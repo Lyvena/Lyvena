@@ -1,0 +1,104 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { FaLinkedin, FaTwitter, FaGithub, FaArrowUp } from 'react-icons/fa'
+
+export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const socialLinks = [
+    { icon: FaLinkedin, href: '#', label: 'LinkedIn', color: 'hover:text-[#0077B5]' },
+    { icon: FaTwitter, href: '#', label: 'Twitter', color: 'hover:text-[#1DA1F2]' },
+    { icon: FaGithub, href: '#', label: 'GitHub', color: 'hover:text-[#333]' },
+  ]
+
+  return (
+    <footer className="bg-neutral-dark text-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-accent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-64 h-64 bg-primary rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Brand */}
+          <div>
+            <h3 className="text-3xl font-display font-bold mb-4 gradient-text">
+              Lyvena
+            </h3>
+            <p className="text-neutral-white/70 leading-relaxed">
+              AI for Good. Building ethical AI solutions that create equitable digital futures.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {['services', 'about', 'portfolio', 'contact'].map((section) => (
+                <li key={section}>
+                  <a
+                    href={`#${section}`}
+                    className="text-neutral-white/70 hover:text-accent transition-colors capitalize"
+                  >
+                    {section}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
+            <p className="text-neutral-white/70 text-sm leading-relaxed">
+              Beta Building, Oficina 6<br />
+              Próspera ZEDE<br />
+              Roatán, Honduras
+            </p>
+          </div>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex justify-center space-x-6 mb-8">
+          {socialLinks.map((social) => (
+            <motion.a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-2xl text-neutral-white/70 transition-colors ${social.color}`}
+              whileHover={{ scale: 1.2, rotate: 360 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label={social.label}
+            >
+              <social.icon />
+            </motion.a>
+          ))}
+        </div>
+
+        {/* Copyright */}
+        <div className="text-center text-neutral-white/50 text-sm border-t border-neutral-white/10 pt-8">
+          <p>© {new Date().getFullYear()} Lyvena. All rights reserved.</p>
+          <p className="mt-2">Built with ❤️ for a better digital future</p>
+        </div>
+      </div>
+
+      {/* Back to top button */}
+      <motion.button
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 p-4 bg-accent text-white rounded-full shadow-lg hover:shadow-2xl transition-shadow z-50"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Scroll to top"
+      >
+        <FaArrowUp className="text-xl" />
+      </motion.button>
+    </footer>
+  )
+}
