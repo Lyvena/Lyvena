@@ -24,6 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/244179468.js"></script>
+        <!-- End of HubSpot Embed Code -->
       </head>
       <body>{children}</body>
     </html>
