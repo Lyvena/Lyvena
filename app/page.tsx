@@ -9,7 +9,6 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import LoadingScreen from '@/components/LoadingScreen'
 import CursorGlow from '@/components/CursorGlow'
-import ChatBubble from '@/components/ChatBubble'
 
 export default function Home() {
   const [loading, setLoading] = useState(true)
@@ -36,7 +35,6 @@ export default function Home() {
       <Portfolio />
       <Contact />
       <Footer />
-      <ChatBubble />
-    </main>
+          </main>
   )
 }
