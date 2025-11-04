@@ -65,6 +65,17 @@ const projects = [
     image: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
     impact: 'Zero data breaches, 5K+ active users',
   },
+  {
+    id: 7,
+    title: 'Kiews - No-Code NEAR Integration',
+    category: 'Blockchain',
+    description: 'Democratizing access to NEAR Protocol through no-code platform',
+    fullDescription: 'A groundbreaking no-code platform that enables non-technical users to build and deploy NEAR Protocol integrations. Kiews features a visual workflow builder, smart contract templates, testing sandbox, and comprehensive monitoring dashboard.',
+    tech: ['NEAR Protocol', 'WebFlow', 'Rust', 'JavaScript'],
+    image: 'linear-gradient(135deg, #FF6B6B 0%, #FFE66D 100%)',
+    impact: '500+ users, $5M+ transaction volume, 92% satisfaction',
+    caseStudyLink: '/case-study',
+  },
 ]
 
 export default function Portfolio() {
@@ -236,16 +247,25 @@ export default function Portfolio() {
                 </div>
 
                 <div className="pt-6 border-t border-neutral-gray">
-                  <button
-                    className="btn-primary w-full md:w-auto"
-                    onClick={() => {
-                      setSelectedProject(null)
-                      const contactSection = document.getElementById('contact')
-                      contactSection?.scrollIntoView({ behavior: 'smooth' })
-                    }}
-                  >
-                    Start Your Project
-                  </button>
+                  {selectedProject.caseStudyLink ? (
+                    <a
+                      href={selectedProject.caseStudyLink}
+                      className="btn-primary w-full md:w-auto inline-block text-center"
+                    >
+                      Read Full Case Study
+                    </a>
+                  ) : (
+                    <button
+                      className="btn-primary w-full md:w-auto"
+                      onClick={() => {
+                        setSelectedProject(null)
+                        const contactSection = document.getElementById('contact')
+                        contactSection?.scrollIntoView({ behavior: 'smooth' })
+                      }}
+                    >
+                      Start Your Project
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
