@@ -1,13 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaLinkedin, FaTwitter, FaGithub, FaArrowUp } from 'react-icons/fa'
+import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   const socialLinks = [
     { icon: FaLinkedin, href: '#', label: 'LinkedIn', color: 'hover:text-[#0077B5]' },
     { icon: FaTwitter, href: '#', label: 'Twitter', color: 'hover:text-[#1DA1F2]' },
@@ -86,19 +82,6 @@ export default function Footer() {
           <p className="mt-2">Built with ❤️ for a better digital future</p>
         </div>
       </div>
-
-      {/* Back to top button */}
-      <motion.button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 p-4 bg-accent text-white rounded-full shadow-lg hover:shadow-2xl transition-shadow z-50"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        aria-label="Scroll to top"
-      >
-        <FaArrowUp className="text-xl" />
-      </motion.button>
     </footer>
   )
 }
