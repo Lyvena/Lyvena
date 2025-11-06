@@ -15,6 +15,225 @@ interface BlogArticle {
 }
 
 const articles: Record<string, BlogArticle> = {
+  'artificial-superintelligence-timeline': {
+    slug: 'artificial-superintelligence-timeline',
+    title: 'How Close Are We to Achieving Artificial SuperIntelligence?',
+    date: 'November 6, 2025',
+    author: 'Lyvena Team',
+    category: 'AI Future',
+    heroImage: 'https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/1ab33709-27e0-4b34-8e05-ce3fa11485d8-hero-picture.webp',
+    content: (
+      <div className="prose prose-lg max-w-none text-neutral-dark">
+        <h2 className="text-3xl font-bold text-neutral-dark mt-0 mb-6">The AI Evolution: From Narrow to Super</h2>
+        <p className="text-lg leading-relaxed mb-6">
+          The landscape of artificial intelligence has transformed dramatically in recent years. What was once the realm of science fiction is increasingly becoming a tangible reality. But as we witness the rapid development of AI systems like ChatGPT, Claude, and Gemini, a question looms large: how close are we to achieving Artificial Superintelligence (ASI)?
+        </p>
+        <p className="mb-6">
+          To understand where we're headed, it's essential to recognize where we are. Currently, we primarily work with narrow AI systems—tools designed for specific tasks like language translation, image recognition, or playing chess. These systems excel at their designated functions but lack the broad capabilities that define human intelligence.
+        </p>
+        <p className="mb-6">
+          The next milestone is Artificial General Intelligence (AGI)—AI that can understand, learn, and apply knowledge across diverse domains at a human level. And beyond that lies ASI: intelligence that surpasses human cognitive abilities across all domains.
+        </p>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Shifting Timeline of Advanced AI</h2>
+        <p className="mb-6">
+          The projected timeline for achieving these advanced forms of AI has undergone significant revision in recent years. As recently as 2020, many AI researchers placed AGI development around 2060. Fast forward to today, and prominent figures in the tech industry are suggesting we could see AGI emerge as early as 2030.
+        </p>
+        <p className="mb-6">
+          What explains this dramatic shift? The unprecedented success of large language models (LLMs) has demonstrated capabilities that many experts didn't anticipate seeing for decades. Systems can now write code, explain complex concepts, generate creative content, and solve intricate problems—all with minimal human intervention.
+        </p>
+        <div className="my-8 rounded-lg overflow-hidden">
+          <img
+            src="https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/951ec012-1381-470d-ad53-4a1f14767503-ai_timline_superintelligence_hologram-2.webp"
+            alt="AI Timeline"
+            className="w-full h-auto"
+          />
+        </div>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Expert Predictions: When Might ASI Arrive?</h2>
+        <p className="mb-6">
+          The timeline for achieving superintelligence varies significantly among experts:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span><strong>Optimists:</strong> Ray Kurzweil, futurist and Google's Director of Engineering, famously predicts ASI by 2045, driven by his theory of accelerating returns in technological development.</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span><strong>Moderates:</strong> A survey of AI researchers suggests a median estimate of ASI between 2040 and 2050, with a 50% probability of occurrence by 2060.</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span><strong>Cautious voices:</strong> Some researchers, including pioneers in the field, suggest that true ASI might be centuries away—or might never be achieved due to fundamental limitations in replicating consciousness.</span>
+          </li>
+        </ul>
+        <p className="mb-6">
+          What's particularly notable is how these predictions have accelerated. Developments that were expected to take decades have been compressed into years, forcing even skeptical experts to revise their timelines.
+        </p>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Technical Barriers to Superintelligence</h2>
+        <p className="mb-6">
+          While the progress is impressive, several significant challenges stand between our current capabilities and true superintelligence:
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">1. The Consciousness Question</h3>
+        <p className="mb-6">
+          Despite advances in neural networks and deep learning, we have yet to develop AI systems with self-awareness or consciousness—qualities that many consider essential components of superintelligence. Our understanding of how human consciousness emerges remains incomplete, making it difficult to replicate in artificial systems.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">2. The Alignment Problem</h3>
+        <p className="mb-6">
+          As AI capabilities increase, ensuring these systems act in accordance with human values becomes increasingly complex. This "alignment problem"—how to control an AI system smarter than its creators—represents one of the most significant challenges to safe ASI development.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">3. Hardware Limitations</h3>
+        <p className="mb-6">
+          Current AI systems require enormous computational resources. Training leading models often costs tens of millions of dollars and consumes massive amounts of energy. Achieving ASI may require computational power well beyond current capabilities.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">4. Quantum Computing: A Potential Catalyst</h3>
+        <p className="mb-6">
+          Quantum computing represents a potential solution to the hardware limitations. These systems leverage quantum mechanics to perform calculations that would be practically impossible for traditional computers. While still in early development stages, quantum computing could accelerate ASI development by overcoming current computational barriers.
+        </p>
+        <div className="my-8 rounded-lg overflow-hidden">
+          <img
+            src="https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/220ea380-b860-4b51-9416-aa27e7afc52d-quantum_vs_classical_hardware-0.webp"
+            alt="Quantum Computing"
+            className="w-full h-auto"
+          />
+        </div>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Recent Developments Accelerating the Timeline</h2>
+        <p className="mb-6">
+          Several key developments in AI research have dramatically altered predictions about superintelligence timelines:
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">The Impact of Foundation Models</h3>
+        <p className="mb-6">
+          The emergence of foundation models—large AI systems trained on diverse data that can be adapted to a wide range of tasks—has demonstrated capabilities previously thought to be decades away. These systems can write stories, generate code, create images, and even reason through complex problems with minimal additional training.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Multimodal Learning</h3>
+        <p className="mb-6">
+          Recent AI systems can process and generate content across multiple modalities—text, images, audio, and video. This ability to integrate different types of information represents a significant step toward more generalized intelligence.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Self-Improvement Capabilities</h3>
+        <p className="mb-6">
+          Some AI systems have demonstrated limited abilities to improve their own performance, suggesting pathways toward recursive self-improvement—a key characteristic expected in superintelligent systems.
+        </p>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">A Realistic Assessment</h2>
+        <p className="mb-6">
+          Despite these advancements, several factors suggest caution when predicting imminent ASI:
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">The Plateauing Effect</h3>
+        <p className="mb-6">
+          While progress in AI has been remarkable, we've also observed that improvements often plateau after initial breakthroughs. Current language models, for instance, still struggle with factual accuracy, causal reasoning, and planning—capabilities essential for superintelligence.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">The Black Box Problem</h3>
+        <p className="mb-6">
+          Many advanced AI systems operate as "black boxes," with decision-making processes that are opaque even to their creators. This lack of interpretability poses challenges for further development and raises questions about reliability.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">From Imitation to Innovation</h3>
+        <p className="mb-6">
+          Current AI systems excel at pattern recognition and imitation but struggle with genuine innovation. True superintelligence would require not just processing existing knowledge but generating novel insights and discoveries.
+        </p>
+        <div className="my-8 rounded-lg overflow-hidden">
+          <img
+            src="https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/497da628-e329-4ec7-966b-37c9f8178f6a-black_box_problem_illustration-0.webp"
+            alt="Black Box Problem"
+            className="w-full h-auto"
+          />
+        </div>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Implications for Business and Society</h2>
+        <p className="mb-6">
+          Whether ASI emerges in 2030 or 2100, the trajectory toward increasingly capable AI systems carries profound implications:
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">For Businesses</h3>
+        <p className="mb-6">
+          Organizations should prepare for continued AI advancement by:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Investing in AI literacy across their workforce</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Developing ethical frameworks for AI deployment</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Creating adaptable business models that can evolve with AI capabilities</span>
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">For Society</h3>
+        <p className="mb-6">
+          The progress toward ASI necessitates:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Robust regulatory frameworks that balance innovation with safety</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Educational systems that prepare people for collaboration with advanced AI</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Ethical guidelines for development and deployment</span>
+          </li>
+        </ul>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Lyvena's Perspective</h2>
+        <p className="mb-6">
+          At Lyvena, we believe in responsible AI development that prioritizes human values while pushing technological boundaries. We approach advanced AI development with both optimism about its potential benefits and caution regarding potential risks.
+        </p>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Most Likely Path Forward</h2>
+        <p className="mb-6">
+          Based on current research and expert consensus, the most plausible timeline suggests:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span><strong>2025-2035:</strong> Increasingly capable AI systems that approach or achieve AGI in specific domains</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span><strong>2035-2050:</strong> Possible emergence of early forms of ASI in controlled environments</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span><strong>2050-2070:</strong> More generalized superintelligent systems, if technical and ethical challenges can be overcome</span>
+          </li>
+        </ul>
+        <p className="mb-6">
+          This timeline remains highly speculative and could accelerate dramatically with unexpected breakthroughs or slow significantly if we encounter unforeseen obstacles.
+        </p>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Conclusion: Preparing for an Uncertain Future</h2>
+        <p className="mb-6">
+          The question "How close are we to achieving Artificial Superintelligence?" has no definitive answer. What's clear is that the timeline has compressed significantly in recent years, and developments once thought to be decades away may arrive much sooner.
+        </p>
+        <p className="mb-6">
+          Rather than focusing exclusively on when ASI might emerge, perhaps the more productive approach is to consider how we want to shape its development. The decisions made by researchers, companies, and policymakers today will influence whether superintelligent systems of the future align with human values and interests.
+        </p>
+        <p className="mb-6">
+          While the emergence of ASI would represent perhaps the most significant technological milestone in human history, the journey toward increasingly capable AI systems is already transforming our world. By engaging thoughtfully with these developments, we can help ensure that advanced AI systems serve humanity's best interests, regardless of when true superintelligence might emerge.
+        </p>
+      </div>
+    ),
+  },
   'generative-ai-2025-breakthroughs': {
     slug: 'generative-ai-2025-breakthroughs',
     title: 'Generative AI in 2025: The Breakthroughs Powering Smarter Content & Code',

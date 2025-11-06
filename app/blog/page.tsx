@@ -16,6 +16,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: '4',
+    title: 'How Close Are We to Achieving Artificial SuperIntelligence?',
+    excerpt: 'Explore the timeline, technical barriers, and expert predictions for achieving Artificial Superintelligence in the coming decades.',
+    date: 'November 6, 2025',
+    author: 'Lyvena Team',
+    category: 'AI Future',
+    slug: 'artificial-superintelligence-timeline',
+    image: 'https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/1ab33709-27e0-4b34-8e05-ce3fa11485d8-hero-picture.webp',
+  },
+  {
     id: '3',
     title: 'Generative AI in 2025: The Breakthroughs Powering Smarter Content & Code',
     excerpt: 'Explore the most significant generative AI breakthroughs of 2025, from agentic AI to multimodal integration and on-device capabilities.',
