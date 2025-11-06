@@ -15,6 +15,370 @@ interface BlogArticle {
 }
 
 const articles: Record<string, BlogArticle> = {
+  'asi-impacts-business-society-technology': {
+    slug: 'asi-impacts-business-society-technology',
+    title: 'Impacts of Artificial SuperIntelligence on Business, Society, and Technology',
+    date: 'November 6, 2025',
+    author: 'Lyvena Team',
+    category: 'AI Impact',
+    heroImage: 'https://cdn.marblism.com/fAzOas6TVc3.webp',
+    content: (
+      <div className="prose prose-lg max-w-none text-neutral-dark">
+        <h2 className="text-3xl font-bold text-neutral-dark mt-0 mb-6">The Dawn of a New Intelligence Era</h2>
+        <p className="text-lg leading-relaxed mb-6">
+          Artificial SuperIntelligence (ASI) represents the theoretical next frontier in AI development—systems that not only match human intelligence but surpass it across virtually all domains. Unlike today's narrow AI tools that excel at specific tasks, ASI would possess general intelligence capabilities that dwarf human potential in areas ranging from scientific innovation to complex problem-solving.
+        </p>
+        <p className="mb-6">
+          While we haven't yet created true ASI, the acceleration of AI development in recent years has shifted these conversations from science fiction into serious strategic discussions. As we edge closer to this technological milestone, understanding its far-reaching implications becomes increasingly important for businesses, technologists, and society at large.
+        </p>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Transforming Business Landscapes</h2>
+        <p className="mb-6">
+          The business world stands to undergo profound transformation with the emergence of ASI technologies. These changes will reshape entire industries and create entirely new business models.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Exponential Productivity and Automation</h3>
+        <p className="mb-6">
+          ASI's impact on business productivity would dwarf today's AI efficiencies. Systems capable of superhuman reasoning could optimize supply chains, product development, and market strategies with unprecedented accuracy.
+        </p>
+        <p className="mb-6">
+          Decision-making processes that currently require teams of experts and weeks of analysis could be completed in seconds, with ASI systems considering variables and outcomes beyond human comprehension. Companies that successfully implement ASI would likely experience order-of-magnitude improvements in operational efficiency.
+        </p>
+        <p className="mb-6 italic border-l-4 border-accent pl-4">
+          "The efficiency gains from narrow AI implementations we're seeing today are just the beginning," notes a recent McKinsey report. "Superintelligent systems could solve optimization problems of such complexity that they unlock entirely new categories of business value."
+        </p>
+        <div className="my-8 rounded-lg overflow-hidden">
+          <img
+            src="https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/9ce1559b-8820-4567-8f7c-8e0f350fcef3-asi-business-dashboard-futuristic-0.webp"
+            alt="ASI Business Dashboard"
+            className="w-full h-auto"
+          />
+        </div>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Job Evolution, Not Just Displacement</h3>
+        <p className="mb-6">
+          While concerns about job displacement are valid, the relationship between ASI and employment is more nuanced than simple replacement. As with previous technological revolutions, new job categories will emerge:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>ASI ethics specialists</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>ASI-human collaboration experts</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>ASI oversight and governance professionals</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Experience designers for ASI-human interfaces</span>
+          </li>
+        </ul>
+        <p className="mb-6">
+          The most significant shift will be in how work is defined. ASI could eliminate routine cognitive labor, potentially freeing humans to focus on uniquely human contributions involving creativity, empathy, and purpose-driven activities.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Competitive Dynamics and Market Concentration</h3>
+        <p className="mb-6">
+          Access to ASI capabilities will likely become a critical competitive advantage, potentially accelerating winner-take-all dynamics in many industries. Companies with early ASI adoption may establish nearly insurmountable leads in their sectors.
+        </p>
+        <p className="mb-6">
+          This raises important questions about market competition and antitrust frameworks. Regulators may need to develop entirely new approaches to ensure healthy market dynamics in an ASI-powered economy.
+        </p>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Reshaping Society's Fundamental Structures</h2>
+        <p className="mb-6">
+          ASI's impacts extend far beyond business, potentially transforming core social institutions and human experiences.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Healthcare Revolution</h3>
+        <p className="mb-6">
+          Perhaps no area stands to benefit more immediately from ASI than healthcare. Superintelligent systems could:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Personalize treatment plans with perfect precision</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Discover novel medications and therapies for previously untreatable conditions</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Predict and prevent disease outbreaks</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Democratize medical expertise globally</span>
+          </li>
+        </ul>
+        <p className="mb-6">
+          ASI could reduce healthcare costs by up to $100 billion annually while dramatically improving outcomes. More profoundly, it might fundamentally alter our relationship with mortality by enabling breakthroughs in longevity research.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Education Reimagined</h3>
+        <p className="mb-6">
+          Educational systems designed for the industrial era will require complete reimagining in an ASI world. When superintelligent systems can perform most routine cognitive tasks, education must shift toward nurturing uniquely human capacities.
+        </p>
+        <p className="mb-6">
+          Future education might emphasize:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Emotional intelligence and interpersonal skills</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Ethical reasoning and values alignment</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Creative expression and arts</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Physical wellbeing and embodied experiences</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Philosophical inquiry and meaning-making</span>
+          </li>
+        </ul>
+        <p className="mb-6">
+          ASI could simultaneously serve as the ultimate personalized tutor, adapting perfectly to each learner's needs while expanding access to world-class education globally.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Governance and Democracy</h3>
+        <p className="mb-6">
+          Democratic institutions face both opportunities and challenges with ASI. On one hand, superintelligent systems could:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Process citizen input at unprecedented scale</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Model complex policy outcomes with extraordinary accuracy</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Identify optimal compromises between competing interests</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Detect corruption and ensure transparent governance</span>
+          </li>
+        </ul>
+        <p className="mb-6">
+          However, these same capabilities raise profound questions about human autonomy in democratic systems. Who controls the ASI systems that inform policy? How do we ensure these systems reflect diverse human values? The answers to these questions will shape democracy's future.
+        </p>
+        <div className="my-8 rounded-lg overflow-hidden">
+          <img
+            src="https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/12c351fd-6be5-4178-b756-38785f3731e9-asi-governance-chamber-1.webp"
+            alt="ASI Governance"
+            className="w-full h-auto"
+          />
+        </div>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Accelerating Technological Evolution</h2>
+        <p className="mb-6">
+          ASI represents not just another technology but potentially a final invention—a system capable of recursive self-improvement and technological development beyond human capability.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Scientific Breakthroughs and Innovation</h3>
+        <p className="mb-6">
+          The most immediate technological impact of ASI would likely be a cascade of scientific breakthroughs across fields:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span><strong>Materials science:</strong> perfectly optimized materials for energy storage, construction, and manufacturing</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span><strong>Quantum physics:</strong> solutions to longstanding theoretical problems</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span><strong>Climate science:</strong> optimal carbon capture and clean energy systems</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span><strong>Space exploration:</strong> advanced propulsion and habitation technologies</span>
+          </li>
+        </ul>
+        <p className="mb-6">
+          ASI's ability to synthesize knowledge across domains could unlock solutions to problems that have stymied human researchers for decades.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">The Technological Singularity Question</h3>
+        <p className="mb-6">
+          Many ASI researchers discuss the concept of a "technological singularity"—a hypothetical point where technological growth becomes uncontrollable and irreversible, resulting in unforeseeable changes to human civilization.
+        </p>
+        <p className="mb-6">
+          While speculative, this concept highlights how ASI fundamentally differs from other technologies. A superintelligent system capable of improving itself could potentially trigger an intelligence explosion, leading to capabilities that are currently unimaginable.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Infrastructure and Energy Requirements</h3>
+        <p className="mb-6">
+          The computational requirements for true ASI would likely be enormous, raising questions about energy usage and environmental impact. Current AI models already consume significant resources; ASI systems would require orders of magnitude more computing power.
+        </p>
+        <p className="mb-6">
+          This presents both challenges and opportunities:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Developing ultra-efficient computing architectures</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Advancing renewable energy to power ASI systems</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Creating sustainable cooling technologies for massive data centers</span>
+          </li>
+        </ul>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Ethical Imperatives and Existential Considerations</h2>
+        <p className="mb-6">
+          Perhaps no aspect of ASI development is more important than the ethical frameworks guiding its creation.
+        </p>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Alignment with Human Values</h3>
+        <p className="mb-6">
+          The "alignment problem"—ensuring ASI systems act in accordance with human values—represents one of the most crucial challenges in AI development. A superintelligent system with misaligned goals could, even unintentionally, cause significant harm.
+        </p>
+        <p className="mb-6">
+          Researchers are exploring various approaches to alignment:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Inverse reinforcement learning from human preferences</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Constitutional AI approaches with explicit value frameworks</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Human-in-the-loop oversight systems</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Interpretability tools to understand ASI reasoning</span>
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Existential Risk Management</h3>
+        <p className="mb-6">
+          ASI development carries both tremendous promise and potential existential risks. Managing these risks requires unprecedented international cooperation, transparency, and safety protocols.
+        </p>
+        <p className="mb-6">
+          Responsible ASI development demands:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Rigorous testing and containment protocols</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>International governance frameworks</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Broad stakeholder participation in development decisions</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Long-term perspective on consequences</span>
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Distributing Benefits Equitably</h3>
+        <p className="mb-6">
+          Perhaps the most significant ethical question is how ASI's immense benefits will be distributed. Will superintelligence exacerbate existing inequalities, or can it be deployed to create more equitable societies?
+        </p>
+        <p className="mb-6">
+          Ensuring broad access to ASI capabilities while preventing monopolistic control will require thoughtful policy approaches and business models designed for inclusive growth.
+        </p>
+        <div className="my-8 rounded-lg overflow-hidden">
+          <img
+            src="https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/6dae87f9-4958-4c8b-80ad-de6db738d48c-asi-alignment-visualization-0.webp"
+            alt="ASI Alignment"
+            className="w-full h-auto"
+          />
+        </div>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Preparing for an ASI Future</h2>
+        <p className="mb-6">
+          While true ASI remains theoretical, the acceleration of AI capabilities suggests that preparing for this possibility is prudent for businesses, governments, and individuals.
+        </p>
+        <p className="mb-6">
+          Organizations should consider:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Developing AI ethics frameworks that can scale to ASI scenarios</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Investing in human capabilities that complement rather than compete with AI</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Participating in multi-stakeholder governance initiatives</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Exploring business models that share AI benefits broadly</span>
+          </li>
+        </ul>
+        <p className="mb-6">
+          Individuals might prepare by:
+        </p>
+        <ul className="space-y-3 mb-6 ml-6">
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Cultivating uniquely human skills like creativity and empathy</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Developing adaptive learning capabilities</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Engaging with ethical questions around technology and society</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-accent mr-3 font-bold">•</span>
+            <span>Building communities focused on human flourishing in an automated world</span>
+          </li>
+        </ul>
+
+        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Conclusion: Navigating the Greatest Transition</h2>
+        <p className="mb-6">
+          The potential development of Artificial SuperIntelligence represents perhaps the most significant transition in human history. Its impacts on business, society, and technology would be transformative in ways we can only begin to imagine.
+        </p>
+        <p className="mb-6">
+          What's clear is that ASI development isn't merely a technical challenge but a profoundly human one. The choices we make today about AI research directions, governance structures, and ethical frameworks will shape whether ASI becomes the greatest boon to humanity or its greatest challenge.
+        </p>
+        <p className="mb-6">
+          By approaching these questions thoughtfully and inclusively, we can work toward an ASI future that amplifies human potential rather than diminishing it—a future where superintelligence serves as a partner in addressing our greatest challenges and creating a more flourishing world.
+        </p>
+      </div>
+    ),
+  },
   'artificial-superintelligence-timeline': {
     slug: 'artificial-superintelligence-timeline',
     title: 'How Close Are We to Achieving Artificial SuperIntelligence?',

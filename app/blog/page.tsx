@@ -16,6 +16,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: '5',
+    title: 'Impacts of Artificial SuperIntelligence on Business, Society, and Technology',
+    excerpt: 'Explore how ASI will transform business landscapes, reshape society, accelerate technological evolution, and raise critical ethical questions.',
+    date: 'November 6, 2025',
+    author: 'Lyvena Team',
+    category: 'AI Impact',
+    slug: 'asi-impacts-business-society-technology',
+    image: 'https://cdn.marblism.com/fAzOas6TVc3.webp',
+  },
+  {
     id: '4',
     title: 'How Close Are We to Achieving Artificial SuperIntelligence?',
     excerpt: 'Explore the timeline, technical barriers, and expert predictions for achieving Artificial Superintelligence in the coming decades.',
