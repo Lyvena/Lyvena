@@ -43,6 +43,14 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/blog"
+                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                >
+                  Blog
+                </a>
+              </li>
             </ul>
           </div>
 
