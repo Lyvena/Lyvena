@@ -50,6 +50,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
             <p className="text-neutral-white/70 text-sm leading-relaxed">
+              <a href="mailto:info@lyvena.xyz" className="hover:text-accent transition-colors">
+                info@lyvena.xyz
+              </a>
+              <br /><br />
               Beta Building, Oficina 6 Próspera ZEDE<br />
               St. John's Bay<br />
               Roatán<br />
