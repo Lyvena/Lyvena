@@ -1,8 +1,4 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
 
 interface BlogArticle {
   slug: string
@@ -1426,9 +1422,12 @@ const articles: Record<string, BlogArticle> = {
   },
 }
 
-export default function BlogArticle() {
-  const params = useParams()
-  const slug = params?.slug as string
+export function generateStaticParams() {
+  return Object.keys(articles).map(slug => ({ slug }))
+}
+
+export default function BlogArticle({ params }: { params: { slug: string } }) {
+  const slug = params.slug
   const article = articles[slug]
 
   if (!article) {
@@ -1459,12 +1458,7 @@ export default function BlogArticle() {
       <article className="section-padding">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
+          <div className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-sm font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
                 {article.category}
@@ -1477,44 +1471,29 @@ export default function BlogArticle() {
             <p className="text-lg text-neutral-white/70">
               By {article.author}
             </p>
-          </motion.div>
+          </div>
 
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="prose prose-invert max-w-none mb-12"
-          >
+          <div className="prose prose-invert max-w-none mb-12">
             {article.content}
-          </motion.div>
+          </div>
 
           {/* Back to Blog */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="border-t border-neutral-white/10 pt-8"
-          >
+          <div className="border-t border-neutral-white/10 pt-8">
             <Link
               href="/blog"
               className="text-accent hover:text-accent/80 transition-colors font-semibold"
             >
               ← Back to Blog
             </Link>
-          </motion.div>
+          </div>
         </div>
       </article>
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-primary to-accent/20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Digital Future?
             </h2>
@@ -1527,7 +1506,7 @@ export default function BlogArticle() {
             >
               Get In Touch
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
     </main>
