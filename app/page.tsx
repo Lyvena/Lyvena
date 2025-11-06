@@ -5,7 +5,7 @@ import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import About from '@/components/About'
 import Portfolio from '@/components/Portfolio'
-import BlogSection from '@/components/BlogSection'
+import StoriesSection from '@/components/StoriesSection'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import LoadingScreen from '@/components/LoadingScreen'
@@ -34,7 +34,7 @@ export default function Home() {
       <Services />
       <About />
       <Portfolio />
-      <BlogSection />
+      <StoriesSection />
       <Contact />
       <Footer />
     </main>

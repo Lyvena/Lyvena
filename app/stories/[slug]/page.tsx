@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-interface BlogArticle {
+interface StoryArticle {
   slug: string
   title: string
   date: string
@@ -10,7 +10,7 @@ interface BlogArticle {
   content: React.ReactNode
 }
 
-const articles: Record<string, BlogArticle> = {
+const articles: Record<string, StoryArticle> = {
   'mit-seal-self-adapting-language-models': {
     slug: 'mit-seal-self-adapting-language-models',
     title: 'MIT SEAL: The Self-Adapting Language Models Redefining AI Learning',
@@ -1426,7 +1426,7 @@ export function generateStaticParams() {
   return Object.keys(articles).map(slug => ({ slug }))
 }
 
-export default function BlogArticle({ params }: { params: { slug: string } }) {
+export default function StoryArticle({ params }: { params: { slug: string } }) {
   const slug = params.slug
   const article = articles[slug]
 
@@ -1435,8 +1435,8 @@ export default function BlogArticle({ params }: { params: { slug: string } }) {
       <main className="min-h-screen bg-neutral-dark flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Article Not Found</h1>
-          <Link href="/blog" className="btn-primary inline-block">
-            Back to Blog
+          <Link href="/stories" className="btn-primary inline-block">
+            Back to Stories
           </Link>
         </div>
       </main>
@@ -1478,13 +1478,13 @@ export default function BlogArticle({ params }: { params: { slug: string } }) {
             {article.content}
           </div>
 
-          {/* Back to Blog */}
+          {/* Back to Stories */}
           <div className="border-t border-neutral-white/10 pt-8">
             <Link
-              href="/blog"
+              href="/stories"
               className="text-accent hover:text-accent/80 transition-colors font-semibold"
             >
-              ← Back to Blog
+              ← Back to Stories
             </Link>
           </div>
         </div>

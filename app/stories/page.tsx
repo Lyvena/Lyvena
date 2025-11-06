@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-interface BlogPost {
+interface StoryPost {
   id: string
   title: string
   excerpt: string
@@ -14,7 +14,7 @@ interface BlogPost {
   image: string
 }
 
-const blogPosts: BlogPost[] = [
+const storyPosts: StoryPost[] = [
   {
     id: '6',
     title: 'MIT SEAL: The Self-Adapting Language Models Redefining AI Learning',
@@ -77,7 +77,7 @@ const blogPosts: BlogPost[] = [
   },
 ]
 
-export default function Blog() {
+export default function Stories() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark">
       {/* Header */}
@@ -90,7 +90,7 @@ export default function Blog() {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
-              Lyvena Blog
+              Lyvena Stories
             </h1>
             <p className="text-xl text-neutral-white/90 max-w-2xl mx-auto">
               Insights, strategies, and best practices for building responsible AI solutions
@@ -99,11 +99,11 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Blog Posts Grid */}
+      {/* Stories Grid */}
       <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 gap-8">
-            {blogPosts.map((post, index) => (
+            {storyPosts.map((post, index) => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -112,7 +112,7 @@ export default function Blog() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="card overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={`/stories/${post.slug}`}>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Image */}
                     <div className="md:col-span-1 h-64 md:h-auto overflow-hidden rounded-lg">

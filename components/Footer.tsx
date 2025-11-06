@@ -45,10 +45,10 @@ export default function Footer() {
               ))}
               <li>
                 <a
-                  href="/blog"
+                  href="/stories"
                   className="text-neutral-white/70 hover:text-accent transition-colors"
                 >
-                  Blog
+                  Stories
                 </a>
               </li>
             </ul>

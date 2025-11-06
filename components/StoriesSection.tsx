@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-export default function BlogSection() {
+export default function StoriesSection() {
   const recentArticles = [
     {
       title: 'Impacts of Artificial SuperIntelligence on Business, Society, and Technology',
@@ -26,7 +26,7 @@ export default function BlogSection() {
   ]
 
   return (
-    <section id="blog" className="section-padding bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark">
+    <section id="stories" className="section-padding bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -54,7 +54,7 @@ export default function BlogSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Link href={`/blog/${article.slug}`}>
+              <Link href={`/stories/${article.slug}`}>
                 <div className="h-full bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50 border border-accent/20 rounded-lg p-6 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 cursor-pointer group">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
@@ -84,7 +84,7 @@ export default function BlogSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <Link href="/blog">
+          <Link href="/stories">
             <button className="btn-primary">
               View All Articles
             </button>
