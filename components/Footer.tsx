@@ -1,13 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 export default function Footer() {
   const socialLinks = [
-    { icon: FaLinkedin, href: '#', label: 'LinkedIn', color: 'hover:text-[#0077B5]' },
-    { icon: FaTwitter, href: '#', label: 'Twitter', color: 'hover:text-[#1DA1F2]' },
-    { icon: FaGithub, href: '#', label: 'GitHub', color: 'hover:text-[#333]' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/company/lyvena/', label: 'LinkedIn', color: 'hover:text-[#0077B5]' },
+    { icon: FaGithub, href: 'https://github.com/Lyvena/Lyvena', label: 'GitHub', color: 'hover:text-[#333]' },
   ]
 
   return (
@@ -51,9 +50,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
             <p className="text-neutral-white/70 text-sm leading-relaxed">
-              Beta Building, Oficina 6<br />
-              Próspera ZEDE<br />
-              Roatán, Honduras
+              Beta Building, Oficina 6 Próspera ZEDE<br />
+              St. John's Bay<br />
+              Roatán<br />
+              Islas de Bahia 34101<br />
+              Honduras
             </p>
           </div>
         </div>
@@ -79,7 +80,6 @@ export default function Footer() {
         {/* Copyright */}
         <div className="text-center text-neutral-white/50 text-sm border-t border-neutral-white/10 pt-8">
           <p>© {new Date().getFullYear()} Lyvena. All rights reserved.</p>
-          <p className="mt-2">Built with ❤️ for a better digital future</p>
         </div>
       </div>
     </footer>
