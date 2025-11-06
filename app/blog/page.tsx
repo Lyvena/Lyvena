@@ -16,6 +16,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: '2',
+    title: 'AI Agents Are Changing the Game: How Lyvena Delivers Websites and Apps Faster Than Ever',
+    excerpt: 'Discover how AI development agents are revolutionizing the development process, delivering projects 70% faster with superior quality.',
+    date: 'November 6, 2025',
+    author: 'Lyvena Team',
+    category: 'AI Agents',
+    slug: 'ai-agents-changing-game',
+    image: 'https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/e1443083-b99c-41e3-aefa-9a4095e4310e-hero-picture.webp',
+  },
+  {
     id: '1',
     title: 'Responsible AI, Real Results: Building Scalable Digital Solutions That Last',
     excerpt: 'Discover how responsible AI development practices create digital solutions that scale effectively and deliver lasting value.',
