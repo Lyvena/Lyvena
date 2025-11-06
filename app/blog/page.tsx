@@ -16,6 +16,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: '6',
+    title: 'MIT SEAL: The Self-Adapting Language Models Redefining AI Learning',
+    excerpt: 'Discover how MIT\'s SEAL technology enables AI models to learn and improve themselves autonomously without human intervention.',
+    date: 'November 6, 2025',
+    author: 'Lyvena Team',
+    category: 'AI Research',
+    slug: 'mit-seal-self-adapting-language-models',
+    image: 'https://cdn.marblism.com/gLWMW21Unfv.webp',
+  },
+  {
     id: '5',
     title: 'Impacts of Artificial SuperIntelligence on Business, Society, and Technology',
     excerpt: 'Explore how ASI will transform business landscapes, reshape society, accelerate technological evolution, and raise critical ethical questions.',
