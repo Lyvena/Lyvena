@@ -16,6 +16,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: '3',
+    title: 'Generative AI in 2025: The Breakthroughs Powering Smarter Content & Code',
+    excerpt: 'Explore the most significant generative AI breakthroughs of 2025, from agentic AI to multimodal integration and on-device capabilities.',
+    date: 'November 6, 2025',
+    author: 'Lyvena Team',
+    category: 'Generative AI',
+    slug: 'generative-ai-2025-breakthroughs',
+    image: 'https://cdn.marblism.com/R_m8QmXdD_c.webp',
+  },
+  {
     id: '2',
     title: 'AI Agents Are Changing the Game: How Lyvena Delivers Websites and Apps Faster Than Ever',
     excerpt: 'Discover how AI development agents are revolutionizing the development process, delivering projects 70% faster with superior quality.',
