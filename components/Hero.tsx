@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [displayText, setDisplayText] = useState('')
-  const fullText = 'AI for Good | Ethical AI Development & Consulting'
+  const fullText = 'AI for Good | Ethical AI Research & Engineering'
   const [showCursor, setShowCursor] = useState(true)
 
   // Typing animation effect
