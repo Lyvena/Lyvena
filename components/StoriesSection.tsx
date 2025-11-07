@@ -48,7 +48,7 @@ export default function StoriesSection() {
         </motion.div>
 
         {/* Articles Grid */}
-        <div className="grid grid-cols-1 gap-8 mb-12">
+        <div className="space-y-12 mb-12">
           {recentArticles.map((article, index) => (
             <motion.div
               key={article.slug}
@@ -58,9 +58,9 @@ export default function StoriesSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Link href={`/stories/${article.slug}`}>
-                <div className="h-full bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50 border border-accent/20 rounded-lg overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 cursor-pointer group">
+                <div className={`h-full bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50 border border-accent/20 rounded-lg overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 cursor-pointer group grid grid-cols-1 md:grid-cols-2 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
                   {/* Hero Image */}
-                  <div className="h-64 md:h-80 overflow-hidden">
+                  <div className={`h-64 md:h-96 overflow-hidden ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                     <img
                       src={article.image}
                       alt={article.title}
@@ -69,19 +69,19 @@ export default function StoriesSection() {
                   </div>
                   
                   {/* Content */}
-                  <div className="p-6">
+                  <div className={`p-8 flex flex-col justify-center ${index % 2 === 1 ? 'md:order-1' : ''}`}>
                     <div className="flex items-center gap-2 mb-4">
                       <span className="text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
                         {article.category}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors line-clamp-2">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors">
                       {article.title}
                     </h3>
-                    <p className="text-neutral-white/70 text-sm leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-neutral-white/70 text-base leading-relaxed mb-6">
                       {article.excerpt}
                     </p>
-                    <div className="text-accent text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                    <div className="text-accent text-sm font-semibold group-hover:translate-x-2 transition-transform w-fit">
                       Read More →
                     </div>
                   </div>
