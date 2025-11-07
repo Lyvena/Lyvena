@@ -26,13 +26,6 @@ export default function StoriesSection() {
       category: 'AI Impact',
       image: 'https://cdn.marblism.com/fAzOas6TVc3.webp',
     },
-    {
-      title: 'How Close Are We to Achieving Artificial SuperIntelligence?',
-      excerpt: 'Explore the timeline, technical barriers, and expert predictions for achieving Artificial Superintelligence in the coming decades.',
-      slug: 'artificial-superintelligence-timeline',
-      category: 'AI Future',
-      image: 'https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/1ab33709-27e0-4b34-8e05-ce3fa11485d8-hero-picture.webp',
-    },
   ]
 
   return (
