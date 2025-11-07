@@ -49,27 +49,18 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="section-padding bg-gradient-to-br from-primary via-primary-dark to-primary-light relative overflow-hidden"
+      className="section-padding bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark relative overflow-hidden"
     >
-      {/* Animated wave background */}
-      <div className="absolute inset-0 opacity-20">
-        <svg
-          className="absolute bottom-0 w-full wave-animation"
-          viewBox="0 0 1440 320"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill="#00D4FF"
-            fillOpacity="0.3"
-            d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          />
-        </svg>
+      {/* Animated background decoration */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -78,12 +69,12 @@ export default function Contact() {
           <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
             Get In Touch
           </h2>
-          <p className="text-xl text-neutral-white/90 max-w-2xl mx-auto">
-            Let's create something amazing together
+          <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
+            Ready to transform your digital future? Let's discuss how we can help bring your vision to life.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -91,7 +82,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="card p-8">
+            <div className="bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm hover:border-accent/40 transition-all duration-300">
               {submitted ? (
                 <motion.div
                   className="text-center py-12"
@@ -102,7 +93,7 @@ export default function Contact() {
                   <h3 className="text-2xl font-bold text-primary mb-2">
                     Thank You!
                   </h3>
-                  <p className="text-neutral-dark/70">
+                  <p className="text-neutral-white/70">
                     We'll get back to you soon.
                   </p>
                 </motion.div>
@@ -111,7 +102,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-neutral-dark mb-2"
+                      className="block text-sm font-semibold text-white mb-2"
                     >
                       Name *
                     </label>
@@ -122,7 +113,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-neutral-gray rounded-lg focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-neutral-dark/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
                       placeholder="Your name"
                     />
                   </div>
@@ -130,7 +121,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold text-neutral-dark mb-2"
+                      className="block text-sm font-semibold text-white mb-2"
                     >
                       Email *
                     </label>
@@ -141,7 +132,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-neutral-gray rounded-lg focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-neutral-dark/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -149,7 +140,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="projectIdea"
-                      className="block text-sm font-semibold text-neutral-dark mb-2"
+                      className="block text-sm font-semibold text-white mb-2"
                     >
                       Project Idea
                     </label>
@@ -159,7 +150,7 @@ export default function Contact() {
                       name="projectIdea"
                       value={formData.projectIdea}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-neutral-gray rounded-lg focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-neutral-dark/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
                       placeholder="Brief description of your project"
                     />
                   </div>
@@ -167,7 +158,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-semibold text-neutral-dark mb-2"
+                      className="block text-sm font-semibold text-white mb-2"
                     >
                       Message *
                     </label>
@@ -178,7 +169,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border-2 border-neutral-gray rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-neutral-dark/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors resize-none"
                       placeholder="Tell us more about your needs..."
                     />
                   </div>
@@ -204,72 +195,48 @@ export default function Contact() {
             className="space-y-8"
           >
             {/* Why choose us */}
-            <div className="card p-6">
-              <h3 className="text-xl font-bold text-primary mb-4">Why Choose Lyvena?</h3>
-              <ul className="space-y-3">
+            <div className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-white mb-6">Why Choose Lyvena?</h3>
+              <ul className="space-y-4">
                 <li className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
+                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                   </svg>
-                  <span className="text-neutral-dark">Ethical AI development with transparency</span>
+                  <span className="text-neutral-white/90">Ethical AI development with transparency</span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
+                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                   </svg>
-                  <span className="text-neutral-dark">Cutting-edge technology stack</span>
+                  <span className="text-neutral-white/90">Cutting-edge technology stack</span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
+                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                   </svg>
-                  <span className="text-neutral-dark">Dedicated to positive social impact</span>
+                  <span className="text-neutral-white/90">Dedicated to positive social impact</span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    stroke="currentColor"
+                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                   </svg>
-                  <span className="text-neutral-dark">Responsive and accessible design</span>
+                  <span className="text-neutral-white/90">Responsive and accessible design</span>
                 </li>
               </ul>
             </div>
