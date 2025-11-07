@@ -31,6 +31,21 @@ export default function StoriesSection() {
   return (
     <section id="stories" className="section-padding bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark">
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+            Latest Insights
+          </h2>
+          <p className="text-lg text-neutral-white/70 max-w-2xl mx-auto">
+            Explore our latest articles on AI development, responsible innovation, and the future of technology.
+          </p>
+        </motion.div>
 
         {/* Articles Grid */}
         <div className="space-y-12 mb-12">
