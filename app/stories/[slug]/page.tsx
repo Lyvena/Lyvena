@@ -152,8 +152,8 @@ const articles: Record<string, StoryArticle> = {
     category: 'AI Impact',
     heroImage: 'https://cdn.marblism.com/fAzOas6TVc3.webp',
     content: (
-      <div className="prose prose-lg max-w-none text-neutral-dark">
-        <h2 className="text-3xl font-bold text-neutral-dark mt-0 mb-6">The Dawn of a New Intelligence Era</h2>
+      <div className="prose prose-lg max-w-none text-neutral-white/90">
+        <h2 className="text-3xl font-bold text-white mt-0 mb-6">The Dawn of a New Intelligence Era</h2>
         <p className="text-lg leading-relaxed mb-6">
           Artificial SuperIntelligence (ASI) represents the theoretical next frontier in AI development—systems that not only match human intelligence but surpass it across virtually all domains. Unlike today's narrow AI tools that excel at specific tasks, ASI would possess general intelligence capabilities that dwarf human potential in areas ranging from scientific innovation to complex problem-solving.
         </p>
@@ -516,8 +516,8 @@ const articles: Record<string, StoryArticle> = {
     category: 'AI Future',
     heroImage: 'https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/1ab33709-27e0-4b34-8e05-ce3fa11485d8-hero-picture.webp',
     content: (
-      <div className="prose prose-lg max-w-none text-neutral-dark">
-        <h2 className="text-3xl font-bold text-neutral-dark mt-0 mb-6">The AI Evolution: From Narrow to Super</h2>
+      <div className="prose prose-lg max-w-none text-neutral-white/90">
+        <h2 className="text-3xl font-bold text-white mt-0 mb-6">The AI Evolution: From Narrow to Super</h2>
         <p className="text-lg leading-relaxed mb-6">
           The landscape of artificial intelligence has transformed dramatically in recent years. What was once the realm of science fiction is increasingly becoming a tangible reality. But as we witness the rapid development of AI systems like ChatGPT, Claude, and Gemini, a question looms large: how close are we to achieving Artificial Superintelligence (ASI)?
         </p>
@@ -735,7 +735,7 @@ const articles: Record<string, StoryArticle> = {
     category: 'Generative AI',
     heroImage: 'https://cdn.marblism.com/R_m8QmXdD_c.webp',
     content: (
-      <div className="prose prose-lg max-w-none text-neutral-dark">
+      <div className="prose prose-lg max-w-none text-neutral-white/90">
         <p className="text-lg leading-relaxed mb-6">
           We're witnessing a pivotal moment in artificial intelligence. Generative AI has evolved from experimental technology into a transformative force that's fundamentally reshaping how we create content and develop code. With venture capital firms investing over $1.7 billion in generative AI solutions over the past three years, 2025 marks the year businesses transition from early-stage prototypes to real-world applications delivering measurable impact.
         </p>
