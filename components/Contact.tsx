@@ -203,43 +203,6 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            {/* Address */}
-            <div className="card p-6 holographic">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <svg
-                    className="w-8 h-8 text-accent"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-primary mb-2">Our Location</h3>
-                  <p className="text-neutral-dark leading-relaxed">
-                    Beta Building, Oficina 6<br />
-                    Próspera ZEDE<br />
-                    St. John's Bay, Roatán<br />
-                    Islas de Bahia 34101<br />
-                    Honduras
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* Why choose us */}
             <div className="card p-6">
               <h3 className="text-xl font-bold text-primary mb-4">Why Choose Lyvena?</h3>
@@ -309,17 +272,6 @@ export default function Contact() {
                   <span className="text-neutral-dark">Responsive and accessible design</span>
                 </li>
               </ul>
-            </div>
-
-            {/* Availability */}
-            <div className="card p-6 bg-gradient-to-br from-accent/10 to-primary/10">
-              <div className="flex items-center space-x-3 mb-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse-slow" />
-                <h3 className="text-xl font-bold text-primary">Available for Projects</h3>
-              </div>
-              <p className="text-neutral-dark">
-                We're currently accepting new projects. Let's discuss how we can help bring your vision to life.
-              </p>
             </div>
           </motion.div>
         </div>
