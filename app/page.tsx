@@ -3,8 +3,9 @@
 import { useEffect, useState } from 'react'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
-import About from '@/components/About'
 import Portfolio from '@/components/Portfolio'
+import Clients from '@/components/Clients'
+import About from '@/components/About'
 import StoriesSection from '@/components/StoriesSection'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
@@ -32,8 +33,9 @@ export default function Home() {
       <CursorGlow />
       <Hero />
       <Services />
-      <About />
       <Portfolio />
+      <Clients />
+      <About />
       <StoriesSection />
       <Contact />
       <Footer />
