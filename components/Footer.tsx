@@ -19,7 +19,7 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
             <Link href="/">
@@ -60,6 +60,33 @@ export default function Footer() {
                   className="text-neutral-white/70 hover:text-accent transition-colors"
                 >
                   Stories
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Products */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Products</h4>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="https://kiews.xyz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                >
+                  Kiews
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://theintelekt.xyz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                >
+                  Intelekt
                 </a>
               </li>
             </ul>
