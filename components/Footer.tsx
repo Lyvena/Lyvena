@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function Footer() {
   const socialLinks = [
@@ -21,9 +22,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-3xl font-display font-bold mb-4 gradient-text">
-              Lyvena
-            </h3>
+            <Link href="/">
+              <h3 className="text-3xl font-display font-bold mb-4 gradient-text hover:opacity-80 transition-opacity cursor-pointer">
+                Lyvena
+              </h3>
+            </Link>
             <p className="text-neutral-white/70 leading-relaxed">
               AI for Good. Building ethical AI solutions that create equitable digital futures.
             </p>
