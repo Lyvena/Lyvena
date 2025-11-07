@@ -94,7 +94,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-center text-neutral-white/50 text-sm border-t border-neutral-white/10 pt-8">
-          <p>© {new Date().getFullYear()} Lyvena. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} <Link href="/" className="hover:text-accent transition-colors">Lyvena</Link>. All rights reserved.</p>
         </div>
       </div>
     </footer>
