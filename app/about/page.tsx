@@ -14,7 +14,7 @@ export default function About() {
       description: 'Visionary leader driving Lyvena\'s mission to develop AI for good.',
     },
     {
-      name: 'Aryna',
+      name: 'Aryna Verchenko',
       role: 'Chief Designer & COO',
       linkedin: 'https://www.linkedin.com/in/unicornixa/',
       description: 'Creative strategist ensuring ethical design and operational excellence.',
@@ -146,10 +146,10 @@ export default function About() {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-accent hover:text-white transition-colors font-semibold"
+                    className="inline-flex flex-col items-center gap-2 text-accent hover:text-white transition-colors font-semibold"
                   >
-                    <FaLinkedin className="text-xl" />
-                    Connect on LinkedIn
+                    <FaLinkedin className="text-3xl" />
+                    <span className="text-sm">Connect on LinkedIn</span>
                   </a>
                 </div>
               </motion.div>
