@@ -93,21 +93,6 @@ export default function Portfolio() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Section header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-5xl md:text-6xl font-display font-bold gradient-text mb-4">
-            Our Portfolio
-          </h2>
-          <p className="text-xl text-neutral-dark/70 max-w-2xl mx-auto">
-            Real projects making real impact
-          </p>
-        </motion.div>
 
         {/* Masonry grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

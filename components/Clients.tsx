@@ -19,15 +19,6 @@ export default function Clients() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Trusted by Industry Leaders
-          </h2>
-          <p className="text-xl text-slate-400">
-            We've had the privilege of working with innovative companies
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center justify-items-center">
           {clients.map((client) => (
             <a

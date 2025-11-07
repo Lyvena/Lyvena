@@ -58,21 +58,6 @@ export default function Contact() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Section header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
-            Get In Touch
-          </h2>
-          <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
-            Ready to transform your digital future? Let's discuss how we can help bring your vision to life.
-          </p>
-        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact form */}
