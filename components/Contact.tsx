@@ -25,25 +25,42 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      // Send email via API
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-    // Trigger confetti
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ['#0A6C74', '#00D4FF', '#F8F9FA'],
-    })
+      if (response.ok) {
+        // Trigger confetti
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#0A6C74', '#00D4FF', '#F8F9FA'],
+        })
 
-    setIsSubmitting(false)
-    setSubmitted(true)
+        setIsSubmitting(false)
+        setSubmitted(true)
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({ name: '', email: '', projectIdea: '', message: '' })
-      setSubmitted(false)
-    }, 3000)
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setFormData({ name: '', email: '', projectIdea: '', message: '' })
+          setSubmitted(false)
+        }, 3000)
+      } else {
+        alert('Failed to send message. Please try again.')
+        setIsSubmitting(false)
+      }
+    } catch (error) {
+      console.error('Error sending message:', error)
+      alert('Error sending message. Please try again.')
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -59,7 +76,7 @@ export default function Contact() {
 
       <div className="relative z-10 max-w-6xl mx-auto">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Contact form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
