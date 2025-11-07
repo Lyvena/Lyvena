@@ -13,11 +13,6 @@ export default function Clients() {
       name: 'SuperWorldapp',
       logo: '/logos/superworldapp.svg',
       url: 'https://superworldapp.com'
-    },
-    {
-      name: 'JWFishers',
-      logo: '/logos/jwfishers.svg',
-      url: 'https://jwfishers.com'
     }
   ]
 
