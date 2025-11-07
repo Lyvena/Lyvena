@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Footer from '@/components/Footer'
 
 interface StoryArticle {
   slug: string
@@ -1509,6 +1510,7 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   )
 }

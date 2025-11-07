@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Footer from '@/components/Footer'
 
 interface StoryPost {
   id: string
@@ -179,6 +180,7 @@ export default function Stories() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </main>
   )
 }
