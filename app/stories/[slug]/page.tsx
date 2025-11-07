@@ -20,7 +20,7 @@ const articles: Record<string, StoryArticle> = {
     category: 'AI Research',
     heroImage: 'https://cdn.marblism.com/gLWMW21Unfv.webp',
     content: (
-      <div className="prose prose-lg max-w-none text-neutral-dark">
+      <div className="prose prose-lg max-w-none text-neutral-white/90">
         <p className="text-lg leading-relaxed mb-6">
           Imagine an AI that doesn't just answer your questions: it actually learns and improves itself while you're using it. No human intervention, no manual retraining, no waiting months for updates. That's exactly what MIT's SEAL (Self-Adapting Language Models) brings to the table, and it's honestly pretty mind-blowing.
         </p>
@@ -28,7 +28,7 @@ const articles: Record<string, StoryArticle> = {
           Most AI models today are like frozen snapshots. They're trained once, then deployed, and that's it. ChatGPT, Claude, even GPT-4: they're all stuck with the knowledge they had during training. But SEAL changes everything by letting language models teach themselves new tricks on the fly.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Self-Edit Revolution</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Self-Edit Revolution</h2>
         <p className="mb-6">
           Here's where things get interesting. SEAL works through something called "self-edits", basically, the AI generates its own training instructions. Think of it like an AI writing its own homework, then grading it, then improving based on what it learned.
         </p>
@@ -46,7 +46,7 @@ const articles: Record<string, StoryArticle> = {
           The process is surprisingly elegant. The model looks at new data, generates a self-edit (like "focus more on temporal relationships" or "prioritize factual accuracy over creative expression"), applies that edit to itself, and then tests whether the change actually improved performance. If it did, great: the edit sticks. If not, it gets discarded.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Two-Loop Learning System</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Two-Loop Learning System</h2>
         <p className="mb-6">
           SEAL uses a sophisticated dual-loop architecture that's honestly pretty clever. The outer loop handles the reinforcement learning: figuring out which self-edits actually work. The inner loop applies those edits through supervised fine-tuning, actually updating the model's weights.
         </p>
@@ -57,12 +57,12 @@ const articles: Record<string, StoryArticle> = {
           This dual-loop approach solves a major problem: how do you train an AI to train itself without ending up with a mess? The answer is careful reinforcement learning that only rewards genuine improvements.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Real-World Applications</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Real-World Applications</h2>
         <p className="mb-6">
           SEAL isn't just theoretical: it's showing real results in two key areas.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Knowledge Incorporation</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Knowledge Incorporation</h3>
         <p className="mb-6">
           Knowledge Incorporation is where SEAL really shines. Give it a new piece of information, and it doesn't just memorize it: it generates logical implications and synthetic data to fully integrate that knowledge. This means the model can answer related questions without needing the original context every time.
         </p>
@@ -70,7 +70,7 @@ const articles: Record<string, StoryArticle> = {
           For example, if you tell SEAL about a new scientific discovery, it'll generate related facts, implications, and connections to existing knowledge. Then it uses all of that to update itself, making the new knowledge truly part of its understanding rather than just a memorized fact.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Few-Shot Learning</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Few-Shot Learning</h3>
         <p className="mb-6">
           Few-Shot Learning is the second application, tested on the challenging ARC benchmark for abstract reasoning. Here, SEAL learns to autonomously select data augmentations and training configurations when faced with new tasks. Instead of using predetermined approaches, it figures out its own training strategies based on just a few examples.
         </p>
@@ -82,7 +82,7 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Technical Breakthroughs That Matter</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Technical Breakthroughs That Matter</h2>
         <p className="mb-6">
           The performance numbers are impressive. SEAL has shown it can outperform static models, including GPT-4, on certain benchmarks. But the real breakthrough isn't just better performance: it's the autonomous improvement capability.
         </p>
@@ -93,7 +93,7 @@ const articles: Record<string, StoryArticle> = {
           The model generates synthetic data that's specifically designed to reinforce important knowledge while learning new tasks. It's like having a study buddy that creates practice questions to help you remember old material while learning new subjects.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Challenges Are Real</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Challenges Are Real</h2>
         <p className="mb-6">
           Let's be honest: SEAL isn't perfect. The computational demands are significant. All that self-editing and continuous learning requires substantial processing power. For businesses, this means higher infrastructure costs, at least initially.
         </p>
@@ -111,7 +111,7 @@ const articles: Record<string, StoryArticle> = {
           There's also the question of control. When an AI system can modify itself, ensuring it stays aligned with intended goals becomes more complex. SEAL includes safeguards, but autonomous self-improvement always carries inherent risks that need careful management.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Why This Matters for Your Business</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Why This Matters for Your Business</h2>
         <p className="mb-6">
           If you're running a business that depends on AI, SEAL represents a fundamental shift in what's possible. Instead of being stuck with static models that become outdated, you could have AI systems that continuously improve and adapt to your specific needs.
         </p>
@@ -125,7 +125,7 @@ const articles: Record<string, StoryArticle> = {
           For companies like Lyvena, which focus on AI development, SEAL opens up entirely new possibilities for creating truly adaptive AI solutions. Our approach to AI development could potentially integrate self-adapting capabilities, offering clients AI that genuinely evolves with their business needs.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Bigger Picture</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Bigger Picture</h2>
         <p className="mb-6">
           SEAL represents more than just a technical advancement: it's a step toward AI systems that can truly learn and grow autonomously. We're moving from static models toward dynamic, self-improving systems that could revolutionize how we think about AI deployment and maintenance.
         </p>
@@ -161,12 +161,12 @@ const articles: Record<string, StoryArticle> = {
           While we haven't yet created true ASI, the acceleration of AI development in recent years has shifted these conversations from science fiction into serious strategic discussions. As we edge closer to this technological milestone, understanding its far-reaching implications becomes increasingly important for businesses, technologists, and society at large.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Transforming Business Landscapes</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Transforming Business Landscapes</h2>
         <p className="mb-6">
           The business world stands to undergo profound transformation with the emergence of ASI technologies. These changes will reshape entire industries and create entirely new business models.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Exponential Productivity and Automation</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Exponential Productivity and Automation</h3>
         <p className="mb-6">
           ASI's impact on business productivity would dwarf today's AI efficiencies. Systems capable of superhuman reasoning could optimize supply chains, product development, and market strategies with unprecedented accuracy.
         </p>
@@ -184,7 +184,7 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Job Evolution, Not Just Displacement</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Job Evolution, Not Just Displacement</h3>
         <p className="mb-6">
           While concerns about job displacement are valid, the relationship between ASI and employment is more nuanced than simple replacement. As with previous technological revolutions, new job categories will emerge:
         </p>
@@ -210,7 +210,7 @@ const articles: Record<string, StoryArticle> = {
           The most significant shift will be in how work is defined. ASI could eliminate routine cognitive labor, potentially freeing humans to focus on uniquely human contributions involving creativity, empathy, and purpose-driven activities.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Competitive Dynamics and Market Concentration</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Competitive Dynamics and Market Concentration</h3>
         <p className="mb-6">
           Access to ASI capabilities will likely become a critical competitive advantage, potentially accelerating winner-take-all dynamics in many industries. Companies with early ASI adoption may establish nearly insurmountable leads in their sectors.
         </p>
@@ -218,12 +218,12 @@ const articles: Record<string, StoryArticle> = {
           This raises important questions about market competition and antitrust frameworks. Regulators may need to develop entirely new approaches to ensure healthy market dynamics in an ASI-powered economy.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Reshaping Society's Fundamental Structures</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Reshaping Society's Fundamental Structures</h2>
         <p className="mb-6">
           ASI's impacts extend far beyond business, potentially transforming core social institutions and human experiences.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Healthcare Revolution</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Healthcare Revolution</h3>
         <p className="mb-6">
           Perhaps no area stands to benefit more immediately from ASI than healthcare. Superintelligent systems could:
         </p>
@@ -249,7 +249,7 @@ const articles: Record<string, StoryArticle> = {
           ASI could reduce healthcare costs by up to $100 billion annually while dramatically improving outcomes. More profoundly, it might fundamentally alter our relationship with mortality by enabling breakthroughs in longevity research.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Education Reimagined</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Education Reimagined</h3>
         <p className="mb-6">
           Educational systems designed for the industrial era will require complete reimagining in an ASI world. When superintelligent systems can perform most routine cognitive tasks, education must shift toward nurturing uniquely human capacities.
         </p>
@@ -282,7 +282,7 @@ const articles: Record<string, StoryArticle> = {
           ASI could simultaneously serve as the ultimate personalized tutor, adapting perfectly to each learner's needs while expanding access to world-class education globally.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Governance and Democracy</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Governance and Democracy</h3>
         <p className="mb-6">
           Democratic institutions face both opportunities and challenges with ASI. On one hand, superintelligent systems could:
         </p>
@@ -315,12 +315,12 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Accelerating Technological Evolution</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Accelerating Technological Evolution</h2>
         <p className="mb-6">
           ASI represents not just another technology but potentially a final invention—a system capable of recursive self-improvement and technological development beyond human capability.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Scientific Breakthroughs and Innovation</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Scientific Breakthroughs and Innovation</h3>
         <p className="mb-6">
           The most immediate technological impact of ASI would likely be a cascade of scientific breakthroughs across fields:
         </p>
@@ -346,7 +346,7 @@ const articles: Record<string, StoryArticle> = {
           ASI's ability to synthesize knowledge across domains could unlock solutions to problems that have stymied human researchers for decades.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">The Technological Singularity Question</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">The Technological Singularity Question</h3>
         <p className="mb-6">
           Many ASI researchers discuss the concept of a "technological singularity"—a hypothetical point where technological growth becomes uncontrollable and irreversible, resulting in unforeseeable changes to human civilization.
         </p>
@@ -354,7 +354,7 @@ const articles: Record<string, StoryArticle> = {
           While speculative, this concept highlights how ASI fundamentally differs from other technologies. A superintelligent system capable of improving itself could potentially trigger an intelligence explosion, leading to capabilities that are currently unimaginable.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Infrastructure and Energy Requirements</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Infrastructure and Energy Requirements</h3>
         <p className="mb-6">
           The computational requirements for true ASI would likely be enormous, raising questions about energy usage and environmental impact. Current AI models already consume significant resources; ASI systems would require orders of magnitude more computing power.
         </p>
@@ -376,12 +376,12 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Ethical Imperatives and Existential Considerations</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Ethical Imperatives and Existential Considerations</h2>
         <p className="mb-6">
           Perhaps no aspect of ASI development is more important than the ethical frameworks guiding its creation.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Alignment with Human Values</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Alignment with Human Values</h3>
         <p className="mb-6">
           The "alignment problem"—ensuring ASI systems act in accordance with human values—represents one of the most crucial challenges in AI development. A superintelligent system with misaligned goals could, even unintentionally, cause significant harm.
         </p>
@@ -407,7 +407,7 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Existential Risk Management</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Existential Risk Management</h3>
         <p className="mb-6">
           ASI development carries both tremendous promise and potential existential risks. Managing these risks requires unprecedented international cooperation, transparency, and safety protocols.
         </p>
@@ -433,7 +433,7 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Distributing Benefits Equitably</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Distributing Benefits Equitably</h3>
         <p className="mb-6">
           Perhaps the most significant ethical question is how ASI's immense benefits will be distributed. Will superintelligence exacerbate existing inequalities, or can it be deployed to create more equitable societies?
         </p>
@@ -448,7 +448,7 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Preparing for an ASI Future</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Preparing for an ASI Future</h2>
         <p className="mb-6">
           While true ASI remains theoretical, the acceleration of AI capabilities suggests that preparing for this possibility is prudent for businesses, governments, and individuals.
         </p>
@@ -495,7 +495,7 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Conclusion: Navigating the Greatest Transition</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Conclusion: Navigating the Greatest Transition</h2>
         <p className="mb-6">
           The potential development of Artificial SuperIntelligence represents perhaps the most significant transition in human history. Its impacts on business, society, and technology would be transformative in ways we can only begin to imagine.
         </p>
@@ -528,7 +528,7 @@ const articles: Record<string, StoryArticle> = {
           The next milestone is Artificial General Intelligence (AGI)—AI that can understand, learn, and apply knowledge across diverse domains at a human level. And beyond that lies ASI: intelligence that surpasses human cognitive abilities across all domains.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Shifting Timeline of Advanced AI</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Shifting Timeline of Advanced AI</h2>
         <p className="mb-6">
           The projected timeline for achieving these advanced forms of AI has undergone significant revision in recent years. As recently as 2020, many AI researchers placed AGI development around 2060. Fast forward to today, and prominent figures in the tech industry are suggesting we could see AGI emerge as early as 2030.
         </p>
@@ -543,7 +543,7 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Expert Predictions: When Might ASI Arrive?</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Expert Predictions: When Might ASI Arrive?</h2>
         <p className="mb-6">
           The timeline for achieving superintelligence varies significantly among experts:
         </p>
@@ -565,27 +565,27 @@ const articles: Record<string, StoryArticle> = {
           What's particularly notable is how these predictions have accelerated. Developments that were expected to take decades have been compressed into years, forcing even skeptical experts to revise their timelines.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Technical Barriers to Superintelligence</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Technical Barriers to Superintelligence</h2>
         <p className="mb-6">
           While the progress is impressive, several significant challenges stand between our current capabilities and true superintelligence:
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">1. The Consciousness Question</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">1. The Consciousness Question</h3>
         <p className="mb-6">
           Despite advances in neural networks and deep learning, we have yet to develop AI systems with self-awareness or consciousness—qualities that many consider essential components of superintelligence. Our understanding of how human consciousness emerges remains incomplete, making it difficult to replicate in artificial systems.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">2. The Alignment Problem</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">2. The Alignment Problem</h3>
         <p className="mb-6">
           As AI capabilities increase, ensuring these systems act in accordance with human values becomes increasingly complex. This "alignment problem"—how to control an AI system smarter than its creators—represents one of the most significant challenges to safe ASI development.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">3. Hardware Limitations</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">3. Hardware Limitations</h3>
         <p className="mb-6">
           Current AI systems require enormous computational resources. Training leading models often costs tens of millions of dollars and consumes massive amounts of energy. Achieving ASI may require computational power well beyond current capabilities.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">4. Quantum Computing: A Potential Catalyst</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">4. Quantum Computing: A Potential Catalyst</h3>
         <p className="mb-6">
           Quantum computing represents a potential solution to the hardware limitations. These systems leverage quantum mechanics to perform calculations that would be practically impossible for traditional computers. While still in early development stages, quantum computing could accelerate ASI development by overcoming current computational barriers.
         </p>
@@ -597,42 +597,42 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Recent Developments Accelerating the Timeline</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Recent Developments Accelerating the Timeline</h2>
         <p className="mb-6">
           Several key developments in AI research have dramatically altered predictions about superintelligence timelines:
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">The Impact of Foundation Models</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">The Impact of Foundation Models</h3>
         <p className="mb-6">
           The emergence of foundation models—large AI systems trained on diverse data that can be adapted to a wide range of tasks—has demonstrated capabilities previously thought to be decades away. These systems can write stories, generate code, create images, and even reason through complex problems with minimal additional training.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Multimodal Learning</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Multimodal Learning</h3>
         <p className="mb-6">
           Recent AI systems can process and generate content across multiple modalities—text, images, audio, and video. This ability to integrate different types of information represents a significant step toward more generalized intelligence.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Self-Improvement Capabilities</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Self-Improvement Capabilities</h3>
         <p className="mb-6">
           Some AI systems have demonstrated limited abilities to improve their own performance, suggesting pathways toward recursive self-improvement—a key characteristic expected in superintelligent systems.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">A Realistic Assessment</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">A Realistic Assessment</h2>
         <p className="mb-6">
           Despite these advancements, several factors suggest caution when predicting imminent ASI:
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">The Plateauing Effect</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">The Plateauing Effect</h3>
         <p className="mb-6">
           While progress in AI has been remarkable, we've also observed that improvements often plateau after initial breakthroughs. Current language models, for instance, still struggle with factual accuracy, causal reasoning, and planning—capabilities essential for superintelligence.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">The Black Box Problem</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">The Black Box Problem</h3>
         <p className="mb-6">
           Many advanced AI systems operate as "black boxes," with decision-making processes that are opaque even to their creators. This lack of interpretability poses challenges for further development and raises questions about reliability.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">From Imitation to Innovation</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">From Imitation to Innovation</h3>
         <p className="mb-6">
           Current AI systems excel at pattern recognition and imitation but struggle with genuine innovation. True superintelligence would require not just processing existing knowledge but generating novel insights and discoveries.
         </p>
@@ -644,12 +644,12 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Implications for Business and Society</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Implications for Business and Society</h2>
         <p className="mb-6">
           Whether ASI emerges in 2030 or 2100, the trajectory toward increasingly capable AI systems carries profound implications:
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">For Businesses</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">For Businesses</h3>
         <p className="mb-6">
           Organizations should prepare for continued AI advancement by:
         </p>
@@ -668,7 +668,7 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">For Society</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">For Society</h3>
         <p className="mb-6">
           The progress toward ASI necessitates:
         </p>
@@ -687,12 +687,12 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Lyvena's Perspective</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Lyvena's Perspective</h2>
         <p className="mb-6">
           At Lyvena, we believe in responsible AI development that prioritizes human values while pushing technological boundaries. We approach advanced AI development with both optimism about its potential benefits and caution regarding potential risks.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Most Likely Path Forward</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Most Likely Path Forward</h2>
         <p className="mb-6">
           Based on current research and expert consensus, the most plausible timeline suggests:
         </p>
@@ -714,7 +714,7 @@ const articles: Record<string, StoryArticle> = {
           This timeline remains highly speculative and could accelerate dramatically with unexpected breakthroughs or slow significantly if we encounter unforeseen obstacles.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Conclusion: Preparing for an Uncertain Future</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Conclusion: Preparing for an Uncertain Future</h2>
         <p className="mb-6">
           The question "How close are we to achieving Artificial Superintelligence?" has no definitive answer. What's clear is that the timeline has compressed significantly in recent years, and developments once thought to be decades away may arrive much sooner.
         </p>
@@ -743,7 +743,7 @@ const articles: Record<string, StoryArticle> = {
           The question isn't whether generative AI will change your industry: it's how quickly you'll adapt to leverage these breakthroughs. Let's explore the most significant developments that are powering smarter content and code generation in 2025.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Rise of Agentic AI: Intelligence That Works Independently</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Rise of Agentic AI: Intelligence That Works Independently</h2>
         <p className="mb-6">
           The most game-changing breakthrough this year is the emergence of <strong>agentic AI</strong>: intelligent systems that operate autonomously with minimal human intervention. Unlike traditional AI that waits for prompts, these goal-oriented systems dynamically respond to real-time data and make decisions independently.
         </p>
@@ -761,7 +761,7 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Multimodal Integration: When AI Speaks Every Language</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Multimodal Integration: When AI Speaks Every Language</h2>
         <p className="mb-6">
           One of 2025's most revolutionary developments is <strong>multimodal generative AI</strong> that seamlessly integrates text, images, video, audio, and code into unified workflows. Earlier AI models handled different formats in fragmented ways: imagine trying to have a conversation where you could only speak one word at a time.
         </p>
@@ -772,7 +772,7 @@ const articles: Record<string, StoryArticle> = {
           What does this mean practically? AI systems now produce cohesive outputs that might include written specifications, visual mockups, audio narration, and functional code: all generated together as a complete solution rather than separate pieces you'd need to manually combine.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Content Creation Gets a Major Upgrade</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Content Creation Gets a Major Upgrade</h2>
         <p className="mb-6">
           Content creation in 2025 has transformed into a highly automated and sophisticated process. AI systems now produce multi-modal content that combines text, images, audio, and video in seamless interactions, going far beyond the simple text generators of previous years.
         </p>
@@ -790,7 +790,7 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Code Generation: From Concept to Working Software</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Code Generation: From Concept to Working Software</h2>
         <p className="mb-6">
           Software development has experienced a paradigm shift with generative AI's enhanced code generation capabilities. The technology now produces functional code that runs without errors, dramatically accelerating development timelines and reducing the barrier to entry for complex programming tasks.
         </p>
@@ -801,7 +801,7 @@ const articles: Record<string, StoryArticle> = {
           For development teams, this means moving from concept to working prototype much faster than traditional methods allow. AI can now handle everything from front-end interfaces to backend logic, API integrations, and database structures: creating comprehensive applications from natural language descriptions.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">On-Device AI: Power in Your Hands</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">On-Device AI: Power in Your Hands</h2>
         <p className="mb-6">
           A major breakthrough in 2025 is the proliferation of on-device AI capabilities and AI Copilot PCs that bring generative power directly to personal and enterprise devices. This development eliminates the constant need for cloud access, making AI tools more accessible and responsive for everyday use.
         </p>
@@ -819,7 +819,7 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Scientific Applications: Accelerating Discovery</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Scientific Applications: Accelerating Discovery</h2>
         <p className="mb-6">
           Generative AI is driving unprecedented scientific breakthroughs across multiple disciplines. Microsoft Research's development of AI2BMD, an AI-driven protein simulation system, exemplifies how the technology is revolutionizing biomolecular science, drug discovery, and protein design.
         </p>
@@ -830,12 +830,12 @@ const articles: Record<string, StoryArticle> = {
           These applications demonstrate how generative AI is becoming essential for addressing some of the world's most pressing scientific problems, from climate change to healthcare innovation.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">What This Means for Your Business</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">What This Means for Your Business</h2>
         <p className="mb-6">
           The developments in 2025 represent a fundamental shift where AI evolves from being a supplementary tool to becoming an integral part of both professional and creative workflows. For businesses, this creates both opportunities and challenges:
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Opportunities:</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Opportunities:</h3>
         <ul className="space-y-3 mb-6 ml-6">
           <li className="flex items-start">
             <span className="text-accent mr-3 font-bold">•</span>
@@ -855,7 +855,7 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Challenges:</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Challenges:</h3>
         <ul className="space-y-3 mb-6 ml-6">
           <li className="flex items-start">
             <span className="text-accent mr-3 font-bold">•</span>
@@ -875,7 +875,7 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Road Ahead</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Road Ahead</h2>
         <p className="mb-6">
           With OpenAI's anticipated launch of GPT-5 promising transformative improvements in understanding, reasoning, memory, and adaptability, 2025 is setting the stage for even more sophisticated applications. Early indications suggest the model will enable smarter virtual agents, deeper customer insights, and hyper-personalized content at unprecedented scale.
         </p>
@@ -883,7 +883,7 @@ const articles: Record<string, StoryArticle> = {
           For businesses and developers, these advancements promise to supercharge conversion-focused content and power dynamic, AI-driven storytelling capabilities that surpass current limitations. The foundation being established in 2025 will enable even more revolutionary applications in the years ahead.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Conclusion</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Conclusion</h2>
         <p className="mb-6">
           The generative AI breakthroughs of 2025 aren't just technological achievements: they're the building blocks of a new era where human creativity and artificial intelligence work together to solve complex problems, create engaging content, and build powerful software solutions faster and more efficiently than ever before.
         </p>
@@ -901,12 +901,12 @@ const articles: Record<string, StoryArticle> = {
     category: 'AI Development',
     heroImage: 'https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/c231cced-c53d-4ae2-8a7a-16464710ac52-hero-picture.webp',
     content: (
-      <div className="prose prose-lg max-w-none text-neutral-dark">
+      <div className="prose prose-lg max-w-none text-neutral-white/90">
         <p className="text-lg leading-relaxed mb-6">
           In today's rapidly evolving digital landscape, businesses face a critical challenge: how to build technology solutions that not only meet current needs but also remain viable for years to come. At Lyvena, we've discovered that the answer lies at the intersection of artificial intelligence and responsible development practices. The result? Digital solutions that scale effectively, deliver consistent value, and stand the test of time.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Why Traditional Development Often Falls Short</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Why Traditional Development Often Falls Short</h2>
         <p className="mb-6">
           Many businesses have experienced the frustration of investing in digital solutions that quickly become outdated or unable to handle growth. The traditional development cycle often faces several limitations:
         </p>
@@ -932,12 +932,12 @@ const articles: Record<string, StoryArticle> = {
           These challenges have pushed forward-thinking organizations to explore AI-powered development approaches. However, not all AI implementations are created equal. The difference between a short-lived solution and one with lasting impact often comes down to how responsibly the AI is designed and deployed.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Five Pillars of Responsible AI Development</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Five Pillars of Responsible AI Development</h2>
         <p className="mb-6">
           At Lyvena, we've built our development philosophy around five essential pillars that ensure our AI-powered solutions deliver sustained value.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">1. Fairness and Inclusivity</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">1. Fairness and Inclusivity</h3>
         <p className="mb-6">
           Responsible AI systems must work equitably for all users, regardless of background or characteristics. This means carefully examining data sets for potential biases and implementing safeguards to prevent discriminatory outcomes.
         </p>
@@ -952,7 +952,7 @@ const articles: Record<string, StoryArticle> = {
           For example, in recruitment applications, AI systems must be designed to evaluate candidates based on relevant qualifications rather than factors like gender, age, or ethnicity. Companies like IBM have made significant strides in this area with systems like Watsonx Orchestrate, which helps managers select candidates from diverse talent pools with reduced bias.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">2. Transparency and Explainability</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">2. Transparency and Explainability</h3>
         <p className="mb-6">
           When AI makes or influences decisions, users should understand how those decisions are reached. This transparency builds trust and allows for more effective human oversight.
         </p>
@@ -977,7 +977,7 @@ const articles: Record<string, StoryArticle> = {
           Atlassian Intelligence demonstrates the value of this approach, providing clear explanations for AI decisions that help users trust and effectively utilize the system's capabilities.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">3. Security and Privacy</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">3. Security and Privacy</h3>
         <p className="mb-6">
           As AI systems process increasing volumes of sensitive data, robust security and privacy protections become non-negotiable elements of responsible development.
         </p>
@@ -1009,7 +1009,7 @@ const articles: Record<string, StoryArticle> = {
           These measures help ensure that AI-powered solutions remain secure against evolving threats while protecting user privacy and maintaining compliance with regulations like GDPR and CCPA.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">4. Accountability and Validation</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">4. Accountability and Validation</h3>
         <div className="my-8 rounded-lg overflow-hidden">
           <img
             src="https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/6327318b-2ec1-4de4-b58e-62e951f9a451-ai-accountability-validation-dashboard.webp"
@@ -1045,7 +1045,7 @@ const articles: Record<string, StoryArticle> = {
           Financial institutions implementing AI for credit scoring, like the FICO Score system, demonstrate how proper validation and accountability measures can ensure fair and accurate assessments over time.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">5. Sustainability</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">5. Sustainability</h3>
         <p className="mb-6">
           The environmental impact of AI systems can be significant, particularly for solutions that require extensive computational resources. Responsible AI development must consider sustainability both in terms of environmental impact and long-term operational viability.
         </p>
@@ -1053,22 +1053,22 @@ const articles: Record<string, StoryArticle> = {
           Lyvena prioritizes efficient algorithms and infrastructure that minimize energy consumption while maintaining performance. Additionally, we design systems with modular architectures that can evolve over time without requiring complete rebuilds, reducing technical waste and extending solution lifespans.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Real Results: The Business Impact of Responsible AI</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Real Results: The Business Impact of Responsible AI</h2>
         <p className="mb-6">
           The business benefits of responsibly developed AI solutions extend far beyond ethical considerations. Organizations implementing these principles typically see:
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Improved ROI and Lower Total Cost of Ownership</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Improved ROI and Lower Total Cost of Ownership</h3>
         <p className="mb-6">
           Scalable, responsible AI solutions may require more thoughtful planning initially, but they typically deliver superior long-term ROI. By avoiding the need for frequent rebuilds and managing technical debt proactively, businesses reduce their total cost of ownership while extending the productive lifespan of their digital assets.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Enhanced Customer Trust and Loyalty</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Enhanced Customer Trust and Loyalty</h3>
         <p className="mb-6">
           In an era of increasing privacy concerns, organizations that demonstrate responsible AI practices build stronger relationships with their customers. Transparency around data usage and algorithmic decision-making fosters trust that translates to improved customer retention and brand reputation.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Greater Adaptability to Change</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Greater Adaptability to Change</h3>
         <div className="my-8 rounded-lg overflow-hidden">
           <img
             src="https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/abc0bd75-9e18-46ca-b1de-22131b1f234a-modular-ai-architecture-evolving.webp"
@@ -1083,12 +1083,12 @@ const articles: Record<string, StoryArticle> = {
           A client in the healthcare sector recently told us: "What impressed us most about Lyvena's approach wasn't just the initial functionality, but how easily the system has accommodated our evolving needs over the past two years. It's grown with us rather than constraining us."
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Reduced Regulatory and Reputational Risk</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Reduced Regulatory and Reputational Risk</h3>
         <p className="mb-6">
           As AI regulation increases globally, organizations with established responsible AI practices face significantly lower compliance burdens and reputational risks. By proactively addressing ethical considerations in AI development, businesses position themselves advantageously for future regulatory changes.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">How Lyvena Builds Lasting Digital Solutions</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">How Lyvena Builds Lasting Digital Solutions</h2>
         <p className="mb-6">
           At Lyvena, our approach to building scalable, responsible AI solutions follows a proven methodology:
         </p>
@@ -1115,7 +1115,7 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ol>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Getting Started with Responsible AI Development</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Getting Started with Responsible AI Development</h2>
         <p className="mb-6">
           For organizations looking to implement responsible AI principles in their digital solutions, we recommend starting with these steps:
         </p>
@@ -1142,7 +1142,7 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ol>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Conclusion: The Long-Term Advantage</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Conclusion: The Long-Term Advantage</h2>
         <p className="mb-6">
           As AI technologies continue to advance, the distinction between organizations that implement AI responsibly and those that rush to deployment without adequate safeguards will become increasingly apparent. Businesses that embrace responsible AI development now will enjoy significant advantages in terms of solution longevity, adaptability, and customer trust.
         </p>
@@ -1163,8 +1163,8 @@ const articles: Record<string, StoryArticle> = {
     category: 'AI Agents',
     heroImage: 'https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/e1443083-b99c-41e3-aefa-9a4095e4310e-hero-picture.webp',
     content: (
-      <div className="prose prose-lg max-w-none text-neutral-dark">
-        <h2 className="text-3xl font-bold text-neutral-dark mt-0 mb-6">The New Development Paradigm</h2>
+      <div className="prose prose-lg max-w-none text-neutral-white/90">
+        <h2 className="text-3xl font-bold text-white mt-0 mb-6">The New Development Paradigm</h2>
         <p className="text-lg leading-relaxed mb-6">
           The tech world is witnessing a fundamental shift. Traditional development cycles—once measured in months—are now compressed into weeks or even days. This dramatic acceleration isn't happening by accident. It's being driven by a technological revolution: AI development agents.
         </p>
@@ -1172,7 +1172,7 @@ const articles: Record<string, StoryArticle> = {
           At Lyvena, we've been at the forefront of this transformation, leveraging sophisticated AI agents to redefine what's possible in web and app development. The results? Faster delivery times, reduced costs, and superior quality output that adapts to evolving business needs.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">What Are AI Development Agents?</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">What Are AI Development Agents?</h2>
         <p className="mb-6">
           AI development agents are autonomous or semi-autonomous software systems designed to handle specific aspects of the development process. Unlike traditional development tools that require constant human direction, these agents can understand requirements, generate code, test solutions, and even deploy applications with minimal human intervention.
         </p>
@@ -1187,7 +1187,7 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Why Traditional Development Is Hitting a Wall</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Why Traditional Development Is Hitting a Wall</h2>
         <p className="mb-6">
           Before diving deeper into AI agents, let's recognize why this innovation was necessary in the first place:
         </p>
@@ -1217,27 +1217,27 @@ const articles: Record<string, StoryArticle> = {
           The consequences are clear: delayed launches, budget overruns, and frustrated stakeholders. In a business environment where digital transformation is essential for survival, these limitations became increasingly unacceptable.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">How AI Agents Transform the Development Landscape</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">How AI Agents Transform the Development Landscape</h2>
         <p className="mb-6">
           AI development agents address these challenges by fundamentally restructuring the development process. Here's how they're changing the game:
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">1. Accelerated Development Cycles</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">1. Accelerated Development Cycles</h3>
         <p className="mb-6">
           AI agents don't need coffee breaks, don't get stuck in meetings, and don't sleep. They can work continuously, processing requirements and generating code at speeds no human team could match. At Lyvena, we've seen projects that would typically take 8-10 weeks completed in just 2-3 weeks with our AI agent approach.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">2. Consistent Quality Standards</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">2. Consistent Quality Standards</h3>
         <p className="mb-6">
           Unlike human developers who may vary in skill level or have different coding styles, AI agents follow consistent patterns and best practices. They don't cut corners when tired or rush code when deadlines loom. The result is more reliable, maintainable code that adheres to industry standards.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">3. Intelligent Resource Allocation</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">3. Intelligent Resource Allocation</h3>
         <p className="mb-6">
           Our AI agents automatically prioritize tasks, identify dependencies, and allocate resources efficiently. This intelligent workflow management ensures that human developers focus on high-value creative work while routine tasks are handled autonomously.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">4. Continuous Learning and Improvement</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">4. Continuous Learning and Improvement</h3>
         <p className="mb-6">
           Perhaps most importantly, AI agents improve over time. They learn from every project, incorporating successful patterns and avoiding approaches that caused issues in the past. This continuous refinement means development quality increases with each project.
         </p>
@@ -1249,12 +1249,12 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Lyvena's Approach: Beyond Basic AI</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Lyvena's Approach: Beyond Basic AI</h2>
         <p className="mb-6">
           While many companies claim to use AI in development, Lyvena has pioneered a truly integrated approach that goes beyond surface-level automation. Our methodology combines three critical elements:
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Specialized AI Agents with Defined Roles</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Specialized AI Agents with Defined Roles</h3>
         <p className="mb-6">
           Rather than using a single general-purpose AI, we deploy specialized agents for different aspects of development:
         </p>
@@ -1284,7 +1284,7 @@ const articles: Record<string, StoryArticle> = {
           These specialized agents communicate and collaborate, creating a virtual development team that works in harmony.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Human-AI Collaboration Framework</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Human-AI Collaboration Framework</h3>
         <p className="mb-6">
           We don't view AI as a replacement for human expertise, but as an amplifier. Our framework creates structured touchpoints between human developers and AI agents:
         </p>
@@ -1307,7 +1307,7 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Continuous Evolution Infrastructure</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Continuous Evolution Infrastructure</h3>
         <p className="mb-6">
           Unlike static development tools, our AI agent ecosystem continuously evolves:
         </p>
@@ -1330,22 +1330,22 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Real-World Impact: Case Studies in Transformation</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Real-World Impact: Case Studies in Transformation</h2>
         <p className="mb-6">
           The proof is in the results. Here are just a few examples of how our AI agent approach has transformed development projects:
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">E-Commerce Platform Relaunch: 70% Faster Development</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">E-Commerce Platform Relaunch: 70% Faster Development</h3>
         <p className="mb-6">
           A mid-sized retailer needed to completely rebuild their aging e-commerce platform. Traditional estimates put the project at 6 months. Using our AI agent approach, we delivered the complete solution in just 8 weeks. The platform included custom product filtering, inventory management integration, and a mobile-optimized customer experience.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">FinTech Dashboard: 65% Cost Reduction</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">FinTech Dashboard: 65% Cost Reduction</h3>
         <p className="mb-6">
           A financial services startup needed a complex analytics dashboard for their users. Traditional development quotes exceeded their budget by a significant margin. Our AI agent approach delivered the solution at 35% of the original projected cost, without compromising on features or quality.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Healthcare Portal: Complexity Without Compromise</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Healthcare Portal: Complexity Without Compromise</h3>
         <p className="mb-6">
           A healthcare provider needed a HIPAA-compliant patient portal with intricate scheduling and record-access features. The regulatory requirements and security considerations added significant complexity. Our AI agents navigated these challenges while still delivering the solution 40% faster than conventional approaches.
         </p>
@@ -1357,32 +1357,32 @@ const articles: Record<string, StoryArticle> = {
           />
         </div>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Beyond Speed: The Broader Benefits</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Beyond Speed: The Broader Benefits</h2>
         <p className="mb-6">
           While accelerated development is the most immediately visible benefit of AI agents, the advantages extend far beyond just getting to market quickly:
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Adaptability to Changing Requirements</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Adaptability to Changing Requirements</h3>
         <p className="mb-6">
           Business needs evolve, especially during development. Traditional projects struggle with changing requirements, often requiring extensive rework or compromises. AI agents can rapidly adjust to new requirements, regenerating affected components while maintaining overall system integrity.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Reduced Technical Debt</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Reduced Technical Debt</h3>
         <p className="mb-6">
           Rushed development often creates technical debt—shortcuts and suboptimal solutions that create long-term maintenance issues. Our AI agents consistently follow best practices and generate well-structured, documented code, significantly reducing technical debt.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Scalability Without Exponential Costs</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Scalability Without Exponential Costs</h3>
         <p className="mb-6">
           As projects grow in scope, traditional development costs tend to scale exponentially. With AI agents, scaling is more linear, allowing ambitious projects to remain economically viable.
         </p>
 
-        <h3 className="text-2xl font-bold text-neutral-dark mt-10 mb-4">Knowledge Retention and Transfer</h3>
+        <h3 className="text-2xl font-bold text-white mt-10 mb-4">Knowledge Retention and Transfer</h3>
         <p className="mb-6">
           When developers leave a project or organization, they take valuable knowledge with them. AI agents maintain a consistent understanding of the codebase and architecture, ensuring continuity even when team composition changes.
         </p>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">The Future of Development Is Here</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">The Future of Development Is Here</h2>
         <p className="mb-6">
           The AI agent revolution isn't just coming—it's already transforming how leading organizations approach development. At Lyvena, we're continuously advancing our AI capabilities, exploring new ways to make development faster, more efficient, and more accessible.
         </p>
@@ -1408,7 +1408,7 @@ const articles: Record<string, StoryArticle> = {
           </li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-neutral-dark mt-12 mb-6">Is Your Organization Ready?</h2>
+        <h2 className="text-3xl font-bold text-white mt-12 mb-6">Is Your Organization Ready?</h2>
         <p className="mb-6">
           The gap between organizations embracing AI-powered development and those relying on traditional approaches is widening. Those who adapt will enjoy significant competitive advantages: faster time to market, reduced costs, and the ability to rapidly iterate based on user feedback.
         </p>
@@ -1475,7 +1475,7 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
           </div>
 
           {/* Content */}
-          <div className="prose prose-invert max-w-none mb-12">
+          <div className="prose prose-invert max-w-none mb-12 prose-p:text-neutral-white/90 prose-h2:text-white prose-h3:text-white prose-li:text-neutral-white/90 prose-strong:text-neutral-white">
             {article.content}
           </div>
 
