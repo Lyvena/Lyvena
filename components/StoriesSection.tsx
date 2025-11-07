@@ -6,6 +6,13 @@ import Link from 'next/link'
 export default function StoriesSection() {
   const recentArticles = [
     {
+      title: 'Mojo vs Python: Why Mojo Might Be the Future of AI Coding',
+      excerpt: 'Discover why Mojo, the new superset of Python, is revolutionizing AI development with speeds up to 35,000 times faster than Python.',
+      slug: 'mojo-vs-python-future-ai-coding',
+      category: 'AI Development',
+      image: 'https://cdn.marblism.com/2reCTwroN9v.webp',
+    },
+    {
       title: 'MIT SEAL: The Self-Adapting Language Models Redefining AI Learning',
       excerpt: 'Discover how MIT\'s SEAL technology enables AI models to learn and improve themselves autonomously without human intervention.',
       slug: 'mit-seal-self-adapting-language-models',

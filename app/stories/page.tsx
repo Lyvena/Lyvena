@@ -17,6 +17,16 @@ interface StoryPost {
 
 const storyPosts: StoryPost[] = [
   {
+    id: '7',
+    title: 'Mojo vs Python: Why Mojo Might Be the Future of AI Coding',
+    excerpt: 'Discover why Mojo, the new superset of Python, is revolutionizing AI development with speeds up to 35,000 times faster than Python.',
+    date: 'November 7, 2025',
+    author: 'Lyvena Team',
+    category: 'AI Development',
+    slug: 'mojo-vs-python-future-ai-coding',
+    image: 'https://cdn.marblism.com/2reCTwroN9v.webp',
+  },
+  {
     id: '6',
     title: 'MIT SEAL: The Self-Adapting Language Models Redefining AI Learning',
     excerpt: 'Discover how MIT\'s SEAL technology enables AI models to learn and improve themselves autonomously without human intervention.',
