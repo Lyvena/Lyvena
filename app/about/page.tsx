@@ -172,7 +172,7 @@ export default function About() {
               Our AI Employees
             </h2>
             <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
-              Powered by <a href="https://www.marblism.com/?via=1178f3" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors font-semibold">Marblism</a> - AI Employees to scale your business
+              Meet our team of AI Employees working to scale your business
             </p>
           </motion.div>
 
@@ -259,7 +259,7 @@ export default function About() {
               rel="noopener noreferrer"
               className="btn-primary inline-block"
             >
-              Explore Marblism AI Employees
+              Explore Our AI Employees
             </a>
           </motion.div>
         </div>
