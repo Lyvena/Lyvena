@@ -107,7 +107,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Leadership Team Section */}
       <section className="section-padding bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -155,6 +155,113 @@ export default function About() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* AI Employees Section */}
+      <section className="section-padding">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+              Our AI Employees
+            </h2>
+            <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
+              Powered by <a href="https://www.marblism.com/?via=1178f3" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors font-semibold">Marblism</a> - AI Employees to scale your business
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'SEO Blog Writer',
+                description: 'Writes SEO-optimized blog posts that make Google happy, your audience obsessed, and your competitors deeply uncomfortable',
+                image: 'https://www.marblism.com/ai-employees/writer.png',
+              },
+              {
+                name: 'Executive Assistant (Eva)',
+                description: 'Crafts email replies, filters out junk emails, manages your calendar and takes meeting notes — so you look productive',
+                image: 'https://www.marblism.com/ai-employees/eva.png',
+              },
+              {
+                name: 'Community Manager (Sonny)',
+                description: 'Turns your social media into a lead-generating machine — without you having to dance on camera',
+                image: 'https://www.marblism.com/ai-employees/sonny.png',
+              },
+              {
+                name: 'Lead Generation (Stan)',
+                description: 'Finds leads, sends cold emails and follow-ups — turning "not interested" into "where do I sign?"',
+                image: 'https://www.marblism.com/ai-employees/stan.png',
+              },
+              {
+                name: 'Legal Assistant (Linda)',
+                description: 'Answers your contract questions and clarifies legal documents — so you can stop pretending you read them',
+                image: 'https://www.marblism.com/ai-employees/linda.png',
+              },
+              {
+                name: 'Receptionist (Rachel)',
+                description: 'Answers calls while you focus on what matters. Professional, reliable, and always available',
+                image: 'https://www.marblism.com/ai-employees/rachel.png',
+              },
+            ].map((employee, index) => (
+              <motion.div
+                key={employee.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50 border border-accent/20 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300 h-full flex flex-col">
+                  <div className="h-48 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
+                    <img
+                      src={employee.image}
+                      alt={employee.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = 'https://via.placeholder.com/300x200?text=' + encodeURIComponent(employee.name)
+                      }}
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold text-white mb-3">{employee.name}</h3>
+                    <p className="text-neutral-white/80 text-sm leading-relaxed mb-4 flex-grow">
+                      {employee.description}
+                    </p>
+                    <a
+                      href="https://www.marblism.com/?via=1178f3"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-white transition-colors font-semibold text-sm"
+                    >
+                      Learn More →
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-16 text-center"
+          >
+            <a
+              href="https://www.marblism.com/?via=1178f3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-block"
+            >
+              Explore Marblism AI Employees
+            </a>
+          </motion.div>
         </div>
       </section>
 
