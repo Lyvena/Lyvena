@@ -36,7 +36,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['services', 'about', 'portfolio', 'contact'].map((section) => (
+              {['services', 'portfolio', 'contact'].map((section) => (
                 <li key={section}>
                   <a
                     href={`#${section}`}
@@ -46,6 +46,14 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/about"
+                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                >
+                  About
+                </Link>
+              </li>
               <li>
                 <a
                   href="/stories"
