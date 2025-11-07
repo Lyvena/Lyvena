@@ -6,6 +6,13 @@ import Link from 'next/link'
 export default function StoriesSection() {
   const recentArticles = [
     {
+      title: 'MIT SEAL: The Self-Adapting Language Models Redefining AI Learning',
+      excerpt: 'Discover how MIT\'s SEAL technology enables AI models to learn and improve themselves autonomously without human intervention.',
+      slug: 'mit-seal-self-adapting-language-models',
+      category: 'AI Research',
+      image: 'https://cdn.marblism.com/gLWMW21Unfv.webp',
+    },
+    {
       title: 'Impacts of Artificial SuperIntelligence on Business, Society, and Technology',
       excerpt: 'Explore how ASI will transform business landscapes, reshape society, accelerate technological evolution, and raise critical ethical questions.',
       slug: 'asi-impacts-business-society-technology',
@@ -18,13 +25,6 @@ export default function StoriesSection() {
       slug: 'artificial-superintelligence-timeline',
       category: 'AI Future',
       image: 'https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/ef780ffb-7a36-4db0-986e-a30cfe7aa53f/agent-output/1ab33709-27e0-4b34-8e05-ce3fa11485d8-hero-picture.webp',
-    },
-    {
-      title: 'Generative AI in 2025: The Breakthroughs Powering Smarter Content & Code',
-      excerpt: 'Explore the most significant generative AI breakthroughs of 2025, from agentic AI to multimodal integration and on-device capabilities.',
-      slug: 'generative-ai-2025-breakthroughs',
-      category: 'Generative AI',
-      image: 'https://cdn.marblism.com/R_m8QmXdD_c.webp',
     },
   ]
 
