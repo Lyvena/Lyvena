@@ -62,6 +62,14 @@ export default function Footer() {
                   Stories
                 </a>
               </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
