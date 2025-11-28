@@ -227,7 +227,7 @@ export default function About() {
                     <img
                       src={employee.image}
                       alt={employee.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                       onError={(e) => {
                         e.currentTarget.src = 'https://via.placeholder.com/300x200?text=' + encodeURIComponent(employee.name)
                       }}
