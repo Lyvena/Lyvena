@@ -183,36 +183,42 @@ export default function About() {
                 role: 'SEO Blog Writer',
                 description: 'Penny writes SEO-optimized blog posts that make Google happy, your audience obsessed, and your competitors deeply uncomfortable.',
                 image: '/penny.webp',
+                link: 'https://www.marblism.com/ai-employees/penny?via=1178f3',
               },
               {
                 name: 'Eva',
                 role: 'Executive Assistant',
                 description: 'Eva crafts email replies, filters out junk emails, manages your calendar, and takes meeting notes — so you look productive, even if you hit snooze three times.',
                 image: '/eva.webp',
+                link: 'https://www.marblism.com/ai-employees/eva?via=1178f3',
               },
               {
                 name: 'Sonny',
                 role: 'Community Manager',
                 description: 'Sonny turns your social media into a lead-generating machine — without you having to dance on camera.',
                 image: '/sonny.webp',
+                link: 'https://www.marblism.com/ai-employees/sonny?via=1178f3',
               },
               {
                 name: 'Stan',
                 role: 'Lead Generation Specialist',
                 description: "Stan finds leads, sends cold emails, and follows up — turning 'not interested' into 'where do I sign?'",
                 image: '/stan.webp',
+                link: 'https://www.marblism.com/ai-employees/stan?via=1178f3',
               },
               {
                 name: 'Linda',
                 role: 'Legal Assistant',
                 description: 'Linda answers your contract questions and clarifies legal documents — so you can stop pretending you read them.',
                 image: '/linda.webp',
+                link: 'https://www.marblism.com/ai-employees/linda?via=1178f3',
               },
               {
                 name: 'Rachel',
                 role: 'Receptionist',
                 description: "Rachel'll answer calls while you hide in the back pretending to be busy, providing professional support 24/7.",
                 image: '/rachel.webp',
+                link: 'https://www.marblism.com/ai-employees/rachel?via=1178f3',
               },
             ].map((employee, index) => (
               <motion.div
@@ -240,7 +246,7 @@ export default function About() {
                       {employee.description}
                     </p>
                     <a
-                      href="https://www.marblism.com/?via=1178f3"
+                      href={employee.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent hover:text-white transition-colors font-semibold text-sm"
