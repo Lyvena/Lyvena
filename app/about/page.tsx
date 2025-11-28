@@ -195,7 +195,7 @@ export default function About() {
               },
               {
                 name: 'Stan',
-                description: 'Welcome Stan, our AI Lead Generation specialist, who finds leads, sends cold emails, and follows up — turning 'not interested' into 'where do I sign?'',
+                description: "Welcome Stan, our AI Lead Generation specialist, who finds leads, sends cold emails, and follows up — turning 'not interested' into 'where do I sign?'",
                 image: 'https://www.marblism.com/ai-employees/stan.png',
               },
               {
@@ -205,7 +205,7 @@ export default function About() {
               },
               {
                 name: 'Rachel',
-                description: 'Introducing Rachel, our AI Receptionist, who'll answer calls while you hide in the back pretending to be busy, providing professional support 24/7.',
+                description: "Introducing Rachel, our AI Receptionist, who'll answer calls while you hide in the back pretending to be busy, providing professional support 24/7.",
                 image: 'https://www.marblism.com/ai-employees/rachel.png',
               },
             ].map((employee, index) => (
