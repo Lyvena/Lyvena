@@ -11,7 +11,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-neutral-dark text-white relative overflow-hidden">
+    <footer className="bg-neutral-charcoal text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-64 h-64 bg-accent rounded-full blur-3xl" />

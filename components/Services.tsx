@@ -31,7 +31,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="section-padding bg-neutral-white relative overflow-hidden"
+      className="section-padding bg-neutral-cream relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
@@ -49,7 +49,7 @@ export default function Services() {
           <h2 className="text-5xl md:text-6xl font-display font-bold gradient-text mb-4">
             Our Services
           </h2>
-          <p className="text-xl text-neutral-dark/70 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-slate/70 max-w-2xl mx-auto">
             Comprehensive solutions for the digital age
           </p>
         </motion.div>
@@ -101,7 +101,7 @@ export default function Services() {
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-neutral-dark leading-relaxed">
+                  <p className="text-neutral-charcoal leading-relaxed">
                     {service.backDesc}
                   </p>
                   <div className="mt-6 pt-6 border-t border-neutral-gray">
@@ -143,7 +143,7 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <p className="text-lg text-neutral-dark/70 mb-6">
+          <p className="text-lg text-neutral-slate/70 mb-6">
             Every solution is crafted with ethics, accessibility, and sustainability in mind
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,9 +15,11 @@ html {
 }
 
 body {
-  @apply bg-neutral-white text-neutral-dark;
-  font-family: 'Inter', 'SF Pro', system-ui, sans-serif;
+  @apply bg-neutral-cream text-neutral-charcoal;
+  font-family: 'Outfit', 'DM Sans', system-ui, sans-serif;
   overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /* Custom scrollbar */
@@ -31,6 +33,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   @apply bg-primary rounded-full;
+  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -40,20 +43,15 @@ body {
 /* Smooth transitions for all interactive elements */
 @layer components {
   .btn-primary {
-    @apply px-8 py-4 bg-accent text-white font-semibold rounded-full 
-           transition-all duration-300 hover:scale-105 hover:shadow-2xl 
-           hover:shadow-accent/50 active:scale-95;
+    @apply px-8 py-4 bg-accent text-neutral-charcoal font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-accent-dark active:scale-95;
   }
 
   .btn-secondary {
-    @apply px-8 py-4 border-2 border-primary text-primary font-semibold 
-           rounded-full transition-all duration-300 hover:bg-primary 
-           hover:text-white hover:scale-105 active:scale-95;
+    @apply px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105 active:scale-95;
   }
 
   .card {
-    @apply bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 
-           hover:shadow-2xl hover:-translate-y-2;
+    @apply bg-white rounded-2xl shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
 
   .section-padding {
@@ -61,50 +59,40 @@ body {
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-accent to-primary-light 
-           bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient;
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
   }
 }
 
-/* Particle animation */
-.particle {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
+/* Gentle elevation effect */
+.gentle-elevation {
+  box-shadow: 0 4px 16px rgba(74, 127, 95, 0.1),
+    0 2px 8px rgba(74, 127, 95, 0.06);
 }
 
-/* Glow effect */
-.glow {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5),
-              0 0 40px rgba(0, 212, 255, 0.3),
-              0 0 60px rgba(0, 212, 255, 0.1);
+/* Warm shadow for interactive elements */
+.warm-shadow {
+  box-shadow: 0 8px 24px rgba(201, 119, 81, 0.15),
+    0 4px 12px rgba(232, 180, 79, 0.1);
 }
 
-/* Cursor trail effect */
-.cursor-glow {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.8), transparent);
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.1s ease;
-}
-
-/* Loading spinner */
+/* Gentle loading spinner */
 .spinner {
-  border: 3px solid rgba(0, 212, 255, 0.1);
-  border-top: 3px solid #00D4FF;
+  border: 3px solid rgba(74, 127, 95, 0.1);
+  border-top: 3px solid #4A7F5F;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  animation: spin 1s linear infinite;
+  animation: spin 1.2s ease-in-out infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Parallax sections */
@@ -145,26 +133,29 @@ body {
 
 /* Modal animations */
 .modal-overlay {
-  @apply fixed inset-0 bg-black/70 backdrop-blur-sm z-50 
-         flex items-center justify-center p-4;
+  @apply fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4;
 }
 
 .modal-content {
-  @apply bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] 
-         overflow-y-auto shadow-2xl;
+  @apply bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl;
 }
 
 /* Wave animation for backgrounds */
 @keyframes wave {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0) translateY(0);
   }
+
   25% {
     transform: translateX(-5%) translateY(-5%);
   }
+
   50% {
     transform: translateX(-10%) translateY(0);
   }
+
   75% {
     transform: translateX(-5%) translateY(5%);
   }
@@ -177,12 +168,10 @@ body {
 /* Holographic effect */
 .holographic {
   position: relative;
-  background: linear-gradient(
-    45deg,
-    rgba(10, 108, 116, 0.1),
-    rgba(0, 212, 255, 0.1),
-    rgba(10, 108, 116, 0.1)
-  );
+  background: linear-gradient(45deg,
+      rgba(10, 108, 116, 0.1),
+      rgba(0, 212, 255, 0.1),
+      rgba(10, 108, 116, 0.1));
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
 }
@@ -220,6 +209,7 @@ body {
 
 /* Reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

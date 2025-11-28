@@ -1,127 +1,8 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
 export default function Hero() {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
-  const [displayText, setDisplayText] = useState('')
-  const fullText = 'AI for Good | Ethical AI Research & Engineering'
-  const [showCursor, setShowCursor] = useState(true)
-
-  // Typing animation effect
-  useEffect(() => {
-    let index = 0
-    const typingInterval = setInterval(() => {
-      if (index < fullText.length) {
-        setDisplayText(fullText.slice(0, index + 1))
-        index++
-      } else {
-        clearInterval(typingInterval)
-      }
-    }, 80)
-
-    return () => clearInterval(typingInterval)
-  }, [])
-
-  // Cursor blink effect
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev)
-    }, 500)
-
-    return () => clearInterval(cursorInterval)
-  }, [])
-
-  // Neural network particle animation
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
-
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-
-    interface Particle {
-      x: number
-      y: number
-      vx: number
-      vy: number
-      radius: number
-    }
-
-    const particles: Particle[] = []
-    const particleCount = 80
-    const connectionDistance = 150
-
-    // Create particles
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        radius: Math.random() * 2 + 1,
-      })
-    }
-
-    function animate() {
-      if (!ctx || !canvas) return
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-      // Update and draw particles
-      particles.forEach((particle, i) => {
-        particle.x += particle.vx
-        particle.y += particle.vy
-
-        // Bounce off edges
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1
-
-        // Draw particle
-        ctx.beginPath()
-        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(0, 212, 255, 0.8)'
-        ctx.fill()
-
-        // Draw connections
-        particles.slice(i + 1).forEach((otherParticle) => {
-          const dx = particle.x - otherParticle.x
-          const dy = particle.y - otherParticle.y
-          const distance = Math.sqrt(dx * dx + dy * dy)
-
-          if (distance < connectionDistance) {
-            ctx.beginPath()
-            ctx.moveTo(particle.x, particle.y)
-            ctx.lineTo(otherParticle.x, otherParticle.y)
-            const opacity = (1 - distance / connectionDistance) * 0.5
-            ctx.strokeStyle = `rgba(10, 108, 116, ${opacity})`
-            ctx.lineWidth = 1
-            ctx.stroke()
-          }
-        })
-      })
-
-      requestAnimationFrame(animate)
-    }
-
-    animate()
-
-    const handleResize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
-
-    window.addEventListener('resize', handleResize)
-
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact')
     contactSection?.scrollIntoView({ behavior: 'smooth' })
@@ -130,26 +11,21 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-cream via-primary/10 to-accent/20"
     >
-      {/* Animated background canvas */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 z-0"
-        aria-hidden="true"
-      />
+      {/* Gentle organic background shapes */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Floating organic shapes */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }} />
 
-      {/* Ocean wave overlay */}
-      <div className="absolute inset-0 z-0 opacity-20">
-        <svg
-          className="absolute bottom-0 w-full wave-animation"
-          viewBox="0 0 1440 320"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        {/* Subtle wave pattern */}
+        <svg className="absolute bottom-0 w-full opacity-30" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
           <path
-            fill="#00D4FF"
-            fillOpacity="0.3"
-            d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            fill="#4A7F5F"
+            fillOpacity="0.15"
+            d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,149.3C672,139,768,149,864,165.3C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           />
         </svg>
       </div>
@@ -163,53 +39,79 @@ export default function Hero() {
         >
           {/* Logo/Brand */}
           <motion.h1
-            className="text-6xl md:text-8xl font-display font-bold text-white mb-6"
-            initial={{ scale: 0.8, opacity: 0 }}
+            className="text-6xl md:text-8xl font-display font-bold text-primary mb-6"
+            initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
             Lyvena
           </motion.h1>
 
-          {/* Typing animation tagline */}
-          <div className="mb-8 min-h-[4rem] flex items-center justify-center">
-            <h2 className="text-2xl md:text-4xl font-semibold text-accent inline-block">
-              {displayText}
-              <span
-                className={`inline-block w-1 h-8 md:h-10 bg-accent ml-1 ${
-                  showCursor ? 'opacity-100' : 'opacity-0'
-                }`}
-              />
-            </h2>
-          </div>
+          {/* Tagline */}
+          <motion.h2
+            className="text-2xl md:text-4xl font-semibold text-neutral-slate mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            AI for Good &mdash; Ethical Innovation
+          </motion.h2>
 
           {/* Subheadline */}
           <motion.p
-            className="text-xl md:text-2xl text-neutral-white mb-12 leading-relaxed"
+            className="text-lg md:text-xl text-neutral-slate/80 mb-12 leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 3.5, duration: 1 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Transform your ideas into stunning digital experiences
-            <br />
-            with cutting-edge technology
+            Building intelligent solutions that respect human values, protect privacy,
+            and create meaningful impact in communities around the world.
           </motion.p>
 
-          {/* CTA Button */}
-          <motion.button
-            onClick={scrollToContact}
-            className="btn-primary text-lg glow"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 4, duration: 0.5 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Get in touch with Lyvena"
+          {/* CTA Buttons */}
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
           >
-            Get In Touch
-          </motion.button>
-        </motion.div>
+            <button
+              onClick={scrollToContact}
+              className="btn-primary text-lg warm-shadow"
+              aria-label="Get in touch with Lyvena"
+            >
+              Get In Touch
+            </button>
+            <a
+              href="#about"
+              className="btn-secondary text-lg"
+              aria-label="Learn more about Lyvena"
+            >
+              Learn More
+            </a>
+          </motion.div>
 
+          {/* Trust indicators */}
+          <motion.div
+            className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-neutral-slate/60"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🔒</span>
+              <span>Privacy-First</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🌱</span>
+              <span>Sustainable</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🤝</span>
+              <span>Community-Driven</span>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )

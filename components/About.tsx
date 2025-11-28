@@ -56,11 +56,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="section-padding bg-gradient-to-br from-neutral-white via-primary/5 to-neutral-white relative overflow-hidden"
+      className="section-padding bg-gradient-to-br from-neutral-cream via-primary/5 to-neutral-cream relative overflow-hidden"
     >
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-20 right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
@@ -72,8 +72,8 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="card holographic p-8 md:p-12">
-            <p className="text-lg md:text-xl text-neutral-dark leading-relaxed text-center">
+          <div className="card gentle-elevation p-8 md:p-12">
+            <p className="text-lg md:text-xl text-neutral-charcoal leading-relaxed text-center">
               Based in the beautiful island of <span className="font-bold text-primary">Roatán, Honduras</span>,
               Lyvena is pioneering the intersection of artificial intelligence and social good.
               We believe technology should empower communities, protect privacy, and promote
@@ -104,7 +104,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="card p-6 h-full hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden">
+                <div className="card p-6 h-full warm-shadow hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden">
                   {/* Gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 

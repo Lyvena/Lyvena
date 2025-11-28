@@ -8,50 +8,62 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Lyvena brand colors inspired by ocean and ethical AI
+        // Lyvena brand colors - warm, ethical, human-oriented
         primary: {
-          DEFAULT: '#0A6C74', // Deep teal
-          dark: '#085259',
-          light: '#0D8A94',
+          DEFAULT: '#4A7F5F', // Sage green - growth, ethics, calm
+          dark: '#3A6349',
+          light: '#5F9B77',
         },
         accent: {
-          DEFAULT: '#00D4FF', // Vibrant cyan
-          dark: '#00A8CC',
-          light: '#33DDFF',
+          DEFAULT: '#E8B44F', // Honey gold - innovation, warmth
+          dark: '#D09A35',
+          light: '#F0C566',
+        },
+        secondary: {
+          DEFAULT: '#C97751', // Terracotta - human warmth, care
+          dark: '#B35F3E',
+          light: '#D98F6B',
+        },
+        coral: {
+          DEFAULT: '#E8856B', // Coral - impact, energy
+          dark: '#D66F56',
+          light: '#EDA185',
         },
         neutral: {
-          white: '#F8F9FA',
-          gray: '#E9ECEF',
-          dark: '#343A40',
+          cream: '#FAF7F2', // Warm background
+          gray: '#E5E3DC', // Soft gray
+          slate: '#5C6B73', // Intelligence, stability
+          charcoal: '#2C2E35', // Readable text
         },
       },
       fontFamily: {
-        sans: ['Inter', 'SF Pro', 'system-ui', 'sans-serif'],
-        display: ['Orbitron', 'Inter', 'sans-serif'],
+        sans: ['Outfit', 'DM Sans', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['Outfit', 'system-ui', 'sans-serif'],
       },
       animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'gradient': 'gradient 8s linear infinite',
-        'typing': 'typing 3.5s steps(40, end)',
-        'blink': 'blink 0.7s infinite',
+        'float': 'float 8s ease-in-out infinite',
+        'gentle-pulse': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'fade-in': 'fadeIn 1s ease-in',
+        'slide-up': 'slideUp 0.6s ease-out',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '50%': { transform: 'translateY(-15px)' },
         },
-        gradient: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
+        fadeIn: {
+          'from': { opacity: '0' },
+          'to': { opacity: '1' },
         },
-        typing: {
-          'from': { width: '0' },
-          'to': { width: '100%' },
-        },
-        blink: {
-          'from, to': { borderColor: 'transparent' },
-          '50%': { borderColor: '#00D4FF' },
+        slideUp: {
+          'from': {
+            opacity: '0',
+            transform: 'translateY(20px)'
+          },
+          'to': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
         },
       },
     },
