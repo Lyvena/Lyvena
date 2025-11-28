@@ -159,7 +159,7 @@ export default function About() {
       </section>
 
       {/* AI Employees Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -271,10 +271,10 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-charcoal mb-4">
               Ready to Build the Future Together?
             </h2>
-            <p className="text-lg text-neutral-white/90 mb-8">
+            <p className="text-lg text-neutral-slate mb-8">
               Join us in developing AI for good. Let's create solutions that make a positive impact.
             </p>
             <Link
