@@ -3,8 +3,8 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Lyvena | AI for Good - Ethical AI Research & Engineering',
-  description: 'Transform your ideas into stunning digital experiences with cutting-edge technology. Based in Roatán, Honduras, we specialize in ethical AI development, consulting, web development, and digital design.',
-  keywords: 'AI for Good, Ethical AI, AI Development, AI Consulting, Web Development, Digital Design, Roatán, Honduras',
+  description: 'Transform your ideas into stunning digital experiences with cutting-edge technology. We specialize in ethical AI development, consulting, web development, and digital design.',
+  keywords: 'AI for Good, Ethical AI, AI Development, AI Consulting, Web Development, Digital Design',
   authors: [{ name: 'Lyvena' }],
   openGraph: {
     title: 'Lyvena | AI for Good',

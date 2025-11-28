@@ -1,7 +1,13 @@
 'use client'
 
 import CaseStudy from '@/components/CaseStudy'
+import Footer from '@/components/Footer'
 
 export default function CaseStudyPage() {
-  return <CaseStudy />
+  return (
+    <main>
+      <CaseStudy />
+      <Footer />
+    </main>
+  )
 }

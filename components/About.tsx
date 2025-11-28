@@ -74,7 +74,6 @@ export default function About() {
         >
           <div className="card gentle-elevation p-8 md:p-12">
             <p className="text-lg md:text-xl text-neutral-charcoal leading-relaxed text-center">
-              Based in the beautiful island of <span className="font-bold text-primary">Roatán, Honduras</span>,
               Lyvena is pioneering AI that puts people first. We believe technology should empower
               communities, protect privacy, and promote sustainability—not just in theory, but in
               every line of code we write. Our team combines deep technical expertise with unwavering
@@ -127,70 +126,6 @@ export default function About() {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
-
-        {/* Location map */}
-        <motion.div
-          ref={mapRef}
-          className="max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <h3 className="text-3xl md:text-4xl font-display font-bold text-center mb-8 text-primary">
-            Where We Are
-          </h3>
-          <div className="card p-8 relative overflow-hidden">
-            {/* Simplified world map with location */}
-            <div className="relative h-64 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center">
-              <svg
-                viewBox="0 0 800 400"
-                className="w-full h-full opacity-20 absolute inset-0"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Simplified world map outline */}
-                <path
-                  d="M100,200 Q200,150 300,200 T500,200 Q600,250 700,200"
-                  stroke="#0A6C74"
-                  strokeWidth="2"
-                  fill="none"
-                />
-                <circle cx="250" cy="220" r="3" fill="#0A6C74" />
-                <circle cx="450" cy="180" r="3" fill="#0A6C74" />
-                <circle cx="600" cy="210" r="3" fill="#0A6C74" />
-              </svg>
-
-              {/* Roatán location pin */}
-              <div className="relative z-10 location-pin">
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ repeat: Infinity, duration: 2 }}
-                  className="flex flex-col items-center"
-                >
-                  <svg
-                    className="w-12 h-12 text-accent drop-shadow-lg"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                  </svg>
-                  <div className="mt-2 bg-white px-4 py-2 rounded-full shadow-lg">
-                    <p className="text-sm font-bold text-primary">Roatán, Honduras</p>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-
-            <div className="mt-6 text-center">
-              <p className="text-neutral-charcoal/70 mb-2">
-                <span className="font-semibold text-primary">Beta Building, Oficina 6</span>
-              </p>
-              <p className="text-neutral-charcoal/70">
-                Próspera ZEDE, St. John's Bay, Roatán, Islas de Bahia 34101, Honduras
-              </p>
-            </div>
           </div>
         </motion.div>
 
