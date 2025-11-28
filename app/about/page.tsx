@@ -172,7 +172,7 @@ export default function About() {
               Our AI Employees
             </h2>
             <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
-              Meet our team of AI Employees working to scale your business
+              Meet the AI employees who power Lyvena's operations and drive our mission forward
             </p>
           </motion.div>
 
@@ -180,32 +180,38 @@ export default function About() {
             {[
               {
                 name: 'Penny',
-                description: 'Introducing Penny, our AI SEO Blog Writer, who writes SEO-optimized blog posts that make Google happy, your audience obsessed, and your competitors deeply uncomfortable.',
+                role: 'SEO Blog Writer',
+                description: 'Penny writes SEO-optimized blog posts that make Google happy, your audience obsessed, and your competitors deeply uncomfortable.',
                 image: 'https://www.marblism.com/ai-employees/penny.png',
               },
               {
                 name: 'Eva',
-                description: 'Meet Eva, our AI Executive Assistant, who crafts email replies, filters out junk emails, manages your calendar, and takes meeting notes — so you look productive, even if you hit snooze three times.',
+                role: 'Executive Assistant',
+                description: 'Eva crafts email replies, filters out junk emails, manages your calendar, and takes meeting notes — so you look productive, even if you hit snooze three times.',
                 image: 'https://www.marblism.com/ai-employees/eva.png',
               },
               {
                 name: 'Sonny',
-                description: 'Say hello to Sonny, our AI Community Manager, who turns your social media into a lead-generating machine — without you having to dance on camera.',
+                role: 'Community Manager',
+                description: 'Sonny turns your social media into a lead-generating machine — without you having to dance on camera.',
                 image: 'https://www.marblism.com/ai-employees/sonny.png',
               },
               {
                 name: 'Stan',
-                description: "Welcome Stan, our AI Lead Generation specialist, who finds leads, sends cold emails, and follows up — turning 'not interested' into 'where do I sign?'",
+                role: 'Lead Generation Specialist',
+                description: "Stan finds leads, sends cold emails, and follows up — turning 'not interested' into 'where do I sign?'",
                 image: 'https://www.marblism.com/ai-employees/stan.png',
               },
               {
                 name: 'Linda',
-                description: 'Get to know Linda, our AI Legal Assistant, who answers your contract questions and clarifies legal documents — so you can stop pretending you read them.',
+                role: 'Legal Assistant',
+                description: 'Linda answers your contract questions and clarifies legal documents — so you can stop pretending you read them.',
                 image: 'https://www.marblism.com/ai-employees/linda.png',
               },
               {
                 name: 'Rachel',
-                description: "Introducing Rachel, our AI Receptionist, who'll answer calls while you hide in the back pretending to be busy, providing professional support 24/7.",
+                role: 'Receptionist',
+                description: "Rachel'll answer calls while you hide in the back pretending to be busy, providing professional support 24/7.",
                 image: 'https://www.marblism.com/ai-employees/rachel.png',
               },
             ].map((employee, index) => (
@@ -228,7 +234,8 @@ export default function About() {
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-white mb-3">{employee.name}</h3>
+                    <h3 className="text-xl font-bold text-white mb-1">{employee.name}</h3>
+                    <p className="text-accent font-semibold text-lg mb-3">{employee.role}</p>
                     <p className="text-neutral-white/80 text-sm leading-relaxed mb-4 flex-grow">
                       {employee.description}
                     </p>
@@ -246,22 +253,6 @@ export default function About() {
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-16 text-center"
-          >
-            <a
-              href="https://www.marblism.com/?via=1178f3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-block"
-            >
-              Explore Our AI Employees
-            </a>
-          </motion.div>
         </div>
       </section>
 
