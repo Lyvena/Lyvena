@@ -33,8 +33,8 @@ export default function Home() {
       <CursorGlow />
       <Hero />
       <Services />
-      <Portfolio />
       <Clients />
+      <Portfolio />
       <About />
       <StoriesSection />
       <Contact />
