@@ -8,7 +8,7 @@ import { FaLinkedin } from 'react-icons/fa'
 export default function About() {
   const team = [
     {
-      name: 'Andriy',
+      name: 'Akshay',
       role: 'Founder & CEO',
       linkedin: 'https://www.linkedin.com/in/Akshay155/',
       description: 'Visionary leader driving Lyvena\'s mission to develop AI for good.',
