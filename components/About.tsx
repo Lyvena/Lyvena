@@ -75,10 +75,10 @@ export default function About() {
           <div className="card gentle-elevation p-8 md:p-12">
             <p className="text-lg md:text-xl text-neutral-charcoal leading-relaxed text-center">
               Based in the beautiful island of <span className="font-bold text-primary">Roatán, Honduras</span>,
-              Lyvena is pioneering the intersection of artificial intelligence and social good.
-              We believe technology should empower communities, protect privacy, and promote
-              sustainability. Our team of experts combines technical excellence with ethical
-              principles to deliver solutions that make a positive impact on the world.
+              Lyvena is pioneering AI that puts people first. We believe technology should empower
+              communities, protect privacy, and promote sustainability—not just in theory, but in
+              every line of code we write. Our team combines deep technical expertise with unwavering
+              ethical principles to deliver solutions that create measurable, positive change in the world.
             </p>
           </div>
         </motion.div>
@@ -184,13 +184,45 @@ export default function About() {
             </div>
 
             <div className="mt-6 text-center">
-              <p className="text-neutral-dark/70 mb-2">
+              <p className="text-neutral-charcoal/70 mb-2">
                 <span className="font-semibold text-primary">Beta Building, Oficina 6</span>
               </p>
-              <p className="text-neutral-dark/70">
+              <p className="text-neutral-charcoal/70">
                 Próspera ZEDE, St. John's Bay, Roatán, Islas de Bahia 34101, Honduras
               </p>
             </div>
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-4">
+            See Our Values in Action
+          </h3>
+          <p className="text-lg text-neutral-slate/80 mb-6 max-w-2xl mx-auto">
+            Every project we take on reflects our commitment to ethical AI and human-centered design.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/case-study"
+              className="btn-primary"
+              aria-label="Read our case studies"
+            >
+              Read Case Studies
+            </a>
+            <a
+              href="#contact"
+              className="btn-secondary"
+              aria-label="Work with us"
+            >
+              Work With Us
+            </a>
           </div>
         </motion.div>
       </div>

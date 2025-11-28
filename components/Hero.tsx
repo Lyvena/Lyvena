@@ -47,47 +47,71 @@ export default function Hero() {
             Lyvena
           </motion.h1>
 
-          {/* Tagline */}
+          {/* Main Tagline */}
           <motion.h2
             className="text-2xl md:text-4xl font-semibold text-neutral-slate mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            AI for Good &mdash; Ethical Innovation
+            Empowering Humanity with Ethical Intelligence
           </motion.h2>
 
-          {/* Subheadline */}
+          {/* Value Proposition */}
           <motion.p
             className="text-lg md:text-xl text-neutral-slate/80 mb-12 leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Building intelligent solutions that respect human values, protect privacy,
-            and create meaningful impact in communities around the world.
+            We build AI solutions that solve real-world problems—from predicting patient needs
+            to automating school systems—while respecting privacy, human dignity, and the planet.
           </motion.p>
+
+          {/* Three Pillars */}
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+          >
+            <div className="text-center">
+              <div className="text-3xl mb-2">🏢</div>
+              <h3 className="font-semibold text-neutral-charcoal mb-1">For Organizations</h3>
+              <p className="text-sm text-neutral-slate/70">Automate with conscience</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">🌍</div>
+              <h3 className="font-semibold text-neutral-charcoal mb-1">For Communities</h3>
+              <p className="text-sm text-neutral-slate/70">Technology that serves people</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">🌱</div>
+              <h3 className="font-semibold text-neutral-charcoal mb-1">For the Future</h3>
+              <p className="text-sm text-neutral-slate/70">Sustainable innovation</p>
+            </div>
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.6 }}
+            transition={{ delay: 1.0, duration: 0.6 }}
           >
             <button
               onClick={scrollToContact}
               className="btn-primary text-lg warm-shadow"
-              aria-label="Get in touch with Lyvena"
+              aria-label="Start a conversation with Lyvena"
             >
-              Get In Touch
+              Start a Conversation
             </button>
             <a
-              href="#about"
+              href="#services"
               className="btn-secondary text-lg"
-              aria-label="Learn more about Lyvena"
+              aria-label="Explore our services"
             >
-              Learn More
+              Explore Our Work
             </a>
           </motion.div>
 

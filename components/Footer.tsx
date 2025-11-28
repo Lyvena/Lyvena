@@ -97,7 +97,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://theintelekt.xyz/"
+                  href="https://intelekt.live/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-white/70 hover:text-accent transition-colors"

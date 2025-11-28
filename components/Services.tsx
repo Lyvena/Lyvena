@@ -5,24 +5,30 @@ import { FaCode, FaBrain, FaPaintBrush } from 'react-icons/fa'
 
 const services = [
   {
-    icon: FaCode,
-    title: 'Web Development',
-    frontDesc: 'Custom web applications',
-    backDesc: 'Custom web apps that scale ethically. We build responsive, accessible, and performant solutions using modern frameworks like React, Next.js, and Node.js.',
+    icon: FaBrain,
+    title: 'AI-Powered Automation',
+    frontDesc: 'Intelligent systems that work for you',
+    backDesc: 'Save 40% of your team\'s time while improving accuracy to 99%. We build AI that predicts patient needs, automates school administration, and optimizes supply chains—freeing humans for what matters most.',
+    whyMatters: 'Reduce manual work, eliminate errors, scale your impact',
+    examples: ['Patient needs prediction', 'School admin automation', 'Supply chain optimization'],
     color: 'from-primary to-primary-dark',
   },
   {
-    icon: FaBrain,
-    title: 'AI Solutions',
-    frontDesc: 'Intelligent automation',
-    backDesc: 'AI tools for positive impact. From machine learning models to natural language processing, we develop ethical AI solutions that solve real-world problems.',
+    icon: FaCode,
+    title: 'Ethical Web Platforms',
+    frontDesc: 'Digital spaces built on values',
+    backDesc: 'Trust, accessibility, and security from day one. We create community platforms, government portals, and nonprofit tools that are truly accessible and engage users 3x more than industry average.',
+    whyMatters: 'Build trust, ensure accessibility, protect user rights',
+    examples: ['Community platforms', 'Government portals', 'Nonprofit management tools'],
     color: 'from-accent to-primary',
   },
   {
     icon: FaPaintBrush,
-    title: 'Digital Design',
-    frontDesc: 'Beautiful interfaces',
-    backDesc: 'Visual designs that inspire change. We create stunning, user-centric designs that combine aesthetics with functionality using Figma and modern design systems.',
+    title: 'Strategic AI Consulting',
+    frontDesc: 'Roadmaps that align tech with mission',
+    backDesc: 'Get a clear path forward in weeks, not months. From AI readiness assessments to ethical framework design, we help you make confident decisions and avoid costly mistakes.',
+    whyMatters: 'Avoid mistakes, maximize impact, move with confidence',
+    examples: ['AI readiness assessments', 'Ethical framework design', 'Technology roadmapping'],
     color: 'from-primary-light to-accent',
   },
 ]
@@ -47,10 +53,10 @@ export default function Services() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-5xl md:text-6xl font-display font-bold gradient-text mb-4">
-            Our Services
+            How We Help
           </h2>
           <p className="text-xl text-neutral-slate/70 max-w-2xl mx-auto">
-            Comprehensive solutions for the digital age
+            End-to-end support from strategy to deployment—designed for nonprofits, schools, and mission-driven organizations
           </p>
         </motion.div>
 
@@ -135,28 +141,38 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Additional info */}
+        {/* CTA Section */}
         <motion.div
-          className="mt-16 text-center"
+          className="mt-16 text-center card gentle-elevation p-8 md:p-12 max-w-3xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <p className="text-lg text-neutral-slate/70 mb-6">
-            Every solution is crafted with ethics, accessibility, and sustainability in mind
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-4">
+            Ready to Transform Your Operations?
+          </h3>
+          <p className="text-lg text-neutral-slate/80 mb-6">
+            Turn your mission into measurable impact. Let's build AI that works for you—deployed in weeks, not months.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {['Ethical AI', 'Accessible Design', 'Scalable Solutions', 'Open Source'].map(
-              (tag) => (
-                <span
-                  key={tag}
-                  className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold"
-                >
-                  {tag}
-                </span>
-              )
-            )}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById('contact')
+                contactSection?.scrollIntoView({ behavior: 'smooth' })
+              }}
+              className="btn-primary"
+              aria-label="Start your transformation"
+            >
+              Start a Conversation
+            </button>
+            <a
+              href="/case-study"
+              className="btn-secondary"
+              aria-label="Read our case studies"
+            >
+              See Our Work in Action
+            </a>
           </div>
         </motion.div>
       </div>
