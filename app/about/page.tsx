@@ -180,32 +180,32 @@ export default function About() {
             {[
               {
                 name: 'Penny',
-                description: 'Penny, your SEO Blog Writer, crafts engaging, search-optimized content that resonates with your audience and amplifies your message authentically.',
+                description: 'Introducing Penny, our AI SEO Blog Writer, who writes SEO-optimized blog posts that make Google happy, your audience obsessed, and your competitors deeply uncomfortable.',
                 image: 'https://www.marblism.com/ai-employees/penny.png',
               },
               {
                 name: 'Eva',
-                description: 'Eva, your Executive Assistant, streamlines your day by managing communications and scheduling, giving you the freedom to focus on strategic leadership.',
+                description: 'Meet Eva, our AI Executive Assistant, who crafts email replies, filters out junk emails, manages your calendar, and takes meeting notes — so you look productive, even if you hit snooze three times.',
                 image: 'https://www.marblism.com/ai-employees/eva.png',
               },
               {
                 name: 'Sonny',
-                description: 'Sonny, your Community Manager, fosters meaningful connections on social media, building a loyal community around your brand values.',
+                description: 'Say hello to Sonny, our AI Community Manager, who turns your social media into a lead-generating machine — without you having to dance on camera.',
                 image: 'https://www.marblism.com/ai-employees/sonny.png',
               },
               {
                 name: 'Stan',
-                description: 'Stan, your Lead Generation specialist, identifies and nurtures aligned opportunities, helping you grow your network with respectful, personalized outreach.',
+                description: 'Welcome Stan, our AI Lead Generation specialist, who finds leads, sends cold emails, and follows up — turning 'not interested' into 'where do I sign?'',
                 image: 'https://www.marblism.com/ai-employees/stan.png',
               },
               {
                 name: 'Linda',
-                description: 'Linda, your Legal Assistant, provides clear insights into complex documents, ensuring you move forward with confidence and clarity.',
+                description: 'Get to know Linda, our AI Legal Assistant, who answers your contract questions and clarifies legal documents — so you can stop pretending you read them.',
                 image: 'https://www.marblism.com/ai-employees/linda.png',
               },
               {
                 name: 'Rachel',
-                description: 'Rachel, your Receptionist, ensures every caller feels heard and valued, providing professional support 24/7 while you focus on your core mission.',
+                description: 'Introducing Rachel, our AI Receptionist, who'll answer calls while you hide in the back pretending to be busy, providing professional support 24/7.',
                 image: 'https://www.marblism.com/ai-employees/rachel.png',
               },
             ].map((employee, index) => (
