@@ -3,12 +3,37 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-const milestones = [
-  { year: '2020', event: 'Founded in Roatán, Honduras', description: 'Started with a vision for ethical AI' },
-  { year: '2021', event: 'First AI Ethics Framework', description: 'Developed proprietary ethical guidelines' },
-  { year: '2022', event: 'Global Partnerships', description: 'Collaborated with international organizations' },
-  { year: '2023', event: 'AI for Good Initiative', description: 'Launched community impact programs' },
-  { year: '2024', event: 'Innovation Hub', description: 'Expanded to cutting-edge AI research' },
+const coreValues = [
+  {
+    icon: '🤖',
+    title: 'Ethical AI',
+    description: 'Prioritizing responsible and transparent AI development that respects human values and dignity'
+  },
+  {
+    icon: '🔒',
+    title: 'Privacy First',
+    description: 'Protecting user data and digital rights with industry-leading security practices'
+  },
+  {
+    icon: '🌱',
+    title: 'Sustainability',
+    description: 'Building technology that benefits the planet and promotes environmental stewardship'
+  },
+  {
+    icon: '🤝',
+    title: 'Community Impact',
+    description: 'Empowering communities through accessible technology and meaningful social programs'
+  },
+  {
+    icon: '💡',
+    title: 'Innovation',
+    description: 'Pushing boundaries while maintaining ethical standards and user-centric design'
+  },
+  {
+    icon: '👁️',
+    title: 'Transparency',
+    description: 'Open communication and accountable practices in everything we do'
+  },
 ]
 
 export default function About() {
@@ -49,16 +74,16 @@ export default function About() {
         >
           <div className="card holographic p-8 md:p-12">
             <p className="text-lg md:text-xl text-neutral-dark leading-relaxed text-center">
-              Based in the beautiful island of <span className="font-bold text-primary">Roatán, Honduras</span>, 
-              Lyvena is pioneering the intersection of artificial intelligence and social good. 
-              We believe technology should empower communities, protect privacy, and promote 
-              sustainability. Our team of experts combines technical excellence with ethical 
+              Based in the beautiful island of <span className="font-bold text-primary">Roatán, Honduras</span>,
+              Lyvena is pioneering the intersection of artificial intelligence and social good.
+              We believe technology should empower communities, protect privacy, and promote
+              sustainability. Our team of experts combines technical excellence with ethical
               principles to deliver solutions that make a positive impact on the world.
             </p>
           </div>
         </motion.div>
 
-        {/* Timeline */}
+        {/* Core Values */}
         <motion.div
           className="mb-20"
           initial={{ opacity: 0 }}
@@ -67,60 +92,41 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h3 className="text-3xl md:text-4xl font-display font-bold text-center mb-12 text-primary">
-            Our Journey
+            Our Core Values
           </h3>
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary via-accent to-primary-light hidden md:block" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {coreValues.map((value, index) => (
+              <motion.div
+                key={value.title}
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="card p-6 h-full hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden">
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-            {/* Timeline items */}
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={milestone.year}
-                  className={`flex items-center ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  } flex-col gap-8`}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <div className="flex-1 text-center md:text-right">
-                    {index % 2 === 0 && (
-                      <div className="card p-6 inline-block max-w-md">
-                        <div className="text-3xl font-display font-bold text-accent mb-2">
-                          {milestone.year}
-                        </div>
-                        <h4 className="text-xl font-bold text-primary mb-2">
-                          {milestone.event}
-                        </h4>
-                        <p className="text-neutral-dark/70">{milestone.description}</p>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Center dot */}
                   <div className="relative z-10">
-                    <div className="w-6 h-6 bg-accent rounded-full border-4 border-white shadow-lg" />
-                  </div>
+                    {/* Icon */}
+                    <div className="text-5xl mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                      {value.icon}
+                    </div>
 
-                  <div className="flex-1 text-center md:text-left">
-                    {index % 2 !== 0 && (
-                      <div className="card p-6 inline-block max-w-md">
-                        <div className="text-3xl font-display font-bold text-accent mb-2">
-                          {milestone.year}
-                        </div>
-                        <h4 className="text-xl font-bold text-primary mb-2">
-                          {milestone.event}
-                        </h4>
-                        <p className="text-neutral-dark/70">{milestone.description}</p>
-                      </div>
-                    )}
+                    {/* Title */}
+                    <h4 className="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors duration-300">
+                      {value.title}
+                    </h4>
+
+                    {/* Description */}
+                    <p className="text-neutral-dark/70 leading-relaxed">
+                      {value.description}
+                    </p>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
