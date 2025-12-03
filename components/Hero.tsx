@@ -49,7 +49,7 @@ export default function Hero() {
 
           {/* Main Tagline */}
           <motion.h2
-            className="text-2xl md:text-4xl font-semibold text-neutral-slate mb-6"
+            className="text-2xl md:text-4xl font-semibold text-neutral-charcoal mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -59,7 +59,7 @@ export default function Hero() {
 
           {/* Value Proposition */}
           <motion.p
-            className="text-lg md:text-xl text-neutral-slate/80 mb-12 leading-relaxed max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-neutral-charcoal/80 mb-12 leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
@@ -78,17 +78,17 @@ export default function Hero() {
             <div className="text-center">
               <div className="text-3xl mb-2">🏢</div>
               <h3 className="font-semibold text-neutral-charcoal mb-1">For Organizations</h3>
-              <p className="text-sm text-neutral-slate/70">Automate with conscience</p>
+              <p className="text-sm text-neutral-charcoal/70">Automate with conscience</p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">🌍</div>
               <h3 className="font-semibold text-neutral-charcoal mb-1">For Communities</h3>
-              <p className="text-sm text-neutral-slate/70">Technology that serves people</p>
+              <p className="text-sm text-neutral-charcoal/70">Technology that serves people</p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">🌱</div>
               <h3 className="font-semibold text-neutral-charcoal mb-1">For the Future</h3>
-              <p className="text-sm text-neutral-slate/70">Sustainable innovation</p>
+              <p className="text-sm text-neutral-charcoal/70">Sustainable innovation</p>
             </div>
           </motion.div>
 
@@ -117,7 +117,7 @@ export default function Hero() {
 
           {/* Trust indicators */}
           <motion.div
-            className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-neutral-slate/60"
+            className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-neutral-charcoal/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.8 }}
