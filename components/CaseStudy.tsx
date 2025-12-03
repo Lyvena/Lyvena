@@ -16,7 +16,7 @@ export default function CaseStudy() {
   ]
 
   return (
-    <section className="min-h-screen bg-neutral-darker text-white py-20 px-6">
+    <section className="min-h-screen bg-neutral-charcoaler text-white py-20 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Hero Image */}
         <motion.div
@@ -88,7 +88,7 @@ export default function CaseStudy() {
               <motion.div
                 key={idx}
                 whileHover={{ y: -5 }}
-                className="bg-neutral-dark/50 p-6 rounded-lg border border-accent/20 hover:border-accent/50 transition-colors"
+                className="bg-neutral-charcoal/50 p-6 rounded-lg border border-accent/20 hover:border-accent/50 transition-colors"
               >
                 <h3 className="text-lg font-semibold text-accent mb-2">{obj.title}</h3>
                 <p className="text-neutral-white/70">{obj.desc}</p>
@@ -182,7 +182,7 @@ export default function CaseStudy() {
               <motion.div
                 key={idx}
                 whileHover={{ x: 5 }}
-                className="bg-neutral-dark/50 p-6 rounded-lg border border-primary/20 hover:border-primary/50 transition-colors"
+                className="bg-neutral-charcoal/50 p-6 rounded-lg border border-primary/20 hover:border-primary/50 transition-colors"
               >
                 <h3 className="text-xl font-semibold text-primary mb-2">{feature.title}</h3>
                 <p className="text-neutral-white/70">{feature.desc}</p>
@@ -220,7 +220,7 @@ export default function CaseStudy() {
             ].map((challenge, idx) => (
               <motion.div
                 key={idx}
-                className="bg-neutral-dark/50 p-6 rounded-lg border border-red-500/20 hover:border-red-500/50 transition-colors"
+                className="bg-neutral-charcoal/50 p-6 rounded-lg border border-red-500/20 hover:border-red-500/50 transition-colors"
               >
                 <h3 className="text-xl font-semibold text-red-400 mb-2">{challenge.title}</h3>
                 <p className="text-neutral-white/70">{challenge.desc}</p>
@@ -301,7 +301,7 @@ export default function CaseStudy() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-12 bg-neutral-dark/50 p-8 rounded-lg border border-accent/30"
+          className="mb-12 bg-neutral-charcoal/50 p-8 rounded-lg border border-accent/30"
         >
           <h2 className="text-3xl font-bold mb-6 text-accent">Client Success Story: ArtisanCraft Marketplace</h2>
           <p className="text-neutral-white/80 leading-relaxed mb-4">
@@ -417,7 +417,7 @@ export default function CaseStudy() {
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-8 py-3 bg-accent text-neutral-darker font-semibold rounded-lg hover:shadow-lg transition-shadow"
+            className="inline-block px-8 py-3 bg-accent text-neutral-charcoaler font-semibold rounded-lg hover:shadow-lg transition-shadow"
           >
             Schedule a Demonstration
           </motion.a>

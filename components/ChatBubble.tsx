@@ -38,7 +38,7 @@ export default function ChatBubble() {
             {/* Chat body */}
             <div className="p-4 space-y-4">
               <div className="bg-neutral-gray rounded-lg p-3">
-                <p className="text-sm text-neutral-dark">
+                <p className="text-sm text-neutral-charcoal">
                   👋 Hi! How can we help you today?
                 </p>
               </div>
@@ -78,7 +78,7 @@ export default function ChatBubble() {
             </div>
 
             {/* Chat footer */}
-            <div className="p-4 bg-neutral-gray/30 text-center text-xs text-neutral-dark/70">
+            <div className="p-4 bg-neutral-gray/30 text-center text-xs text-neutral-charcoal/70">
               Powered by Lyvena AI
             </div>
           </motion.div>

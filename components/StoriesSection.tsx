@@ -29,7 +29,7 @@ export default function StoriesSection() {
   ]
 
   return (
-    <section id="stories" className="section-padding bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark">
+    <section id="stories" className="section-padding bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -58,7 +58,7 @@ export default function StoriesSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Link href={`/stories/${article.slug}`}>
-                <div className={`h-full bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50 border border-accent/20 rounded-lg overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 cursor-pointer group grid grid-cols-1 md:grid-cols-2 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
+                <div className={`h-full bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-lg overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 cursor-pointer group grid grid-cols-1 md:grid-cols-2 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
                   {/* Hero Image */}
                   <div className={`h-64 md:h-96 overflow-hidden ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                     <img

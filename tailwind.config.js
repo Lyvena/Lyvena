@@ -34,6 +34,7 @@ module.exports = {
           gray: '#E5E3DC', // Soft gray
           slate: '#5C6B73', // Intelligence, stability
           charcoal: '#2C2E35', // Readable text
+          white: '#FFFFFF', // Pure white for text on dark backgrounds
         },
       },
       fontFamily: {

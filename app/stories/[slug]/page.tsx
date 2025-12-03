@@ -1609,7 +1609,7 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
 
   if (!article) {
     return (
-      <main className="min-h-screen bg-neutral-dark flex items-center justify-center">
+      <main className="min-h-screen bg-neutral-charcoal flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Article Not Found</h1>
           <Link href="/stories" className="btn-primary inline-block">
@@ -1621,7 +1621,7 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero Image */}
       <div className="w-full h-96 overflow-hidden">
         <img

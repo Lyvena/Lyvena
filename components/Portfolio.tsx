@@ -139,7 +139,7 @@ export default function Portfolio() {
 
                 {/* Project info */}
                 <div className="p-6">
-                  <p className="text-neutral-dark/80 mb-4">{project.description}</p>
+                  <p className="text-neutral-charcoal/80 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.slice(0, 3).map((tech) => (
                       <span
@@ -150,7 +150,7 @@ export default function Portfolio() {
                       </span>
                     ))}
                     {project.tech.length > 3 && (
-                      <span className="px-3 py-1 bg-neutral-gray text-neutral-dark text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-neutral-gray text-neutral-charcoal text-xs font-semibold rounded-full">
                         +{project.tech.length - 3} more
                       </span>
                     )}
@@ -207,14 +207,14 @@ export default function Portfolio() {
               <div className="p-8">
                 <div className="mb-6">
                   <h4 className="text-2xl font-bold text-primary mb-3">About This Project</h4>
-                  <p className="text-lg text-neutral-dark leading-relaxed">
+                  <p className="text-lg text-neutral-charcoal leading-relaxed">
                     {selectedProject.fullDescription}
                   </p>
                 </div>
 
                 <div className="mb-6">
                   <h4 className="text-xl font-bold text-primary mb-3">Impact</h4>
-                  <p className="text-neutral-dark">{selectedProject.impact}</p>
+                  <p className="text-neutral-charcoal">{selectedProject.impact}</p>
                 </div>
 
                 <div className="mb-6">

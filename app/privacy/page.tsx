@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 
 export default function PrivacyPolicy() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero Section */}
       <section className="section-padding pt-32 pb-16 bg-gradient-to-br from-primary via-primary-dark to-primary-light relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
@@ -213,7 +213,7 @@ export default function PrivacyPolicy() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">10. Contact Information</h2>
                 <p className="text-neutral-white/80 mb-3">For questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
-                <div className="bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50 border border-accent/20 rounded-lg p-6 text-neutral-white/80">
+                <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-lg p-6 text-neutral-white/80">
                   <p><strong>Lyvena</strong></p>
                   <p>Email: <a href="mailto:info@lyvena.xyz" className="text-accent hover:text-white transition-colors">info@lyvena.xyz</a></p>
                   <p>Website: <a href="https://lyvena.xyz/" className="text-accent hover:text-white transition-colors">https://lyvena.xyz/</a></p>
