@@ -22,7 +22,7 @@ export default function About() {
   ]
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero Section */}
       <section className="section-padding pt-32 pb-16 bg-gradient-to-br from-primary via-primary-dark to-primary-light relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
@@ -108,7 +108,7 @@ export default function About() {
       </section>
 
       {/* Leadership Team Section */}
-      <section className="section-padding bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50">
+      <section className="section-padding bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -120,7 +120,7 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               Our Leadership
             </h2>
-            <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
+            <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
               Visionary leaders driving Lyvena's mission forward
             </p>
           </motion.div>
@@ -134,7 +134,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50 border border-accent/20 rounded-2xl p-8 hover:border-accent/40 transition-all duration-300">
+                <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl p-8 hover:border-accent/40 transition-all duration-300">
                   <div className="mb-6">
                     <h3 className="text-3xl font-bold text-white mb-2">{member.name}</h3>
                     <p className="text-accent font-semibold text-lg">{member.role}</p>
@@ -159,7 +159,7 @@ export default function About() {
       </section>
 
       {/* AI Employees Section */}
-      <section className="section-padding bg-gradient-to-br from-neutral-dark via-neutral-dark to-primary-dark relative overflow-hidden">
+      <section className="section-padding bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -171,7 +171,7 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               Our AI Employees
             </h2>
-            <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
+            <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
               Meet the AI employees who power Lyvena's operations and drive our mission forward
             </p>
           </motion.div>
@@ -228,7 +228,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="bg-gradient-to-br from-neutral-dark/50 to-primary-dark/50 border border-accent/20 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300 h-full flex flex-col">
+                <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300 h-full flex flex-col">
                   <div className="h-48 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
                     <img
                       src={employee.image}
@@ -274,7 +274,7 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-charcoal mb-4">
               Ready to Build the Future Together?
             </h2>
-            <p className="text-lg text-neutral-slate mb-8">
+            <p className="text-lg text-neutral-charcoal/90 mb-8">
               Join us in developing AI for good. Let's create solutions that make a positive impact.
             </p>
             <Link

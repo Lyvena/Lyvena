@@ -119,7 +119,7 @@ export default function About() {
                     </h4>
 
                     {/* Description */}
-                    <p className="text-neutral-dark/70 leading-relaxed">
+                    <p className="text-neutral-charcoal/70 leading-relaxed">
                       {value.description}
                     </p>
                   </div>
@@ -140,7 +140,7 @@ export default function About() {
           <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-4">
             See Our Values in Action
           </h3>
-          <p className="text-lg text-neutral-slate/80 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-charcoal/80 mb-6 max-w-2xl mx-auto">
             Every project we take on reflects our commitment to ethical AI and human-centered design.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

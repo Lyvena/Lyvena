@@ -55,7 +55,7 @@ export default function Services() {
           <h2 className="text-5xl md:text-6xl font-display font-bold gradient-text mb-4">
             How We Help
           </h2>
-          <p className="text-xl text-neutral-slate/70 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-charcoal/70 max-w-2xl mx-auto">
             End-to-end support from strategy to deployment—designed for nonprofits, schools, and mission-driven organizations
           </p>
         </motion.div>
@@ -152,7 +152,7 @@ export default function Services() {
           <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-4">
             Ready to Transform Your Operations?
           </h3>
-          <p className="text-lg text-neutral-slate/80 mb-6">
+          <p className="text-lg text-neutral-charcoal/80 mb-6">
             Turn your mission into measurable impact. Let's build AI that works for you—deployed in weeks, not months.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
