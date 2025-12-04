@@ -8,32 +8,32 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Lyvena brand colors - warm, ethical, human-oriented
+        // Lyvena brand colors - vibrant, ethical, human-oriented
         primary: {
-          DEFAULT: '#4A7F5F', // Sage green - growth, ethics, calm
-          dark: '#3A6349',
-          light: '#5F9B77',
+          DEFAULT: '#2E8B57', // Vibrant sea green - growth, ethics, energy
+          dark: '#228B22',
+          light: '#32CD32',
         },
         accent: {
-          DEFAULT: '#E8B44F', // Honey gold - innovation, warmth
-          dark: '#D09A35',
-          light: '#F0C566',
+          DEFAULT: '#FFD700', // Bright gold - innovation, warmth, brilliance
+          dark: '#FFA500',
+          light: '#FFE55C',
         },
         secondary: {
-          DEFAULT: '#C97751', // Terracotta - human warmth, care
-          dark: '#B35F3E',
-          light: '#D98F6B',
+          DEFAULT: '#FF6B35', // Vivid orange - impact, passion, dynamism
+          dark: '#FF4500',
+          light: '#FFA07A',
         },
         coral: {
-          DEFAULT: '#E8856B', // Coral - impact, energy
-          dark: '#D66F56',
-          light: '#EDA185',
+          DEFAULT: '#FF7F50', // Bright coral - creativity, warmth
+          dark: '#FF6347',
+          light: '#FFA500',
         },
         neutral: {
           cream: '#FAF7F2', // Warm background
           gray: '#E5E3DC', // Soft gray
           slate: '#5C6B73', // Intelligence, stability
-          charcoal: '#2C2E35', // Readable text
+          charcoal: '#1C1E22', // Deeper charcoal for better contrast
           white: '#FFFFFF', // Pure white for text on dark backgrounds
         },
       },

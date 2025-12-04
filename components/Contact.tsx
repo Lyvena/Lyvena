@@ -83,7 +83,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
             Ready to transform your digital future? Let's discuss how we can help bring your vision to life.
           </p>
         </motion.div>
@@ -107,7 +107,7 @@ export default function Contact() {
                   <h3 className="text-2xl font-bold text-primary mb-2">
                     Thank You!
                   </h3>
-                  <p className="text-neutral-white/70">
+                  <p className="text-neutral-white/80">
                     We'll get back to you soon.
                   </p>
                 </motion.div>

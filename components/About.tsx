@@ -119,7 +119,7 @@ export default function About() {
                     </h4>
 
                     {/* Description */}
-                    <p className="text-neutral-charcoal/70 leading-relaxed">
+                    <p className="text-neutral-charcoal/80 leading-relaxed">
                       {value.description}
                     </p>
                   </div>

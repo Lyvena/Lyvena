@@ -55,7 +55,7 @@ export default function Services() {
           <h2 className="text-5xl md:text-6xl font-display font-bold gradient-text mb-4">
             How We Help
           </h2>
-          <p className="text-xl text-neutral-charcoal/70 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-charcoal/90 max-w-2xl mx-auto">
             End-to-end support from strategy to deployment—designed for nonprofits, schools, and mission-driven organizations
           </p>
         </motion.div>

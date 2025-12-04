@@ -27,7 +27,7 @@ export default function Footer() {
                 Lyvena
               </h3>
             </Link>
-            <p className="text-neutral-white/70 leading-relaxed">
+            <p className="text-neutral-white/80 leading-relaxed">
               AI for Good. Building ethical AI solutions that create equitable digital futures.
             </p>
           </div>
@@ -40,7 +40,7 @@ export default function Footer() {
                 <li key={section}>
                   <a
                     href={`#${section}`}
-                    className="text-neutral-white/70 hover:text-accent transition-colors capitalize"
+                    className="text-neutral-white/80 hover:text-accent transition-colors capitalize"
                   >
                     {section}
                   </a>
@@ -49,7 +49,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
                   About
                 </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/stories"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
                   Stories
                 </a>
@@ -65,7 +65,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -73,7 +73,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/terms"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
                   Terms of Service
                 </Link>
@@ -90,7 +90,7 @@ export default function Footer() {
                   href="https://kiews.xyz/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
                   Kiews
                 </a>
@@ -100,7 +100,7 @@ export default function Footer() {
                   href="https://intelekt.live/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
                   Intelekt
                 </a>
@@ -111,7 +111,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
-            <p className="text-neutral-white/70 text-sm leading-relaxed">
+            <p className="text-neutral-white/80 text-sm leading-relaxed">
               <a href="mailto:info@lyvena.xyz" className="hover:text-accent transition-colors">
                 info@lyvena.xyz
               </a>

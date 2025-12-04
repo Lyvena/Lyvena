@@ -38,7 +38,7 @@ export default function TermsOfService() {
           >
             <div className="space-y-8">
               {/* Last Updated */}
-              <p className="text-neutral-charcoal/70 italic">
+              <p className="text-neutral-charcoal/80 italic">
                 Last Updated: November 7, 2025
               </p>
 
