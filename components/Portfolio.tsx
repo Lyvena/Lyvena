@@ -49,6 +49,17 @@ const projects = [
     impact: 'Streamlined hiring process, automated contractor management',
     websiteLink: 'https://www.remotely.works/',
   },
+  {
+    id: 5,
+    title: 'JW Fishers',
+    category: 'Web Design & Development',
+    description: 'Professional website for leading underwater search equipment manufacturer',
+    fullDescription: 'A comprehensive website designed and developed for JW Fishers, a world-renowned manufacturer of underwater search equipment trusted by law enforcement, military, and commercial industries worldwide. The platform showcases their cutting-edge products including ROVs, side scan sonar systems, underwater metal detectors (rated #1 by US Homeland Security), and underwater cameras serving defense, first responders, offshore oil & gas, and scientific research sectors.',
+    tech: ['Webflow', 'CSS', 'JavaScript', 'Responsive Design'],
+    image: 'linear-gradient(135deg, #1a2980 0%, #26d0ce 100%)',
+    impact: 'Enhanced product visibility, trusted by US Homeland Security',
+    websiteLink: 'https://www.jwfishers.com/',
+  },
 ]
 
 export default function Portfolio() {
