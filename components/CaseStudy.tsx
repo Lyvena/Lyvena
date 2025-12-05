@@ -16,7 +16,7 @@ export default function CaseStudy() {
   ]
 
   return (
-    <section className="min-h-screen bg-neutral-charcoaler text-white py-20 px-6">
+    <section className="min-h-screen bg-neutral-charcoal text-white py-20 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Hero Image */}
         <motion.div
@@ -91,7 +91,7 @@ export default function CaseStudy() {
                 className="bg-neutral-charcoal/50 p-6 rounded-lg border border-accent/20 hover:border-accent/50 transition-colors"
               >
                 <h3 className="text-lg font-semibold text-accent mb-2">{obj.title}</h3>
-                <p className="text-neutral-white/90">{obj.desc}</p>
+                <p className="text-white/90">{obj.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -185,7 +185,7 @@ export default function CaseStudy() {
                 className="bg-neutral-charcoal/50 p-6 rounded-lg border border-primary/20 hover:border-primary/50 transition-colors"
               >
                 <h3 className="text-xl font-semibold text-primary mb-2">{feature.title}</h3>
-                <p className="text-neutral-white/90">{feature.desc}</p>
+                <p className="text-white/90">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -223,7 +223,7 @@ export default function CaseStudy() {
                 className="bg-neutral-charcoal/50 p-6 rounded-lg border border-red-500/20 hover:border-red-500/50 transition-colors"
               >
                 <h3 className="text-xl font-semibold text-red-400 mb-2">{challenge.title}</h3>
-                <p className="text-neutral-white/90">{challenge.desc}</p>
+                <p className="text-white/90">{challenge.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -253,7 +253,7 @@ export default function CaseStudy() {
                   className="bg-gradient-to-br from-accent/20 to-primary/20 p-6 rounded-lg border border-accent/30"
                 >
                   <div className="text-3xl font-bold text-accent mb-2">{metric.label}</div>
-                  <p className="text-neutral-white/90">{metric.desc}</p>
+                  <p className="text-white/90">{metric.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -410,14 +410,14 @@ export default function CaseStudy() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <p className="text-neutral-white/90 mb-6">
+          <p className="text-white/90 mb-6">
             Interested in exploring how Kiews can help your organization leverage NEAR Protocol without code?
           </p>
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-8 py-3 bg-accent text-neutral-charcoaler font-semibold rounded-lg hover:shadow-lg transition-shadow"
+            className="inline-block px-8 py-3 bg-accent text-neutral-charcoal font-semibold rounded-xl hover:shadow-lg hover:shadow-accent/30 transition-all"
           >
             Schedule a Demonstration
           </motion.a>
