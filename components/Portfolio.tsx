@@ -76,6 +76,17 @@ const projects = [
     impact: '500+ users, $5M+ transaction volume, 92% satisfaction',
     caseStudyLink: '/case-study',
   },
+  {
+    id: 8,
+    title: 'St. Joachim and Anne Clinic',
+    category: 'Web Development',
+    description: 'Modern medical website for advanced bariatric surgery clinic',
+    fullDescription: 'A comprehensive, patient-focused website for St. Joachim and Anne Clinic, a premier medical facility specializing in advanced weight loss surgery and obesity treatment. The platform features detailed procedure information for gastric bypass, sleeve gastrectomy, and gastric band surgeries, along with compassionate patient resources and streamlined appointment scheduling.',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Cloudflare'],
+    image: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+    impact: 'Enhanced patient engagement, streamlined consultations',
+    websiteLink: 'https://stja-clinic.com/',
+  },
 ]
 
 export default function Portfolio() {
@@ -238,6 +249,15 @@ export default function Portfolio() {
                       className="btn-primary w-full md:w-auto inline-block text-center"
                     >
                       Read Full Case Study
+                    </a>
+                  ) : (selectedProject as any).websiteLink ? (
+                    <a
+                      href={(selectedProject as any).websiteLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary w-full md:w-auto inline-block text-center"
+                    >
+                      Visit Website
                     </a>
                   ) : (
                     <button
