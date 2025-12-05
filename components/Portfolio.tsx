@@ -60,6 +60,17 @@ const projects = [
     impact: 'Enhanced product visibility, trusted by US Homeland Security',
     websiteLink: 'https://www.jwfishers.com/',
   },
+  {
+    id: 6,
+    title: 'SuperWorld',
+    category: 'Web3 & Blockchain',
+    description: 'Virtual real estate platform mapping digital assets to real-world locations',
+    fullDescription: 'SuperWorld is an innovative virtual real estate platform that maps digital assets onto real-world locations, enabling users to buy, sell, and monetize virtual land corresponding to any place on Earth. Powered by AI and blockchain technology, the platform features NFT creation, DAO communities, and a $SPWR token ecosystem on Base. Users can personalize the world around them with content, recommendations, events, and bookings while earning from real-world activity on their virtual properties.',
+    tech: ['React', 'Blockchain', 'AI', 'Web3', 'Base'],
+    image: 'linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)',
+    impact: 'Pioneering virtual real estate, backed by leading VCs',
+    websiteLink: 'https://www.superworldapp.com/',
+  },
 ]
 
 export default function Portfolio() {
