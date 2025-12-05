@@ -38,6 +38,17 @@ const projects = [
     impact: 'Award-winning authentication innovation, trusted by leading banks',
     websiteLink: 'https://www.entersekt.com/',
   },
+  {
+    id: 4,
+    title: 'Remotely',
+    category: 'Backend & Automation',
+    description: 'Talent platform connecting global developers with elite US startup jobs',
+    fullDescription: 'Remotely is a comprehensive talent platform that connects top software engineers worldwide with full-time, long-term positions at fast-growing US startups. We developed the robust backend infrastructure, database architecture, and automation systems that power their matching algorithms, candidate management, invoice processing, PTO tracking, and contractor management platform.',
+    tech: ['Node.js', 'PostgreSQL', 'Automation', 'API Integration'],
+    image: 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
+    impact: 'Streamlined hiring process, automated contractor management',
+    websiteLink: 'https://www.remotely.works/',
+  },
 ]
 
 export default function Portfolio() {
