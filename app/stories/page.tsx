@@ -138,7 +138,7 @@ export default function Stories() {
                     <div className="md:col-span-2 p-6 flex flex-col justify-between">
                       <div>
                         <div className="flex items-center gap-3 mb-4">
-                          <span className="text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
+                          <span className="text-xs font-semibold text-neutral-charcoal bg-accent px-3 py-1 rounded-full">
                             {post.category}
                           </span>
                           <span className="text-sm font-medium text-neutral-charcoal/70">{post.date}</span>
@@ -153,7 +153,7 @@ export default function Stories() {
 
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium text-neutral-charcoal">By {post.author}</span>
-                        <span className="text-accent font-semibold hover:text-primary transition-colors">
+                        <span className="text-primary font-semibold hover:text-primary-dark transition-colors">
                           Read More →
                         </span>
                       </div>

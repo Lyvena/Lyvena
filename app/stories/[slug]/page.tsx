@@ -1637,15 +1637,15 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
           {/* Header */}
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-sm font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
+              <span className="text-sm font-semibold text-neutral-charcoal bg-accent px-3 py-1 rounded-full">
                 {article.category}
               </span>
-              <span className="text-sm text-neutral-white/60">{article.date}</span>
+              <span className="text-sm text-white/80">{article.date}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
               {article.title}
             </h1>
-            <p className="text-lg text-neutral-white/70">
+            <p className="text-lg text-white/80">
               By {article.author}
             </p>
           </div>
