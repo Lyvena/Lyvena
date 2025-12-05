@@ -141,18 +141,18 @@ export default function Stories() {
                           <span className="text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
                             {post.category}
                           </span>
-                          <span className="text-sm font-medium text-neutral-charcoal/80">{post.date}</span>
+                          <span className="text-sm font-medium text-neutral-charcoal/70">{post.date}</span>
                         </div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-neutral-charcoal mb-4 hover:text-primary transition-colors line-clamp-3">
+                        <h2 className="text-2xl md:text-3xl font-bold text-neutral-charcoal mb-4 hover:text-primary transition-colors">
                           {post.title}
                         </h2>
-                        <p className="text-base md:text-lg text-neutral-charcoal/80 leading-relaxed mb-4 line-clamp-3">
+                        <p className="text-base md:text-lg text-neutral-charcoal/70 leading-relaxed mb-4 line-clamp-2">
                           {post.excerpt}
                         </p>
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-neutral-charcoal/80">By {post.author}</span>
+                        <span className="text-sm font-medium text-neutral-charcoal">By {post.author}</span>
                         <span className="text-accent font-semibold hover:text-primary transition-colors">
                           Read More →
                         </span>
