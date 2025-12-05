@@ -86,23 +86,31 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Products</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="https://kiews.xyz/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/products"
                   className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
-                  Kiews
-                </a>
+                  All Products
+                </Link>
               </li>
               <li>
                 <a
-                  href="https://intelekt.live/"
+                  href="https://intelekt.live"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
                   Intelekt
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://kiews.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
+                >
+                  Kiews
                 </a>
               </li>
             </ul>

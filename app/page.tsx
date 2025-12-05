@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
+import Products from '@/components/Products'
 import Portfolio from '@/components/Portfolio'
 import Clients from '@/components/Clients'
 import About from '@/components/About'
@@ -34,6 +35,7 @@ export default function Home() {
       <Hero />
       <StoriesSection />
       <Services />
+      <Products />
       <Clients />
       <Portfolio />
       <About />
