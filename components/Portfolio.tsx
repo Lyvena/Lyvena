@@ -2,72 +2,84 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaTimes } from 'react-icons/fa'
+import { FaTimes, FaExternalLinkAlt } from 'react-icons/fa'
 
 const projects = [
   {
     id: 1,
-    title: 'Kiews - No-Code NEAR Integration',
+    title: 'Kiews',
+    subtitle: 'No-Code NEAR Integration',
     category: 'Blockchain',
     description: 'Democratizing access to NEAR Protocol through no-code platform',
     fullDescription: 'A groundbreaking no-code platform that enables non-technical users to build and deploy NEAR Protocol integrations. Kiews features a visual workflow builder, smart contract templates, testing sandbox, and comprehensive monitoring dashboard.',
     tech: ['NEAR Protocol', 'WebFlow', 'Rust', 'JavaScript'],
-    image: 'linear-gradient(135deg, #FF6B6B 0%, #FFE66D 100%)',
+    gradient: 'from-orange-500 to-yellow-500',
+    imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80',
     impact: '500+ users, $5M+ transaction volume, 92% satisfaction',
     caseStudyLink: '/case-study',
   },
   {
     id: 2,
     title: 'St. Joachim and Anne Clinic',
+    subtitle: 'Medical Website',
     category: 'Web Design & Development',
     description: 'Modern medical website designed and developed for advanced bariatric surgery clinic',
     fullDescription: 'A comprehensive, patient-focused website designed and developed for St. Joachim and Anne Clinic, a premier medical facility specializing in advanced weight loss surgery and obesity treatment. The platform features a compassionate and professional design, detailed procedure information for gastric bypass, sleeve gastrectomy, and gastric band surgeries, along with patient resources and streamlined appointment scheduling.',
     tech: ['React', 'Vite', 'Tailwind CSS', 'Cloudflare'],
-    image: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+    gradient: 'from-emerald-500 to-teal-500',
+    imageUrl: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80',
     impact: 'Enhanced patient engagement, streamlined consultations',
     websiteLink: 'https://stja-clinic.com/',
   },
   {
     id: 3,
     title: 'Entersekt',
+    subtitle: 'Financial Security Platform',
     category: 'Web Development',
     description: 'Corporate website for leading financial authentication company',
     fullDescription: 'A professional corporate website developed for Entersekt, a leading financial authentication company that shields customers from AI-driven scams and modern financial fraud. The platform showcases their award-winning Context Aware™ Authentication solutions, fraud prevention services, and account takeover protection for banking institutions worldwide.',
     tech: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
-    image: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    gradient: 'from-violet-500 to-purple-600',
+    imageUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80',
     impact: 'Award-winning authentication innovation, trusted by leading banks',
     websiteLink: 'https://www.entersekt.com/',
   },
   {
     id: 4,
     title: 'Remotely',
+    subtitle: 'Global Talent Platform',
     category: 'Backend & Automation',
     description: 'Talent platform connecting global developers with elite US startup jobs',
     fullDescription: 'Remotely is a comprehensive talent platform that connects top software engineers worldwide with full-time, long-term positions at fast-growing US startups. We developed the robust backend infrastructure, database architecture, and automation systems that power their matching algorithms, candidate management, invoice processing, PTO tracking, and contractor management platform.',
     tech: ['Node.js', 'PostgreSQL', 'Automation', 'API Integration'],
-    image: 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
+    gradient: 'from-cyan-500 to-blue-600',
+    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
     impact: 'Streamlined hiring process, automated contractor management',
     websiteLink: 'https://www.remotely.works/',
   },
   {
     id: 5,
     title: 'JW Fishers',
+    subtitle: 'Underwater Search Equipment',
     category: 'Web Design & Development',
     description: 'Professional website for leading underwater search equipment manufacturer',
     fullDescription: 'A comprehensive website designed and developed for JW Fishers, a world-renowned manufacturer of underwater search equipment trusted by law enforcement, military, and commercial industries worldwide. The platform showcases their cutting-edge products including ROVs, side scan sonar systems, underwater metal detectors (rated #1 by US Homeland Security), and underwater cameras serving defense, first responders, offshore oil & gas, and scientific research sectors.',
     tech: ['Webflow', 'CSS', 'JavaScript', 'Responsive Design'],
-    image: 'linear-gradient(135deg, #1a2980 0%, #26d0ce 100%)',
+    gradient: 'from-blue-600 to-cyan-500',
+    imageUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
     impact: 'Enhanced product visibility, trusted by US Homeland Security',
     websiteLink: 'https://www.jwfishers.com/',
   },
   {
     id: 6,
     title: 'SuperWorld',
+    subtitle: 'Virtual Real Estate Platform',
     category: 'Web3 & Blockchain',
     description: 'Virtual real estate platform mapping digital assets to real-world locations',
     fullDescription: 'SuperWorld is an innovative virtual real estate platform that maps digital assets onto real-world locations, enabling users to buy, sell, and monetize virtual land corresponding to any place on Earth. Powered by AI and blockchain technology, the platform features NFT creation, DAO communities, and a $SPWR token ecosystem on Base. Users can personalize the world around them with content, recommendations, events, and bookings while earning from real-world activity on their virtual properties.',
     tech: ['React', 'Blockchain', 'AI', 'Web3', 'Base'],
-    image: 'linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)',
+    gradient: 'from-purple-600 to-indigo-600',
+    imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
     impact: 'Pioneering virtual real estate, backed by leading VCs',
     websiteLink: 'https://www.superworldapp.com/',
   },
@@ -79,31 +91,45 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="section-padding bg-gradient-to-br from-primary/5 via-neutral-white to-accent/5 relative overflow-hidden"
+      className="section-padding bg-gradient-to-b from-neutral-charcoal to-neutral-charcoal relative overflow-hidden"
     >
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-30">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Our Work</span>
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
+            Featured Projects
+          </h2>
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
+            From blockchain platforms to medical websites, we deliver excellence across industries
+          </p>
+        </motion.div>
 
-        {/* Masonry grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`${
-                index % 5 === 0 ? 'md:col-span-2 md:row-span-2' : ''
-              }`}
+              className="group"
             >
               <div
-                className="card cursor-pointer overflow-hidden group h-full"
+                className="relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-accent/50 transition-all duration-500 cursor-pointer h-full"
                 onClick={() => setSelectedProject(project)}
                 role="button"
                 tabIndex={0}
@@ -114,39 +140,54 @@ export default function Portfolio() {
                 }}
                 aria-label={`View details for ${project.title}`}
               >
-                {/* Project thumbnail */}
-                <div
-                  className="h-64 relative overflow-hidden"
-                  style={{ background: project.image }}
-                >
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
-                    <div className="text-white text-center p-6">
-                      <h3 className="text-2xl font-display font-bold mb-2">
-                        {project.title}
-                      </h3>
-                      <p className="text-sm opacity-90 mb-4">{project.category}</p>
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-accent font-semibold">Click to learn more →</span>
-                      </div>
-                    </div>
+                {/* Project Image */}
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-60 mix-blend-multiply`} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-charcoal via-transparent to-transparent" />
+                  
+                  {/* Category Badge */}
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                      {project.category}
+                    </span>
+                  </div>
+
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white font-semibold flex items-center gap-2">
+                      View Project <FaExternalLinkAlt className="text-sm" />
+                    </span>
                   </div>
                 </div>
 
-                {/* Project info */}
+                {/* Project Info */}
                 <div className="p-6">
-                  <p className="text-neutral-charcoal/80 mb-4">{project.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-1 group-hover:text-accent transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-accent/80 text-sm font-medium mb-3">{project.subtitle}</p>
+                  <p className="text-white/60 text-sm leading-relaxed mb-4 line-clamp-2">
+                    {project.description}
+                  </p>
+                  
+                  {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2">
                     {project.tech.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full"
+                        className="px-2 py-1 bg-white/10 text-white/70 text-xs rounded-md"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.tech.length > 3 && (
-                      <span className="px-3 py-1 bg-neutral-gray text-neutral-charcoal text-xs font-semibold rounded-full">
-                        +{project.tech.length - 3} more
+                      <span className="px-2 py-1 bg-white/10 text-white/70 text-xs rounded-md">
+                        +{project.tech.length - 3}
                       </span>
                     )}
                   </div>
@@ -155,6 +196,25 @@ export default function Portfolio() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-16"
+        >
+          <button
+            onClick={() => {
+              const contactSection = document.getElementById('contact')
+              contactSection?.scrollIntoView({ behavior: 'smooth' })
+            }}
+            className="btn-primary shine"
+          >
+            Start Your Project
+          </button>
+        </motion.div>
       </div>
 
       {/* Modal */}
@@ -184,16 +244,20 @@ export default function Portfolio() {
               </button>
 
               {/* Project hero */}
-              <div
-                className="h-64 relative"
-                style={{ background: selectedProject.image }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+              <div className="h-72 relative overflow-hidden">
+                <img
+                  src={selectedProject.imageUrl}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-t ${selectedProject.gradient} opacity-50 mix-blend-multiply`} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                   <div className="p-8 text-white">
-                    <h3 className="text-4xl font-display font-bold mb-2">
+                    <span className="text-accent text-sm font-semibold mb-2 block">{selectedProject.category}</span>
+                    <h3 className="text-3xl md:text-4xl font-display font-bold mb-1">
                       {selectedProject.title}
                     </h3>
-                    <p className="text-lg opacity-90">{selectedProject.category}</p>
+                    <p className="text-white/80">{selectedProject.subtitle}</p>
                   </div>
                 </div>
               </div>
