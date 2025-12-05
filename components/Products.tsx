@@ -20,7 +20,6 @@ const products = [
     gradient: 'from-violet-500 via-purple-500 to-indigo-500',
     bgGradient: 'from-violet-500/10 via-purple-500/10 to-indigo-500/10',
     link: 'https://intelekt.live',
-    status: 'Live',
   },
   {
     id: 'kiews',
@@ -37,7 +36,6 @@ const products = [
     gradient: 'from-amber-500 via-orange-500 to-red-500',
     bgGradient: 'from-amber-500/10 via-orange-500/10 to-red-500/10',
     link: 'https://kiews.xyz',
-    status: 'Live',
   },
 ]
 
@@ -86,14 +84,11 @@ export default function Products() {
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
                 
-                {/* Status Badge */}
-                <div className="flex items-center justify-between mb-6">
+                {/* Product Icon */}
+                <div className="mb-6">
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${product.gradient}`}>
                     <product.icon className="text-3xl text-white" />
                   </div>
-                  <span className="px-3 py-1 text-xs font-bold bg-green-500/20 text-green-400 rounded-full border border-green-500/30">
-                    {product.status}
-                  </span>
                 </div>
 
                 {/* Content */}
