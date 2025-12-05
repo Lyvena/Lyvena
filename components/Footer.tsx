@@ -28,7 +28,7 @@ export default function Footer() {
               </h3>
             </Link>
             <p className="text-neutral-white/80 leading-relaxed">
-              AI for Good. Building ethical AI solutions that create equitable digital futures.
+              An Orthodox Christian company pioneering Artificial SuperIntelligence for the good of humanity.
             </p>
           </div>
 

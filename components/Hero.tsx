@@ -41,7 +41,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
           >
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            <span className="text-sm text-white/80 font-medium">AI for Good • Ethical Innovation</span>
+            <span className="text-sm text-white/80 font-medium">Orthodox Christian • AI for Good • Ethical Innovation</span>
           </motion.div>
 
           {/* Logo/Brand */}
@@ -61,8 +61,8 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Empowering Humanity with{' '}
-            <span className="text-accent">Ethical Intelligence</span>
+            Building the Future with{' '}
+            <span className="text-accent">Responsible AI</span>
           </motion.h2>
 
           {/* Value Proposition */}
@@ -72,8 +72,8 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            We build AI solutions that solve real-world problems—from predicting patient needs
-            to automating school systems—while respecting privacy, human dignity, and the planet.
+            We're an Orthodox Christian company pioneering Artificial SuperIntelligence that serves humanity.
+            Our AI solutions transform healthcare, education, and business—built on ethics, transparency, and purpose.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -88,14 +88,14 @@ export default function Hero() {
               className="btn-primary text-lg shine"
               aria-label="Start a conversation with Lyvena"
             >
-              Start a Conversation
+              Let's Build Together
             </button>
             <a
               href="#services"
               className="btn-secondary text-lg"
               aria-label="Explore our services"
             >
-              Explore Our Work
+              See What We Do
             </a>
           </motion.div>
 

@@ -85,10 +85,10 @@ export default function Contact() {
         >
           <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Get In Touch</span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-            Let's Build Something Amazing
+            Ready to Make an Impact?
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Ready to transform your digital future? Let's discuss how we can help bring your vision to life.
+            Whether you're launching something new or transforming what exists, we're here to help you build technology that matters.
           </p>
         </motion.div>
 
@@ -214,7 +214,7 @@ export default function Contact() {
           >
             {/* Why choose us */}
             <div className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-white mb-6">Why Choose Lyvena?</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Why Partner With Us?</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <svg
@@ -224,7 +224,7 @@ export default function Contact() {
                   >
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                   </svg>
-                  <span className="text-neutral-white/90">Ethical AI development with transparency</span>
+                  <span className="text-neutral-white/90">Faith-driven approach to technology and innovation</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -234,7 +234,7 @@ export default function Contact() {
                   >
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                   </svg>
-                  <span className="text-neutral-white/90">Cutting-edge technology stack</span>
+                  <span className="text-neutral-white/90">Proven track record across healthcare, fintech, and Web3</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -244,7 +244,7 @@ export default function Contact() {
                   >
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                   </svg>
-                  <span className="text-neutral-white/90">Dedicated to positive social impact</span>
+                  <span className="text-neutral-white/90">End-to-end delivery from strategy to deployment</span>
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -254,7 +254,7 @@ export default function Contact() {
                   >
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                   </svg>
-                  <span className="text-neutral-white/90">Responsive and accessible design</span>
+                  <span className="text-neutral-white/90">Long-term partnership mindset, not just project delivery</span>
                 </li>
               </ul>
             </div>

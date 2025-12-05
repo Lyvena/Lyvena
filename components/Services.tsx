@@ -6,26 +6,26 @@ import { FaCode, FaBrain, FaPaintBrush } from 'react-icons/fa'
 const services = [
   {
     icon: FaBrain,
-    title: 'AI-Powered Automation',
-    description: 'Intelligent systems that work for you',
-    details: 'Save 40% of your team\'s time while improving accuracy to 99%. We build AI that predicts patient needs, automates school administration, and optimizes supply chains.',
-    features: ['Patient needs prediction', 'School admin automation', 'Supply chain optimization'],
+    title: 'AI & Automation Solutions',
+    description: 'Intelligence that amplifies your impact',
+    details: 'Transform operations with AI that learns, adapts, and delivers. From predictive healthcare to automated workflows, we build systems that free your team to focus on what matters most.',
+    features: ['Predictive analytics & insights', 'Workflow automation', 'Custom AI model development'],
     gradient: 'from-primary via-primary to-primary-dark',
   },
   {
     icon: FaCode,
-    title: 'Ethical Web Platforms',
-    description: 'Digital spaces built on values',
-    details: 'Trust, accessibility, and security from day one. We create platforms that engage users 3x more than industry average.',
-    features: ['Community platforms', 'Government portals', 'Nonprofit tools'],
+    title: 'Web & App Development',
+    description: 'Digital experiences that inspire action',
+    details: 'We craft beautiful, high-performance platforms that convert visitors into advocates. Every pixel purposeful, every interaction meaningful.',
+    features: ['Modern web applications', 'Mobile-first design', 'E-commerce & portals'],
     gradient: 'from-accent via-accent to-accent-dark',
   },
   {
     icon: FaPaintBrush,
-    title: 'Strategic AI Consulting',
-    description: 'Roadmaps that align tech with mission',
-    details: 'Get a clear path forward in weeks, not months. From AI readiness to ethical framework design.',
-    features: ['AI readiness assessments', 'Ethical frameworks', 'Technology roadmaps'],
+    title: 'Design & Strategy',
+    description: 'Vision translated into reality',
+    details: 'From brand identity to UX research, we create cohesive digital strategies that align technology with your mission and values.',
+    features: ['Brand & identity design', 'UX/UI design', 'Digital transformation consulting'],
     gradient: 'from-secondary via-secondary to-secondary-dark',
   },
 ]
@@ -53,10 +53,10 @@ export default function Services() {
         >
           <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Our Services</span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
-            How We Help
+            What We Build
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            End-to-end support from strategy to deployment—designed for nonprofits, schools, and mission-driven organizations
+            End-to-end solutions from concept to launch. We partner with visionary organizations to create technology that makes a difference.
           </p>
         </motion.div>
 
@@ -133,10 +133,10 @@ export default function Services() {
               }}
               className="btn-primary shine"
             >
-              Start a Conversation
+              Start Your Project
             </button>
             <a href="/case-study" className="btn-secondary">
-              See Our Work
+              View Case Studies
             </a>
           </div>
         </motion.div>

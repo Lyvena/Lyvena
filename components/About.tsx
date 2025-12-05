@@ -7,37 +7,37 @@ const coreValues = [
   {
     icon: FaShieldAlt,
     title: 'Ethical AI',
-    description: 'Prioritizing responsible and transparent AI development that respects human values and dignity',
+    description: 'Every algorithm we build respects human dignity. We develop AI that is fair, unbiased, and aligned with moral principles.',
     gradient: 'from-emerald-500 to-teal-500',
   },
   {
     icon: FaLock,
     title: 'Privacy First',
-    description: 'Protecting user data and digital rights with industry-leading security practices',
+    description: 'Your data belongs to you. We implement industry-leading security practices and never compromise on user privacy.',
     gradient: 'from-blue-500 to-indigo-500',
   },
   {
     icon: FaLeaf,
     title: 'Sustainability',
-    description: 'Building technology that benefits the planet and promotes environmental stewardship',
+    description: 'Technology should heal, not harm. We build solutions that benefit both people and planet for generations to come.',
     gradient: 'from-green-500 to-emerald-500',
   },
   {
     icon: FaUsers,
     title: 'Community Impact',
-    description: 'Empowering communities through accessible technology and meaningful social programs',
+    description: 'Real change happens together. We partner with communities to create technology that lifts everyone up.',
     gradient: 'from-orange-500 to-amber-500',
   },
   {
     icon: FaLightbulb,
     title: 'Innovation',
-    description: 'Pushing boundaries while maintaining ethical standards and user-centric design',
+    description: 'We push boundaries responsibly. Cutting-edge technology, grounded in timeless values and human-centered design.',
     gradient: 'from-yellow-500 to-orange-500',
   },
   {
     icon: FaEye,
     title: 'Transparency',
-    description: 'Open communication and accountable practices in everything we do',
+    description: 'No black boxes here. We believe in open communication, explainable AI, and accountable practices.',
     gradient: 'from-purple-500 to-pink-500',
   },
 ]
@@ -65,11 +65,11 @@ export default function About() {
         >
           <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Who We Are</span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-charcoal mb-6">
-            Our Core Values
+            What Drives Us
           </h2>
           <p className="text-lg text-neutral-charcoal/70 max-w-3xl mx-auto">
-            Lyvena is pioneering AI that puts people first. We believe technology should empower
-            communities, protect privacy, and promote sustainability.
+            We're building AI the right way—with purpose, integrity, and an unwavering commitment
+            to human flourishing. These principles guide every decision we make.
           </p>
         </motion.div>
 

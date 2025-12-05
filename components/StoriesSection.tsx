@@ -46,9 +46,9 @@ export default function StoriesSection() {
           className="flex flex-col md:flex-row md:items-end md:justify-between mb-16"
         >
           <div>
-            <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Our Blog</span>
+            <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Insights & Ideas</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-charcoal">
-              Latest Insights
+              Thinking About Tomorrow
             </h2>
           </div>
           <Link href="/stories" className="mt-4 md:mt-0">

@@ -11,13 +11,13 @@ export default function About() {
       name: 'Aryna Verchenko',
       role: 'Chief Designer & COO',
       linkedin: 'https://www.linkedin.com/in/unicornixa/',
-      description: 'Creative strategist ensuring ethical design and operational excellence.',
+      description: 'Creative visionary and operational leader, bringing artistry and precision to everything we build. Aryna ensures our solutions are as beautiful as they are functional.',
     },
     {
       name: 'Akshay',
       role: 'Founder & CEO',
       linkedin: 'https://www.linkedin.com/in/Akshay155/',
-      description: 'Visionary leader driving Lyvena\'s mission to develop AI for good.',
+      description: 'Founder and driving force behind Lyvena\'s mission to develop AI for good. Akshay leads with conviction that technology can—and must—serve humanity\'s highest aspirations.',
     },
   ]
 
@@ -36,7 +36,7 @@ export default function About() {
               About Lyvena
             </h1>
             <p className="text-xl text-neutral-white/90 max-w-2xl mx-auto">
-              Pioneering ethical AI development for a better future
+              Where faith meets innovation. Building AI that serves humanity with purpose, integrity, and hope.
             </p>
           </motion.div>
         </div>
@@ -57,13 +57,13 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-lg text-neutral-white/80 leading-relaxed mb-6">
-                Lyvena is an Orthodox Christian company dedicated to researching and developing Artificial SuperIntelligence with a clear purpose: <span className="text-accent font-semibold">AI for Good</span>.
+                Lyvena is an Orthodox Christian company on a mission to develop Artificial SuperIntelligence that truly serves humanity. Our purpose is clear: <span className="text-accent font-semibold">AI for Good</span>.
               </p>
               <p className="text-lg text-neutral-white/80 leading-relaxed mb-6">
-                We believe that artificial intelligence should be developed with ethical principles, transparency, and a commitment to creating equitable digital futures. Our work is grounded in values that prioritize human flourishing and responsible innovation.
+                We believe the most powerful technology should be built on the strongest foundation—one of ethics, transparency, and genuine care for human flourishing. Every line of code we write reflects our commitment to responsible innovation.
               </p>
               <p className="text-lg text-neutral-white/80 leading-relaxed">
-                Every solution we build is designed to amplify human potential, solve meaningful problems, and contribute positively to society.
+                From healthcare to education, fintech to Web3, we partner with organizations who share our vision of technology that elevates, empowers, and unites.
               </p>
             </div>
             <motion.div
@@ -77,7 +77,7 @@ export default function About() {
                 <div>
                   <h3 className="text-2xl font-bold text-accent mb-3">Our Vision</h3>
                   <p className="text-neutral-white/80">
-                    To pioneer ethical AI development that serves humanity and reflects our commitment to responsible innovation.
+                    A world where artificial intelligence amplifies human potential, protects human dignity, and advances the common good—built by people who believe technology can be a force for genuine transformation.
                   </p>
                 </div>
                 <div>
@@ -85,19 +85,19 @@ export default function About() {
                   <ul className="space-y-2 text-neutral-white/80">
                     <li className="flex items-start">
                       <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Ethical AI development with transparency</span>
+                      <span>Faith as our foundation, excellence as our standard</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Commitment to positive social impact</span>
+                      <span>Technology in service of human flourishing</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Cutting-edge technology with integrity</span>
+                      <span>Transparency in everything we build and do</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Inclusive and accessible solutions</span>
+                      <span>Long-term thinking over short-term gains</span>
                     </li>
                   </ul>
                 </div>
@@ -117,10 +117,10 @@ export default function About() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Our AI Employees
+              Meet Our AI Team
             </h2>
             <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
-              Meet the AI employees who power Lyvena's operations and drive our mission forward
+              The intelligent assistants who help us deliver exceptional results—efficiently, ethically, and with care.
             </p>
           </motion.div>
 
@@ -221,10 +221,10 @@ export default function About() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Our Leadership
+              Leadership
             </h2>
             <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
-              Visionary leaders driving Lyvena's mission forward
+              The people behind the mission, committed to building AI that serves the greater good.
             </p>
           </motion.div>
 
@@ -270,10 +270,10 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-charcoal mb-4">
-              Ready to Build the Future Together?
+              Let's Build Something Meaningful
             </h2>
             <p className="text-lg text-neutral-charcoal/90 mb-8">
-              Join us in developing AI for good. Let's create solutions that make a positive impact.
+              Ready to create technology that makes a real difference? We'd love to hear about your vision.
             </p>
             <Link
               href="/#contact"
