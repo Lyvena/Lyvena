@@ -52,7 +52,7 @@ export default function CaseStudy() {
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-4 text-accent">{section.title}</h2>
-            <p className="text-neutral-white/80 leading-relaxed text-lg">{section.content}</p>
+            <p className="text-white leading-relaxed text-lg">{section.content}</p>
           </motion.div>
         ))}
 
@@ -91,7 +91,7 @@ export default function CaseStudy() {
                 className="bg-neutral-charcoal/50 p-6 rounded-lg border border-accent/20 hover:border-accent/50 transition-colors"
               >
                 <h3 className="text-lg font-semibold text-accent mb-2">{obj.title}</h3>
-                <p className="text-neutral-white/70">{obj.desc}</p>
+                <p className="text-neutral-white/90">{obj.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -108,20 +108,20 @@ export default function CaseStudy() {
 
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4 text-primary">Research & Discovery Phase</h3>
-            <p className="text-neutral-white/80 leading-relaxed mb-4">
+            <p className="text-white leading-relaxed mb-4">
               We began with comprehensive research into the existing NEAR ecosystem, identifying pain points and opportunities. Our team conducted interviews with non-technical business leaders interested in blockchain, web developers without blockchain experience, NEAR Protocol core developers, and current NEAR dApp creators.
             </p>
-            <p className="text-neutral-white/80 leading-relaxed">
+            <p className="text-white leading-relaxed">
               This research revealed that most potential users were enthusiastic about blockchain possibilities but intimidated by implementation complexities. We also discovered that a visual, workflow-based interface would be most effective for our target audience.
             </p>
           </div>
 
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4 text-primary">Technical Architecture</h3>
-            <p className="text-neutral-white/80 leading-relaxed mb-4">
+            <p className="text-white leading-relaxed mb-4">
               Kiews' architecture was designed around three core components:
             </p>
-            <ul className="space-y-3 text-neutral-white/80">
+            <ul className="space-y-3 text-white">
               <li className="flex items-start">
                 <span className="text-accent mr-3 font-bold">1.</span>
                 <span><strong>Visual Interface Layer:</strong> A drag-and-drop environment built using WebFlow's advanced capabilities, allowing users to design their workflow visually</span>
@@ -185,7 +185,7 @@ export default function CaseStudy() {
                 className="bg-neutral-charcoal/50 p-6 rounded-lg border border-primary/20 hover:border-primary/50 transition-colors"
               >
                 <h3 className="text-xl font-semibold text-primary mb-2">{feature.title}</h3>
-                <p className="text-neutral-white/70">{feature.desc}</p>
+                <p className="text-neutral-white/90">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -223,7 +223,7 @@ export default function CaseStudy() {
                 className="bg-neutral-charcoal/50 p-6 rounded-lg border border-red-500/20 hover:border-red-500/50 transition-colors"
               >
                 <h3 className="text-xl font-semibold text-red-400 mb-2">{challenge.title}</h3>
-                <p className="text-neutral-white/70">{challenge.desc}</p>
+                <p className="text-neutral-white/90">{challenge.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -253,7 +253,7 @@ export default function CaseStudy() {
                   className="bg-gradient-to-br from-accent/20 to-primary/20 p-6 rounded-lg border border-accent/30"
                 >
                   <div className="text-3xl font-bold text-accent mb-2">{metric.label}</div>
-                  <p className="text-neutral-white/70">{metric.desc}</p>
+                  <p className="text-neutral-white/90">{metric.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -261,7 +261,7 @@ export default function CaseStudy() {
 
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-primary">Business Impact</h3>
-            <ul className="space-y-3 text-neutral-white/80">
+            <ul className="space-y-3 text-white">
               <li className="flex items-start">
                 <span className="text-accent mr-3">✓</span>
                 <span>Enabled 120+ new businesses to enter the NEAR ecosystem</span>
@@ -304,10 +304,10 @@ export default function CaseStudy() {
           className="mb-12 bg-neutral-charcoal/50 p-8 rounded-lg border border-accent/30"
         >
           <h2 className="text-3xl font-bold mb-6 text-accent">Client Success Story: ArtisanCraft Marketplace</h2>
-          <p className="text-neutral-white/80 leading-relaxed mb-4">
+          <p className="text-white leading-relaxed mb-4">
             One of our earliest adopters, ArtisanCraft, illustrates Kiews' potential. This artisan collective wanted to create a specialized NFT marketplace for handcrafted goods but lacked technical resources. Using Kiews, they:
           </p>
-          <ul className="space-y-3 mb-6 text-neutral-white/80">
+          <ul className="space-y-3 mb-6 text-white">
             <li className="flex items-start">
               <span className="text-accent mr-3 font-bold">1.</span>
               <span>Designed and deployed their marketplace in just 9 days</span>
@@ -325,7 +325,7 @@ export default function CaseStudy() {
               <span>Connected their existing e-commerce platform through API integrations</span>
             </li>
           </ul>
-          <p className="text-neutral-white/80 leading-relaxed">
+          <p className="text-white leading-relaxed">
             The result was a fully-functional NFT marketplace that preserved their brand identity while leveraging NEAR Protocol's speed and low transaction costs. Since launch, they've generated over $120,000 in NFT sales with zero technical maintenance required.
           </p>
         </motion.div>
@@ -341,7 +341,7 @@ export default function CaseStudy() {
 
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4 text-primary">Short-term Priorities (Next 6 Months)</h3>
-            <ul className="space-y-2 text-neutral-white/80">
+            <ul className="space-y-2 text-white">
               <li className="flex items-start">
                 <span className="text-accent mr-3">→</span>
                 <span>Expand template library with industry-specific solutions</span>
@@ -363,7 +363,7 @@ export default function CaseStudy() {
 
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-primary">Long-term Vision (12-24 Months)</h3>
-            <ul className="space-y-2 text-neutral-white/80">
+            <ul className="space-y-2 text-white">
               <li className="flex items-start">
                 <span className="text-accent mr-3">→</span>
                 <span>Multi-chain support beyond NEAR Protocol</span>
@@ -392,13 +392,13 @@ export default function CaseStudy() {
           className="mb-12 bg-gradient-to-r from-accent/10 to-primary/10 p-8 rounded-lg border border-accent/30"
         >
           <h2 className="text-3xl font-bold mb-6 text-accent">Conclusion</h2>
-          <p className="text-neutral-white/80 leading-relaxed mb-4">
+          <p className="text-white leading-relaxed mb-4">
             The development of Kiews represents a significant milestone in blockchain accessibility. By removing technical barriers to NEAR Protocol integration, we've opened the ecosystem to a vast new audience of creators, businesses, and innovators. The no-code approach doesn't just simplify development—it fundamentally transforms who can participate in the blockchain revolution.
           </p>
-          <p className="text-neutral-white/80 leading-relaxed mb-4">
+          <p className="text-white leading-relaxed mb-4">
             At Lyvena, we believe that powerful technology should be accessible to everyone, regardless of technical background. Kiews embodies this philosophy, democratizing access to NEAR Protocol's robust capabilities while maintaining the security and performance that make blockchain valuable.
           </p>
-          <p className="text-neutral-white/80 leading-relaxed">
+          <p className="text-white leading-relaxed">
             As we continue to evolve the platform, we remain committed to our core mission: making blockchain technology accessible, useful, and impactful for all.
           </p>
         </motion.div>
@@ -410,7 +410,7 @@ export default function CaseStudy() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <p className="text-neutral-white/70 mb-6">
+          <p className="text-neutral-white/90 mb-6">
             Interested in exploring how Kiews can help your organization leverage NEAR Protocol without code?
           </p>
           <motion.a
