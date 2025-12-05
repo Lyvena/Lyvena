@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 interface StoryPost {
@@ -92,7 +91,6 @@ const storyPosts: StoryPost[] = [
 export default function Stories() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
-      <Navigation />
       {/* Header */}
       <section className="section-padding pt-32 pb-16 bg-gradient-to-br from-primary via-primary-dark to-primary-light">
         <div className="max-w-6xl mx-auto">

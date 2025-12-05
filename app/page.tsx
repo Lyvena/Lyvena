@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import Portfolio from '@/components/Portfolio'
@@ -31,7 +30,6 @@ export default function Home() {
 
   return (
     <main className="relative">
-      <Navigation />
       <CursorGlow />
       <Hero />
       <StoriesSection />
