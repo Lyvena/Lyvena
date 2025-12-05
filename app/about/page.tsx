@@ -228,11 +228,11 @@ export default function About() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300 h-full flex flex-col">
-                  <div className="max-h-40 sm:max-h-48 md:max-h-56 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
+                  <div className="overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
                     <img
                       src={employee.image}
                       alt={employee.name}
-                      className="w-full object-contain"
+                      className="w-full h-auto object-contain"
                       onError={(e) => {
                         e.currentTarget.src = 'https://via.placeholder.com/300x200?text=' + encodeURIComponent(employee.name)
                       }}
