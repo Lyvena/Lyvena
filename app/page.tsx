@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import Portfolio from '@/components/Portfolio'
@@ -19,7 +20,7 @@ export default function Home() {
     // Simulate loading time for assets
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 2000)
+    }, 1500)
 
     return () => clearTimeout(timer)
   }, [])
@@ -30,6 +31,7 @@ export default function Home() {
 
   return (
     <main className="relative">
+      <Navigation />
       <CursorGlow />
       <Hero />
       <StoriesSection />

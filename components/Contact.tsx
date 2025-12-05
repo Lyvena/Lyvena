@@ -75,7 +75,7 @@ export default function Contact() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Section description */}
+        {/* Section Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -83,7 +83,11 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
+          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Get In Touch</span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+            Let's Build Something Amazing
+          </h2>
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
             Ready to transform your digital future? Let's discuss how we can help bring your vision to life.
           </p>
         </motion.div>

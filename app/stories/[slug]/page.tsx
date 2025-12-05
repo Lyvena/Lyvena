@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 interface StoryArticle {
@@ -1610,6 +1611,7 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
   if (!article) {
     return (
       <main className="min-h-screen bg-neutral-charcoal flex items-center justify-center">
+        <Navigation />
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Article Not Found</h1>
           <Link href="/stories" className="btn-primary inline-block">
@@ -1622,6 +1624,7 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
+      <Navigation />
       {/* Hero Section with Image and Text Overlay */}
       <div className="relative w-full min-h-[60vh] md:min-h-[70vh] flex items-end">
         {/* Background Image */}

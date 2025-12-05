@@ -1,24 +1,24 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import Link from 'next/link'
 
 export default function Footer() {
   const socialLinks = [
-    { icon: FaLinkedin, href: 'https://www.linkedin.com/company/lyvena/', label: 'LinkedIn', color: 'hover:text-[#0077B5]' },
-    { icon: FaGithub, href: 'https://github.com/Lyvena/Lyvena', label: 'GitHub', color: 'hover:text-[#333]' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/company/lyvena/', label: 'LinkedIn' },
+    { icon: FaGithub, href: 'https://github.com/Lyvena/Lyvena', label: 'GitHub' },
   ]
 
   return (
-    <footer className="bg-neutral-charcoal text-white relative overflow-hidden">
+    <footer className="bg-neutral-charcoal text-white relative overflow-hidden border-t border-white/10">
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-64 h-64 bg-accent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-primary rounded-full blur-3xl" />
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-accent/5 rounded-full blur-[100px]" />
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-[100px]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
@@ -126,19 +126,19 @@ export default function Footer() {
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center space-x-6 mb-8">
+        <div className="flex justify-center space-x-6 mb-12">
           {socialLinks.map((social) => (
             <motion.a
               key={social.label}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-2xl text-neutral-white/70 transition-colors ${social.color}`}
-              whileHover={{ scale: 1.2, rotate: 360 }}
-              whileTap={{ scale: 0.9 }}
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-accent hover:text-neutral-charcoal transition-all"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
               aria-label={social.label}
             >
-              <social.icon />
+              <social.icon className="text-xl" />
             </motion.a>
           ))}
         </div>
