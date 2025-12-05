@@ -19,9 +19,9 @@ const projects = [
   {
     id: 2,
     title: 'St. Joachim and Anne Clinic',
-    category: 'Web Development',
-    description: 'Modern medical website for advanced bariatric surgery clinic',
-    fullDescription: 'A comprehensive, patient-focused website for St. Joachim and Anne Clinic, a premier medical facility specializing in advanced weight loss surgery and obesity treatment. The platform features detailed procedure information for gastric bypass, sleeve gastrectomy, and gastric band surgeries, along with compassionate patient resources and streamlined appointment scheduling.',
+    category: 'Web Design & Development',
+    description: 'Modern medical website designed and developed for advanced bariatric surgery clinic',
+    fullDescription: 'A comprehensive, patient-focused website designed and developed for St. Joachim and Anne Clinic, a premier medical facility specializing in advanced weight loss surgery and obesity treatment. The platform features a compassionate and professional design, detailed procedure information for gastric bypass, sleeve gastrectomy, and gastric band surgeries, along with patient resources and streamlined appointment scheduling.',
     tech: ['React', 'Vite', 'Tailwind CSS', 'Cloudflare'],
     image: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
     impact: 'Enhanced patient engagement, streamlined consultations',
