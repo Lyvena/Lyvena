@@ -27,6 +27,17 @@ const projects = [
     impact: 'Enhanced patient engagement, streamlined consultations',
     websiteLink: 'https://stja-clinic.com/',
   },
+  {
+    id: 3,
+    title: 'Entersekt',
+    category: 'Web Development',
+    description: 'Corporate website for leading financial authentication company',
+    fullDescription: 'A professional corporate website developed for Entersekt, a leading financial authentication company that shields customers from AI-driven scams and modern financial fraud. The platform showcases their award-winning Context Aware™ Authentication solutions, fraud prevention services, and account takeover protection for banking institutions worldwide.',
+    tech: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
+    image: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    impact: 'Award-winning authentication innovation, trusted by leading banks',
+    websiteLink: 'https://www.entersekt.com/',
+  },
 ]
 
 export default function Portfolio() {
