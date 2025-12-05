@@ -12,7 +12,7 @@ export default function Clients() {
     {
       name: 'SuperWorldapp',
       logo: '/logos/superworldapp.svg',
-      url: 'https://superworldapp.com'
+      url: 'https://www.superworldapp.com/'
     }
   ]
 
