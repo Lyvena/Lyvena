@@ -29,82 +29,118 @@ export default function StoriesSection() {
   ]
 
   return (
-    <section id="stories" className="section-padding bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
-      <div className="max-w-7xl mx-auto">
+    <section id="stories" className="section-padding bg-neutral-cream relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="flex flex-col md:flex-row md:items-end md:justify-between mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-            Latest Insights
-          </h2>
-          <p className="text-lg text-neutral-white/80 max-w-2xl mx-auto">
-            Explore our latest articles on AI development, responsible innovation, and the future of technology.
-          </p>
+          <div>
+            <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Our Blog</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-charcoal">
+              Latest Insights
+            </h2>
+          </div>
+          <Link href="/stories" className="mt-4 md:mt-0">
+            <span className="text-primary font-semibold hover:text-accent transition-colors flex items-center gap-2">
+              View all articles
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </Link>
         </motion.div>
 
-        {/* Articles Grid */}
-        <div className="space-y-12 mb-12">
-          {recentArticles.map((article, index) => (
+        {/* Articles Grid - Featured + 2 smaller */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Featured Article */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:row-span-2"
+          >
+            <Link href={`/stories/${recentArticles[0].slug}`}>
+              <div className="group h-full bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-neutral-gray/20">
+                <div className="h-64 lg:h-80 overflow-hidden">
+                  <img
+                    src={recentArticles[0].image}
+                    alt={recentArticles[0].title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="p-8">
+                  <span className="inline-block text-xs font-bold text-accent bg-accent/10 px-3 py-1.5 rounded-full mb-4">
+                    {recentArticles[0].category}
+                  </span>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-neutral-charcoal mb-4 group-hover:text-primary transition-colors">
+                    {recentArticles[0].title}
+                  </h3>
+                  <p className="text-neutral-charcoal/70 leading-relaxed mb-6">
+                    {recentArticles[0].excerpt}
+                  </p>
+                  <span className="text-primary font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Read article
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Other Articles */}
+          {recentArticles.slice(1).map((article, index) => (
             <motion.div
               key={article.slug}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: (index + 1) * 0.1 }}
             >
               <Link href={`/stories/${article.slug}`}>
-                <div className={`h-full bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-lg overflow-hidden hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 cursor-pointer group grid grid-cols-1 md:grid-cols-2 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
-                  {/* Hero Image */}
-                  <div className={`h-64 md:h-96 overflow-hidden ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                <div className="group h-full bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-neutral-gray/20 flex flex-col md:flex-row">
+                  <div className="h-48 md:h-auto md:w-1/3 overflow-hidden flex-shrink-0">
                     <img
                       src={article.image}
                       alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
-                  
-                  {/* Content */}
-                  <div className={`p-8 flex flex-col justify-center ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                    <div className="flex items-center gap-2 mb-4">
-                      <span className="text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
-                        {article.category}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition-colors">
+                  <div className="p-6 flex flex-col justify-center">
+                    <span className="inline-block text-xs font-bold text-accent bg-accent/10 px-3 py-1 rounded-full mb-3 w-fit">
+                      {article.category}
+                    </span>
+                    <h3 className="text-lg font-bold text-neutral-charcoal mb-2 group-hover:text-primary transition-colors line-clamp-2">
                       {article.title}
                     </h3>
-                    <p className="text-neutral-white/80 text-base leading-relaxed mb-6">
+                    <p className="text-neutral-charcoal/70 text-sm leading-relaxed line-clamp-2 mb-4">
                       {article.excerpt}
                     </p>
-                    <div className="text-accent text-sm font-semibold group-hover:translate-x-2 transition-transform w-fit">
-                      Read More →
-                    </div>
+                    <span className="text-primary font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                      Read more
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </Link>
             </motion.div>
           ))}
         </div>
-
-        {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center"
-        >
-          <Link href="/stories">
-            <button className="btn-primary">
-              View All Articles
-            </button>
-          </Link>
-        </motion.div>
       </div>
     </section>
   )

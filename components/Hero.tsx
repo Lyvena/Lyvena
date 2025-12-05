@@ -11,55 +11,63 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-cream via-primary/10 to-accent/20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark"
     >
-      {/* Gentle organic background shapes */}
+      {/* Animated gradient orbs */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Floating organic shapes */}
-        <div className="absolute top-20 left-10 w-48 md:w-96 h-48 md:h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-40 md:w-80 h-40 md:h-80 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 md:w-[600px] h-64 md:h-[600px] bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }} />
-
-        {/* Subtle wave pattern */}
-        <svg className="absolute bottom-0 w-full opacity-30" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill="#4A7F5F"
-            fillOpacity="0.15"
-            d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,149.3C672,139,768,149,864,165.3C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          />
-        </svg>
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-accent/30 to-secondary/20 rounded-full blur-[100px] animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-primary/30 to-accent/20 rounded-full blur-[100px] animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-[120px] animate-float" style={{ animationDelay: '4s' }} />
+        
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }} />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
+          >
+            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+            <span className="text-sm text-white/80 font-medium">AI for Good • Ethical Innovation</span>
+          </motion.div>
+
           {/* Logo/Brand */}
           <motion.h1
-            className="text-6xl md:text-8xl font-display font-bold text-primary mb-6"
+            className="text-7xl md:text-9xl font-display font-bold mb-6 text-glow"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            Lyvena
+            <span className="gradient-text">Lyvena</span>
           </motion.h1>
 
           {/* Main Tagline */}
           <motion.h2
-            className="text-2xl md:text-4xl font-semibold text-neutral-charcoal mb-6"
+            className="text-2xl md:text-4xl font-semibold text-white/90 mb-6 tracking-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Empowering Humanity with Ethical Intelligence
+            Empowering Humanity with{' '}
+            <span className="text-accent">Ethical Intelligence</span>
           </motion.h2>
 
           {/* Value Proposition */}
           <motion.p
-            className="text-lg md:text-xl text-neutral-charcoal/90 mb-12 leading-relaxed max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-white/70 mb-12 leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
@@ -68,40 +76,16 @@ export default function Hero() {
             to automating school systems—while respecting privacy, human dignity, and the planet.
           </motion.p>
 
-          {/* Three Pillars */}
+          {/* CTA Buttons */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
           >
-            <div className="text-center">
-              <div className="text-3xl mb-2">🏢</div>
-              <h3 className="font-semibold text-neutral-charcoal mb-1">For Organizations</h3>
-              <p className="text-sm text-neutral-charcoal/80">Automate with conscience</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-2">🌍</div>
-              <h3 className="font-semibold text-neutral-charcoal mb-1">For Communities</h3>
-              <p className="text-sm text-neutral-charcoal/80">Technology that serves people</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-2">🌱</div>
-              <h3 className="font-semibold text-neutral-charcoal mb-1">For the Future</h3>
-              <p className="text-sm text-neutral-charcoal/80">Sustainable innovation</p>
-            </div>
-          </motion.div>
-
-          {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0, duration: 0.6 }}
-          >
             <button
               onClick={scrollToContact}
-              className="btn-primary text-lg warm-shadow"
+              className="btn-primary text-lg shine"
               aria-label="Start a conversation with Lyvena"
             >
               Start a Conversation
@@ -115,28 +99,38 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Trust indicators */}
+          {/* Stats/Trust indicators */}
           <motion.div
-            className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-neutral-charcoal/70"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
+            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
           >
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">🔒</span>
-              <span>Privacy-First</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">🌱</span>
-              <span>Sustainable</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">🤝</span>
-              <span>Community-Driven</span>
-            </div>
+            {[
+              { value: '100%', label: 'Ethical AI' },
+              { value: '24/7', label: 'AI Support' },
+              { value: '∞', label: 'Innovation' },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-accent mb-1">{stat.value}</div>
+                <div className="text-sm text-white/60">{stat.label}</div>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 10, 0] }}
+        transition={{ delay: 1.5, duration: 2, repeat: Infinity }}
+      >
+        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
+          <div className="w-1.5 h-3 bg-accent rounded-full" />
+        </div>
+      </motion.div>
     </section>
   )
 }
