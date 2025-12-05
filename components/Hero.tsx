@@ -99,24 +99,6 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Stats/Trust indicators */}
-          <motion.div
-            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-          >
-            {[
-              { value: '100%', label: 'Ethical AI' },
-              { value: '24/7', label: 'AI Support' },
-              { value: '∞', label: 'Innovation' },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-accent mb-1">{stat.value}</div>
-                <div className="text-sm text-white/60">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
 
