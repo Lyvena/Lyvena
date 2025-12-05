@@ -33,17 +33,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
-          >
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            <span className="text-sm text-white/80 font-medium">Orthodox Christian • AI for Good • Ethical Innovation</span>
-          </motion.div>
-
           {/* Logo/Brand */}
           <motion.h1
             className="text-7xl md:text-9xl font-display font-bold mb-6 text-glow"
