@@ -99,19 +99,6 @@ export default function Services() {
                   ))}
                 </div>
 
-                {/* CTA */}
-                <button
-                  onClick={() => {
-                    const contactSection = document.getElementById('contact')
-                    contactSection?.scrollIntoView({ behavior: 'smooth' })
-                  }}
-                  className="flex items-center gap-2 text-accent font-semibold group-hover:gap-4 transition-all"
-                >
-                  Learn more
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </button>
               </div>
             </motion.div>
           ))}
