@@ -1622,33 +1622,37 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
-      {/* Hero Image */}
-      <div className="w-full h-96 overflow-hidden">
+      {/* Hero Section with Image and Text Overlay */}
+      <div className="relative w-full min-h-[60vh] md:min-h-[70vh] flex items-end">
+        {/* Background Image */}
         <img
           src={article.heroImage}
           alt={article.title}
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
         />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-charcoal via-neutral-charcoal/70 to-transparent" />
+        
+        {/* Hero Content */}
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-12 md:pb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-sm font-semibold text-neutral-charcoal bg-accent px-3 py-1 rounded-full">
+              {article.category}
+            </span>
+            <span className="text-sm text-white/80">{article.date}</span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 leading-tight">
+            {article.title}
+          </h1>
+          <p className="text-lg text-white/80">
+            By {article.author}
+          </p>
+        </div>
       </div>
 
       {/* Article Content */}
       <article className="section-padding">
         <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="mb-12">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-sm font-semibold text-neutral-charcoal bg-accent px-3 py-1 rounded-full">
-                {article.category}
-              </span>
-              <span className="text-sm text-white/80">{article.date}</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
-              {article.title}
-            </h1>
-            <p className="text-lg text-white/80">
-              By {article.author}
-            </p>
-          </div>
 
           {/* Content */}
           <div className="prose prose-invert prose-lg max-w-none mb-12 prose-p:text-white/90 prose-h2:text-white prose-h3:text-white prose-li:text-white/90 prose-strong:text-white prose-a:text-accent">
