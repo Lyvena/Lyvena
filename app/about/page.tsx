@@ -107,57 +107,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Leadership Team Section */}
-      <section className="section-padding bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Our Leadership
-            </h2>
-            <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
-              Visionary leaders driving Lyvena's mission forward
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl p-8 hover:border-accent/40 transition-all duration-300">
-                  <div className="mb-6">
-                    <h3 className="text-3xl font-bold text-white mb-2">{member.name}</h3>
-                    <p className="text-accent font-semibold text-lg">{member.role}</p>
-                  </div>
-                  <p className="text-neutral-white/80 text-base leading-relaxed mb-6">
-                    {member.description}
-                  </p>
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex flex-col items-center gap-2 text-accent hover:text-white transition-colors font-semibold"
-                  >
-                    <FaLinkedin className="text-3xl" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* AI Employees Section */}
       <section className="section-padding bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -258,6 +207,56 @@ export default function About() {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* Leadership Team Section */}
+      <section className="section-padding bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+              Our Leadership
+            </h2>
+            <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
+              Visionary leaders driving Lyvena's mission forward
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {team.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl p-8 hover:border-accent/40 transition-all duration-300">
+                  <div className="mb-6">
+                    <h3 className="text-3xl font-bold text-white mb-2">{member.name}</h3>
+                    <p className="text-accent font-semibold text-lg">{member.role}</p>
+                  </div>
+                  <p className="text-neutral-white/80 text-base leading-relaxed mb-6">
+                    {member.description}
+                  </p>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex flex-col items-center gap-2 text-accent hover:text-white transition-colors font-semibold"
+                  >
+                    <FaLinkedin className="text-3xl" />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
