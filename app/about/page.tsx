@@ -8,16 +8,16 @@ import { FaLinkedin } from 'react-icons/fa'
 export default function About() {
   const team = [
     {
-      name: 'Akshay',
-      role: 'Founder & CEO',
-      linkedin: 'https://www.linkedin.com/in/Akshay155/',
-      description: 'Visionary leader driving Lyvena\'s mission to develop AI for good.',
-    },
-    {
       name: 'Aryna Verchenko',
       role: 'Chief Designer & COO',
       linkedin: 'https://www.linkedin.com/in/unicornixa/',
       description: 'Creative strategist ensuring ethical design and operational excellence.',
+    },
+    {
+      name: 'Akshay',
+      role: 'Founder & CEO',
+      linkedin: 'https://www.linkedin.com/in/Akshay155/',
+      description: 'Visionary leader driving Lyvena\'s mission to develop AI for good.',
     },
   ]
 
@@ -149,7 +149,6 @@ export default function About() {
                     className="inline-flex flex-col items-center gap-2 text-accent hover:text-white transition-colors font-semibold"
                   >
                     <FaLinkedin className="text-3xl" />
-                    <span className="text-sm">Connect on LinkedIn</span>
                   </a>
                 </div>
               </motion.div>
@@ -181,21 +180,21 @@ export default function About() {
               {
                 name: 'Penny',
                 role: 'SEO Blog Writer',
-                description: 'Penny writes SEO-optimized blog posts that make Google happy, your audience obsessed, and your competitors deeply uncomfortable.',
+                description: 'Penny writes SEO-optimized blog posts that make Google happy, our audience obsessed, and our competitors deeply uncomfortable.',
                 image: '/penny.webp',
                 link: 'https://www.marblism.com/ai-employees/penny?via=1178f3',
               },
               {
                 name: 'Eva',
                 role: 'Executive Assistant',
-                description: 'Eva crafts email replies, filters out junk emails, manages your calendar, and takes meeting notes — so you look productive, even if you hit snooze three times.',
+                description: 'Eva crafts email replies, filters out junk emails, manages our calendar, and takes meeting notes — so we look productive, even if we hit snooze three times.',
                 image: '/eva.webp',
                 link: 'https://www.marblism.com/ai-employees/eva?via=1178f3',
               },
               {
                 name: 'Sonny',
                 role: 'Community Manager',
-                description: 'Sonny turns your social media into a lead-generating machine — without you having to dance on camera.',
+                description: 'Sonny turns our social media into a lead-generating machine — without us having to dance on camera.',
                 image: '/sonny.webp',
                 link: 'https://www.marblism.com/ai-employees/sonny?via=1178f3',
               },
@@ -209,14 +208,14 @@ export default function About() {
               {
                 name: 'Linda',
                 role: 'Legal Assistant',
-                description: 'Linda answers your contract questions and clarifies legal documents — so you can stop pretending you read them.',
+                description: 'Linda answers our contract questions and clarifies legal documents — so we can stop pretending we read them.',
                 image: '/linda.webp',
                 link: 'https://www.marblism.com/ai-employees/linda?via=1178f3',
               },
               {
                 name: 'Rachel',
                 role: 'Receptionist',
-                description: "Rachel'll answer calls while you hide in the back pretending to be busy, providing professional support 24/7.",
+                description: "Rachel'll answer calls while we hide in the back pretending to be busy, providing professional support 24/7.",
                 image: '/rachel.webp',
                 link: 'https://www.marblism.com/ai-employees/rachel?via=1178f3',
               },
@@ -229,11 +228,11 @@ export default function About() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300 h-full flex flex-col">
-                  <div className="h-48 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
+                  <div className="overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
                     <img
                       src={employee.image}
                       alt={employee.name}
-                      className="w-full h-full object-contain"
+                      className="w-full object-contain"
                       onError={(e) => {
                         e.currentTarget.src = 'https://via.placeholder.com/300x200?text=' + encodeURIComponent(employee.name)
                       }}
