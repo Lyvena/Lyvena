@@ -32,11 +32,11 @@ export default function Home() {
     <main className="relative">
       <CursorGlow />
       <Hero />
+      <StoriesSection />
       <Services />
       <Clients />
       <Portfolio />
       <About />
-      <StoriesSection />
       <Contact />
       <Footer />
     </main>
