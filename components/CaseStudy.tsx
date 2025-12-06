@@ -414,7 +414,7 @@ export default function CaseStudy() {
             Interested in exploring how Kiews can help your organization leverage NEAR Protocol without code?
           </p>
           <motion.a
-            href="#contact"
+            href="/#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block px-8 py-3 bg-accent text-neutral-charcoal font-semibold rounded-xl hover:shadow-lg hover:shadow-accent/30 transition-all"
