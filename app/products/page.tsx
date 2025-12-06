@@ -4,91 +4,78 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
 import { FaRobot, FaCubes, FaArrowRight, FaCheck, FaExternalLinkAlt, FaCode, FaDatabase, FaBrain, FaLink, FaWallet, FaCog, FaShieldAlt, FaBolt } from 'react-icons/fa'
+import { useTranslations } from '@/lib/i18n'
 
-const products = [
+const getProducts = (t: ReturnType<typeof useTranslations>) => [
   {
     id: 'intelekt',
     name: 'Intelekt',
-    tagline: 'AI-Powered Web Development Platform',
-    heroDescription: 'The future of building software is here. Intelekt combines cutting-edge AI with powerful development tools to revolutionize how you create web applications.',
-    fullDescription: 'Intelekt is an intelligent web development platform that puts the power of AI at your fingertips. With built-in content management, AI-powered code generation, and virtual CEO & PM assistants, you can build production-ready applications faster than ever before.',
+    tagline: t.productsPage.intelekt.tagline,
+    heroDescription: t.productsPage.intelekt.heroDescription,
+    fullDescription: t.productsPage.intelekt.fullDescription,
     icon: FaRobot,
     gradient: 'from-violet-500 via-purple-500 to-indigo-500',
     bgGradient: 'from-violet-500/20 via-purple-500/20 to-indigo-500/20',
     link: 'https://intelekt.live',
-    status: 'Live',
+    status: t.productsPage.live,
     features: [
       {
         icon: FaBrain,
-        title: 'AI Code Generation',
-        description: 'Generate high-quality code with natural language prompts powered by advanced AI models.',
+        title: t.productsPage.intelekt.features.aiCodeGen.title,
+        description: t.productsPage.intelekt.features.aiCodeGen.description,
       },
       {
         icon: FaDatabase,
-        title: 'Built-in CMS',
-        description: 'Manage your content seamlessly with an integrated content management system.',
+        title: t.productsPage.intelekt.features.builtInCms.title,
+        description: t.productsPage.intelekt.features.builtInCms.description,
       },
       {
         icon: FaRobot,
-        title: 'AI CEO & PM',
-        description: 'Virtual assistants that help you plan, prioritize, and execute your projects effectively.',
+        title: t.productsPage.intelekt.features.aiCeoPm.title,
+        description: t.productsPage.intelekt.features.aiCeoPm.description,
       },
       {
         icon: FaBolt,
-        title: 'Mojo Powered',
-        description: 'Built on Mojo and ChromaDB for lightning-fast performance and intelligent data handling.',
+        title: t.productsPage.intelekt.features.mojoPowered.title,
+        description: t.productsPage.intelekt.features.mojoPowered.description,
       },
     ],
-    highlights: [
-      'Natural language to code conversion',
-      'Intelligent project management',
-      'Real-time collaboration',
-      'Production-ready deployments',
-      'Smart content workflows',
-      'AI-assisted debugging',
-    ],
+    highlights: t.productsPage.intelekt.highlights,
   },
   {
     id: 'kiews',
     name: 'Kiews',
-    tagline: 'No-Code Blockchain Integration Platform',
-    heroDescription: 'Connect to NEAR Protocol in just a few clicks. No coding required. Kiews makes blockchain technology accessible to everyone.',
-    fullDescription: 'Kiews provides ready-to-use NEAR Protocol integrations for 10+ popular no-code and low-code platforms. Whether you\'re building on Webflow, Zapier, or Make, Kiews helps you integrate blockchain functionality into your projects without writing a single line of code.',
+    tagline: t.productsPage.kiews.tagline,
+    heroDescription: t.productsPage.kiews.heroDescription,
+    fullDescription: t.productsPage.kiews.fullDescription,
     icon: FaCubes,
     gradient: 'from-amber-500 via-orange-500 to-red-500',
     bgGradient: 'from-amber-500/20 via-orange-500/20 to-red-500/20',
     link: 'https://kiews.xyz',
-    status: 'Live',
+    status: t.productsPage.live,
     features: [
       {
         icon: FaLink,
-        title: '10+ Integrations',
-        description: 'Connect with Webflow, Zapier, Make, Hubspot, AppGyver, and many more platforms.',
+        title: t.productsPage.kiews.features.integrations.title,
+        description: t.productsPage.kiews.features.integrations.description,
       },
       {
         icon: FaWallet,
-        title: 'Wallet Connect',
-        description: 'Easy user authentication and wallet connection through NEAR Protocol.',
+        title: t.productsPage.kiews.features.walletConnect.title,
+        description: t.productsPage.kiews.features.walletConnect.description,
       },
       {
         icon: FaCog,
-        title: 'Smart Contracts',
-        description: 'Call view and change methods on smart contracts without coding knowledge.',
+        title: t.productsPage.kiews.features.smartContracts.title,
+        description: t.productsPage.kiews.features.smartContracts.description,
       },
       {
         icon: FaShieldAlt,
-        title: 'Secure by Design',
-        description: 'FunctionCall keys protect user data while maintaining full functionality.',
+        title: t.productsPage.kiews.features.secureByDesign.title,
+        description: t.productsPage.kiews.features.secureByDesign.description,
       },
     ],
-    highlights: [
-      'Webflow integration',
-      'Zapier automation',
-      'Make (Integromat) support',
-      'AppGyver compatibility',
-      'Hubspot connection',
-      'Flutter & Bildr ready',
-    ],
+    highlights: t.productsPage.kiews.highlights,
     integrations: [
       'Webflow', 'Zapier', 'Make', 'AppGyver', 'Hubspot', 
       'Contentful', 'Carrd CMS', 'Flutter', 'Bildr', 'Butter CMS'
@@ -97,6 +84,9 @@ const products = [
 ]
 
 export default function ProductsPage() {
+  const t = useTranslations()
+  const products = getProducts(t)
+  
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero Section */}
@@ -113,14 +103,13 @@ export default function ProductsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Our Products</span>
+            <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">{t.productsPage.hero.label}</span>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6">
-              Tools That{' '}
-              <span className="gradient-text">Transform</span>
+              {t.productsPage.hero.title}{' '}
+              <span className="gradient-text">{t.productsPage.hero.titleHighlight}</span>
             </h1>
             <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-              We don't just build for clients—we build products that push the boundaries of what's possible. 
-              Explore our suite of innovative tools powered by AI and blockchain technology.
+              {t.productsPage.hero.description}
             </p>
           </motion.div>
         </div>
@@ -180,7 +169,7 @@ export default function ProductsPage() {
                   rel="noopener noreferrer"
                   className={`inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r ${product.gradient} text-white font-semibold rounded-full hover:shadow-xl transition-all`}
                 >
-                  Visit {product.name}
+                  {t.productsPage.visit} {product.name}
                   <FaExternalLinkAlt className="text-sm" />
                 </a>
               </motion.div>
@@ -194,7 +183,7 @@ export default function ProductsPage() {
                 className={productIndex % 2 === 1 ? 'lg:order-1' : ''}
               >
                 <div className={`bg-gradient-to-br ${product.bgGradient} backdrop-blur-sm rounded-3xl p-8 border border-white/10`}>
-                  <h3 className="text-2xl font-bold text-white mb-8">Key Features</h3>
+                  <h3 className="text-2xl font-bold text-white mb-8">{t.productsPage.keyFeatures}</h3>
                   <div className="space-y-6">
                     {product.features.map((feature, idx) => (
                       <motion.div
@@ -219,7 +208,7 @@ export default function ProductsPage() {
                   {/* Integrations for Kiews */}
                   {product.integrations && (
                     <div className="mt-8 pt-8 border-t border-white/10">
-                      <h4 className="text-white font-semibold mb-4">Supported Platforms</h4>
+                      <h4 className="text-white font-semibold mb-4">{t.productsPage.supportedPlatforms}</h4>
                       <div className="flex flex-wrap gap-2">
                         {product.integrations.map((integration, idx) => (
                           <span 
@@ -253,17 +242,17 @@ export default function ProductsPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
-              Have an Idea for a Product?
+              {t.productsPage.cta.title}
             </h2>
             <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              We're always exploring new frontiers. If you have a vision for a product that could change the world, let's build it together.
+              {t.productsPage.cta.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/#contact" className="btn-primary">
-                Let's Talk
+                {t.productsPage.cta.primaryButton}
               </Link>
               <Link href="/" className="btn-secondary">
-                Back to Home
+                {t.productsPage.cta.secondaryButton}
               </Link>
             </div>
           </motion.div>

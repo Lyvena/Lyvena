@@ -4,20 +4,23 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
 import { FaLinkedin } from 'react-icons/fa'
+import { useTranslations } from '@/lib/i18n'
 
 export default function About() {
+  const t = useTranslations()
+  
   const team = [
     {
       name: 'Aryna Verchenko',
-      role: 'Chief Designer & COO',
+      role: t.aboutPage.leadership.members.aryna.role,
       linkedin: 'https://www.linkedin.com/in/unicornixa/',
-      description: 'Creative visionary and operational leader, bringing artistry and precision to everything we build. Aryna ensures our solutions are as beautiful as they are functional.',
+      description: t.aboutPage.leadership.members.aryna.description,
     },
     {
       name: 'Akshay',
-      role: 'Founder & CEO',
+      role: t.aboutPage.leadership.members.akshay.role,
       linkedin: 'https://www.linkedin.com/in/Akshay155/',
-      description: 'Founder and driving force behind Lyvena\'s mission to develop AI for good. Akshay leads with conviction that technology can—and must—serve humanity\'s highest aspirations.',
+      description: t.aboutPage.leadership.members.akshay.description,
     },
   ]
 
@@ -33,10 +36,10 @@ export default function About() {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
-              About Lyvena
+              {t.aboutPage.hero.title}
             </h1>
             <p className="text-xl text-neutral-white/90 max-w-2xl mx-auto">
-              Where faith meets innovation. Building AI that serves humanity with purpose, integrity, and hope.
+              {t.aboutPage.hero.description}
             </p>
           </motion.div>
         </div>
@@ -54,16 +57,16 @@ export default function About() {
           >
             <div>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-                Our Mission
+                {t.aboutPage.mission.title}
               </h2>
               <p className="text-lg text-neutral-white/80 leading-relaxed mb-6">
-                Lyvena is an Orthodox Christian company on a mission to develop Artificial SuperIntelligence that truly serves humanity. Our purpose is clear: <span className="text-accent font-semibold">AI for Good</span>.
+                {t.aboutPage.mission.description1.split('AI for Good')[0]}<span className="text-accent font-semibold">AI for Good</span>{t.aboutPage.mission.description1.split('AI for Good')[1] || '.'}
               </p>
               <p className="text-lg text-neutral-white/80 leading-relaxed mb-6">
-                We believe the most powerful technology should be built on the strongest foundation—one of ethics, transparency, and genuine care for human flourishing. Every line of code we write reflects our commitment to responsible innovation.
+                {t.aboutPage.mission.description2}
               </p>
               <p className="text-lg text-neutral-white/80 leading-relaxed">
-                From healthcare to education, fintech to Web3, we partner with organizations who share our vision of technology that elevates, empowers, and unites.
+                {t.aboutPage.mission.description3}
               </p>
             </div>
             <motion.div
@@ -75,30 +78,20 @@ export default function About() {
             >
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-accent mb-3">Our Vision</h3>
+                  <h3 className="text-2xl font-bold text-accent mb-3">{t.aboutPage.vision.title}</h3>
                   <p className="text-neutral-white/80">
-                    A world where artificial intelligence amplifies human potential, protects human dignity, and advances the common good—built by people who believe technology can be a force for genuine transformation.
+                    {t.aboutPage.vision.description}
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-accent mb-3">Our Values</h3>
+                  <h3 className="text-2xl font-bold text-accent mb-3">{t.aboutPage.values.title}</h3>
                   <ul className="space-y-2 text-neutral-white/80">
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Faith as our foundation, excellence as our standard</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Technology in service of human flourishing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Transparency in everything we build and do</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Long-term thinking over short-term gains</span>
-                    </li>
+                    {t.aboutPage.values.items.map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-accent mr-3 font-bold">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -117,10 +110,10 @@ export default function About() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Meet Our AI Team
+              {t.aboutPage.aiTeam.title}
             </h2>
             <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
-              The intelligent assistants who help us deliver exceptional results—efficiently, ethically, and with care.
+              {t.aboutPage.aiTeam.description}
             </p>
           </motion.div>
 
@@ -128,43 +121,43 @@ export default function About() {
             {[
               {
                 name: 'Penny',
-                role: 'SEO Blog Writer',
-                description: 'Penny lovingly crafts SEO-optimized blog posts that help our audience discover valuable content and keeps our online presence thriving.',
+                role: t.aboutPage.aiTeam.members.penny.role,
+                description: t.aboutPage.aiTeam.members.penny.description,
                 image: '/penny.webp',
                 link: 'https://www.marblism.com/ai-employees/penny?via=1178f3',
               },
               {
                 name: 'Eva',
-                role: 'Executive Assistant',
-                description: 'Eva thoughtfully manages our emails, organizes our calendar, and captures meeting notes — helping our team stay focused on what matters most.',
+                role: t.aboutPage.aiTeam.members.eva.role,
+                description: t.aboutPage.aiTeam.members.eva.description,
                 image: '/eva.webp',
                 link: 'https://www.marblism.com/ai-employees/eva?via=1178f3',
               },
               {
                 name: 'Sonny',
-                role: 'Community Manager',
-                description: 'Sonny nurtures our social media community with engaging content, building meaningful connections and helping our message reach those who need it.',
+                role: t.aboutPage.aiTeam.members.sonny.role,
+                description: t.aboutPage.aiTeam.members.sonny.description,
                 image: '/sonny.webp',
                 link: 'https://www.marblism.com/ai-employees/sonny?via=1178f3',
               },
               {
                 name: 'Stan',
-                role: 'Lead Generation Specialist',
-                description: 'Stan warmly reaches out to potential partners, building relationships through thoughtful follow-ups and genuine conversations.',
+                role: t.aboutPage.aiTeam.members.stan.role,
+                description: t.aboutPage.aiTeam.members.stan.description,
                 image: '/stan.webp',
                 link: 'https://www.marblism.com/ai-employees/stan?via=1178f3',
               },
               {
                 name: 'Linda',
-                role: 'Legal Assistant',
-                description: 'Linda patiently guides us through contract questions and legal documents, ensuring we understand every detail with clarity and confidence.',
+                role: t.aboutPage.aiTeam.members.linda.role,
+                description: t.aboutPage.aiTeam.members.linda.description,
                 image: '/linda.webp',
                 link: 'https://www.marblism.com/ai-employees/linda?via=1178f3',
               },
               {
                 name: 'Rachel',
-                role: 'Receptionist',
-                description: 'Rachel warmly greets every caller with care and professionalism, ensuring everyone who reaches out feels welcomed and supported around the clock.',
+                role: t.aboutPage.aiTeam.members.rachel.role,
+                description: t.aboutPage.aiTeam.members.rachel.description,
                 image: '/rachel.webp',
                 link: 'https://www.marblism.com/ai-employees/rachel?via=1178f3',
               },
@@ -199,7 +192,7 @@ export default function About() {
                       rel="noopener noreferrer"
                       className="text-accent hover:text-white transition-colors font-semibold text-sm"
                     >
-                      Learn More →
+                      {t.aboutPage.aiTeam.learnMore}
                     </a>
                   </div>
                 </div>
@@ -221,10 +214,10 @@ export default function About() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Leadership
+              {t.aboutPage.leadership.title}
             </h2>
             <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
-              The people behind the mission, committed to building AI that serves the greater good.
+              {t.aboutPage.leadership.description}
             </p>
           </motion.div>
 
@@ -270,16 +263,16 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-charcoal mb-4">
-              Let's Build Something Meaningful
+              {t.aboutPage.cta.title}
             </h2>
             <p className="text-lg text-neutral-charcoal/90 mb-8">
-              Ready to create technology that makes a real difference? We'd love to hear about your vision.
+              {t.aboutPage.cta.description}
             </p>
             <Link
               href="/#contact"
               className="btn-primary inline-block"
             >
-              Get In Touch
+              {t.aboutPage.cta.button}
             </Link>
           </motion.div>
         </div>
