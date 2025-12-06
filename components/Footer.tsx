@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import Link from 'next/link'
 import { useTranslations } from '@/lib/i18n'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Footer() {
   const t = useTranslations()
@@ -168,8 +169,9 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-neutral-white/50 text-sm border-t border-neutral-white/10 pt-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-white/50 text-sm border-t border-neutral-white/10 pt-8">
           <p>© {new Date().getFullYear()} <Link href="/" className="hover:text-accent transition-colors">Lyvena</Link>. {t.footer.copyright}</p>
+          <LanguageSwitcher variant="compact" />
         </div>
       </div>
     </footer>
