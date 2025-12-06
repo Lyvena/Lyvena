@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaTimes, FaExternalLinkAlt } from 'react-icons/fa'
+import { useTranslations } from '@/lib/i18n'
 
 const projects = [
   {
@@ -86,6 +87,7 @@ const projects = [
 ]
 
 export default function Portfolio() {
+  const t = useTranslations()
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null)
 
   return (
@@ -108,12 +110,12 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Our Work</span>
+          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">{t.portfolio.label}</span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
-            Featured Projects
+            {t.portfolio.title}
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            From blockchain platforms to medical websites, we deliver excellence across industries
+            {t.portfolio.description}
           </p>
         </motion.div>
 
@@ -160,7 +162,7 @@ export default function Portfolio() {
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span className="text-white font-semibold flex items-center gap-2">
-                      View Project <FaExternalLinkAlt className="text-sm" />
+                      {t.portfolio.viewProject} <FaExternalLinkAlt className="text-sm" />
                     </span>
                   </div>
                 </div>
@@ -212,7 +214,7 @@ export default function Portfolio() {
             }}
             className="btn-primary shine"
           >
-            Start Your Project
+            {t.portfolio.startProject}
           </button>
         </motion.div>
       </div>
@@ -265,19 +267,19 @@ export default function Portfolio() {
               {/* Project details */}
               <div className="p-8">
                 <div className="mb-6">
-                  <h4 className="text-2xl font-bold text-primary mb-3">About This Project</h4>
+                  <h4 className="text-2xl font-bold text-primary mb-3">{t.portfolio.aboutProject}</h4>
                   <p className="text-lg text-neutral-charcoal leading-relaxed">
                     {selectedProject.fullDescription}
                   </p>
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-xl font-bold text-primary mb-3">Impact</h4>
+                  <h4 className="text-xl font-bold text-primary mb-3">{t.portfolio.impact}</h4>
                   <p className="text-neutral-charcoal">{selectedProject.impact}</p>
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-xl font-bold text-primary mb-3">Tech Stack</h4>
+                  <h4 className="text-xl font-bold text-primary mb-3">{t.portfolio.techStack}</h4>
                   <div className="flex flex-wrap gap-3">
                     {selectedProject.tech.map((tech) => (
                       <span
@@ -296,7 +298,7 @@ export default function Portfolio() {
                       href={selectedProject.caseStudyLink}
                       className="btn-primary w-full md:w-auto inline-block text-center"
                     >
-                      Read Full Case Study
+                      {t.portfolio.readCaseStudy}
                     </a>
                   ) : (selectedProject as any).websiteLink ? (
                     <a
@@ -305,7 +307,7 @@ export default function Portfolio() {
                       rel="noopener noreferrer"
                       className="btn-primary w-full md:w-auto inline-block text-center"
                     >
-                      Visit Website
+                      {t.portfolio.visitWebsite}
                     </a>
                   ) : (
                     <button
@@ -316,7 +318,7 @@ export default function Portfolio() {
                         contactSection?.scrollIntoView({ behavior: 'smooth' })
                       }}
                     >
-                      Start Your Project
+                      {t.portfolio.startProject}
                     </button>
                   )}
                 </div>

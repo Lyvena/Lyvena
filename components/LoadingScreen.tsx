@@ -1,8 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from '@/lib/i18n'
 
 export default function LoadingScreen() {
+  const t = useTranslations()
+  
   return (
     <div className="fixed inset-0 bg-neutral-charcoal flex items-center justify-center z-50">
       {/* Background gradient orbs */}
@@ -46,7 +49,7 @@ export default function LoadingScreen() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          Loading...
+          {t.loading}
         </motion.p>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: 'Lyvena | AI for Good - Ethical AI Research & Engineering',
@@ -21,14 +22,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
         {/* Start of HubSpot Embed Code */}
         <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/244179468.js"></script>
         {/* End of HubSpot Embed Code */}
       </head>
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

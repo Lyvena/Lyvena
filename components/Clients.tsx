@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useTranslations } from '@/lib/i18n'
 
 export default function Clients() {
+  const t = useTranslations()
   const clients = [
     {
       name: 'NEAR Protocol',
@@ -28,7 +30,7 @@ export default function Clients() {
           className="text-center mb-10"
         >
           <p className="text-white/50 text-sm uppercase tracking-widest font-medium">
-            Trusted by innovative companies
+            {t.clients.trustedBy}
           </p>
         </motion.div>
         

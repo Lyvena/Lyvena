@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useTranslations } from '@/lib/i18n'
 
 export default function StoriesSection() {
+  const t = useTranslations()
   const recentArticles = [
     {
       title: 'Mojo vs Python: Why Mojo Might Be the Future of AI Coding',
@@ -46,14 +48,14 @@ export default function StoriesSection() {
           className="flex flex-col md:flex-row md:items-end md:justify-between mb-16"
         >
           <div>
-            <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Insights & Ideas</span>
+            <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">{t.stories.label}</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-charcoal">
-              Thinking About Tomorrow
+              {t.stories.title}
             </h2>
           </div>
           <Link href="/stories" className="mt-4 md:mt-0">
             <span className="text-primary font-semibold hover:text-accent transition-colors flex items-center gap-2">
-              View all articles
+              {t.stories.viewAll}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -91,7 +93,7 @@ export default function StoriesSection() {
                     {recentArticles[0].excerpt}
                   </p>
                   <span className="text-primary font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Read article
+                    {t.stories.readArticle}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -130,7 +132,7 @@ export default function StoriesSection() {
                       {article.excerpt}
                     </p>
                     <span className="text-primary font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
-                      Read more
+                      {t.stories.readMore}
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>

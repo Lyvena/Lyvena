@@ -3,8 +3,10 @@
 import { motion } from 'framer-motion'
 import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import Link from 'next/link'
+import { useTranslations } from '@/lib/i18n'
 
 export default function Footer() {
+  const t = useTranslations()
   const socialLinks = [
     { icon: FaLinkedin, href: 'https://www.linkedin.com/company/lyvena/', label: 'LinkedIn' },
     { icon: FaGithub, href: 'https://github.com/Lyvena/Lyvena', label: 'GitHub' },
@@ -28,30 +30,44 @@ export default function Footer() {
               </h3>
             </Link>
             <p className="text-neutral-white/80 leading-relaxed">
-              An Orthodox Christian company pioneering Artificial SuperIntelligence for the good of humanity.
+              {t.footer.description}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-2">
-              {['services', 'portfolio', 'contact'].map((section) => (
-                <li key={section}>
-                  <a
-                    href={`#${section}`}
-                    className="text-neutral-white/80 hover:text-accent transition-colors capitalize"
-                  >
-                    {section}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="#services"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
+                >
+                  {t.nav.services}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
+                >
+                  {t.nav.portfolio}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
+                >
+                  {t.nav.contact}
+                </a>
+              </li>
               <li>
                 <Link
                   href="/about"
                   className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
-                  About
+                  {t.nav.about}
                 </Link>
               </li>
               <li>
@@ -59,7 +75,7 @@ export default function Footer() {
                   href="/stories"
                   className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
-                  Stories
+                  {t.nav.stories}
                 </a>
               </li>
               <li>
@@ -83,14 +99,14 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Products</h4>
+            <h4 className="text-lg font-semibold mb-4">{t.footer.products}</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/products"
                   className="text-neutral-white/80 hover:text-accent transition-colors"
                 >
-                  All Products
+                  {t.footer.allProducts}
                 </Link>
               </li>
               <li>
@@ -118,7 +134,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
+            <h4 className="text-lg font-semibold mb-4">{t.footer.getInTouch}</h4>
             <p className="text-neutral-white/80 text-sm leading-relaxed">
               <a href="mailto:info@lyvena.xyz" className="hover:text-accent transition-colors">
                 info@lyvena.xyz
@@ -153,7 +169,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-center text-neutral-white/50 text-sm border-t border-neutral-white/10 pt-8">
-          <p>© {new Date().getFullYear()} <Link href="/" className="hover:text-accent transition-colors">Lyvena</Link>. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} <Link href="/" className="hover:text-accent transition-colors">Lyvena</Link>. {t.footer.copyright}</p>
         </div>
       </div>
     </footer>

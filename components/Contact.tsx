@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import confetti from 'canvas-confetti'
+import { useTranslations } from '@/lib/i18n'
 
 export default function Contact() {
+  const t = useTranslations()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -53,12 +55,12 @@ export default function Contact() {
           setSubmitted(false)
         }, 3000)
       } else {
-        alert('Failed to send message. Please try again.')
+        alert(t.contact.error.send)
         setIsSubmitting(false)
       }
     } catch (error) {
       console.error('Error sending message:', error)
-      alert('Error sending message. Please try again.')
+      alert(t.contact.error.send)
       setIsSubmitting(false)
     }
   }
@@ -83,12 +85,12 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Get In Touch</span>
+          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">{t.contact.label}</span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-            Ready to Make an Impact?
+            {t.contact.title}
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Whether you're launching something new or transforming what exists, we're here to help you build technology that matters.
+            {t.contact.description}
           </p>
         </motion.div>
 
@@ -109,10 +111,10 @@ export default function Contact() {
                 >
                   <div className="text-6xl mb-4">🎉</div>
                   <h3 className="text-2xl font-bold text-primary mb-2">
-                    Thank You!
+                    {t.contact.success.title}
                   </h3>
                   <p className="text-neutral-white/80">
-                    We'll get back to you soon.
+                    {t.contact.success.message}
                   </p>
                 </motion.div>
               ) : (
@@ -122,7 +124,7 @@ export default function Contact() {
                       htmlFor="name"
                       className="block text-sm font-semibold text-white mb-2"
                     >
-                      Name *
+                      {t.contact.form.name}
                     </label>
                     <input
                       type="text"
@@ -132,7 +134,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
-                      placeholder="Your name"
+                      placeholder={t.contact.form.namePlaceholder}
                     />
                   </div>
 
@@ -141,7 +143,7 @@ export default function Contact() {
                       htmlFor="email"
                       className="block text-sm font-semibold text-white mb-2"
                     >
-                      Email *
+                      {t.contact.form.email}
                     </label>
                     <input
                       type="email"
@@ -151,7 +153,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
-                      placeholder="your.email@example.com"
+                      placeholder={t.contact.form.emailPlaceholder}
                     />
                   </div>
 
@@ -160,7 +162,7 @@ export default function Contact() {
                       htmlFor="projectIdea"
                       className="block text-sm font-semibold text-white mb-2"
                     >
-                      Project Idea
+                      {t.contact.form.projectIdea}
                     </label>
                     <input
                       type="text"
@@ -169,7 +171,7 @@ export default function Contact() {
                       value={formData.projectIdea}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
-                      placeholder="Brief description of your project"
+                      placeholder={t.contact.form.projectIdeaPlaceholder}
                     />
                   </div>
 
@@ -178,7 +180,7 @@ export default function Contact() {
                       htmlFor="message"
                       className="block text-sm font-semibold text-white mb-2"
                     >
-                      Message *
+                      {t.contact.form.message}
                     </label>
                     <textarea
                       id="message"
@@ -188,7 +190,7 @@ export default function Contact() {
                       required
                       rows={5}
                       className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors resize-none"
-                      placeholder="Tell us more about your needs..."
+                      placeholder={t.contact.form.messagePlaceholder}
                     />
                   </div>
 
@@ -197,7 +199,7 @@ export default function Contact() {
                     disabled={isSubmitting}
                     className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? t.contact.form.sending : t.contact.form.send}
                   </button>
                 </form>
               )}
@@ -214,48 +216,20 @@ export default function Contact() {
           >
             {/* Why choose us */}
             <div className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-white mb-6">Why Partner With Us?</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">{t.contact.whyPartner.title}</h3>
               <ul className="space-y-4">
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                  </svg>
-                  <span className="text-neutral-white/90">Faith-driven approach to technology and innovation</span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                  </svg>
-                  <span className="text-neutral-white/90">Proven track record across healthcare, fintech, and Web3</span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                  </svg>
-                  <span className="text-neutral-white/90">End-to-end delivery from strategy to deployment</span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                  </svg>
-                  <span className="text-neutral-white/90">Long-term partnership mindset, not just project delivery</span>
-                </li>
+                {t.contact.whyPartner.reasons.map((reason, index) => (
+                  <li key={index} className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                    </svg>
+                    <span className="text-neutral-white/90">{reason}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </motion.div>

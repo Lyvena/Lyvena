@@ -3,43 +3,35 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { FaRocket, FaCubes, FaArrowRight, FaCode, FaRobot, FaLink } from 'react-icons/fa'
-
-const products = [
-  {
-    id: 'intelekt',
-    name: 'Intelekt',
-    tagline: 'AI-Powered Web Development',
-    description: 'The future of building software. Intelekt is an intelligent web development platform featuring built-in CMS, AI CEO & PM assistants, powered by cutting-edge Mojo and ChromaDB technology.',
-    features: [
-      'AI-powered code generation',
-      'Built-in content management system',
-      'AI CEO & PM assistants',
-      'Powered by Mojo & ChromaDB',
-    ],
-    icon: FaRobot,
-    gradient: 'from-violet-500 via-purple-500 to-indigo-500',
-    bgGradient: 'from-violet-500/10 via-purple-500/10 to-indigo-500/10',
-    link: 'https://intelekt.live',
-  },
-  {
-    id: 'kiews',
-    name: 'Kiews',
-    tagline: 'No-Code Blockchain Integration',
-    description: 'Connect to NEAR Protocol in just a few clicks. Kiews provides ready-to-use integrations for 10+ no-code platforms, making blockchain accessible to everyone.',
-    features: [
-      '10+ platform integrations',
-      'Webflow, Zapier, Make & more',
-      'No coding required',
-      'NEAR Protocol powered',
-    ],
-    icon: FaCubes,
-    gradient: 'from-amber-500 via-orange-500 to-red-500',
-    bgGradient: 'from-amber-500/10 via-orange-500/10 to-red-500/10',
-    link: 'https://kiews.xyz',
-  },
-]
+import { useTranslations } from '@/lib/i18n'
 
 export default function Products() {
+  const t = useTranslations()
+
+  const products = [
+    {
+      id: 'intelekt',
+      name: 'Intelekt',
+      tagline: t.products.intelekt.tagline,
+      description: t.products.intelekt.description,
+      features: t.products.intelekt.features,
+      icon: FaRobot,
+      gradient: 'from-violet-500 via-purple-500 to-indigo-500',
+      bgGradient: 'from-violet-500/10 via-purple-500/10 to-indigo-500/10',
+      link: 'https://intelekt.live',
+    },
+    {
+      id: 'kiews',
+      name: 'Kiews',
+      tagline: t.products.kiews.tagline,
+      description: t.products.kiews.description,
+      features: t.products.kiews.features,
+      icon: FaCubes,
+      gradient: 'from-amber-500 via-orange-500 to-red-500',
+      bgGradient: 'from-amber-500/10 via-orange-500/10 to-red-500/10',
+      link: 'https://kiews.xyz',
+    },
+  ]
   return (
     <section
       id="products"
@@ -60,12 +52,12 @@ export default function Products() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Our Products</span>
+          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">{t.products.label}</span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
-            Innovation in Action
+            {t.products.title}
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Powerful tools we've built to push the boundaries of what's possible with AI and blockchain technology.
+            {t.products.description}
           </p>
         </motion.div>
 
@@ -119,7 +111,7 @@ export default function Products() {
                   rel="noopener noreferrer"
                   className={`inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r ${product.gradient} text-white font-semibold rounded-full hover:shadow-lg hover:shadow-${product.id === 'intelekt' ? 'violet' : 'amber'}-500/25 transition-all group-hover:gap-4`}
                 >
-                  Explore {product.name}
+                  {t.products.explore} {product.name}
                   <FaArrowRight className="text-sm" />
                 </a>
               </div>
@@ -139,7 +131,7 @@ export default function Products() {
             href="/products"
             className="inline-flex items-center gap-2 text-white/80 hover:text-accent font-semibold transition-colors"
           >
-            View all products
+            {t.products.viewAll}
             <FaArrowRight className="text-sm" />
           </Link>
         </motion.div>

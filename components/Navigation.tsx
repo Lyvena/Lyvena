@@ -5,20 +5,23 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaBars, FaTimes } from 'react-icons/fa'
-
-const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'Services', href: '/#services' },
-  { name: 'Portfolio', href: '/#portfolio' },
-  { name: 'About', href: '/about' },
-  { name: 'Stories', href: '/stories' },
-  { name: 'Contact', href: '/#contact' },
-]
+import { useTranslations } from '@/lib/i18n'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
+  const t = useTranslations()
+
+  const navLinks = [
+    { name: t.nav.home, href: '/' },
+    { name: t.nav.services, href: '/#services' },
+    { name: t.nav.portfolio, href: '/#portfolio' },
+    { name: t.nav.about, href: '/about' },
+    { name: t.nav.stories, href: '/stories' },
+    { name: t.nav.contact, href: '/#contact' },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,13 +80,14 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
+            {/* Language Switcher & CTA Button */}
+            <div className="hidden md:flex items-center gap-4">
+              <LanguageSwitcher variant="compact" />
               <Link
                 href="/#contact"
                 className="px-6 py-2.5 bg-accent text-neutral-charcoal font-semibold rounded-full hover:bg-accent-light transition-all hover:scale-105"
               >
-                Get Started
+                {t.nav.getStarted}
               </Link>
             </div>
 
@@ -132,14 +136,15 @@ export default function Navigation() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
-                  className="mt-4"
+                  className="mt-4 flex flex-col items-center gap-4"
                 >
+                  <LanguageSwitcher />
                   <Link
                     href="/#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="px-8 py-3 bg-accent text-neutral-charcoal font-semibold rounded-full"
                   >
-                    Get Started
+                    {t.nav.getStarted}
                   </Link>
                 </motion.div>
               </div>

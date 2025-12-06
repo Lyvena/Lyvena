@@ -2,35 +2,37 @@
 
 import { motion } from 'framer-motion'
 import { FaCode, FaBrain, FaPaintBrush } from 'react-icons/fa'
-
-const services = [
-  {
-    icon: FaBrain,
-    title: 'AI & Automation Solutions',
-    description: 'Intelligence that amplifies your impact',
-    details: 'Transform operations with AI that learns, adapts, and delivers. From predictive healthcare to automated workflows, we build systems that free your team to focus on what matters most.',
-    features: ['Predictive analytics & insights', 'Workflow automation', 'Custom AI model development'],
-    gradient: 'from-primary via-primary to-primary-dark',
-  },
-  {
-    icon: FaCode,
-    title: 'Web & App Development',
-    description: 'Digital experiences that inspire action',
-    details: 'We craft beautiful, high-performance platforms that convert visitors into advocates. Every pixel purposeful, every interaction meaningful.',
-    features: ['Modern web applications', 'Mobile-first design', 'E-commerce & portals'],
-    gradient: 'from-accent via-accent to-accent-dark',
-  },
-  {
-    icon: FaPaintBrush,
-    title: 'Design & Strategy',
-    description: 'Vision translated into reality',
-    details: 'From brand identity to UX research, we create cohesive digital strategies that align technology with your mission and values.',
-    features: ['Brand & identity design', 'UX/UI design', 'Digital transformation consulting'],
-    gradient: 'from-secondary via-secondary to-secondary-dark',
-  },
-]
+import { useTranslations } from '@/lib/i18n'
 
 export default function Services() {
+  const t = useTranslations()
+
+  const services = [
+    {
+      icon: FaBrain,
+      title: t.services.aiAutomation.title,
+      description: t.services.aiAutomation.description,
+      details: t.services.aiAutomation.details,
+      features: t.services.aiAutomation.features,
+      gradient: 'from-primary via-primary to-primary-dark',
+    },
+    {
+      icon: FaCode,
+      title: t.services.webDev.title,
+      description: t.services.webDev.description,
+      details: t.services.webDev.details,
+      features: t.services.webDev.features,
+      gradient: 'from-accent via-accent to-accent-dark',
+    },
+    {
+      icon: FaPaintBrush,
+      title: t.services.design.title,
+      description: t.services.design.description,
+      details: t.services.design.details,
+      features: t.services.design.features,
+      gradient: 'from-secondary via-secondary to-secondary-dark',
+    },
+  ]
   return (
     <section
       id="services"
@@ -51,12 +53,12 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Our Services</span>
+          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">{t.services.label}</span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
-            What We Build
+            {t.services.title}
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            End-to-end solutions from concept to launch. We partner with visionary organizations to create technology that makes a difference.
+            {t.services.description}
           </p>
         </motion.div>
 
@@ -120,10 +122,10 @@ export default function Services() {
               }}
               className="btn-primary shine"
             >
-              Start Your Project
+              {t.services.ctaPrimary}
             </button>
             <a href="/case-study" className="btn-secondary">
-              View Case Studies
+              {t.services.ctaSecondary}
             </a>
           </div>
         </motion.div>

@@ -2,47 +2,49 @@
 
 import { motion } from 'framer-motion'
 import { FaShieldAlt, FaLock, FaLeaf, FaUsers, FaLightbulb, FaEye } from 'react-icons/fa'
-
-const coreValues = [
-  {
-    icon: FaShieldAlt,
-    title: 'Ethical AI',
-    description: 'Every algorithm we build respects human dignity. We develop AI that is fair, unbiased, and aligned with moral principles.',
-    gradient: 'from-emerald-500 to-teal-500',
-  },
-  {
-    icon: FaLock,
-    title: 'Privacy First',
-    description: 'Your data belongs to you. We implement industry-leading security practices and never compromise on user privacy.',
-    gradient: 'from-blue-500 to-indigo-500',
-  },
-  {
-    icon: FaLeaf,
-    title: 'Sustainability',
-    description: 'Technology should heal, not harm. We build solutions that benefit both people and planet for generations to come.',
-    gradient: 'from-green-500 to-emerald-500',
-  },
-  {
-    icon: FaUsers,
-    title: 'Community Impact',
-    description: 'Real change happens together. We partner with communities to create technology that lifts everyone up.',
-    gradient: 'from-orange-500 to-amber-500',
-  },
-  {
-    icon: FaLightbulb,
-    title: 'Innovation',
-    description: 'We push boundaries responsibly. Cutting-edge technology, grounded in timeless values and human-centered design.',
-    gradient: 'from-yellow-500 to-orange-500',
-  },
-  {
-    icon: FaEye,
-    title: 'Transparency',
-    description: 'No black boxes here. We believe in open communication, explainable AI, and accountable practices.',
-    gradient: 'from-purple-500 to-pink-500',
-  },
-]
+import { useTranslations } from '@/lib/i18n'
 
 export default function About() {
+  const t = useTranslations()
+
+  const coreValues = [
+    {
+      icon: FaShieldAlt,
+      title: t.about.values.ethicalAI.title,
+      description: t.about.values.ethicalAI.description,
+      gradient: 'from-emerald-500 to-teal-500',
+    },
+    {
+      icon: FaLock,
+      title: t.about.values.privacy.title,
+      description: t.about.values.privacy.description,
+      gradient: 'from-blue-500 to-indigo-500',
+    },
+    {
+      icon: FaLeaf,
+      title: t.about.values.sustainability.title,
+      description: t.about.values.sustainability.description,
+      gradient: 'from-green-500 to-emerald-500',
+    },
+    {
+      icon: FaUsers,
+      title: t.about.values.community.title,
+      description: t.about.values.community.description,
+      gradient: 'from-orange-500 to-amber-500',
+    },
+    {
+      icon: FaLightbulb,
+      title: t.about.values.innovation.title,
+      description: t.about.values.innovation.description,
+      gradient: 'from-yellow-500 to-orange-500',
+    },
+    {
+      icon: FaEye,
+      title: t.about.values.transparency.title,
+      description: t.about.values.transparency.description,
+      gradient: 'from-purple-500 to-pink-500',
+    },
+  ]
   return (
     <section
       id="about"
@@ -63,13 +65,12 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Who We Are</span>
+          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">{t.about.label}</span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-charcoal mb-6">
-            What Drives Us
+            {t.about.title}
           </h2>
           <p className="text-lg text-neutral-charcoal/70 max-w-3xl mx-auto">
-            We're building AI the right way—with purpose, integrity, and an unwavering commitment
-            to human flourishing. These principles guide every decision we make.
+            {t.about.description}
           </p>
         </motion.div>
 
@@ -114,10 +115,10 @@ export default function About() {
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <a href="/case-study" className="btn-primary">
-              Read Case Studies
+              {t.about.ctaPrimary}
             </a>
             <a href="/about" className="btn-secondary">
-              Learn More About Us
+              {t.about.ctaSecondary}
             </a>
           </div>
         </motion.div>

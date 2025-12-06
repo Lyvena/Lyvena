@@ -1,8 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from '@/lib/i18n'
 
 export default function Hero() {
+  const t = useTranslations()
+  
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact')
     contactSection?.scrollIntoView({ behavior: 'smooth' })
@@ -50,8 +53,8 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Building the Future with{' '}
-            <span className="text-accent">Responsible AI</span>
+            {t.hero.tagline}{' '}
+            <span className="text-accent">{t.hero.taglineHighlight}</span>
           </motion.h2>
 
           {/* Value Proposition */}
@@ -61,8 +64,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            We're an Orthodox Christian company pioneering Artificial SuperIntelligence that serves humanity.
-            Our AI solutions transform healthcare, education, and business—built on ethics, transparency, and purpose.
+            {t.hero.description}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -77,14 +79,14 @@ export default function Hero() {
               className="btn-primary text-lg shine"
               aria-label="Start a conversation with Lyvena"
             >
-              Let's Build Together
+              {t.hero.ctaPrimary}
             </button>
             <a
               href="#services"
               className="btn-secondary text-lg"
               aria-label="Explore our services"
             >
-              See What We Do
+              {t.hero.ctaSecondary}
             </a>
           </motion.div>
 
