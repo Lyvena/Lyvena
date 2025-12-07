@@ -18,7 +18,7 @@ export default function Products() {
       icon: FaRobot,
       gradient: 'from-violet-500 via-purple-500 to-indigo-500',
       bgGradient: 'from-violet-500/10 via-purple-500/10 to-indigo-500/10',
-      link: 'https://intelekt.live',
+      link: 'https://intelekt.live/',
     },
     {
       id: 'kiews',
@@ -29,7 +29,7 @@ export default function Products() {
       icon: FaCubes,
       gradient: 'from-amber-500 via-orange-500 to-red-500',
       bgGradient: 'from-amber-500/10 via-orange-500/10 to-red-500/10',
-      link: 'https://kiews.xyz',
+      link: 'https://kiews.xyz/',
     },
   ]
   return (
