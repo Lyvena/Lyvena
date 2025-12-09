@@ -11,6 +11,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: FaLinkedin, href: 'https://www.linkedin.com/company/lyvena/', label: 'LinkedIn' },
     { icon: FaGithub, href: 'https://github.com/Lyvena/Lyvena', label: 'GitHub' },
+    { icon: FaEnvelope, href: 'mailto:info@lyvena.xyz', label: 'Email' },
   ]
 
   return (
