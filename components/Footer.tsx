@@ -31,9 +31,26 @@ export default function Footer() {
                 Lyvena
               </h3>
             </Link>
-            <p className="text-neutral-white/80 leading-relaxed">
+            <p className="text-neutral-white/80 leading-relaxed mb-6">
               {t.footer.description}
             </p>
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-accent hover:text-neutral-charcoal transition-all"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label={social.label}
+                >
+                  <social.icon className="text-lg" />
+                </motion.a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -149,24 +166,6 @@ export default function Footer() {
               Honduras
             </p>
           </div>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex justify-center space-x-6 mb-12">
-          {socialLinks.map((social) => (
-            <motion.a
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-accent hover:text-neutral-charcoal transition-all"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              aria-label={social.label}
-            >
-              <social.icon className="text-lg" />
-            </motion.a>
-          ))}
         </div>
 
         {/* Copyright */}
