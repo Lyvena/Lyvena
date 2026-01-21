@@ -148,6 +148,16 @@ export default function Footer() {
                   Kiews
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://prosperahavens.space/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-white/80 hover:text-accent transition-colors"
+                >
+                  Prospera havens
+                </a>
+              </li>
             </ul>
           </div>
 
