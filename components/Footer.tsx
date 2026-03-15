@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Footer() {
   const socialLinks = [
     { icon: FaLinkedin, href: 'https://www.linkedin.com/company/lyvena/', label: 'LinkedIn', color: 'hover:text-[#0077B5]' },
-    { icon: FaGithub, href: 'https://github.com/Lyvena/Lyvena', label: 'GitHub', color: 'hover:text-[#333]' },
+    { icon: FaGithub, href: 'https://github.com/lyvena', label: 'GitHub', color: 'hover:text-[#333]' },
   ]
 
   return (
