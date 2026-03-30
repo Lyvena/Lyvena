@@ -231,7 +231,7 @@ export const en: Translations = {
           description: "Creative visionary and operational leader, bringing artistry and precision to everything we build. Aryna ensures our solutions are as beautiful as they are functional.",
         },
         akshay: {
-          role: 'Founder & CEO',
+          role: 'Assistant',
           description: "Founder and driving force behind Lyvena's mission to develop AI for good. Akshay leads with conviction that technology can—and must—serve humanity's highest aspirations.",
         },
       },
