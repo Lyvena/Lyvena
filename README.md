@@ -13,7 +13,7 @@ positioned around three things:
 - TypeScript
 - Tailwind CSS
 - React Icons
-- Nodemailer for the contact route
+- Static contact flow via `mailto:`
 
 ## Local Development
 
@@ -37,14 +37,12 @@ bun run build
 - `/about` - Company and delivery positioning
 - `/case-study` - Kiews case study
 - `/stories` - Notes and long-form thinking
-- `/api/contact` - Contact form submission endpoint
-
 ## Repository Notes
 
 - SEO helpers live in `app/robots.ts` and `app/sitemap.ts`
 - Shared story content lives in `lib/stories.ts`
 - Site-wide header and metadata live in `app/layout.tsx`
-- Contact form handling lives in `components/Contact.tsx` and `app/api/contact/route.ts`
+- Contact form handling lives in `components/Contact.tsx`
 
 ## Contact
 

@@ -28,36 +28,35 @@ export default function Contact() {
     setError('')
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      const subject = `Lyvena inquiry from ${formData.name}`
+      const body = [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Organization: ${formData.organization || 'Not provided'}`,
+        `Project Idea: ${formData.projectIdea || 'Not provided'}`,
+        '',
+        formData.message,
+      ].join('\n')
+
+      window.location.href = `mailto:info@lyvena.xyz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#0A6C74', '#00D4FF', '#F8F9FA'],
       })
 
-      if (response.ok) {
-        confetti({
-          particleCount: 100,
-          spread: 70,
-          origin: { y: 0.6 },
-          colors: ['#0A6C74', '#00D4FF', '#F8F9FA'],
-        })
+      setIsSubmitting(false)
+      setSubmitted(true)
 
-        setIsSubmitting(false)
-        setSubmitted(true)
-
-        setTimeout(() => {
-          setFormData({ name: '', email: '', organization: '', projectIdea: '', message: '' })
-          setSubmitted(false)
-        }, 3000)
-      } else {
-        setError('Unable to send your message right now. Please email info@lyvena.xyz.')
-        setIsSubmitting(false)
-      }
+      setTimeout(() => {
+        setFormData({ name: '', email: '', organization: '', projectIdea: '', message: '' })
+        setSubmitted(false)
+      }, 3000)
     } catch (error) {
       console.error('Error sending message:', error)
-      setError('Unable to send your message right now. Please email info@lyvena.xyz.')
+      setError('Unable to open your email client. Please email info@lyvena.xyz directly.')
       setIsSubmitting(false)
     }
   }
@@ -96,7 +95,7 @@ export default function Contact() {
                     Thank You!
                   </h3>
                   <p className="text-neutral-white/70">
-                    We&apos;ll get back to you soon.
+                    Your email draft is ready. Send it and we&apos;ll get back to you soon.
                   </p>
                 </div>
               ) : (
@@ -203,9 +202,9 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? 'Preparing...' : 'Prepare Email'}
                   </button>
                 </form>
               )}
