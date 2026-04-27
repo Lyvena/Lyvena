@@ -27,7 +27,7 @@ export default function About() {
               About Lyvena
             </h1>
             <p className="text-xl text-neutral-white/90 max-w-2xl mx-auto">
-              A product-minded AI studio focused on applied systems, credible delivery, and
+              An Orthodox Christian company focused on applied AI systems, credible delivery, and
               responsible rollout.
             </p>
           </div>
@@ -43,7 +43,9 @@ export default function About() {
               </h2>
               <p className="text-lg text-neutral-white/80 leading-relaxed mb-6">
                 Lyvena is at its best when it focuses on turning ambiguous AI ambition into clear
-                product direction, real systems, and delivery plans teams can actually run.
+                product direction, real systems, and delivery plans teams can actually run. We are
+                an Orthodox Christian company, and that identity shapes how we think about human
+                dignity, responsibility, and the kinds of systems worth building.
               </p>
               <p className="text-lg text-neutral-white/80 leading-relaxed mb-6">
                 That means narrowing the promise: not everything about AI, but specific internal
@@ -60,7 +62,8 @@ export default function About() {
                   <h3 className="text-2xl font-bold text-accent mb-3">Core Offer</h3>
                   <p className="text-neutral-white/80">
                     Applied AI systems, product engineering, and responsible delivery for teams that
-                    need more than prototypes.
+                    need more than prototypes, guided by an Orthodox Christian view of integrity,
+                    stewardship, and human-centered technology.
                   </p>
                 </div>
                 <div>
