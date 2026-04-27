@@ -1,19 +1,36 @@
 import nodemailer from 'nodemailer'
 
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+
 export async function POST(request: Request) {
   try {
-    const { name, email, projectIdea, message } = await request.json()
+    const { name, email, organization, projectIdea, message } = await request.json()
+    const trimmedName = String(name || '').trim()
+    const trimmedEmail = String(email || '').trim()
+    const trimmedOrganization = String(organization || '').trim()
+    const trimmedProjectIdea = String(projectIdea || '').trim()
+    const trimmedMessage = String(message || '').trim()
 
-    // Validate required fields
-    if (!name || !email || !message) {
+    if (!trimmedName || !trimmedEmail || !trimmedMessage) {
       return new Response(
         JSON.stringify({ error: 'Missing required fields' }),
         { status: 400 }
       )
     }
 
-    // Create transporter using Gmail SMTP
-    // Note: You need to set up environment variables for email credentials
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
+      return new Response(
+        JSON.stringify({ error: 'Email service is not configured' }),
+        { status: 500 }
+      )
+    }
+
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -22,23 +39,31 @@ export async function POST(request: Request) {
       },
     })
 
-    // Email content
     const emailContent = `
       <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Project Idea:</strong> ${projectIdea || 'Not provided'}</p>
+      <p><strong>Name:</strong> ${escapeHtml(trimmedName)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(trimmedEmail)}</p>
+      <p><strong>Organization:</strong> ${escapeHtml(trimmedOrganization || 'Not provided')}</p>
+      <p><strong>Project Idea:</strong> ${escapeHtml(trimmedProjectIdea || 'Not provided')}</p>
       <p><strong>Message:</strong></p>
-      <p>${message.replace(/\n/g, '<br>')}</p>
+      <p>${escapeHtml(trimmedMessage).replace(/\n/g, '<br>')}</p>
     `
 
-    // Send email to info@lyvena.xyz
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: 'info@lyvena.xyz',
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `New Lyvena inquiry from ${trimmedName}`,
       html: emailContent,
-      replyTo: email,
+      replyTo: trimmedEmail,
+      text: [
+        'New Contact Form Submission',
+        `Name: ${trimmedName}`,
+        `Email: ${trimmedEmail}`,
+        `Organization: ${trimmedOrganization || 'Not provided'}`,
+        `Project Idea: ${trimmedProjectIdea || 'Not provided'}`,
+        '',
+        trimmedMessage,
+      ].join('\n'),
     })
 
     return new Response(

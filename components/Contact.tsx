@@ -1,20 +1,19 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import confetti from 'canvas-confetti'
-import { useTranslations } from '@/lib/i18n'
 
 export default function Contact() {
-  const t = useTranslations()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    organization: '',
     projectIdea: '',
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -26,9 +25,9 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError('')
 
     try {
-      // Send email via API
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -38,7 +37,6 @@ export default function Contact() {
       })
 
       if (response.ok) {
-        // Trigger confetti
         confetti({
           particleCount: 100,
           spread: 70,
@@ -49,18 +47,17 @@ export default function Contact() {
         setIsSubmitting(false)
         setSubmitted(true)
 
-        // Reset form after 3 seconds
         setTimeout(() => {
-          setFormData({ name: '', email: '', projectIdea: '', message: '' })
+          setFormData({ name: '', email: '', organization: '', projectIdea: '', message: '' })
           setSubmitted(false)
         }, 3000)
       } else {
-        alert(t.contact.error.send)
+        setError('Unable to send your message right now. Please email info@lyvena.xyz.')
         setIsSubmitting(false)
       }
     } catch (error) {
       console.error('Error sending message:', error)
-      alert(t.contact.error.send)
+      setError('Unable to send your message right now. Please email info@lyvena.xyz.')
       setIsSubmitting(false)
     }
   }
@@ -70,53 +67,38 @@ export default function Contact() {
       id="contact"
       className="section-padding bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark relative overflow-hidden"
     >
-      {/* Animated background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">{t.contact.label}</span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-            {t.contact.title}
-          </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            {t.contact.description}
+        <div className="mb-16 max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent/80">
+            Contact
           </p>
-        </motion.div>
+          <h2 className="mb-4 text-4xl font-display font-bold text-white md:text-5xl">
+            Bring a real workflow, product idea, or AI rollout question
+          </h2>
+          <p className="text-xl text-neutral-white/70">
+            The best first conversations are concrete. Tell us what is slow, messy, expensive,
+            or blocked today and we will map the shortest credible path forward.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Contact form */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm hover:border-accent/40 transition-all duration-300">
+          <div>
+            <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm transition-all duration-300">
               {submitted ? (
-                <motion.div
-                  className="text-center py-12"
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                >
+                <div className="text-center py-12">
                   <div className="text-6xl mb-4">🎉</div>
                   <h3 className="text-2xl font-bold text-primary mb-2">
-                    {t.contact.success.title}
+                    Thank You!
                   </h3>
-                  <p className="text-neutral-white/80">
-                    {t.contact.success.message}
+                  <p className="text-neutral-white/70">
+                    We&apos;ll get back to you soon.
                   </p>
-                </motion.div>
+                </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -124,7 +106,7 @@ export default function Contact() {
                       htmlFor="name"
                       className="block text-sm font-semibold text-white mb-2"
                     >
-                      {t.contact.form.name}
+                      Name *
                     </label>
                     <input
                       type="text"
@@ -134,7 +116,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
-                      placeholder={t.contact.form.namePlaceholder}
+                      placeholder="Your name"
                     />
                   </div>
 
@@ -143,7 +125,7 @@ export default function Contact() {
                       htmlFor="email"
                       className="block text-sm font-semibold text-white mb-2"
                     >
-                      {t.contact.form.email}
+                      Email *
                     </label>
                     <input
                       type="email"
@@ -153,7 +135,25 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
-                      placeholder={t.contact.form.emailPlaceholder}
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="organization"
+                      className="block text-sm font-semibold text-white mb-2"
+                    >
+                      Organization
+                    </label>
+                    <input
+                      type="text"
+                      id="organization"
+                      name="organization"
+                      value={formData.organization}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
+                      placeholder="Company, team, or product"
                     />
                   </div>
 
@@ -162,7 +162,7 @@ export default function Contact() {
                       htmlFor="projectIdea"
                       className="block text-sm font-semibold text-white mb-2"
                     >
-                      {t.contact.form.projectIdea}
+                      Project Idea
                     </label>
                     <input
                       type="text"
@@ -171,7 +171,7 @@ export default function Contact() {
                       value={formData.projectIdea}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
-                      placeholder={t.contact.form.projectIdeaPlaceholder}
+                      placeholder="Brief description of your project"
                     />
                   </div>
 
@@ -180,7 +180,7 @@ export default function Contact() {
                       htmlFor="message"
                       className="block text-sm font-semibold text-white mb-2"
                     >
-                      {t.contact.form.message}
+                      Message *
                     </label>
                     <textarea
                       id="message"
@@ -190,49 +190,89 @@ export default function Contact() {
                       required
                       rows={5}
                       className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors resize-none"
-                      placeholder={t.contact.form.messagePlaceholder}
+                      placeholder="Tell us more about your needs..."
                     />
                   </div>
+
+                  {error ? (
+                    <p className="rounded-lg border border-red-400/30 bg-red-500/10 px-4 py-3 text-sm text-red-100">
+                      {error}
+                    </p>
+                  ) : null}
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
                     className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? t.contact.form.sending : t.contact.form.send}
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               )}
             </div>
-          </motion.div>
+          </div>
 
-          {/* Contact info */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
-          >
-            {/* Why choose us */}
+          <div className="space-y-8">
             <div className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-white mb-6">{t.contact.whyPartner.title}</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">What makes a good first engagement</h3>
               <ul className="space-y-4">
-                {t.contact.whyPartner.reasons.map((reason, index) => (
-                  <li key={index} className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                    </svg>
-                    <span className="text-neutral-white/90">{reason}</span>
-                  </li>
-                ))}
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                  </svg>
+                  <span className="text-neutral-white/90">A specific workflow or operator pain point</span>
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                  </svg>
+                  <span className="text-neutral-white/90">A product goal tied to adoption, speed, or quality</span>
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                  </svg>
+                  <span className="text-neutral-white/90">A team ready to pilot, measure, and iterate</span>
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                  </svg>
+                  <span className="text-neutral-white/90">A willingness to define human review and guardrails upfront</span>
+                </li>
               </ul>
             </div>
-          </motion.div>
+
+            <div className="rounded-2xl border border-neutral-white/10 bg-neutral-charcoal/50 p-8">
+              <h3 className="mb-4 text-2xl font-bold text-white">Prefer email?</h3>
+              <p className="mb-3 text-neutral-white/70">
+                Reach us directly at{' '}
+                <a href="mailto:info@lyvena.xyz" className="text-accent transition-colors hover:text-white">
+                  info@lyvena.xyz
+                </a>
+                .
+              </p>
+              <p className="text-sm text-neutral-white/55">
+                Include the workflow, team, and outcome you care about most.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

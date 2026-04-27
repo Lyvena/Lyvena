@@ -38,8 +38,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Outfit', 'DM Sans', 'Inter', 'system-ui', 'sans-serif'],
-        display: ['Outfit', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'system-ui', 'sans-serif'],
       },
       animation: {
         'float': 'float 8s ease-in-out infinite',

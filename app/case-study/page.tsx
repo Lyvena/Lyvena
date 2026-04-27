@@ -1,5 +1,3 @@
-'use client'
-
 import CaseStudy from '@/components/CaseStudy'
 import Footer from '@/components/Footer'
 
