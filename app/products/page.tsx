@@ -116,7 +116,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Detail Sections */}
-      {products.map((product, productIndex) => (
+      {products.map((product: any, productIndex: number) => (
         <section 
           key={product.id}
           id={product.id}
@@ -154,7 +154,7 @@ export default function ProductsPage() {
 
                 {/* Highlights */}
                 <div className="grid grid-cols-2 gap-3 mb-8">
-                  {product.highlights.map((highlight, idx) => (
+                  {product.highlights.map((highlight: string, idx: number) => (
                     <div key={idx} className="flex items-center gap-2 text-white/80">
                       <FaCheck className={`text-sm bg-gradient-to-r ${product.gradient} bg-clip-text text-transparent`} style={{ color: productIndex === 0 ? '#8b5cf6' : '#f59e0b' }} />
                       <span className="text-sm">{highlight}</span>
@@ -185,7 +185,7 @@ export default function ProductsPage() {
                 <div className={`bg-gradient-to-br ${product.bgGradient} backdrop-blur-sm rounded-3xl p-8 border border-white/10`}>
                   <h3 className="text-2xl font-bold text-white mb-8">{t.productsPage.keyFeatures}</h3>
                   <div className="space-y-6">
-                    {product.features.map((feature, idx) => (
+                    {product.features.map((feature: any, idx: number) => (
                       <motion.div
                         key={idx}
                         initial={{ opacity: 0, y: 20 }}
@@ -210,7 +210,7 @@ export default function ProductsPage() {
                     <div className="mt-8 pt-8 border-t border-white/10">
                       <h4 className="text-white font-semibold mb-4">{t.productsPage.supportedPlatforms}</h4>
                       <div className="flex flex-wrap gap-2">
-                        {product.integrations.map((integration, idx) => (
+                        {product.integrations.map((integration: string, idx: number) => (
                           <span 
                             key={idx}
                             className="px-3 py-1.5 text-xs font-medium bg-white/10 text-white/80 rounded-full"

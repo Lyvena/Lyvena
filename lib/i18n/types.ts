@@ -1,3 +1,5 @@
+export type Locale = 'en' | 'uk'
+
 export interface Translations {
-  [key: string]: string | string[] | Translations
+  [key: string]: any
 }

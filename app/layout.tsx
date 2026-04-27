@@ -3,6 +3,7 @@ import { DM_Sans, Outfit } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import SiteHeader from '@/components/SiteHeader'
+import { I18nProvider } from '@/lib/i18n'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -71,8 +72,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-neutral-cream text-neutral-charcoal">
-        <SiteHeader />
-        {children}
+        <I18nProvider>
+          <SiteHeader />
+          {children}
+        </I18nProvider>
       </body>
     </html>
   )

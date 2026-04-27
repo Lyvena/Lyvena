@@ -63,7 +63,7 @@ export default function Products() {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {products.map((product, index) => (
+          {products.map((product: any, index: number) => (
             <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 40 }}
@@ -96,7 +96,7 @@ export default function Products() {
 
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-3 mb-8">
-                  {product.features.map((feature, idx) => (
+                  {product.features.map((feature: string, idx: number) => (
                     <div key={idx} className="flex items-center gap-2 text-sm text-white/80">
                       <span className={`w-1.5 h-1.5 bg-gradient-to-r ${product.gradient} rounded-full`} />
                       {feature}
