@@ -1,23 +1,33 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes, FaChevronDown, FaRobot, FaHome, FaBolt, FaBriefcase, FaCubes } from 'react-icons/fa'
 import { useTranslations } from '@/lib/i18n'
 import LanguageSwitcher from './LanguageSwitcher'
+
+const productSubMenu = [
+  { name: 'Intelekt', href: '/products/intelekt', icon: FaRobot, description: 'AI-Native MVP Builder', gradient: 'from-violet-500 to-indigo-500' },
+  { name: 'Prospera Havens', href: '/products/prospera-havens', icon: FaHome, description: 'AI-Powered Real Estate', gradient: 'from-cyan-500 to-teal-500' },
+  { name: 'Mojoflow', href: '/products/mojoflow', icon: FaBolt, description: 'Workflow Automation', gradient: 'from-orange-500 to-amber-500' },
+  { name: 'Seerist', href: '/products/seerist', icon: FaBriefcase, description: 'Revenue Operating System', gradient: 'from-blue-500 to-cyan-500' },
+  { name: 'Kiews', href: '/products/kiews', icon: FaCubes, description: 'No-Code Blockchain', gradient: 'from-amber-500 to-orange-500' },
+]
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isProductsOpen, setIsProductsOpen] = useState(false)
+  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false)
+  const productsRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
   const t = useTranslations()
 
   const navLinks = [
     { name: t.nav.home, href: '/' },
     { name: t.nav.services, href: '/#services' },
-    { name: t.nav.portfolio, href: '/#portfolio' },
     { name: t.nav.about, href: '/about' },
     { name: t.nav.stories, href: '/stories' },
     { name: t.nav.contact, href: '/#contact' },
@@ -31,10 +41,22 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (productsRef.current && !productsRef.current.contains(event.target as Node)) {
+        setIsProductsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/'
     return pathname.startsWith(href.split('#')[0])
   }
+
+  const isProductsActive = pathname.startsWith('/products')
 
   return (
     <>
@@ -59,7 +81,95 @@ export default function Navigation() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
+              {/* Home link */}
+              <Link
+                href="/"
+                className={`relative text-sm font-medium transition-colors ${
+                  isActive('/') ? 'text-accent' : 'text-white/80 hover:text-white'
+                }`}
+              >
+                {t.nav.home}
+                {isActive('/') && (
+                  <motion.span
+                    layoutId="activeNav"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent rounded-full"
+                  />
+                )}
+              </Link>
+
+              {/* Services link */}
+              <Link
+                href="/#services"
+                className={`relative text-sm font-medium transition-colors ${
+                  isActive('/#services') ? 'text-accent' : 'text-white/80 hover:text-white'
+                }`}
+              >
+                {t.nav.services}
+              </Link>
+
+              {/* Products dropdown */}
+              <div ref={productsRef} className="relative">
+                <button
+                  onClick={() => setIsProductsOpen(!isProductsOpen)}
+                  onMouseEnter={() => setIsProductsOpen(true)}
+                  className={`relative text-sm font-medium transition-colors flex items-center gap-1 ${
+                    isProductsActive ? 'text-accent' : 'text-white/80 hover:text-white'
+                  }`}
+                >
+                  Products
+                  <FaChevronDown className={`text-[10px] transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} />
+                  {isProductsActive && (
+                    <motion.span
+                      layoutId="activeNav"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent rounded-full"
+                    />
+                  )}
+                </button>
+
+                <AnimatePresence>
+                  {isProductsOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.2 }}
+                      onMouseLeave={() => setIsProductsOpen(false)}
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 bg-neutral-charcoal/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl shadow-black/30 overflow-hidden"
+                    >
+                      <div className="p-2">
+                        {productSubMenu.map((product) => (
+                          <Link
+                            key={product.href}
+                            href={product.href}
+                            onClick={() => setIsProductsOpen(false)}
+                            className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-white/5 transition-colors group"
+                          >
+                            <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${product.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                              <product.icon className="text-white text-sm" />
+                            </div>
+                            <div>
+                              <p className="text-white text-sm font-medium group-hover:text-accent transition-colors">{product.name}</p>
+                              <p className="text-white/40 text-xs">{product.description}</p>
+                            </div>
+                          </Link>
+                        ))}
+                        <div className="border-t border-white/10 mt-1 pt-1">
+                          <Link
+                            href="/products"
+                            onClick={() => setIsProductsOpen(false)}
+                            className="flex items-center justify-center px-3 py-2.5 rounded-xl hover:bg-white/5 transition-colors text-accent text-sm font-medium"
+                          >
+                            View All Products →
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Remaining nav links */}
+              {navLinks.slice(2).map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -112,14 +222,84 @@ export default function Navigation() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 z-40 md:hidden"
           >
-            <div className="absolute inset-0 bg-neutral-charcoal/95 backdrop-blur-xl pt-24">
+            <div className="absolute inset-0 bg-neutral-charcoal/95 backdrop-blur-xl pt-24 overflow-y-auto">
               <div className="flex flex-col items-center gap-6 p-6">
-                {navLinks.map((link, index) => (
+                {/* Home */}
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0 }}>
+                  <Link
+                    href="/"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`text-2xl font-medium ${isActive('/') ? 'text-accent' : 'text-white'}`}
+                  >
+                    {t.nav.home}
+                  </Link>
+                </motion.div>
+
+                {/* Services */}
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+                  <Link
+                    href="/#services"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`text-2xl font-medium ${isActive('/#services') ? 'text-accent' : 'text-white'}`}
+                  >
+                    {t.nav.services}
+                  </Link>
+                </motion.div>
+
+                {/* Products with expandable sub-menu */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="flex flex-col items-center"
+                >
+                  <button
+                    onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
+                    className={`text-2xl font-medium flex items-center gap-2 ${isProductsActive ? 'text-accent' : 'text-white'}`}
+                  >
+                    Products
+                    <FaChevronDown className={`text-sm transition-transform duration-200 ${isMobileProductsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  <AnimatePresence>
+                    {isMobileProductsOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="flex flex-col items-center gap-3 mt-4 overflow-hidden"
+                      >
+                        {productSubMenu.map((product) => (
+                          <Link
+                            key={product.href}
+                            href={product.href}
+                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileProductsOpen(false); }}
+                            className="flex items-center gap-3 text-white/70 hover:text-accent transition-colors"
+                          >
+                            <div className={`w-7 h-7 rounded-lg bg-gradient-to-br ${product.gradient} flex items-center justify-center`}>
+                              <product.icon className="text-white text-xs" />
+                            </div>
+                            <span className="text-lg">{product.name}</span>
+                          </Link>
+                        ))}
+                        <Link
+                          href="/products"
+                          onClick={() => { setIsMobileMenuOpen(false); setIsMobileProductsOpen(false); }}
+                          className="text-accent text-sm font-medium mt-1"
+                        >
+                          View All Products →
+                        </Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+
+                {/* About, Stories, Contact */}
+                {navLinks.slice(2).map((link, index) => (
                   <motion.div
                     key={link.name}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ delay: (index + 3) * 0.1 }}
                   >
                     <Link
                       href={link.href}
@@ -132,6 +312,7 @@ export default function Navigation() {
                     </Link>
                   </motion.div>
                 ))}
+
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
