@@ -14,12 +14,12 @@ const principles = [
   {
     title: 'Measure before scale',
     description:
-      'Every pilot should prove something: cycle time, quality, usability, or operator confidence. Otherwise it is still a demo.',
+      'Every pilot proves something: cycle time, quality, usability, or operator confidence. Otherwise it is still a demo.',
   },
   {
     title: 'Ship with ownership',
     description:
-      'A production system needs clear owners, rules, and maintenance habits. We design rollout so teams can actually sustain it.',
+      'A production system needs clear owners, rules, and maintenance habits. We design rollout so your team can sustain it.',
   },
 ]
 
@@ -36,16 +36,15 @@ export default function About() {
           </p>
           <div className="card gentle-elevation p-8 md:p-12">
             <p className="text-lg md:text-xl text-neutral-charcoal leading-relaxed">
-              Lyvena should win on clarity. The company story is strongest when it focuses on
-              applied AI systems, strong product design, careful delivery, and a bias toward
-              measurable outcomes instead of broad claims about the future.
+              We combine applied AI systems, strong product design, careful delivery, and a bias toward
+              measurable outcomes. That clarity is what makes teams trust us with their most important AI projects.
             </p>
           </div>
         </div>
 
         <div className="mb-20">
           <h3 className="mb-12 text-3xl md:text-4xl font-display font-bold text-primary">
-            How Lyvena works best
+            How we deliver
           </h3>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {principles.map((principle) => (
@@ -60,15 +59,15 @@ export default function About() {
         <div className="grid gap-8 rounded-3xl border border-primary/10 bg-white p-8 shadow-sm md:grid-cols-[1.4fr_1fr] md:p-12">
           <div>
             <h3 className="mb-4 text-2xl md:text-3xl font-display font-bold text-primary">
-              Delivery structure that buyers can trust
+              A delivery structure you can trust
             </h3>
             <p className="mb-6 text-lg text-neutral-charcoal/80">
-              Discovery, prototype, instrumentation, and rollout should feel connected. When the
-              sales story matches the operating model, the brand becomes much more credible.
+              Discovery, prototype, instrumentation, and rollout are connected end-to-end.
+              When the sales story matches the operating model, you know exactly what you&apos;re getting.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link href="/about" className="btn-secondary text-center">
-                Learn More About Lyvena
+                Learn More About Us
               </Link>
               <Link href="/stories" className="btn-primary text-center">
                 Read Our Notes
@@ -84,7 +83,7 @@ export default function About() {
               <li>1. Audit the workflow and define success.</li>
               <li>2. Design the AI experience and human review path.</li>
               <li>3. Ship a measured pilot with clear instrumentation.</li>
-              <li>4. Scale only what the team can own and maintain.</li>
+              <li>4. Scale only what your team can own and maintain.</li>
             </ol>
           </div>
         </div>

@@ -5,8 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaBars, FaTimes, FaChevronDown, FaRobot, FaHome, FaBolt, FaBriefcase, FaCubes } from 'react-icons/fa'
-import { useTranslations } from '@/lib/i18n'
-import LanguageSwitcher from './LanguageSwitcher'
 
 const productSubMenu = [
   { name: 'Intelekt', href: '/products/intelekt', icon: FaRobot, description: 'AI-Native MVP Builder', gradient: 'from-violet-500 to-indigo-500' },
@@ -23,14 +21,13 @@ export default function Navigation() {
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false)
   const productsRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
-  const t = useTranslations()
 
   const navLinks = [
-    { name: t.nav.home, href: '/' },
-    { name: t.nav.services, href: '/#services' },
-    { name: t.nav.about, href: '/about' },
-    { name: t.nav.stories, href: '/stories' },
-    { name: t.nav.contact, href: '/#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/#services' },
+    { name: 'About', href: '/about' },
+    { name: 'Stories', href: '/stories' },
+    { name: 'Contact', href: '/#contact' },
   ]
 
   useEffect(() => {
@@ -88,7 +85,7 @@ export default function Navigation() {
                   isActive('/') ? 'text-accent' : 'text-white/80 hover:text-white'
                 }`}
               >
-                {t.nav.home}
+                Home
                 {isActive('/') && (
                   <motion.span
                     layoutId="activeNav"
@@ -104,7 +101,7 @@ export default function Navigation() {
                   isActive('/#services') ? 'text-accent' : 'text-white/80 hover:text-white'
                 }`}
               >
-                {t.nav.services}
+                Services
               </Link>
 
               {/* Products dropdown */}
@@ -192,12 +189,11 @@ export default function Navigation() {
 
             {/* Language Switcher & CTA Button */}
             <div className="hidden md:flex items-center gap-4">
-              <LanguageSwitcher variant="compact" />
               <Link
                 href="/#contact"
                 className="px-6 py-2.5 bg-accent text-neutral-charcoal font-semibold rounded-full hover:bg-accent-light transition-all hover:scale-105"
               >
-                {t.nav.getStarted}
+                Get Started
               </Link>
             </div>
 
@@ -231,7 +227,7 @@ export default function Navigation() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`text-2xl font-medium ${isActive('/') ? 'text-accent' : 'text-white'}`}
                   >
-                    {t.nav.home}
+                    Home
                   </Link>
                 </motion.div>
 
@@ -242,7 +238,7 @@ export default function Navigation() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`text-2xl font-medium ${isActive('/#services') ? 'text-accent' : 'text-white'}`}
                   >
-                    {t.nav.services}
+                    Services
                   </Link>
                 </motion.div>
 
@@ -319,13 +315,12 @@ export default function Navigation() {
                   transition={{ delay: 0.6 }}
                   className="mt-4 flex flex-col items-center gap-4"
                 >
-                  <LanguageSwitcher />
                   <Link
                     href="/#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="px-8 py-3 bg-accent text-neutral-charcoal font-semibold rounded-full"
                   >
-                    {t.nav.getStarted}
+                    Get Started
                   </Link>
                 </motion.div>
               </div>

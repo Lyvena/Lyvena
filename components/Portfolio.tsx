@@ -5,8 +5,8 @@ const proofItems = [
     title: 'Kiews',
     type: 'Product',
     summary:
-      'A no-code product focused on reducing the friction of integrating NEAR Protocol workflows for non-technical teams.',
-    highlights: ['Workflow builder concept', 'Template-driven blockchain actions', 'Case study with delivery lessons'],
+      'A no-code platform that reduces the friction of integrating NEAR Protocol workflows — built for non-technical teams who need blockchain without the jargon.',
+    highlights: ['Visual workflow builder', 'Template-driven blockchain actions', 'Case study with delivery lessons'],
     href: '/case-study',
     cta: 'Read case study',
   },
@@ -14,17 +14,17 @@ const proofItems = [
     title: 'Intelekt',
     type: 'Product',
     summary:
-      'An AI-assisted web development platform positioned around faster software creation with stronger operator leverage.',
-    highlights: ['AI-assisted product building', 'CMS-oriented workflow', 'Productization beyond service revenue'],
+      'An AI-assisted web development platform that gives operators stronger leverage over the full build cycle — from concept to deployed product.',
+    highlights: ['AI-powered code generation', 'Built-in CMS workflow', 'Virtual CEO & PM assistants'],
     href: 'https://intelekt.live/',
     cta: 'Visit product',
   },
   {
-    title: 'Lyvena Delivery Model',
-    type: 'Service Proof',
+    title: 'Our Delivery Model',
+    type: 'Service',
     summary:
-      'Where Lyvena can stand out today is not generic AI claims, but the combination of scoping, UX, engineering, and responsible rollout.',
-    highlights: ['Audit -> pilot -> instrumentation -> rollout', 'Human review where it matters', 'Clear owners and measurable outcomes'],
+      'Where we stand out is the combination of scoping, UX, engineering, and responsible rollout — connected end to end with clear ownership at every step.',
+    highlights: ['Audit → pilot → instrumentation → rollout', 'Human review where it matters', 'Clear owners and measurable outcomes'],
     href: '/#contact',
     cta: 'Start a conversation',
   },
@@ -44,11 +44,10 @@ export default function Portfolio() {
             Proof
           </p>
           <h2 className="mb-4 text-5xl font-display font-bold gradient-text md:text-6xl">
-            Real products, real delivery focus
+            Real products, real results
           </h2>
           <p className="text-xl text-neutral-charcoal/70">
-            The strongest version of Lyvena is specific. These are the products and delivery
-            patterns the brand should lead with.
+            We lead with specifics — shipped products, working systems, and delivery patterns you can evaluate.
           </p>
         </div>
 

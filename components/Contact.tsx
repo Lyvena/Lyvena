@@ -1,21 +1,22 @@
 'use client'
 
 import { useState } from 'react'
-import confetti from 'canvas-confetti'
+import { FaCalendarAlt, FaEnvelope, FaArrowRight } from 'react-icons/fa'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     organization: '',
-    projectIdea: '',
+    budget: '',
+    timeline: '',
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -28,36 +29,69 @@ export default function Contact() {
     setError('')
 
     try {
+      // Submit to HubSpot via their Forms API
+      const hubspotData = {
+        fields: [
+          { name: 'firstname', value: formData.name },
+          { name: 'email', value: formData.email },
+          { name: 'company', value: formData.organization },
+          { name: 'message', value: `Budget: ${formData.budget || 'Not specified'}\nTimeline: ${formData.timeline || 'Not specified'}\n\n${formData.message}` },
+        ],
+        context: {
+          pageUri: typeof window !== 'undefined' ? window.location.href : 'https://lyvena.xyz',
+          pageName: 'Contact Form',
+        },
+      }
+
+      const response = await fetch(
+        'https://api.hsforms.com/submissions/v3/integration/submit/244179468/your-form-guid',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(hubspotData),
+        }
+      )
+
+      // Fallback: if HubSpot form isn't configured yet, use mailto
+      if (!response.ok) {
+        const subject = `Lyvena inquiry from ${formData.name}`
+        const body = [
+          `Name: ${formData.name}`,
+          `Email: ${formData.email}`,
+          `Organization: ${formData.organization || 'Not provided'}`,
+          `Budget: ${formData.budget || 'Not provided'}`,
+          `Timeline: ${formData.timeline || 'Not provided'}`,
+          '',
+          formData.message,
+        ].join('\n')
+        window.location.href = `mailto:info@lyvena.xyz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      }
+
+      setIsSubmitting(false)
+      setSubmitted(true)
+      setTimeout(() => {
+        setFormData({ name: '', email: '', organization: '', budget: '', timeline: '', message: '' })
+        setSubmitted(false)
+      }, 5000)
+    } catch {
+      // Fallback to mailto on any error
       const subject = `Lyvena inquiry from ${formData.name}`
       const body = [
         `Name: ${formData.name}`,
         `Email: ${formData.email}`,
         `Organization: ${formData.organization || 'Not provided'}`,
-        `Project Idea: ${formData.projectIdea || 'Not provided'}`,
+        `Budget: ${formData.budget || 'Not provided'}`,
+        `Timeline: ${formData.timeline || 'Not provided'}`,
         '',
         formData.message,
       ].join('\n')
-
       window.location.href = `mailto:info@lyvena.xyz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ['#0A6C74', '#00D4FF', '#F8F9FA'],
-      })
-
       setIsSubmitting(false)
       setSubmitted(true)
-
       setTimeout(() => {
-        setFormData({ name: '', email: '', organization: '', projectIdea: '', message: '' })
+        setFormData({ name: '', email: '', organization: '', budget: '', timeline: '', message: '' })
         setSubmitted(false)
-      }, 3000)
-    } catch (error) {
-      console.error('Error sending message:', error)
-      setError('Unable to open your email client. Please email info@lyvena.xyz directly.')
-      setIsSubmitting(false)
+      }, 5000)
     }
   }
 
@@ -74,75 +108,63 @@ export default function Contact() {
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="mb-16 max-w-3xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent/80">
-            Contact
+            Get Started
           </p>
           <h2 className="mb-4 text-4xl font-display font-bold text-white md:text-5xl">
-            Bring a real workflow, product idea, or AI rollout question
+            Ready to build something real?
           </h2>
           <p className="text-xl text-neutral-white/70">
-            The best first conversations are concrete. Tell us what is slow, messy, expensive,
-            or blocked today and we will map the shortest credible path forward.
+            Tell us what&apos;s slow, messy, expensive, or blocked today and we&apos;ll map the shortest path forward.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Form */}
           <div>
-            <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm transition-all duration-300">
+            <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm">
               {submitted ? (
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🎉</div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">
-                    Thank You!
-                  </h3>
-                  <p className="text-neutral-white/70">
-                    Your email draft is ready. Send it and we&apos;ll get back to you soon.
-                  </p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
+                  <p className="text-neutral-white/70">We&apos;ll get back to you within 24 hours.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-semibold text-white mb-2"
-                    >
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
-                      placeholder="Your name"
-                    />
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
+                        Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-semibold text-white mb-2"
-                    >
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="organization"
-                      className="block text-sm font-semibold text-white mb-2"
-                    >
+                    <label htmlFor="organization" className="block text-sm font-semibold text-white mb-2">
                       Organization
                     </label>
                     <input
@@ -152,34 +174,55 @@ export default function Contact() {
                       value={formData.organization}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
-                      placeholder="Company, team, or product"
+                      placeholder="Company or team"
                     />
                   </div>
 
-                  <div>
-                    <label
-                      htmlFor="projectIdea"
-                      className="block text-sm font-semibold text-white mb-2"
-                    >
-                      Project Idea
-                    </label>
-                    <input
-                      type="text"
-                      id="projectIdea"
-                      name="projectIdea"
-                      value={formData.projectIdea}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
-                      placeholder="Brief description of your project"
-                    />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label htmlFor="budget" className="block text-sm font-semibold text-white mb-2">
+                        Budget Range
+                      </label>
+                      <select
+                        id="budget"
+                        name="budget"
+                        value={formData.budget}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white focus:border-accent focus:outline-none transition-colors"
+                      >
+                        <option value="">Select range</option>
+                        <option value="Under $5K">Under $5K</option>
+                        <option value="$5K - $15K">$5K - $15K</option>
+                        <option value="$15K - $50K">$15K - $50K</option>
+                        <option value="$50K - $100K">$50K - $100K</option>
+                        <option value="$100K+">$100K+</option>
+                        <option value="Not sure yet">Not sure yet</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="timeline" className="block text-sm font-semibold text-white mb-2">
+                        Timeline
+                      </label>
+                      <select
+                        id="timeline"
+                        name="timeline"
+                        value={formData.timeline}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white focus:border-accent focus:outline-none transition-colors"
+                      >
+                        <option value="">Select timeline</option>
+                        <option value="ASAP">ASAP</option>
+                        <option value="1-2 weeks">1-2 weeks</option>
+                        <option value="1-3 months">1-3 months</option>
+                        <option value="3-6 months">3-6 months</option>
+                        <option value="Flexible">Flexible</option>
+                      </select>
+                    </div>
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-semibold text-white mb-2"
-                    >
-                      Message *
+                    <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">
+                      What do you need help with? *
                     </label>
                     <textarea
                       id="message"
@@ -187,88 +230,79 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      rows={5}
+                      rows={4}
                       className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors resize-none"
-                      placeholder="Tell us more about your needs..."
+                      placeholder="Describe the workflow, product, or AI challenge you're facing..."
                     />
                   </div>
 
-                  {error ? (
+                  {error && (
                     <p className="rounded-lg border border-red-400/30 bg-red-500/10 px-4 py-3 text-sm text-red-100">
                       {error}
                     </p>
-                  ) : null}
+                  )}
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                      className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? 'Preparing...' : 'Prepare Email'}
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               )}
             </div>
           </div>
 
-          <div className="space-y-8">
-            <div className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-white mb-6">What makes a good first engagement</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                  </svg>
-                  <span className="text-neutral-white/90">A specific workflow or operator pain point</span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                  </svg>
-                  <span className="text-neutral-white/90">A product goal tied to adoption, speed, or quality</span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                  </svg>
-                  <span className="text-neutral-white/90">A team ready to pilot, measure, and iterate</span>
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                  </svg>
-                  <span className="text-neutral-white/90">A willingness to define human review and guardrails upfront</span>
-                </li>
-              </ul>
+          {/* Right side - Booking + Info */}
+          <div className="space-y-6">
+            {/* Book a Call - Primary CTA */}
+            <div className="bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 rounded-2xl p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-white mb-3">Prefer a live conversation?</h3>
+              <p className="text-neutral-white/70 mb-6">
+                Book a free 30-minute strategy call. We&apos;ll discuss your project, identify the best approach, and outline next steps.
+              </p>
+              <a
+                href="https://cal.com/akshay1/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center gap-2 text-center"
+              >
+                <FaCalendarAlt />
+                Book a 30-Min Call
+              </a>
             </div>
 
+            {/* How We Work */}
             <div className="rounded-2xl border border-neutral-white/10 bg-neutral-charcoal/50 p-8">
-              <h3 className="mb-4 text-2xl font-bold text-white">Prefer email?</h3>
-              <p className="mb-3 text-neutral-white/70">
-                Reach us directly at{' '}
-                <a href="mailto:info@lyvena.xyz" className="text-accent transition-colors hover:text-white">
+              <h3 className="mb-4 text-xl font-bold text-white">Our Delivery Process</h3>
+              <ol className="space-y-3">
+                {[
+                  { step: '1', label: 'Audit', desc: 'Map the workflow and define success criteria' },
+                  { step: '2', label: 'Design', desc: 'Create the AI experience and review paths' },
+                  { step: '3', label: 'Pilot', desc: 'Ship a measured pilot with instrumentation' },
+                  { step: '4', label: 'Scale', desc: 'Roll out what the team can own and maintain' },
+                ].map((item) => (
+                  <li key={item.step} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-7 h-7 rounded-full bg-accent/20 text-accent text-sm font-bold flex items-center justify-center">
+                      {item.step}
+                    </span>
+                    <div>
+                      <span className="text-white font-semibold">{item.label}</span>
+                      <span className="text-neutral-white/60 text-sm"> — {item.desc}</span>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            {/* Email fallback */}
+            <div className="rounded-2xl border border-neutral-white/10 bg-neutral-charcoal/50 p-6 text-center">
+              <p className="text-neutral-white/70 text-sm">
+                Or email us directly at{' '}
+                <a href="mailto:info@lyvena.xyz" className="text-accent hover:text-white transition-colors font-medium">
                   info@lyvena.xyz
                 </a>
-                .
-              </p>
-              <p className="text-sm text-neutral-white/55">
-                Include the workflow, team, and outcome you care about most.
               </p>
             </div>
           </div>

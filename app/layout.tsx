@@ -2,8 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { DM_Sans, Outfit } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
-import SiteHeader from '@/components/SiteHeader'
-import { I18nProvider } from '@/lib/i18n'
+import Navigation from '@/components/Navigation'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -30,13 +29,14 @@ export const metadata: Metadata = {
     'AI automation',
     'AI consulting',
     'product design',
+    'Lyvena',
   ],
   authors: [{ name: 'Lyvena' }],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Lyvena',
+    title: 'Lyvena | Applied AI Systems & Product Engineering',
     description:
       'Applied AI systems and product engineering for teams that need proof, clarity, and responsible delivery.',
     type: 'website',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lyvena',
+    title: 'Lyvena | Applied AI Systems & Product Engineering',
     description:
       'Applied AI systems and product engineering for teams that need proof, clarity, and responsible delivery.',
   },
@@ -72,10 +72,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-neutral-cream text-neutral-charcoal">
-        <I18nProvider>
-          <SiteHeader />
-          {children}
-        </I18nProvider>
+        <Navigation />
+        {children}
       </body>
     </html>
   )

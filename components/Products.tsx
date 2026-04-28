@@ -3,10 +3,8 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { FaRocket, FaCubes, FaArrowRight, FaRobot, FaHome, FaBolt, FaBriefcase } from 'react-icons/fa'
-import { useTranslations } from '@/lib/i18n'
 
 export default function Products() {
-  const t = useTranslations()
 
   const products = [
     {
@@ -79,12 +77,12 @@ export default function Products() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">{t.products.label}</span>
+          <span className="text-accent font-semibold text-sm tracking-widest uppercase mb-4 block">Our Products</span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
-            {t.products.title}
+            Innovation in Action
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            {t.products.description}
+            Powerful tools we&apos;ve built to push the boundaries of what&apos;s possible with AI and blockchain technology.
           </p>
         </motion.div>
 
@@ -118,7 +116,7 @@ export default function Products() {
                       {product.description}
                     </p>
                     <span className={`inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r ${product.gradient} text-white font-semibold rounded-full`}>
-                      {t.products.explore} {product.name}
+                      Explore {product.name}
                       <FaArrowRight className="text-sm" />
                     </span>
                   </div>
@@ -178,7 +176,7 @@ export default function Products() {
             href="/products"
             className="inline-flex items-center gap-2 text-white/80 hover:text-accent font-semibold transition-colors"
           >
-            {t.products.viewAll}
+            View all products
             <FaArrowRight className="text-sm" />
           </Link>
         </motion.div>

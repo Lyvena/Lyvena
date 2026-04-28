@@ -32,8 +32,8 @@ export default function Footer() {
               </h3>
             </Link>
             <p className="text-neutral-white/70 leading-relaxed">
-              Orthodox Christian company building applied AI systems, product engineering, and
-              responsible delivery for teams that need more than a demo.
+              Applied AI systems, product engineering, and responsible delivery for teams
+              that need more than a demo. Built with integrity.
             </p>
           </div>
 
