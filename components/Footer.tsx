@@ -7,6 +7,14 @@ export default function Footer() {
     { icon: FaGithub, href: 'https://github.com/lyvena', label: 'GitHub', color: 'hover:text-[#333]' },
   ]
 
+  const productLinks = [
+    { label: 'Intelekt', href: '/products/intelekt' },
+    { label: 'Prospera Havens', href: '/products/prospera-havens' },
+    { label: 'Mojoflow', href: '/products/mojoflow' },
+    { label: 'Seerist', href: '/products/seerist' },
+    { label: 'Kiews', href: '/products/kiews' },
+  ]
+
   return (
     <footer className="bg-neutral-charcoal text-white relative overflow-hidden">
       {/* Background decoration */}
@@ -81,25 +89,23 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Products</h4>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://kiews.xyz/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
+              {productLinks.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-neutral-white/70 hover:text-accent transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              <li className="pt-2 border-t border-white/10 mt-2">
+                <Link
+                  href="/products"
+                  className="text-neutral-white/70 hover:text-accent transition-colors text-sm"
                 >
-                  Kiews
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://intelekt.live/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
-                >
-                  Intelekt
-                </a>
+                  View All Products →
+                </Link>
               </li>
             </ul>
           </div>
