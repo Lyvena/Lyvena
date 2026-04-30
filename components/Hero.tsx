@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { FaCalendarAlt, FaArrowRight } from 'react-icons/fa'
 
 const metrics = [
-  { value: '5', label: 'Live Products' },
+  { value: '5', label: 'Products Built' },
   { value: '7+', label: 'Projects Shipped' },
   { value: '3', label: 'Industries' },
   { value: '4-Step', label: 'Delivery Model' },

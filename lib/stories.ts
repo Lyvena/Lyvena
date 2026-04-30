@@ -15,6 +15,45 @@ export interface Story {
 
 export const stories: Story[] = [
   {
+    slug: 'building-ai-products-teams-adopt',
+    title: 'Building AI Products That Teams Actually Adopt',
+    excerpt:
+      'The gap between a working AI prototype and a product teams use every day is almost never a technical problem. It is an adoption problem — and it starts with how the system is introduced.',
+    date: '2026-04-30',
+    category: 'Product Delivery',
+    readTime: '5 min read',
+    sections: [
+      {
+        title: 'Why prototypes stall',
+        paragraphs: [
+          'Most AI prototypes fail to become products because they were scoped around what AI can do, not what the team actually needs. A demo that impresses leadership rarely matches the messy reality of the workflow it is supposed to improve.',
+          'Adoption requires trust, and trust requires familiarity. If team members encounter an AI tool for the first time at launch, they are already behind.',
+        ],
+      },
+      {
+        title: 'Involve users before launch',
+        paragraphs: [
+          'The teams with the best AI adoption involve end users during the pilot, not just in testing. When someone sees their own inputs producing useful outputs early, they arrive at launch with confidence instead of skepticism.',
+          'Early involvement also surfaces the edge cases that matter most: the unusual request, the time-sensitive exception, the workflow step that was not in the scope document.',
+        ],
+      },
+      {
+        title: 'Design for the handoff',
+        paragraphs: [
+          'Every AI product has a moment where control transfers — from the system to a human, or from a human to the system. That handoff needs to be designed explicitly: who acts, on what signal, with what context.',
+          'Products that skip this design have high initial adoption and fast dropout. Products that get it right become infrastructure.',
+        ],
+      },
+      {
+        title: 'Measure what operators care about',
+        paragraphs: [
+          'Usage metrics matter, but adoption is ultimately measured by outcomes: did cycle time drop, did quality improve, did the team stop avoiding the workflow? Those are the numbers that justify the next phase.',
+          'Define them before launch. Agree on them with the team. Review them at 30 and 90 days. That cadence is what separates a real rollout from a pilot that quietly disappears.',
+        ],
+      },
+    ],
+  },
+  {
     slug: 'shipping-ai-products-with-proof',
     title: 'Shipping AI Products With Proof, Not Hype',
     excerpt:

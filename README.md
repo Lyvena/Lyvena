@@ -13,7 +13,7 @@ positioned around three things:
 - TypeScript
 - Tailwind CSS
 - React Icons
-- Static contact flow via `mailto:`
+- HubSpot Forms API for contact submissions (with email fallback)
 
 ## Local Development
 
@@ -35,8 +35,18 @@ bun run build
 
 - `/` - Homepage
 - `/about` - Company and delivery positioning
+- `/products` - All products overview
+- `/products/intelekt` - Intelekt product page
+- `/products/prospera-havens` - Prospera Havens product page
+- `/products/mojoflow` - Mojoflow product page
+- `/products/seerist` - Seerist product page
+- `/products/kiews` - Kiews product page
+- `/clients/superworld` - SuperWorld client project
+- `/clients/remotely` - Remotely client project
 - `/case-study` - Kiews case study
 - `/stories` - Notes and long-form thinking
+- `/privacy` - Privacy policy
+- `/terms` - Terms of service
 ## Repository Notes
 
 - SEO helpers live in `app/robots.ts` and `app/sitemap.ts`
@@ -48,6 +58,6 @@ bun run build
 
 Lyvena  
 Beta Building, Oficina 6  
-Próspera ZEDE, St. John&apos;s Bay  
+Próspera ZEDE, St. John's Bay  
 Roatán, Islas de Bahia 34101  
 Honduras
