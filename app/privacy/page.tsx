@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">1. Introduction</h2>
                 <p className="text-neutral-charcoal/80 leading-relaxed">
-                  Lyvena ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website https://lyvena.xyz/ and use our AI-driven web development services.
+                  Lyvena (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website https://lyvena.xyz/ and use our AI-driven web development services.
                 </p>
               </div>
 
@@ -226,7 +226,7 @@ export default function PrivacyPolicy() {
                 <p className="text-neutral-charcoal/80 mb-3">We may update this Privacy Policy periodically to reflect changes in our practices, services, or legal requirements. We will notify you of material changes by:</p>
                 <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80 mb-3">
                   <li>Posting the updated policy on our website</li>
-                  <li>Updating the "Last Updated" date</li>
+                  <li>Updating the &quot;Last Updated&quot; date</li>
                   <li>Sending email notifications for significant changes (where applicable)</li>
                 </ul>
                 <p className="text-neutral-charcoal/80">Your continued use of our services after such modifications constitutes acceptance of the updated Privacy Policy.</p>

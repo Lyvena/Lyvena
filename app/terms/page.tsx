@@ -46,7 +46,7 @@ export default function TermsOfService() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">1. Acceptance of Terms</h2>
                 <p className="text-neutral-charcoal/80 leading-relaxed">
-                  By accessing or using the Lyvena website (https://lyvena.xyz/) and our services, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you may not use our website or services.
+                  By accessing or using the Lyvena website (https://lyvena.xyz/) and our services, you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree to these Terms, you may not use our website or services.
                 </p>
               </div>
 
@@ -92,7 +92,7 @@ export default function TermsOfService() {
 
                 <div className="ml-4 space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-secondary mb-3">5.1 Lyvena's Rights</h3>
+                    <h3 className="text-2xl font-bold text-secondary mb-3">5.1 Lyvena&apos;s Rights</h3>
                     <p className="text-neutral-charcoal/80">All proprietary technology, AI algorithms, methodologies, and intellectual property used in providing our services remain the exclusive property of Lyvena.</p>
                   </div>
 
@@ -130,9 +130,9 @@ export default function TermsOfService() {
                 <h2 className="text-3xl font-bold text-primary mb-4">8. Limitation of Liability</h2>
                 <p className="text-neutral-charcoal/80 mb-3 font-semibold">TO THE MAXIMUM EXTENT PERMITTED BY LAW:</p>
                 <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
-                  <li>Lyvena's total liability shall not exceed the amount paid by the client for the specific service in question</li>
+                  <li>Lyvena&apos;s total liability shall not exceed the amount paid by the client for the specific service in question</li>
                   <li>We are not liable for indirect, incidental, consequential, or punitive damages</li>
-                  <li>We provide services "as is" without warranties of any kind</li>
+                  <li>We provide services &quot;as is&quot; without warranties of any kind</li>
                   <li>We do not guarantee specific business outcomes or results from our services</li>
                 </ul>
               </div>

@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import Link from 'next/link'
 
@@ -8,6 +5,14 @@ export default function Footer() {
   const socialLinks = [
     { icon: FaLinkedin, href: 'https://www.linkedin.com/company/lyvena/', label: 'LinkedIn', color: 'hover:text-[#0077B5]' },
     { icon: FaGithub, href: 'https://github.com/lyvena', label: 'GitHub', color: 'hover:text-[#333]' },
+  ]
+
+  const productLinks = [
+    { label: 'Intelekt', href: '/products/intelekt' },
+    { label: 'Prospera Havens', href: '/products/prospera-havens' },
+    { label: 'Mojoflow', href: '/products/mojoflow' },
+    { label: 'Seerist', href: '/products/seerist' },
+    { label: 'Kiews', href: '/products/kiews' },
   ]
 
   return (
@@ -20,7 +25,6 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
           <div>
             <Link href="/">
               <h3 className="text-3xl font-display font-bold mb-4 gradient-text hover:opacity-80 transition-opacity cursor-pointer">
@@ -28,22 +32,23 @@ export default function Footer() {
               </h3>
             </Link>
             <p className="text-neutral-white/70 leading-relaxed">
-              AI for Good. Building ethical AI solutions that create equitable digital futures.
+              Applied AI systems, product engineering, and responsible delivery for teams
+              that need more than a demo. Built with integrity.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['services', 'portfolio', 'contact'].map((section) => (
-                <li key={section}>
-                  <a
-                    href={`#${section}`}
-                    className="text-neutral-white/70 hover:text-accent transition-colors capitalize"
-                  >
-                    {section}
-                  </a>
+              {[
+                { label: 'Services', href: '/#services' },
+                { label: 'Proof', href: '/#proof' },
+                { label: 'Contact', href: '/#contact' },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-neutral-white/70 hover:text-accent transition-colors">
+                    {item.label}
+                  </Link>
                 </li>
               ))}
               <li>
@@ -81,34 +86,30 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Products */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Products</h4>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://kiews.xyz/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
+              {productLinks.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-neutral-white/70 hover:text-accent transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              <li className="pt-2 border-t border-white/10 mt-2">
+                <Link
+                  href="/products"
+                  className="text-neutral-white/70 hover:text-accent transition-colors text-sm"
                 >
-                  Kiews
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://intelekt.live/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
-                >
-                  Intelekt
-                </a>
+                  View All Products →
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
             <p className="text-neutral-white/70 text-sm leading-relaxed">
@@ -117,7 +118,7 @@ export default function Footer() {
               </a>
               <br /><br />
               Beta Building, Oficina 6 Próspera ZEDE<br />
-              St. John's Bay<br />
+              St. John&apos;s Bay<br />
               Roatán<br />
               Islas de Bahia 34101<br />
               Honduras
@@ -125,25 +126,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Links */}
         <div className="flex justify-center space-x-6 mb-8">
           {socialLinks.map((social) => (
-            <motion.a
+            <a
               key={social.label}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
               className={`text-2xl text-neutral-white/70 transition-colors ${social.color}`}
-              whileHover={{ scale: 1.2, rotate: 360 }}
-              whileTap={{ scale: 0.9 }}
               aria-label={social.label}
             >
               <social.icon />
-            </motion.a>
+            </a>
           ))}
         </div>
 
-        {/* Copyright */}
         <div className="text-center text-neutral-white/50 text-sm border-t border-neutral-white/10 pt-8">
           <p>© {new Date().getFullYear()} <Link href="/" className="hover:text-accent transition-colors">Lyvena</Link>. All rights reserved.</p>
         </div>

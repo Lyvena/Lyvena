@@ -1,146 +1,53 @@
-# Lyvena - AI for Good
+# Lyvena
 
-A stunning, fully responsive modern website for Lyvena, an innovative company specializing in ethical AI development, consulting, web development, and digital design services.
+Lyvena is a Next.js marketing site for an applied AI and product engineering studio. The site is
+positioned around three things:
 
-## 🌟 Features
+- Applied AI systems and internal tooling
+- Customer-facing AI product engineering
+- Responsible delivery, rollout, and evaluation
 
-- **Futuristic Design**: Sleek minimalism with organic, ethereal elements
-- **Ocean-Inspired Color Palette**: Deep teal (#0A6C74), vibrant cyan (#00D4FF), and soft neutrals
-- **Smooth Animations**: Powered by Framer Motion and GSAP
-- **Interactive Elements**:
-  - Neural network particle animation in hero section
-  - Flip cards for services
-  - Masonry grid portfolio with modals
-  - Animated timeline for company journey
-  - Confetti celebration on form submission
-  - Floating chat bubble for quick inquiries
-  - Cursor glow trail effect
-- **Fully Responsive**: Mobile-first design with fluid grids
-- **Accessibility**: WCAG compliant with ARIA labels and keyboard navigation
-- **Performance Optimized**: Lazy loading, minified code, 60fps animations
+## Stack
 
-## 🚀 Getting Started
+- Next.js 14 App Router
+- TypeScript
+- Tailwind CSS
+- React Icons
+- Static contact flow via `mailto:`
 
-### Prerequisites
+## Local Development
 
-- Node.js 18+ and npm
-
-### Installation
+This repo uses `bun`.
 
 ```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the website.
+Useful commands:
 
-## 📁 Project Structure
-
-```
-lyvena-website/
-├── app/
-│   ├── globals.css          # Global styles and animations
-│   ├── layout.tsx            # Root layout with metadata
-│   └── page.tsx              # Main page component
-├── components/
-│   ├── Hero.tsx              # Hero section with typing animation
-│   ├── Services.tsx          # Interactive flip cards
-│   ├── About.tsx             # Company timeline and location
-│   ├── Portfolio.tsx         # Masonry grid with modals
-│   ├── Contact.tsx           # Contact form with confetti
-│   ├── Footer.tsx            # Footer with social links
-│   ├── LoadingScreen.tsx     # Animated loading screen
-│   ├── CursorGlow.tsx        # Cursor trail effect
-│   └── ChatBubble.tsx        # Floating chat widget
-├── public/                   # Static assets
-├── package.json              # Dependencies
-├── tailwind.config.js        # Tailwind configuration
-├── tsconfig.json             # TypeScript configuration
-└── next.config.js            # Next.js configuration
+```bash
+bun run lint
+bun run build
 ```
 
-## 🎨 Customization
+## Important Routes
 
-### Colors
+- `/` - Homepage
+- `/about` - Company and delivery positioning
+- `/case-study` - Kiews case study
+- `/stories` - Notes and long-form thinking
+## Repository Notes
 
-Edit `tailwind.config.js` to customize the color palette:
+- SEO helpers live in `app/robots.ts` and `app/sitemap.ts`
+- Shared story content lives in `lib/stories.ts`
+- Site-wide header and metadata live in `app/layout.tsx`
+- Contact form handling lives in `components/Contact.tsx`
 
-```javascript
-colors: {
-  primary: '#0A6C74',      // Deep teal
-  accent: '#00D4FF',       // Vibrant cyan
-  neutral: {
-    white: '#F8F9FA',
-    gray: '#E9ECEF',
-  },
-}
-```
+## Contact
 
-### Content
-
-- **Hero Section**: Edit `components/Hero.tsx` to change tagline and CTA
-- **Services**: Modify the `services` array in `components/Services.tsx`
-- **Portfolio**: Update the `projects` array in `components/Portfolio.tsx`
-- **Contact**: Change address in `components/Contact.tsx`
-
-### Animations
-
-- Global animations are defined in `app/globals.css`
-- Component-specific animations use Framer Motion
-- Adjust animation durations and delays in component files
-
-## 🛠️ Technologies Used
-
-- **Framework**: Next.js 14 with App Router
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: React Icons
-- **Language**: TypeScript
-- **Effects**: Canvas Confetti
-
-## 📱 Responsive Breakpoints
-
-- Mobile: < 768px
-- Tablet: 768px - 1024px
-- Desktop: > 1024px
-
-## ♿ Accessibility
-
-- Semantic HTML5 elements
-- ARIA labels and roles
-- Keyboard navigation support
-- Focus indicators
-- Screen reader friendly
-- Reduced motion support
-
-## 🌐 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 📄 License
-
-This project is proprietary and confidential.
-
-## 🤝 Contact
-
-**Lyvena**  
+Lyvena  
 Beta Building, Oficina 6  
-Próspera ZEDE, St. John's Bay  
+Próspera ZEDE, St. John&apos;s Bay  
 Roatán, Islas de Bahia 34101  
 Honduras
-
----
-
-Built with ❤️ for a better digital future

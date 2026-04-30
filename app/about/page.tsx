@@ -1,138 +1,190 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import Footer from '@/components/Footer'
-import { FaLinkedin } from 'react-icons/fa'
+import { FaLinkedin, FaCalendarAlt, FaRobot, FaChartLine, FaPaintBrush, FaHeadset, FaSearch, FaPenFancy } from 'react-icons/fa'
+
+const team = [
+  {
+    name: 'Akshay',
+    role: 'Founder & CEO',
+    linkedin: 'https://www.linkedin.com/in/Akshay155/',
+    description: 'Leads product direction, client strategy, and the practical application of AI across every engagement.',
+  },
+  {
+    name: 'Aryna Verchenko',
+    role: 'Chief Designer & COO',
+    linkedin: 'https://www.linkedin.com/in/unicornixa/',
+    description: 'Shapes design quality, product clarity, and the operating discipline behind every delivery.',
+  },
+]
+
+const aiTeam = [
+  {
+    name: 'Penny',
+    role: 'AI Product Manager',
+    description: 'Scopes requirements, prioritizes features, and keeps delivery on track.',
+    icon: FaChartLine,
+    gradient: 'from-violet-500 to-purple-600',
+    link: 'https://www.marblism.com/ai-employees/penny?via=1178f3',
+  },
+  {
+    name: 'Eva',
+    role: 'AI Engineer',
+    description: 'Writes production code, builds APIs, and architects scalable systems.',
+    icon: FaRobot,
+    gradient: 'from-cyan-500 to-blue-600',
+    link: 'https://www.marblism.com/ai-employees/eva?via=1178f3',
+  },
+  {
+    name: 'Sonny',
+    role: 'AI Designer',
+    description: 'Creates interfaces, design systems, and user experiences that feel intuitive.',
+    icon: FaPaintBrush,
+    gradient: 'from-orange-500 to-amber-600',
+    link: 'https://www.marblism.com/ai-employees/sonny?via=1178f3',
+  },
+  {
+    name: 'Stan',
+    role: 'AI QA & Support',
+    description: 'Tests systems, catches edge cases, and ensures quality before launch.',
+    icon: FaHeadset,
+    gradient: 'from-green-500 to-emerald-600',
+    link: 'https://www.marblism.com/ai-employees/stan?via=1178f3',
+  },
+  {
+    name: 'Rachel',
+    role: 'AI Researcher',
+    description: 'Analyzes markets, evaluates tools, and finds the fastest path to results.',
+    icon: FaSearch,
+    gradient: 'from-pink-500 to-rose-600',
+    link: 'https://www.marblism.com/ai-employees/rachel?via=1178f3',
+  },
+  {
+    name: 'Linda',
+    role: 'AI Content Strategist',
+    description: 'Writes copy, structures messaging, and builds content that converts.',
+    icon: FaPenFancy,
+    gradient: 'from-indigo-500 to-violet-600',
+    link: 'https://www.marblism.com/ai-employees/linda?via=1178f3',
+  },
+]
+
+const values = [
+  {
+    title: 'Specificity over hype',
+    description: 'We scope AI around real operating bottlenecks, not trend-chasing. Every project starts with a clear problem.',
+  },
+  {
+    title: 'Proof over promises',
+    description: 'We ship measured pilots with real instrumentation. You see results before you scale.',
+  },
+  {
+    title: 'Delivery discipline',
+    description: 'Discovery, prototype, instrumentation, and rollout are connected. No handoff gaps, no surprises.',
+  },
+  {
+    title: 'Trustworthy design',
+    description: 'Human review paths, fallback states, and authorship clarity are product requirements — not afterthoughts.',
+  },
+]
 
 export default function About() {
-  const team = [
-    {
-      name: 'Akshay',
-      role: 'Founder & CEO',
-      linkedin: 'https://www.linkedin.com/in/Akshay155/',
-      description: 'Visionary leader driving Lyvena\'s mission to develop AI for good.',
-    },
-    {
-      name: 'Aryna Verchenko',
-      role: 'Chief Designer & COO',
-      linkedin: 'https://www.linkedin.com/in/unicornixa/',
-      description: 'Creative strategist ensuring ethical design and operational excellence.',
-    },
-  ]
-
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="section-padding pt-32 pb-16 bg-gradient-to-br from-primary via-primary-dark to-primary-light relative overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-10 w-96 h-96 bg-accent rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary rounded-full blur-3xl" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="max-w-3xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-5xl md:text-6xl font-display font-bold text-white mb-4"
+            >
               About Lyvena
-            </h1>
-            <p className="text-xl text-neutral-white/90 max-w-2xl mx-auto">
-              Pioneering ethical AI development for a better future
-            </p>
-          </motion.div>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-xl text-neutral-white/90 max-w-2xl"
+            >
+              An Orthodox Christian company building applied AI systems with integrity, clear delivery, and responsible rollout.
+            </motion.p>
+          </div>
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission */}
       <section className="section-padding">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-                Our Mission
+                AI that solves real problems
               </h2>
               <p className="text-lg text-neutral-white/80 leading-relaxed mb-6">
-                Lyvena is an Orthodox Christian company dedicated to researching and developing Artificial SuperIntelligence with a clear purpose: <span className="text-accent font-semibold">AI for Good</span>.
+                Lyvena turns ambiguous AI ambition into clear product direction, real systems, and delivery plans your team can actually run. We are an Orthodox Christian company, and that identity shapes how we think about human dignity, responsibility, and the kinds of systems worth building.
               </p>
               <p className="text-lg text-neutral-white/80 leading-relaxed mb-6">
-                We believe that artificial intelligence should be developed with ethical principles, transparency, and a commitment to creating equitable digital futures. Our work is grounded in values that prioritize human flourishing and responsible innovation.
+                We focus on specific internal tools, product features, and rollout strategies with evidence behind them — not vague promises about &ldquo;AI transformation.&rdquo;
               </p>
               <p className="text-lg text-neutral-white/80 leading-relaxed">
-                Every solution we build is designed to amplify human potential, solve meaningful problems, and contribute positively to society.
+                Strong positioning, strong UX, and strong operating discipline make us the partner teams trust when AI needs to actually work.
               </p>
             </div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm"
-            >
+            <div className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-8 backdrop-blur-sm">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-accent mb-3">Our Vision</h3>
+                  <h3 className="text-2xl font-bold text-accent mb-3">What We Do</h3>
                   <p className="text-neutral-white/80">
-                    To pioneer ethical AI development that serves humanity and reflects our commitment to responsible innovation.
+                    Applied AI systems, product engineering, and responsible delivery for teams that need more than prototypes — guided by integrity, stewardship, and human-centered technology.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-accent mb-3">Our Values</h3>
                   <ul className="space-y-2 text-neutral-white/80">
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Ethical AI development with transparency</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Commitment to positive social impact</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Cutting-edge technology with integrity</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-3 font-bold">•</span>
-                      <span>Inclusive and accessible solutions</span>
-                    </li>
+                    {values.map((v) => (
+                      <li key={v.title} className="flex items-start">
+                        <span className="text-accent mr-3 font-bold mt-0.5">&#10003;</span>
+                        <span><strong className="text-white">{v.title}</strong> — {v.description}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Leadership Team Section */}
+      {/* Leadership */}
       <section className="section-padding bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent/80">Our Team</p>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Our Leadership
+              Leadership
             </h2>
             <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
-              Visionary leaders driving Lyvena's mission forward
+              Product direction and design quality — the two disciplines that make AI delivery credible.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {team.map((member, index) => (
+            {team.map((member) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
               >
                 <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl p-8 hover:border-accent/40 transition-all duration-300">
                   <div className="mb-6">
@@ -146,10 +198,10 @@ export default function About() {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex flex-col items-center gap-2 text-accent hover:text-white transition-colors font-semibold"
+                    className="inline-flex items-center gap-2 text-accent hover:text-white transition-colors font-semibold"
                   >
-                    <FaLinkedin className="text-3xl" />
-                    <span className="text-sm">Connect on LinkedIn</span>
+                    <FaLinkedin className="text-2xl" />
+                    <span>Connect on LinkedIn</span>
                   </a>
                 </div>
               </motion.div>
@@ -158,132 +210,116 @@ export default function About() {
         </div>
       </section>
 
-      {/* AI Employees Section */}
+      {/* AI Team */}
       <section className="section-padding bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark relative overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 -left-32 w-[400px] h-[400px] bg-violet-500/10 rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 -right-32 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[120px]" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent/80">AI-Powered</p>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Our AI Employees
+              Meet Our AI Team
             </h2>
-            <p className="text-xl text-neutral-white/80 max-w-2xl mx-auto">
-              Meet the AI employees who power Lyvena's operations and drive our mission forward
+            <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
+              We use AI specialists across research, engineering, design, and operations — each with a clear role, clear review step, and human oversight.
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Penny',
-                role: 'SEO Blog Writer',
-                description: 'Penny writes SEO-optimized blog posts that make Google happy, your audience obsessed, and your competitors deeply uncomfortable.',
-                image: '/penny.webp',
-                link: 'https://www.marblism.com/ai-employees/penny?via=1178f3',
-              },
-              {
-                name: 'Eva',
-                role: 'Executive Assistant',
-                description: 'Eva crafts email replies, filters out junk emails, manages your calendar, and takes meeting notes — so you look productive, even if you hit snooze three times.',
-                image: '/eva.webp',
-                link: 'https://www.marblism.com/ai-employees/eva?via=1178f3',
-              },
-              {
-                name: 'Sonny',
-                role: 'Community Manager',
-                description: 'Sonny turns your social media into a lead-generating machine — without you having to dance on camera.',
-                image: '/sonny.webp',
-                link: 'https://www.marblism.com/ai-employees/sonny?via=1178f3',
-              },
-              {
-                name: 'Stan',
-                role: 'Lead Generation Specialist',
-                description: "Stan finds leads, sends cold emails, and follows up — turning 'not interested' into 'where do I sign?'",
-                image: '/stan.webp',
-                link: 'https://www.marblism.com/ai-employees/stan?via=1178f3',
-              },
-              {
-                name: 'Linda',
-                role: 'Legal Assistant',
-                description: 'Linda answers your contract questions and clarifies legal documents — so you can stop pretending you read them.',
-                image: '/linda.webp',
-                link: 'https://www.marblism.com/ai-employees/linda?via=1178f3',
-              },
-              {
-                name: 'Rachel',
-                role: 'Receptionist',
-                description: "Rachel'll answer calls while you hide in the back pretending to be busy, providing professional support 24/7.",
-                image: '/rachel.webp',
-                link: 'https://www.marblism.com/ai-employees/rachel?via=1178f3',
-              },
-            ].map((employee, index) => (
-              <motion.div
-                key={employee.name}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {aiTeam.map((member, index) => (
+              <motion.a
+                key={member.name}
+                href={member.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group block"
               >
-                <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-accent/20 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300 h-full flex flex-col">
-                  <div className="h-48 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
-                    <img
-                      src={employee.image}
-                      alt={employee.name}
-                      className="w-full h-full object-contain"
-                      onError={(e) => {
-                        e.currentTarget.src = 'https://via.placeholder.com/300x200?text=' + encodeURIComponent(employee.name)
-                      }}
-                    />
+                <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-white/10 rounded-2xl p-6 hover:border-accent/30 transition-all duration-300">
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${member.gradient} mb-4 group-hover:scale-110 transition-transform`}>
+                    <member.icon className="text-2xl text-white" />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-white mb-1">{employee.name}</h3>
-                    <p className="text-accent font-semibold text-lg mb-3">{employee.role}</p>
-                    <p className="text-neutral-white/80 text-sm leading-relaxed mb-4 flex-grow">
-                      {employee.description}
-                    </p>
-                    <a
-                      href={employee.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-accent hover:text-white transition-colors font-semibold text-sm"
-                    >
-                      Learn More →
-                    </a>
-                  </div>
+                  <h3 className="text-xl font-bold text-white mb-1 group-hover:text-accent transition-colors">
+                    {member.name}
+                  </h3>
+                  <p className={`text-sm font-semibold bg-gradient-to-r ${member.gradient} bg-clip-text text-transparent mb-3`}>
+                    {member.role}
+                  </p>
+                  <p className="text-neutral-white/70 text-sm leading-relaxed">
+                    {member.description}
+                  </p>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
-
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* How We Use AI */}
+      <section className="section-padding">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent/80">Our Approach</p>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+              How We Use AI in Delivery
+            </h2>
+            <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
+              AI accelerates every phase of our work — with human judgment and quality gates at every step.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {[
+              {
+                title: 'Research & Scoping',
+                description: 'AI summarizes, clusters, and compares options while humans stay accountable for direction and priority.',
+              },
+              {
+                title: 'Design & Prototyping',
+                description: 'AI accelerates copy drafts, prototype logic, and UI exploration — refined with editorial and product judgment.',
+              },
+              {
+                title: 'Build & Delivery',
+                description: 'AI handles code generation, testing, and documentation with clear review steps, clear owners, and defined quality bars.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-accent/20 bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 p-8">
+                <h3 className="mb-4 text-2xl font-bold text-white">{item.title}</h3>
+                <p className="text-neutral-white/80 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="section-padding bg-gradient-to-r from-primary to-accent/20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-charcoal mb-4">
-              Ready to Build the Future Together?
-            </h2>
-            <p className="text-lg text-neutral-charcoal/90 mb-8">
-              Join us in developing AI for good. Let's create solutions that make a positive impact.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-primary inline-block"
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-charcoal mb-4">
+            Ready to turn AI ambition into a real product?
+          </h2>
+          <p className="text-lg text-neutral-charcoal/90 mb-8">
+            Start with a focused conversation about the workflow, product, and constraints that matter most to your team.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://cal.com/akshay1/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center justify-center gap-2"
             >
-              Get In Touch
+              <FaCalendarAlt />
+              Book a Strategy Call
+            </a>
+            <Link href="/#contact" className="btn-secondary inline-block text-center">
+              Send a Message
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
