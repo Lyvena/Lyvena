@@ -15,9 +15,8 @@ export default function Hero() {
       className="relative overflow-hidden bg-gradient-to-br from-neutral-cream via-primary/10 to-accent/20"
     >
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-20 left-10 w-80 h-80 bg-primary/15 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-accent/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 pb-8 pt-28 md:px-12 lg:px-24 lg:pt-32">

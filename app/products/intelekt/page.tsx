@@ -49,10 +49,10 @@ export default function IntelektPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-32 pb-24 px-6">
+      <section className="section-padding pt-32 pb-24 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-violet-500/15 rounded-full blur-[180px]" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[150px]" />
+          <div className="absolute top-0 left-1/4 w-[520px] h-[520px] bg-violet-500/15 rounded-full blur-[130px]" />
+          <div className="absolute bottom-0 right-1/4 w-[380px] h-[380px] bg-indigo-500/10 rounded-full blur-[110px]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-purple-400/10 rounded-full blur-[100px]" />
         </div>
 
@@ -60,7 +60,7 @@ export default function IntelektPage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/20 border border-violet-500/30 text-violet-300 text-sm font-medium mb-8">
               <FaRocket className="text-xs" />
-              Under Development
+              In Progress
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-4">
               Intelekt
@@ -68,7 +68,7 @@ export default function IntelektPage() {
             <p className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
               AI-Native MVP Builder
             </p>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-10">
+            <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed mb-10">
               The future of building software. Intelekt combines cutting-edge AI with powerful development tools
               to help you go from idea to production-ready MVP faster than ever before.
             </p>
@@ -79,7 +79,7 @@ export default function IntelektPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-500 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-violet-500/25 transition-all hover:scale-105"
               >
-                Visit Intelekt
+                Visit Platform
                 <FaArrowRight className="text-sm" />
               </a>
               <Link href="/products" className="btn-secondary !border-white/20 !text-white hover:!bg-white/10">
@@ -91,7 +91,7 @@ export default function IntelektPage() {
       </section>
 
       {/* Interactive Mockup Section */}
-      <section className="py-20 px-6 relative">
+      <section className="section-padding relative">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -110,7 +110,7 @@ export default function IntelektPage() {
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
                 </div>
                 <div className="flex-1 mx-4">
-                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/50 text-center">intelekt.live</div>
+                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/75 text-center">intelekt.live</div>
                 </div>
               </div>
               {/* App content mockup */}
@@ -124,17 +124,17 @@ export default function IntelektPage() {
                       </div>
                     </div>
                     <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                      <div className="flex items-center gap-2 text-white/50 text-sm">
+                      <div className="flex items-center gap-2 text-white/75 text-sm">
                         <FaLayerGroup className="text-xs" /> Components
                       </div>
                     </div>
                     <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                      <div className="flex items-center gap-2 text-white/50 text-sm">
+                      <div className="flex items-center gap-2 text-white/75 text-sm">
                         <FaDatabase className="text-xs" /> Content
                       </div>
                     </div>
                     <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                      <div className="flex items-center gap-2 text-white/50 text-sm">
+                      <div className="flex items-center gap-2 text-white/75 text-sm">
                         <FaCogs className="text-xs" /> Deploy
                       </div>
                     </div>
@@ -144,7 +144,7 @@ export default function IntelektPage() {
                     <div className="p-6 rounded-xl bg-gradient-to-br from-violet-500/10 to-purple-500/10 border border-violet-500/20">
                       <p className="text-violet-300 text-sm font-medium mb-3">AI Prompt</p>
                       <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                        <p className="text-white/70 text-sm font-mono">&quot;Build a SaaS dashboard with user auth, a data table, and chart components...&quot;</p>
+                        <p className="text-white/85 text-sm font-mono">&quot;Build a SaaS dashboard with user auth, a data table, and chart components...&quot;</p>
                       </div>
                       <div className="mt-4 flex items-center gap-3">
                         <motion.div
@@ -165,7 +165,7 @@ export default function IntelektPage() {
                         className="p-4 rounded-xl bg-white/5 border border-white/10"
                       >
                         <p className="text-green-400 text-xs font-medium mb-1">Generated</p>
-                        <p className="text-white/70 text-sm">12 Components</p>
+                        <p className="text-white/85 text-sm">12 Components</p>
                       </motion.div>
                       <motion.div
                         initial={{ opacity: 0 }}
@@ -175,7 +175,7 @@ export default function IntelektPage() {
                         className="p-4 rounded-xl bg-white/5 border border-white/10"
                       >
                         <p className="text-blue-400 text-xs font-medium mb-1">Ready</p>
-                        <p className="text-white/70 text-sm">API Routes</p>
+                        <p className="text-white/85 text-sm">API Routes</p>
                       </motion.div>
                     </div>
                   </div>
@@ -187,7 +187,7 @@ export default function IntelektPage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -196,7 +196,7 @@ export default function IntelektPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Powerful Capabilities</h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto">Everything you need to build, manage, and deploy modern web applications with AI assistance.</p>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">Everything you need to build, manage, and deploy modern web applications with AI assistance.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -213,7 +213,7 @@ export default function IntelektPage() {
                   <feature.icon className="text-white text-lg" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-white/80 text-sm leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -221,7 +221,7 @@ export default function IntelektPage() {
       </section>
 
       {/* Workflow */}
-      <section className="py-20 px-6 bg-white/[0.02]">
+      <section className="section-padding bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -230,7 +230,7 @@ export default function IntelektPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">How It Works</h2>
-            <p className="text-lg text-white/60">From idea to deployed application in four simple steps.</p>
+            <p className="text-lg text-white/80">From idea to deployed application in four simple steps.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -247,7 +247,7 @@ export default function IntelektPage() {
                   {item.step}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                <p className="text-white/60 text-sm">{item.description}</p>
+                <p className="text-white/80 text-sm">{item.description}</p>
                 {idx < workflow.length - 1 && (
                   <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2">
                     <FaArrowRight className="text-white/20" />
@@ -260,7 +260,7 @@ export default function IntelektPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -270,7 +270,7 @@ export default function IntelektPage() {
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Ready to Build Faster?
             </h2>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto">
               Join the next generation of AI-powered development. Intelekt is currently under development — be among the first to experience it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -280,10 +280,10 @@ export default function IntelektPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-500 text-white font-semibold rounded-full hover:shadow-xl transition-all hover:scale-105"
               >
-                Visit Intelekt <FaArrowRight className="text-sm" />
+                Visit Platform <FaArrowRight className="text-sm" />
               </a>
               <Link href="/#contact" className="btn-primary">
-                Contact Us
+                Start a Project
               </Link>
             </div>
           </motion.div>

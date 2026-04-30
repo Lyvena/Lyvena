@@ -5,7 +5,7 @@ import { stories } from '@/lib/stories'
 export default function Stories() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
-      <section className="section-padding pt-32 pb-16 bg-gradient-to-br from-primary via-primary-dark to-primary-light">
+      <section className="section-padding pt-32 pb-20 bg-gradient-to-br from-primary via-primary-dark to-primary-light">
         <div className="max-w-6xl mx-auto">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">

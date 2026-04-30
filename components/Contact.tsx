@@ -15,6 +15,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
+  const [showEmailFallback, setShowEmailFallback] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -27,6 +28,7 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
     setError('')
+    setShowEmailFallback(false)
 
     try {
       // Submit to HubSpot via their Forms API
@@ -52,19 +54,11 @@ export default function Contact() {
         }
       )
 
-      // Fallback: if HubSpot form isn't configured yet, use mailto
       if (!response.ok) {
-        const subject = `Lyvena inquiry from ${formData.name}`
-        const body = [
-          `Name: ${formData.name}`,
-          `Email: ${formData.email}`,
-          `Organization: ${formData.organization || 'Not provided'}`,
-          `Budget: ${formData.budget || 'Not provided'}`,
-          `Timeline: ${formData.timeline || 'Not provided'}`,
-          '',
-          formData.message,
-        ].join('\n')
-        window.location.href = `mailto:info@lyvena.xyz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+        setIsSubmitting(false)
+        setError('We could not submit your request right now. Please try again or use email below.')
+        setShowEmailFallback(true)
+        return
       }
 
       setIsSubmitting(false)
@@ -74,24 +68,9 @@ export default function Contact() {
         setSubmitted(false)
       }, 5000)
     } catch {
-      // Fallback to mailto on any error
-      const subject = `Lyvena inquiry from ${formData.name}`
-      const body = [
-        `Name: ${formData.name}`,
-        `Email: ${formData.email}`,
-        `Organization: ${formData.organization || 'Not provided'}`,
-        `Budget: ${formData.budget || 'Not provided'}`,
-        `Timeline: ${formData.timeline || 'Not provided'}`,
-        '',
-        formData.message,
-      ].join('\n')
-      window.location.href = `mailto:info@lyvena.xyz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
       setIsSubmitting(false)
-      setSubmitted(true)
-      setTimeout(() => {
-        setFormData({ name: '', email: '', organization: '', budget: '', timeline: '', message: '' })
-        setSubmitted(false)
-      }, 5000)
+      setError('Network error while sending your request. Please try again or use email below.')
+      setShowEmailFallback(true)
     }
   }
 
@@ -113,7 +92,7 @@ export default function Contact() {
           <h2 className="mb-4 text-4xl font-display font-bold text-white md:text-5xl">
             Ready to build something real?
           </h2>
-          <p className="text-xl text-neutral-white/70">
+          <p className="text-xl text-neutral-white/85">
             Tell us what&apos;s slow, messy, expensive, or blocked today and we&apos;ll map the shortest path forward.
           </p>
         </div>
@@ -142,7 +121,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/60 focus:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors"
                         placeholder="Your name"
                       />
                     </div>
@@ -157,7 +136,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/60 focus:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -173,7 +152,7 @@ export default function Contact() {
                       name="organization"
                       value={formData.organization}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/60 focus:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors"
                       placeholder="Company or team"
                     />
                   </div>
@@ -188,7 +167,7 @@ export default function Contact() {
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white focus:border-accent focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white focus:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors"
                       >
                         <option value="">Select range</option>
                         <option value="Under $5K">Under $5K</option>
@@ -208,7 +187,7 @@ export default function Contact() {
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white focus:border-accent focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white focus:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors"
                       >
                         <option value="">Select timeline</option>
                         <option value="ASAP">ASAP</option>
@@ -231,7 +210,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={4}
-                      className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/40 focus:border-accent focus:outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-neutral-charcoal/50 border border-accent/20 rounded-lg text-white placeholder-neutral-white/60 focus:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors resize-none"
                       placeholder="Describe the workflow, product, or AI challenge you're facing..."
                     />
                   </div>
@@ -245,10 +224,19 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
+                  {showEmailFallback && (
+                    <p className="text-sm text-neutral-white/85">
+                      Need an immediate fallback? Email{' '}
+                      <a href="mailto:info@lyvena.xyz" className="text-accent hover:text-white underline underline-offset-2 transition-colors">
+                        info@lyvena.xyz
+                      </a>
+                      .
+                    </p>
+                  )}
                 </form>
               )}
             </div>
@@ -259,7 +247,7 @@ export default function Contact() {
             {/* Book a Call - Primary CTA */}
             <div className="bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 rounded-2xl p-8 backdrop-blur-sm">
               <h3 className="text-2xl font-bold text-white mb-3">Prefer a live conversation?</h3>
-              <p className="text-neutral-white/70 mb-6">
+              <p className="text-neutral-white/85 mb-6">
                 Book a free 30-minute strategy call. We&apos;ll discuss your project, identify the best approach, and outline next steps.
               </p>
               <a
@@ -289,7 +277,7 @@ export default function Contact() {
                     </span>
                     <div>
                       <span className="text-white font-semibold">{item.label}</span>
-                      <span className="text-neutral-white/60 text-sm"> — {item.desc}</span>
+                      <span className="text-neutral-white/80 text-sm"> — {item.desc}</span>
                     </div>
                   </li>
                 ))}
@@ -298,7 +286,7 @@ export default function Contact() {
 
             {/* Email fallback */}
             <div className="rounded-2xl border border-neutral-white/10 bg-neutral-charcoal/50 p-6 text-center">
-              <p className="text-neutral-white/70 text-sm">
+              <p className="text-neutral-white/85 text-sm">
                 Or email us directly at{' '}
                 <a href="mailto:info@lyvena.xyz" className="text-accent hover:text-white transition-colors font-medium">
                   info@lyvena.xyz

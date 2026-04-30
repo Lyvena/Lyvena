@@ -12,7 +12,7 @@ export default function ChatBubble() {
       {/* Chat bubble button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 left-8 p-4 bg-accent text-white rounded-full shadow-lg hover:shadow-2xl transition-shadow z-50"
+        className="fixed bottom-8 left-8 p-4 bg-accent text-white rounded-full shadow-lg hover:shadow-2xl transition-shadow z-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         aria-label="Open chat"
@@ -50,7 +50,7 @@ export default function ChatBubble() {
                     contactSection?.scrollIntoView({ behavior: 'smooth' })
                     setIsOpen(false)
                   }}
-                  className="w-full text-left p-3 bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors text-sm"
+                  className="w-full text-left p-3 bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   💼 Start a project
                 </button>
@@ -60,17 +60,17 @@ export default function ChatBubble() {
                     servicesSection?.scrollIntoView({ behavior: 'smooth' })
                     setIsOpen(false)
                   }}
-                  className="w-full text-left p-3 bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors text-sm"
+                  className="w-full text-left p-3 bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   🔍 Learn about our services
                 </button>
                 <button
                   onClick={() => {
-                    const portfolioSection = document.getElementById('portfolio')
+                    const portfolioSection = document.getElementById('proof')
                     portfolioSection?.scrollIntoView({ behavior: 'smooth' })
                     setIsOpen(false)
                   }}
-                  className="w-full text-left p-3 bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors text-sm"
+                  className="w-full text-left p-3 bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   📂 View our work
                 </button>

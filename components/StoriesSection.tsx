@@ -14,7 +14,7 @@ export default function StoriesSection() {
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
             Practical thinking on AI delivery
           </h2>
-          <p className="text-lg text-neutral-white/70 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-white/85 max-w-2xl mx-auto">
             Fewer trend takes, more operating advice: what to ship, how to measure it, and how to
             keep teams trusting the system after launch.
           </p>
@@ -32,12 +32,12 @@ export default function StoriesSection() {
                     <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
                       {article.category}
                     </span>
-                    <span className="text-xs text-neutral-white/50">{article.readTime}</span>
+                    <span className="text-xs text-neutral-white/75">{article.readTime}</span>
                   </div>
                   <h3 className="mb-4 text-2xl font-bold text-white transition-colors group-hover:text-accent">
                     {article.title}
                   </h3>
-                  <p className="mb-6 text-neutral-white/70 leading-relaxed">{article.excerpt}</p>
+                  <p className="mb-6 text-neutral-white/85 leading-relaxed">{article.excerpt}</p>
                   <div className="text-sm font-semibold text-accent">Read note →</div>
                 </div>
               </Link>

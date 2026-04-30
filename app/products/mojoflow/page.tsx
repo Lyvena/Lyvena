@@ -49,10 +49,10 @@ export default function MojoflowPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-32 pb-24 px-6">
+      <section className="section-padding pt-32 pb-24 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-1/4 w-[700px] h-[700px] bg-orange-500/12 rounded-full blur-[180px]" />
-          <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-yellow-500/10 rounded-full blur-[150px]" />
+          <div className="absolute top-0 right-1/4 w-[520px] h-[520px] bg-orange-500/12 rounded-full blur-[130px]" />
+          <div className="absolute bottom-0 left-1/4 w-[380px] h-[380px] bg-yellow-500/10 rounded-full blur-[110px]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-amber-400/8 rounded-full blur-[100px]" />
         </div>
 
@@ -60,7 +60,7 @@ export default function MojoflowPage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-300 text-sm font-medium mb-8">
               <FaBolt className="text-xs" />
-              Under Development
+              In Progress
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-4">
               Mojoflow
@@ -68,7 +68,7 @@ export default function MojoflowPage() {
             <p className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 bg-clip-text text-transparent mb-6">
               AI-Powered Workflow Automation
             </p>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-10">
+            <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed mb-10">
               Supercharge your productivity with intelligent workflow automation. Mojoflow combines visual workflow design
               with AI-powered decision making to automate your most complex business processes.
             </p>
@@ -79,7 +79,7 @@ export default function MojoflowPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-orange-500/25 transition-all hover:scale-105"
               >
-                Visit Mojoflow
+                Visit Platform
                 <FaArrowRight className="text-sm" />
               </a>
               <Link href="/products" className="btn-secondary !border-white/20 !text-white hover:!bg-white/10">
@@ -91,7 +91,7 @@ export default function MojoflowPage() {
       </section>
 
       {/* Interactive Mockup */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -107,7 +107,7 @@ export default function MojoflowPage() {
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
                 </div>
                 <div className="flex-1 mx-4">
-                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/50 text-center">intelekt.live/mojoflow</div>
+                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/75 text-center">intelekt.live/mojoflow</div>
                 </div>
               </div>
               <div className="p-8 md:p-12">
@@ -156,7 +156,7 @@ export default function MojoflowPage() {
                   className="mt-8 p-4 rounded-xl bg-gradient-to-r from-orange-500/10 to-amber-500/10 border border-orange-500/20 flex items-center gap-4"
                 >
                   <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <p className="text-white/60 text-sm flex-1">Workflow running — <span className="text-orange-300">247 leads processed today</span>, 89% accuracy score</p>
+                  <p className="text-white/80 text-sm flex-1">Workflow running — <span className="text-orange-300">247 leads processed today</span>, 89% accuracy score</p>
                   <div className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-medium">Active</div>
                 </motion.div>
               </div>
@@ -166,11 +166,11 @@ export default function MojoflowPage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-6 bg-white/[0.02]">
+      <section className="section-padding bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Intelligent Automation</h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto">Build workflows that think, adapt, and optimize themselves.</p>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">Build workflows that think, adapt, and optimize themselves.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -187,7 +187,7 @@ export default function MojoflowPage() {
                   <feature.icon className="text-white text-lg" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-white/80 text-sm leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -195,11 +195,11 @@ export default function MojoflowPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Built for Every Team</h2>
-            <p className="text-lg text-white/60">Automate workflows across departments and use cases.</p>
+            <p className="text-lg text-white/80">Automate workflows across departments and use cases.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -217,7 +217,7 @@ export default function MojoflowPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">{useCase.title}</h3>
-                  <p className="text-white/60 text-sm">{useCase.description}</p>
+                  <p className="text-white/80 text-sm">{useCase.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -226,13 +226,13 @@ export default function MojoflowPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-r from-orange-900/30 via-amber-900/30 to-yellow-900/30">
+      <section className="section-padding bg-gradient-to-r from-orange-900/30 via-amber-900/30 to-yellow-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Automate with Intelligence
             </h2>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto">
               Mojoflow is currently under development. Be among the first to experience AI-powered workflow automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -242,10 +242,10 @@ export default function MojoflowPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-full hover:shadow-xl transition-all hover:scale-105"
               >
-                Visit Mojoflow <FaArrowRight className="text-sm" />
+                Visit Platform <FaArrowRight className="text-sm" />
               </a>
               <Link href="/#contact" className="btn-primary">
-                Contact Us
+                Start a Project
               </Link>
             </div>
           </motion.div>

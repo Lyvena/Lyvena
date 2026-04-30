@@ -28,7 +28,7 @@ export default function TermsOfService() {
 
       {/* Content Section */}
       <section className="section-padding">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function TermsOfService() {
             transition={{ duration: 0.6 }}
             className="prose max-w-none text-neutral-charcoal/90"
           >
-            <div className="space-y-8">
+            <div className="space-y-10 text-[1.04rem] leading-8">
               {/* Last Updated */}
               <p className="text-neutral-charcoal/70 italic">
                 Last Updated: November 7, 2025
@@ -62,7 +62,7 @@ export default function TermsOfService() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">3. Services Description</h2>
                 <p className="text-neutral-charcoal/80 mb-3">Our services include:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80 mb-3">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80 mb-3">
                   <li>AI-powered website development</li>
                   <li>Web application development</li>
                   <li>Custom coding solutions</li>
@@ -76,7 +76,7 @@ export default function TermsOfService() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">4. User Obligations</h2>
                 <p className="text-neutral-charcoal/80 mb-3">By using our services, you agree to:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                   <li>Provide accurate and complete information when requesting services</li>
                   <li>Comply with all applicable laws and regulations</li>
                   <li>Not use our services for illegal, harmful, or unauthorized purposes</li>
@@ -111,7 +111,7 @@ export default function TermsOfService() {
               {/* Section 6 */}
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">6. Payment Terms</h2>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                   <li>Payment terms will be specified in individual service agreements</li>
                   <li>All fees are due as specified in the applicable agreement</li>
                   <li>Late payments may result in suspension of services</li>
@@ -129,7 +129,7 @@ export default function TermsOfService() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">8. Limitation of Liability</h2>
                 <p className="text-neutral-charcoal/80 mb-3 font-semibold">TO THE MAXIMUM EXTENT PERMITTED BY LAW:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                   <li>Lyvena&apos;s total liability shall not exceed the amount paid by the client for the specific service in question</li>
                   <li>We are not liable for indirect, incidental, consequential, or punitive damages</li>
                   <li>We provide services &quot;as is&quot; without warranties of any kind</li>
@@ -153,7 +153,7 @@ export default function TermsOfService() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">11. Termination</h2>
                 <p className="text-neutral-charcoal/80 mb-3">Either party may terminate the service relationship with appropriate notice as specified in individual agreements. Upon termination:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                   <li>All outstanding payments become immediately due</li>
                   <li>Access to ongoing services will be discontinued</li>
                   <li>Data retention will be handled according to our Privacy Policy</li>

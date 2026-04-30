@@ -94,7 +94,7 @@ export default function About() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero */}
-      <section className="section-padding pt-32 pb-16 bg-gradient-to-br from-primary via-primary-dark to-primary-light relative overflow-hidden">
+      <section className="section-padding pt-32 pb-20 bg-gradient-to-br from-primary via-primary-dark to-primary-light relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-96 h-96 bg-accent rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary rounded-full blur-3xl" />
@@ -113,7 +113,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-xl text-neutral-white/90 max-w-2xl"
+              className="text-xl text-neutral-white/95 max-w-2xl"
             >
               An Orthodox Christian company building applied AI systems with integrity, clear delivery, and responsible rollout.
             </motion.p>

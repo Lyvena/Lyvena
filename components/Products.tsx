@@ -81,7 +81,7 @@ export default function Products() {
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
             Innovation in Action
           </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
+          <p className="text-lg text-white/85 max-w-2xl mx-auto">
             Powerful tools we&apos;ve built to push the boundaries of what&apos;s possible with AI and blockchain technology.
           </p>
         </motion.div>
@@ -112,7 +112,7 @@ export default function Products() {
                     <p className={`text-lg font-semibold bg-gradient-to-r ${product.gradient} bg-clip-text text-transparent mb-4`}>
                       {product.tagline}
                     </p>
-                    <p className="text-white/70 leading-relaxed mb-6">
+                    <p className="text-white/85 leading-relaxed mb-6">
                       {product.description}
                     </p>
                     <span className={`inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r ${product.gradient} text-white font-semibold rounded-full`}>
@@ -152,10 +152,10 @@ export default function Products() {
                     <p className={`text-sm font-semibold bg-gradient-to-r ${product.gradient} bg-clip-text text-transparent mb-3`}>
                       {product.tagline}
                     </p>
-                    <p className="text-white/70 text-sm leading-relaxed mb-4">
+                    <p className="text-white/85 text-sm leading-relaxed mb-4">
                       {product.description}
                     </p>
-                    <span className="inline-flex items-center gap-2 text-white/80 hover:text-accent font-semibold transition-colors text-sm">
+                    <span className="inline-flex items-center gap-2 text-white/90 hover:text-accent font-semibold transition-colors text-sm">
                       Learn More <FaArrowRight className="text-xs" />
                     </span>
                   </div>
@@ -174,7 +174,7 @@ export default function Products() {
         >
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-white/80 hover:text-accent font-semibold transition-colors"
+            className="inline-flex items-center gap-2 text-white/90 hover:text-accent font-semibold transition-colors"
           >
             View all products
             <FaArrowRight className="text-sm" />

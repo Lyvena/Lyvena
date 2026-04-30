@@ -57,10 +57,10 @@ export default function RemotelyPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-32 pb-24 px-6">
+      <section className="section-padding pt-32 pb-24 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-1/4 w-[700px] h-[700px] bg-purple-500/12 rounded-full blur-[180px]" />
-          <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-pink-500/10 rounded-full blur-[150px]" />
+          <div className="absolute top-0 right-1/4 w-[520px] h-[520px] bg-purple-500/12 rounded-full blur-[130px]" />
+          <div className="absolute bottom-0 left-1/4 w-[380px] h-[380px] bg-pink-500/10 rounded-full blur-[110px]" />
           <div className="absolute top-1/3 left-1/2 w-[300px] h-[300px] bg-violet-400/8 rounded-full blur-[100px]" />
         </div>
 
@@ -68,7 +68,7 @@ export default function RemotelyPage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8">
               <FaStar className="text-xs" />
-              Client Project
+              Client Build
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-4">
               Remotely
@@ -76,7 +76,7 @@ export default function RemotelyPage() {
             <p className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent mb-6">
               Get Hired at a Top U.S. Tech Startup
             </p>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-10">
+            <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed mb-10">
               A recruitment platform connecting senior Latin American software developers with fast-growing US startups
               for full-time remote positions. 100% transparent, developer-first.
             </p>
@@ -86,7 +86,7 @@ export default function RemotelyPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-purple-500/25 transition-all hover:scale-105"
             >
-              Visit Remotely
+              Visit Platform
               <FaArrowRight className="text-sm" />
             </a>
           </motion.div>
@@ -109,7 +109,7 @@ export default function RemotelyPage() {
                 <div className="text-4xl font-display font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-1">
                   {stat.value}
                 </div>
-                <p className="text-white/60 text-sm">{stat.label}</p>
+                <p className="text-white/80 text-sm">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -117,7 +117,7 @@ export default function RemotelyPage() {
       </section>
 
       {/* Platform Mockup */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -133,7 +133,7 @@ export default function RemotelyPage() {
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
                 </div>
                 <div className="flex-1 mx-4">
-                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/50 text-center">remotely.works</div>
+                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/75 text-center">remotely.works</div>
                 </div>
               </div>
               <div className="p-8 md:p-12">
@@ -160,7 +160,7 @@ export default function RemotelyPage() {
                         <div className="flex items-start justify-between mb-2">
                           <div>
                             <h5 className="text-white font-medium">{job.title}</h5>
-                            <p className="text-white/50 text-sm">{job.company}</p>
+                            <p className="text-white/80 text-sm">{job.company}</p>
                           </div>
                           <span className="text-purple-400 font-semibold text-sm">{job.salary}</span>
                         </div>
@@ -179,18 +179,18 @@ export default function RemotelyPage() {
                         <FaCode className="text-white text-xl" />
                       </div>
                       <p className="text-white font-semibold text-center">Developer Profile</p>
-                      <p className="text-white/50 text-xs text-center mt-1">Optimized & Ready</p>
+                      <p className="text-white/80 text-xs text-center mt-1">Optimized & Ready</p>
                       <div className="mt-4 space-y-2">
                         <div className="flex justify-between text-sm">
-                          <span className="text-white/50">Experience</span>
+                          <span className="text-white/80">Experience</span>
                           <span className="text-white">8 years</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                          <span className="text-white/50">Match Score</span>
+                          <span className="text-white/80">Match Score</span>
                           <span className="text-green-400">94%</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                          <span className="text-white/50">Status</span>
+                          <span className="text-white/80">Status</span>
                           <span className="text-purple-400">Active</span>
                         </div>
                       </div>
@@ -198,7 +198,7 @@ export default function RemotelyPage() {
                     <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
                       <FaChartLine className="text-purple-400 text-2xl mx-auto mb-2" />
                       <p className="text-white font-semibold">600+</p>
-                      <p className="text-white/50 text-xs">Developers Placed</p>
+                      <p className="text-white/80 text-xs">Developers Placed</p>
                     </div>
                   </div>
                 </div>
@@ -209,14 +209,14 @@ export default function RemotelyPage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 px-6 bg-white/[0.02]">
+      <section className="section-padding bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">How It Works</h2>
-            <p className="text-lg text-white/60">From discovery to long-term career success in five steps.</p>
+            <p className="text-lg text-white/80">From discovery to long-term career success in five steps.</p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
             {process.map((item, idx) => (
               <motion.div
                 key={item.step}
@@ -228,7 +228,7 @@ export default function RemotelyPage() {
               >
                 <div className="text-3xl mb-2">{item.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-1">{item.step}</h3>
-                <p className="text-white/50 text-xs">{item.description}</p>
+                <p className="text-white/80 text-xs">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -236,11 +236,11 @@ export default function RemotelyPage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Developer-First Platform</h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto">Built to put developers first with transparent compensation and comprehensive support.</p>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">Built to put developers first with transparent compensation and comprehensive support.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -257,7 +257,7 @@ export default function RemotelyPage() {
                   <feature.icon className="text-white text-lg" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-white/80 text-sm leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -265,13 +265,13 @@ export default function RemotelyPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-r from-purple-900/30 via-pink-900/30 to-orange-900/30">
+      <section className="section-padding bg-gradient-to-r from-purple-900/30 via-pink-900/30 to-orange-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Connecting Talent with Opportunity
             </h2>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto">
               Remotely is a platform Lyvena helped build, connecting LatAm developers with top US startups. Explore open positions or start your own project with us.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -281,10 +281,10 @@ export default function RemotelyPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:shadow-xl transition-all hover:scale-105"
               >
-                Visit Remotely <FaArrowRight className="text-sm" />
+                Visit Platform <FaArrowRight className="text-sm" />
               </a>
               <Link href="/#contact" className="btn-primary">
-                Start Your Project
+                Start a Project
               </Link>
             </div>
           </motion.div>

@@ -65,10 +65,10 @@ export default function KiewsPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-32 pb-24 px-6">
+      <section className="section-padding pt-32 pb-24 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-1/4 w-[700px] h-[700px] bg-amber-500/12 rounded-full blur-[180px]" />
-          <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-red-500/10 rounded-full blur-[150px]" />
+          <div className="absolute top-0 right-1/4 w-[520px] h-[520px] bg-amber-500/12 rounded-full blur-[130px]" />
+          <div className="absolute bottom-0 left-1/4 w-[380px] h-[380px] bg-red-500/10 rounded-full blur-[110px]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-orange-400/8 rounded-full blur-[100px]" />
         </div>
 
@@ -76,7 +76,7 @@ export default function KiewsPage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-300 text-sm font-medium mb-8">
               <FaCubes className="text-xs" />
-              Live Platform
+              Live
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-4">
               Kiews
@@ -84,7 +84,7 @@ export default function KiewsPage() {
             <p className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6">
               No-Code Blockchain Integration
             </p>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-10">
+            <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed mb-10">
               Integrate NEAR Protocol into your projects in minutes, not months. Kiews provides ready-to-use
               blockchain integrations for 10+ popular no-code and low-code platforms.
             </p>
@@ -95,7 +95,7 @@ export default function KiewsPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-amber-500/25 transition-all hover:scale-105"
               >
-                Get Access for Free
+                Visit Platform
                 <FaArrowRight className="text-sm" />
               </a>
               <a
@@ -112,11 +112,11 @@ export default function KiewsPage() {
       </section>
 
       {/* Integrations Grid Mockup */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Supported Platforms</h2>
-            <p className="text-lg text-white/60">Connect NEAR Protocol to the tools you already use.</p>
+            <p className="text-lg text-white/80">Connect NEAR Protocol to the tools you already use.</p>
           </motion.div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -145,14 +145,14 @@ export default function KiewsPage() {
               className="p-6 rounded-2xl bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 text-center flex flex-col items-center justify-center"
             >
               <div className="text-3xl font-display font-bold text-amber-400 mb-1">150+</div>
-              <p className="text-white/60 text-sm">More via Make</p>
+              <p className="text-white/80 text-sm">More via Make</p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Interactive Mockup */}
-      <section className="py-20 px-6 bg-white/[0.02]">
+      <section className="section-padding bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -168,7 +168,7 @@ export default function KiewsPage() {
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
                 </div>
                 <div className="flex-1 mx-4">
-                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/50 text-center">kiews.xyz</div>
+                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/75 text-center">kiews.xyz</div>
                 </div>
               </div>
               <div className="p-8 md:p-12">
@@ -177,20 +177,20 @@ export default function KiewsPage() {
                   <div className="space-y-4">
                     <h4 className="text-white font-semibold text-lg mb-4">Integration Setup</h4>
                     <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                      <p className="text-white/50 text-xs mb-2">Platform</p>
+                      <p className="text-white/75 text-xs mb-2">Platform</p>
                       <div className="flex items-center gap-2 p-2 rounded-lg bg-amber-500/10 border border-amber-500/20">
                         <FaPlug className="text-amber-400 text-sm" />
                         <span className="text-white text-sm">Webflow</span>
                       </div>
                     </div>
                     <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                      <p className="text-white/50 text-xs mb-2">Contract</p>
+                      <p className="text-white/75 text-xs mb-2">Contract</p>
                       <div className="p-2 rounded-lg bg-white/5 border border-white/10">
                         <code className="text-amber-300 text-xs">app.kiews.near</code>
                       </div>
                     </div>
                     <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                      <p className="text-white/50 text-xs mb-2">Method</p>
+                      <p className="text-white/75 text-xs mb-2">Method</p>
                       <div className="p-2 rounded-lg bg-white/5 border border-white/10">
                         <code className="text-green-300 text-xs">get_user_balance()</code>
                       </div>
@@ -212,21 +212,21 @@ export default function KiewsPage() {
                       </div>
                       <div className="space-y-2">
                         <div className="flex justify-between text-sm">
-                          <span className="text-white/50">Account</span>
+                          <span className="text-white/75">Account</span>
                           <span className="text-white font-mono">user.near</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                          <span className="text-white/50">Balance</span>
+                          <span className="text-white/75">Balance</span>
                           <span className="text-amber-400 font-mono">24.5 NEAR</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                          <span className="text-white/50">Status</span>
+                          <span className="text-white/75">Status</span>
                           <span className="text-green-400">Active</span>
                         </div>
                       </div>
                     </motion.div>
                     <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                      <p className="text-white/50 text-xs mb-2">Embed Code</p>
+                      <p className="text-white/75 text-xs mb-2">Embed Code</p>
                       <pre className="text-xs text-amber-300/70 bg-white/5 p-3 rounded-lg overflow-x-auto">
 {`<script src="kiews.xyz/embed.js"
   data-contract="app.kiews.near"
@@ -243,11 +243,11 @@ export default function KiewsPage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Built for Everyone</h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto">Making blockchain accessible — no coding required.</p>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">Making blockchain accessible — no coding required.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -264,7 +264,7 @@ export default function KiewsPage() {
                   <feature.icon className="text-white text-lg" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-white/80 text-sm leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -272,7 +272,7 @@ export default function KiewsPage() {
       </section>
 
       {/* Capabilities */}
-      <section className="py-20 px-6 bg-white/[0.02]">
+      <section className="section-padding bg-white/[0.02]">
         <div className="max-w-4xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Core Capabilities</h2>
@@ -299,13 +299,13 @@ export default function KiewsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-r from-amber-900/30 via-orange-900/30 to-red-900/30">
+      <section className="section-padding bg-gradient-to-r from-amber-900/30 via-orange-900/30 to-red-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Start Building with Blockchain
             </h2>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto">
               Kiews is open-source and free to use. Integrate NEAR Protocol into your project today — no blockchain experience required.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -315,7 +315,7 @@ export default function KiewsPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-full hover:shadow-xl transition-all hover:scale-105"
               >
-                Get Access for Free <FaArrowRight className="text-sm" />
+                Visit Platform <FaArrowRight className="text-sm" />
               </a>
               <a
                 href="https://github.com/Kiews-OU"

@@ -16,7 +16,7 @@ const products = [
     bgGradient: 'from-violet-500/20 via-purple-500/20 to-indigo-500/20',
     link: 'https://intelekt.live',
     page: '/products/intelekt',
-    status: 'Under Development',
+    status: 'In Progress',
     statusColor: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
     highlights: ['AI code generation', 'Built-in CMS', 'AI CEO & PM assistants', 'Mojo powered'],
   },
@@ -44,7 +44,7 @@ const products = [
     bgGradient: 'from-orange-500/20 via-amber-500/20 to-yellow-500/20',
     link: 'https://intelekt.live/mojoflow',
     page: '/products/mojoflow',
-    status: 'Under Development',
+    status: 'In Progress',
     statusColor: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
     highlights: ['Visual builder', 'AI decision nodes', 'Smart triggers', 'Universal connectors'],
   },
@@ -107,8 +107,8 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <section className="section-padding pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-violet-500/10 rounded-full blur-[150px]" />
-          <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px]" />
+          <div className="absolute top-0 left-1/4 w-[520px] h-[520px] bg-violet-500/8 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 right-1/4 w-[520px] h-[520px] bg-amber-500/8 rounded-full blur-[120px]" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">
@@ -122,7 +122,7 @@ export default function ProductsPage() {
               Tools That{' '}
               <span className="gradient-text">Transform</span>
             </h1>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed">
               We don&apos;t just build for clients — we build products that push the boundaries of what&apos;s possible.
               Explore our suite of innovative tools powered by AI and blockchain technology.
             </p>
@@ -162,13 +162,13 @@ export default function ProductsPage() {
                     <p className={`text-lg font-semibold bg-gradient-to-r ${product.gradient} bg-clip-text text-transparent mb-4`}>
                       {product.tagline}
                     </p>
-                    <p className="text-white/70 leading-relaxed mb-6">
+                    <p className="text-white/85 leading-relaxed mb-6">
                       {product.description}
                     </p>
 
                     <div className="grid grid-cols-2 gap-2 mb-8">
                       {product.highlights.map((h) => (
-                        <div key={h} className="flex items-center gap-2 text-sm text-white/80">
+                        <div key={h} className="flex items-center gap-2 text-sm text-white/90">
                           <span className={`w-1.5 h-1.5 bg-gradient-to-r ${product.gradient} rounded-full`} />
                           {h}
                         </div>
@@ -186,9 +186,9 @@ export default function ProductsPage() {
                         href={product.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white/80 font-medium rounded-full hover:bg-white/5 transition-all"
+                        className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white/90 font-medium rounded-full hover:bg-white/5 transition-all"
                       >
-                        Visit <FaExternalLinkAlt className="text-xs" />
+                        Visit Platform <FaExternalLinkAlt className="text-xs" />
                       </a>
                     </div>
                   </div>
@@ -212,7 +212,7 @@ export default function ProductsPage() {
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               Built for Our Clients
             </h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Projects we&apos;ve delivered for innovative companies across industries.
             </p>
           </motion.div>
@@ -233,14 +233,14 @@ export default function ProductsPage() {
                       <project.icon className="text-xl text-white" />
                     </div>
                     <span className="px-3 py-1 text-xs font-bold bg-sky-500/20 text-sky-400 rounded-full border border-sky-500/30">
-                      Client Project
+                      Client Build
                     </span>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-1">{project.name}</h3>
                   <p className={`font-semibold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent mb-3`}>
                     {project.tagline}
                   </p>
-                  <p className="text-white/60 mb-6">{project.description}</p>
+                  <p className="text-white/80 mb-6">{project.description}</p>
                   <div className="flex flex-wrap gap-3">
                     <Link
                       href={project.page}
@@ -252,9 +252,9 @@ export default function ProductsPage() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/20 text-white/80 font-medium rounded-full hover:bg-white/5 transition-all text-sm"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/20 text-white/90 font-medium rounded-full hover:bg-white/5 transition-all text-sm"
                     >
-                      Visit Site <FaExternalLinkAlt className="text-xs" />
+                      Visit Platform <FaExternalLinkAlt className="text-xs" />
                     </a>
                   </div>
                 </div>
@@ -285,7 +285,7 @@ export default function ProductsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/#contact" className="btn-primary">
-                Let&apos;s Talk
+                Start a Project
               </Link>
               <Link href="/" className="btn-secondary">
                 Back to Home

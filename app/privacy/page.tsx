@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
 
       {/* Content Section */}
       <section className="section-padding">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
             transition={{ duration: 0.6 }}
             className="prose max-w-none text-neutral-charcoal/90"
           >
-            <div className="space-y-8">
+            <div className="space-y-10 text-[1.04rem] leading-8">
               {/* Last Updated */}
               <p className="text-neutral-charcoal/70 italic">
                 Last Updated: November 7, 2025
@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
                   <div>
                     <h3 className="text-2xl font-bold text-secondary mb-3">2.1 Personal Information</h3>
                     <p className="text-neutral-charcoal/80 mb-3">We may collect personal information that you voluntarily provide, including:</p>
-                    <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                    <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                       <li>Name and contact information (email address, phone number)</li>
                       <li>Business information (company name, job title, business requirements)</li>
                       <li>Payment information (processed through secure third-party payment processors)</li>
@@ -69,7 +69,7 @@ export default function PrivacyPolicy() {
                   <div>
                     <h3 className="text-2xl font-bold text-secondary mb-3">2.2 Automatically Collected Information</h3>
                     <p className="text-neutral-charcoal/80 mb-3">We automatically collect certain information when you visit our website:</p>
-                    <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                    <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                       <li>IP address and location data</li>
                       <li>Browser type and version</li>
                       <li>Device information and operating system</li>
@@ -82,7 +82,7 @@ export default function PrivacyPolicy() {
                   <div>
                     <h3 className="text-2xl font-bold text-secondary mb-3">2.3 Technical Information</h3>
                     <p className="text-neutral-charcoal/80 mb-3">In providing our AI development services, we may collect:</p>
-                    <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                    <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                       <li>Project specifications and requirements</li>
                       <li>Website performance data</li>
                       <li>Development preferences and feedback</li>
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">3. How We Use Your Information</h2>
                 <p className="text-neutral-charcoal/80 mb-3">We use collected information for the following purposes:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                   <li><strong>Service Delivery:</strong> To provide, maintain, and improve our AI-driven web development services</li>
                   <li><strong>Communication:</strong> To respond to inquiries, provide customer support, and send service-related notifications</li>
                   <li><strong>Business Operations:</strong> To process transactions, manage accounts, and fulfill contractual obligations</li>
@@ -116,7 +116,7 @@ export default function PrivacyPolicy() {
                   <div>
                     <h3 className="text-2xl font-bold text-secondary mb-3">4.1 Service Providers</h3>
                     <p className="text-neutral-charcoal/80 mb-3">We may share information with trusted third-party service providers who assist in:</p>
-                    <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                    <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                       <li>Website hosting and maintenance</li>
                       <li>Payment processing</li>
                       <li>Analytics and performance monitoring</li>
@@ -128,7 +128,7 @@ export default function PrivacyPolicy() {
                   <div>
                     <h3 className="text-2xl font-bold text-secondary mb-3">4.2 Legal Requirements</h3>
                     <p className="text-neutral-charcoal/80 mb-3">We may disclose information when required by law or to:</p>
-                    <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                    <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                       <li>Comply with legal processes, court orders, or government requests</li>
                       <li>Protect our rights, property, or safety</li>
                       <li>Investigate potential violations of our terms of service</li>
@@ -147,7 +147,7 @@ export default function PrivacyPolicy() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">5. Data Security</h2>
                 <p className="text-neutral-charcoal/80 mb-3">We implement appropriate technical and organizational measures to protect your information, including:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                   <li>Encryption of data in transit and at rest</li>
                   <li>Access controls and authentication procedures</li>
                   <li>Regular security assessments and updates</li>
@@ -160,7 +160,7 @@ export default function PrivacyPolicy() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">6. Data Retention</h2>
                 <p className="text-neutral-charcoal/80 mb-3">We retain your information for as long as necessary to:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80 mb-3">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80 mb-3">
                   <li>Provide our services and fulfill contractual obligations</li>
                   <li>Comply with legal and regulatory requirements</li>
                   <li>Resolve disputes and enforce agreements</li>
@@ -173,7 +173,7 @@ export default function PrivacyPolicy() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">7. Your Privacy Rights</h2>
                 <p className="text-neutral-charcoal/80 mb-3">Depending on your location, you may have the following rights:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80 mb-3">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80 mb-3">
                   <li><strong>Access:</strong> Request access to your personal information</li>
                   <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
                   <li><strong>Deletion:</strong> Request deletion of your personal information</li>
@@ -189,7 +189,7 @@ export default function PrivacyPolicy() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">8. Cookies and Tracking Technologies</h2>
                 <p className="text-neutral-charcoal/80 mb-3">We use cookies and similar technologies to:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80 mb-3">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80 mb-3">
                   <li>Enable website functionality</li>
                   <li>Analyze website performance and usage</li>
                   <li>Personalize content and user experience</li>
@@ -202,7 +202,7 @@ export default function PrivacyPolicy() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">9. International Data Transfers</h2>
                 <p className="text-neutral-charcoal/80 mb-3">Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place to protect your information during such transfers, including:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80">
                   <li>Standard contractual clauses</li>
                   <li>Adequacy decisions by relevant authorities</li>
                   <li>Other legally recognized transfer mechanisms</li>
@@ -224,7 +224,7 @@ export default function PrivacyPolicy() {
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-4">11. Changes to This Privacy Policy</h2>
                 <p className="text-neutral-charcoal/80 mb-3">We may update this Privacy Policy periodically to reflect changes in our practices, services, or legal requirements. We will notify you of material changes by:</p>
-                <ul className="list-disc list-inside space-y-2 text-neutral-charcoal/80 mb-3">
+                <ul className="list-disc list-outside pl-6 space-y-2 text-neutral-charcoal/80 mb-3">
                   <li>Posting the updated policy on our website</li>
                   <li>Updating the &quot;Last Updated&quot; date</li>
                   <li>Sending email notifications for significant changes (where applicable)</li>

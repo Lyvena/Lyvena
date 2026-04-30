@@ -51,17 +51,17 @@ export default function SuperWorldPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-32 pb-24 px-6">
+      <section className="section-padding pt-32 pb-24 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/3 w-[700px] h-[700px] bg-sky-500/12 rounded-full blur-[180px]" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[150px]" />
+          <div className="absolute top-0 left-1/3 w-[520px] h-[520px] bg-sky-500/12 rounded-full blur-[130px]" />
+          <div className="absolute bottom-0 right-1/4 w-[380px] h-[380px] bg-cyan-500/10 rounded-full blur-[110px]" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500/20 border border-sky-500/30 text-sky-300 text-sm font-medium mb-8">
               <FaStar className="text-xs" />
-              Client Project
+              Client Build
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-4">
               SuperWorld
@@ -69,7 +69,7 @@ export default function SuperWorldPage() {
             <p className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Make the World Yours
             </p>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-10">
+            <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed mb-10">
               A location-based augmented reality platform where users buy, sell, and monetize virtual real estate
               tied to real-world locations. Combining NFTs, AR, and blockchain technology.
             </p>
@@ -79,7 +79,7 @@ export default function SuperWorldPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-sky-500/25 transition-all hover:scale-105"
             >
-              Visit SuperWorld
+              Visit Platform
               <FaArrowRight className="text-sm" />
             </a>
           </motion.div>
@@ -87,7 +87,7 @@ export default function SuperWorldPage() {
       </section>
 
       {/* Globe Mockup */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -103,7 +103,7 @@ export default function SuperWorldPage() {
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
                 </div>
                 <div className="flex-1 mx-4">
-                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/50 text-center">superworldapp.com</div>
+                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/75 text-center">superworldapp.com</div>
                 </div>
               </div>
               <div className="p-8 md:p-12">
@@ -147,23 +147,23 @@ export default function SuperWorldPage() {
                         </motion.div>
                       ))}
                       <div className="absolute bottom-4 left-4 px-3 py-2 bg-black/40 backdrop-blur-sm rounded-lg">
-                        <p className="text-white/60 text-xs">Virtual Real Estate Map</p>
+                        <p className="text-white/80 text-xs">Virtual Real Estate Map</p>
                         <p className="text-white font-semibold text-sm">64.8B parcels mapped</p>
                       </div>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <div className="p-4 rounded-xl bg-gradient-to-br from-sky-500/10 to-cyan-500/10 border border-white/10">
-                      <p className="text-white/50 text-xs mb-1">$SPWR Token</p>
+                      <p className="text-white/75 text-xs mb-1">$SPWR Token</p>
                       <p className="text-2xl font-bold text-white">Base Chain</p>
                       <p className="text-sky-400 text-xs mt-1">Live & Trading</p>
                     </div>
                     <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                      <p className="text-white/50 text-xs mb-1">NFTs Minted</p>
+                      <p className="text-white/75 text-xs mb-1">NFTs Minted</p>
                       <p className="text-2xl font-bold text-white">250K+</p>
                     </div>
                     <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                      <p className="text-white/50 text-xs mb-1">Platform</p>
+                      <p className="text-white/75 text-xs mb-1">Platform</p>
                       <p className="text-lg font-bold text-white">AR + Web3</p>
                       <p className="text-white/40 text-xs mt-1">iOS & Android</p>
                     </div>
@@ -176,11 +176,11 @@ export default function SuperWorldPage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-6 bg-white/[0.02]">
+      <section className="section-padding bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Platform Features</h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto">A comprehensive ecosystem for virtual real estate, NFTs, and augmented reality.</p>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">A comprehensive ecosystem for virtual real estate, NFTs, and augmented reality.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -197,7 +197,7 @@ export default function SuperWorldPage() {
                   <feature.icon className="text-white text-lg" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-white/80 text-sm leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -205,7 +205,7 @@ export default function SuperWorldPage() {
       </section>
 
       {/* Highlights */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-4xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Ecosystem Highlights</h2>
@@ -232,13 +232,13 @@ export default function SuperWorldPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-r from-sky-900/30 via-cyan-900/30 to-blue-900/30">
+      <section className="section-padding bg-gradient-to-r from-sky-900/30 via-cyan-900/30 to-blue-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Explore the Virtual World
             </h2>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto">
               SuperWorld is a pioneering AR platform that Lyvena helped bring to life. Explore virtual real estate tied to real-world locations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -248,10 +248,10 @@ export default function SuperWorldPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold rounded-full hover:shadow-xl transition-all hover:scale-105"
               >
-                Visit SuperWorld <FaArrowRight className="text-sm" />
+                Visit Platform <FaArrowRight className="text-sm" />
               </a>
               <Link href="/#contact" className="btn-primary">
-                Start Your Project
+                Start a Project
               </Link>
             </div>
           </motion.div>

@@ -56,10 +56,10 @@ export default function ProsperaHavensPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-32 pb-24 px-6">
+      <section className="section-padding pt-32 pb-24 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/3 w-[700px] h-[700px] bg-cyan-500/12 rounded-full blur-[180px]" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px]" />
+          <div className="absolute top-0 left-1/3 w-[520px] h-[520px] bg-cyan-500/12 rounded-full blur-[130px]" />
+          <div className="absolute bottom-0 right-1/4 w-[380px] h-[380px] bg-blue-500/10 rounded-full blur-[110px]" />
           <div className="absolute top-1/3 right-1/3 w-[300px] h-[300px] bg-teal-400/8 rounded-full blur-[100px]" />
         </div>
 
@@ -67,7 +67,7 @@ export default function ProsperaHavensPage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-8">
               <FaHome className="text-xs" />
-              Live Platform
+              Live
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-4">
               Prospera Havens
@@ -75,7 +75,7 @@ export default function ProsperaHavensPage() {
             <p className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-400 bg-clip-text text-transparent mb-6">
               AI-Powered Caribbean Real Estate
             </p>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-10">
+            <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed mb-10">
               Discover, buy, sell, rent, and invest in Caribbean real estate in Prospera ZEDE — an autonomous
               economic zone on Roatan Island, Honduras. Crypto-friendly, AI-powered, and built for the future.
             </p>
@@ -86,7 +86,7 @@ export default function ProsperaHavensPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 via-teal-500 to-blue-500 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-cyan-500/25 transition-all hover:scale-105"
               >
-                Explore Properties
+                Visit Platform
                 <FaArrowRight className="text-sm" />
               </a>
               <Link href="/products" className="btn-secondary !border-white/20 !text-white hover:!bg-white/10">
@@ -113,7 +113,7 @@ export default function ProsperaHavensPage() {
                 <div className="text-4xl font-display font-bold bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent mb-1">
                   {stat.value}
                 </div>
-                <p className="text-white/60 text-sm">{stat.label}</p>
+                <p className="text-white/80 text-sm">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -121,7 +121,7 @@ export default function ProsperaHavensPage() {
       </section>
 
       {/* Interactive Property Mockup */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -137,7 +137,7 @@ export default function ProsperaHavensPage() {
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
                 </div>
                 <div className="flex-1 mx-4">
-                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/50 text-center">prosperahavens.space</div>
+                  <div className="bg-white/10 rounded-lg px-4 py-1.5 text-sm text-white/75 text-center">prosperahavens.space</div>
                 </div>
               </div>
               <div className="p-8 md:p-12">
@@ -165,7 +165,7 @@ export default function ProsperaHavensPage() {
                       <div className="p-4">
                         <h4 className="text-white font-semibold mb-1">{property.name}</h4>
                         <p className="text-cyan-400 font-bold text-lg mb-2">{property.price}</p>
-                        <div className="flex items-center gap-2 text-white/50 text-xs">
+                        <div className="flex items-center gap-2 text-white/75 text-xs">
                           <FaHome className="text-xs" /> {property.beds} Beds
                           <span className="ml-auto flex items-center gap-1"><FaStar className="text-yellow-400" /> Prospera ZEDE</span>
                         </div>
@@ -185,7 +185,7 @@ export default function ProsperaHavensPage() {
                     <FaRobot className="text-white text-sm" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-white/70 text-sm">AI Concierge: <span className="text-cyan-300">&quot;I found 3 properties matching your criteria in Prospera ZEDE. Would you like a detailed investor brief?&quot;</span></p>
+                    <p className="text-white/85 text-sm">AI Concierge: <span className="text-cyan-300">&quot;I found 3 properties matching your criteria in Prospera ZEDE. Would you like a detailed investor brief?&quot;</span></p>
                   </div>
                 </motion.div>
               </div>
@@ -195,11 +195,11 @@ export default function ProsperaHavensPage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-6 bg-white/[0.02]">
+      <section className="section-padding bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Why Prospera Havens</h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto">The smartest way to invest in Caribbean real estate, powered by AI and blockchain.</p>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">The smartest way to invest in Caribbean real estate, powered by AI and blockchain.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -216,7 +216,7 @@ export default function ProsperaHavensPage() {
                   <feature.icon className="text-white text-lg" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-white/80 text-sm leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -224,11 +224,11 @@ export default function ProsperaHavensPage() {
       </section>
 
       {/* Intelligence Services */}
-      <section className="py-20 px-6">
+      <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Premium Intelligence</h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto">AI-powered services to make smarter real estate decisions.</p>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">AI-powered services to make smarter real estate decisions.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -243,7 +243,7 @@ export default function ProsperaHavensPage() {
               >
                 <div className="text-3xl font-display font-bold text-cyan-400 mb-2">{service.price}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-white/60 text-sm">{service.description}</p>
+                <p className="text-white/80 text-sm">{service.description}</p>
               </motion.div>
             ))}
           </div>
@@ -251,13 +251,13 @@ export default function ProsperaHavensPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-r from-cyan-900/30 via-teal-900/30 to-blue-900/30">
+      <section className="section-padding bg-gradient-to-r from-cyan-900/30 via-teal-900/30 to-blue-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Your Caribbean Investment Awaits
             </h2>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto">
               Start exploring properties in Prospera ZEDE today. With crypto-friendly infrastructure, AI-powered insights, and fractional investment options starting at $100.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -267,10 +267,10 @@ export default function ProsperaHavensPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold rounded-full hover:shadow-xl transition-all hover:scale-105"
               >
-                Explore Properties <FaArrowRight className="text-sm" />
+                Visit Platform <FaArrowRight className="text-sm" />
               </a>
               <Link href="/#contact" className="btn-primary">
-                Contact Us
+                Start a Project
               </Link>
             </div>
           </motion.div>

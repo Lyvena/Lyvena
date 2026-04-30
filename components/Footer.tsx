@@ -60,12 +60,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="/stories"
-                  className="text-neutral-white/70 hover:text-accent transition-colors"
-                >
-                  Stories
-                </a>
+                  <Link
+                    href="/stories"
+                    className="text-neutral-white/70 hover:text-accent transition-colors"
+                  >
+                    Stories
+                  </Link>
               </li>
               <li>
                 <Link

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useId } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -20,6 +20,8 @@ export default function Navigation() {
   const [isProductsOpen, setIsProductsOpen] = useState(false)
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false)
   const productsRef = useRef<HTMLDivElement>(null)
+  const productsButtonRef = useRef<HTMLButtonElement>(null)
+  const dropdownId = useId()
   const pathname = usePathname()
 
   const navLinks = [
@@ -48,9 +50,22 @@ export default function Navigation() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsProductsOpen(false)
+        productsButtonRef.current?.focus()
+      }
+    }
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [])
+
   const isActive = (href: string) => {
+    const [basePath, hash] = href.split('#')
     if (href === '/') return pathname === '/'
-    return pathname.startsWith(href.split('#')[0])
+    if (hash) return pathname === '/'
+    return pathname === basePath || pathname.startsWith(`${basePath}/`)
   }
 
   const isProductsActive = pathname.startsWith('/products')
@@ -64,13 +79,13 @@ export default function Navigation() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? 'bg-neutral-charcoal/90 backdrop-blur-xl shadow-lg border-b border-white/10'
-            : 'bg-transparent'
+            : 'bg-neutral-charcoal/55 backdrop-blur-md border-b border-white/10'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md">
               <span className="text-2xl font-display font-bold text-white">
                 Lyvena
               </span>
@@ -81,7 +96,7 @@ export default function Navigation() {
               {/* Home link */}
               <Link
                 href="/"
-                className={`relative text-sm font-medium transition-colors ${
+                className={`relative text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm ${
                   isActive('/') ? 'text-accent' : 'text-white/80 hover:text-white'
                 }`}
               >
@@ -97,7 +112,7 @@ export default function Navigation() {
               {/* Services link */}
               <Link
                 href="/#services"
-                className={`relative text-sm font-medium transition-colors ${
+                className={`relative text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm ${
                   isActive('/#services') ? 'text-accent' : 'text-white/80 hover:text-white'
                 }`}
               >
@@ -107,11 +122,16 @@ export default function Navigation() {
               {/* Products dropdown */}
               <div ref={productsRef} className="relative">
                 <button
+                  ref={productsButtonRef}
+                  type="button"
                   onClick={() => setIsProductsOpen(!isProductsOpen)}
                   onMouseEnter={() => setIsProductsOpen(true)}
-                  className={`relative text-sm font-medium transition-colors flex items-center gap-1 ${
+                  className={`relative text-sm font-medium transition-colors flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm ${
                     isProductsActive ? 'text-accent' : 'text-white/80 hover:text-white'
                   }`}
+                  aria-expanded={isProductsOpen}
+                  aria-controls={dropdownId}
+                  aria-haspopup="menu"
                 >
                   Products
                   <FaChevronDown className={`text-[10px] transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} />
@@ -131,6 +151,8 @@ export default function Navigation() {
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.2 }}
                       onMouseLeave={() => setIsProductsOpen(false)}
+                      id={dropdownId}
+                      role="menu"
                       className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 bg-neutral-charcoal/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl shadow-black/30 overflow-hidden"
                     >
                       <div className="p-2">
@@ -139,7 +161,8 @@ export default function Navigation() {
                             key={product.href}
                             href={product.href}
                             onClick={() => setIsProductsOpen(false)}
-                            className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-white/5 transition-colors group"
+                            className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-white/5 transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                            role="menuitem"
                           >
                             <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${product.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
                               <product.icon className="text-white text-sm" />
@@ -154,7 +177,8 @@ export default function Navigation() {
                           <Link
                             href="/products"
                             onClick={() => setIsProductsOpen(false)}
-                            className="flex items-center justify-center px-3 py-2.5 rounded-xl hover:bg-white/5 transition-colors text-accent text-sm font-medium"
+                            className="flex items-center justify-center px-3 py-2.5 rounded-xl hover:bg-white/5 transition-colors text-accent text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                            role="menuitem"
                           >
                             View All Products →
                           </Link>
@@ -170,7 +194,7 @@ export default function Navigation() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`relative text-sm font-medium transition-colors ${
+                  className={`relative text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm ${
                     isActive(link.href)
                       ? 'text-accent'
                       : 'text-white/80 hover:text-white'
@@ -191,7 +215,7 @@ export default function Navigation() {
             <div className="hidden md:flex items-center gap-4">
               <Link
                 href="/#contact"
-                className="px-6 py-2.5 bg-accent text-neutral-charcoal font-semibold rounded-full hover:bg-accent-light transition-all hover:scale-105"
+                className="px-6 py-2.5 bg-accent text-neutral-charcoal font-semibold rounded-full hover:bg-accent-light transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Get Started
               </Link>
@@ -200,8 +224,9 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-white"
+              className="md:hidden p-2 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md"
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
@@ -225,7 +250,7 @@ export default function Navigation() {
                   <Link
                     href="/"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`text-2xl font-medium ${isActive('/') ? 'text-accent' : 'text-white'}`}
+                    className={`text-2xl font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm ${isActive('/') ? 'text-accent' : 'text-white'}`}
                   >
                     Home
                   </Link>
@@ -236,7 +261,7 @@ export default function Navigation() {
                   <Link
                     href="/#services"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`text-2xl font-medium ${isActive('/#services') ? 'text-accent' : 'text-white'}`}
+                    className={`text-2xl font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm ${isActive('/#services') ? 'text-accent' : 'text-white'}`}
                   >
                     Services
                   </Link>
@@ -251,7 +276,8 @@ export default function Navigation() {
                 >
                   <button
                     onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
-                    className={`text-2xl font-medium flex items-center gap-2 ${isProductsActive ? 'text-accent' : 'text-white'}`}
+                    className={`text-2xl font-medium flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm ${isProductsActive ? 'text-accent' : 'text-white'}`}
+                    aria-expanded={isMobileProductsOpen}
                   >
                     Products
                     <FaChevronDown className={`text-sm transition-transform duration-200 ${isMobileProductsOpen ? 'rotate-180' : ''}`} />
@@ -269,7 +295,7 @@ export default function Navigation() {
                             key={product.href}
                             href={product.href}
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileProductsOpen(false); }}
-                            className="flex items-center gap-3 text-white/70 hover:text-accent transition-colors"
+                            className="flex items-center gap-3 text-white/70 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
                           >
                             <div className={`w-7 h-7 rounded-lg bg-gradient-to-br ${product.gradient} flex items-center justify-center`}>
                               <product.icon className="text-white text-xs" />
@@ -280,7 +306,7 @@ export default function Navigation() {
                         <Link
                           href="/products"
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileProductsOpen(false); }}
-                          className="text-accent text-sm font-medium mt-1"
+                          className="text-accent text-sm font-medium mt-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
                         >
                           View All Products →
                         </Link>
@@ -300,7 +326,7 @@ export default function Navigation() {
                     <Link
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`text-2xl font-medium ${
+                      className={`text-2xl font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm ${
                         isActive(link.href) ? 'text-accent' : 'text-white'
                       }`}
                     >
@@ -318,7 +344,7 @@ export default function Navigation() {
                   <Link
                     href="/#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="px-8 py-3 bg-accent text-neutral-charcoal font-semibold rounded-full"
+                    className="px-8 py-3 bg-accent text-neutral-charcoal font-semibold rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     Get Started
                   </Link>
