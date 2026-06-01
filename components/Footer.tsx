@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FaLinkedin, FaGithub, FaArrowRight } from 'react-icons/fa'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -101,6 +102,22 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+            <a
+              href="https://elevenlabs.io/startup-grants"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ElevenLabs Grants"
+              className="mt-7 inline-flex opacity-80 transition-opacity duration-300 hover:opacity-100"
+            >
+              <Image
+                src="https://eleven-public-cdn.elevenlabs.io/payloadcms/cy7rxce8uki-IIElevenLabsGrants%201.webp"
+                alt="ElevenLabs Grants"
+                width={1496}
+                height={132}
+                className="h-auto w-[190px] sm:w-[220px]"
+                loading="lazy"
+              />
+            </a>
           </div>
 
           {/* Quick Links */}
