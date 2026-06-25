@@ -3,7 +3,6 @@ import { DM_Sans, Outfit } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import Navigation from '@/components/Navigation'
-import ChatBubble from '@/components/ChatBubble'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -75,7 +74,6 @@ export default function RootLayout({
       <body className="min-h-screen bg-neutral-cream text-neutral-charcoal">
         <Navigation />
         {children}
-        <ChatBubble />
       </body>
     </html>
   )

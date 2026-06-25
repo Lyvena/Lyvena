@@ -5,7 +5,10 @@ import Link from 'next/link'
 import { stories } from '@/lib/stories'
 
 export default function StoriesSection() {
-  const recentArticles = stories.slice(0, 3)
+  const kiewsArticle = stories.find((s) => s.slug === 'case-study-developing-kiews-no-code-near-protocol-integrations')
+  const otherArticles = stories.filter((s) => s.slug !== 'case-study-developing-kiews-no-code-near-protocol-integrations')
+  const recentArticles = kiewsArticle ? [kiewsArticle, ...otherArticles.slice(0, 2)] : stories.slice(0, 3)
+
   return (
     <section id="stories" className="section-padding relative overflow-hidden bg-neutral-cream">
       <div className="absolute inset-0 dot-grid opacity-40" />
