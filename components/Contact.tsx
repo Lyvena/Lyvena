@@ -24,6 +24,55 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
+  const HUBSPOT_PORTAL_ID = '244179468'
+  const HUBSPOT_FORM_GUID = process.env.NEXT_PUBLIC_HUBSPOT_FORM_GUID || ''
+
+  const submitToFormSubmit = async () => {
+    const data = new FormData()
+    data.append('name', formData.name)
+    data.append('email', formData.email)
+    data.append('organization', formData.organization)
+    data.append('budget', formData.budget || 'Not specified')
+    data.append('timeline', formData.timeline || 'Not specified')
+    data.append('message', formData.message)
+    data.append('_subject', `New inquiry from ${formData.name}`)
+    data.append('_captcha', 'true')
+    data.append('_template', 'table')
+
+    const res = await fetch('https://formsubmit.co/ajax/info@lyvena.xyz', {
+      method: 'POST',
+      body: data,
+    })
+    if (!res.ok) throw new Error('FormSubmit failed')
+  }
+
+  const submitToHubspot = async () => {
+    if (!HUBSPOT_FORM_GUID) return
+
+    await fetch(
+      `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fields: [
+            { name: 'firstname', value: formData.name },
+            { name: 'email', value: formData.email },
+            { name: 'company', value: formData.organization },
+            {
+              name: 'message',
+              value: `Budget: ${formData.budget || 'Not specified'}\nTimeline: ${formData.timeline || 'Not specified'}\n\n${formData.message}`,
+            },
+          ],
+          context: {
+            pageUri: typeof window !== 'undefined' ? window.location.href : 'https://lyvena.xyz',
+            pageName: 'Contact Form',
+          },
+        }),
+      }
+    )
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -31,25 +80,7 @@ export default function Contact() {
     setShowEmailFallback(false)
 
     try {
-      const data = new FormData()
-      data.append('name', formData.name)
-      data.append('email', formData.email)
-      data.append('organization', formData.organization)
-      data.append('budget', formData.budget || 'Not specified')
-      data.append('timeline', formData.timeline || 'Not specified')
-      data.append('message', formData.message)
-      data.append('_subject', `New inquiry from ${formData.name}`)
-      data.append('_captcha', 'true')
-      data.append('_template', 'table')
-
-      const response = await fetch('https://formsubmit.co/ajax/info@lyvena.xyz', {
-        method: 'POST',
-        body: data,
-      })
-
-      if (!response.ok) {
-        throw new Error('Form submission failed')
-      }
+      await Promise.allSettled([submitToFormSubmit(), submitToHubspot()])
 
       setIsSubmitting(false)
       setSubmitted(true)
