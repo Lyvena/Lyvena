@@ -3275,16 +3275,26 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark">
-      <section className="section-padding pt-32">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark relative">
+      <div className="absolute inset-absolute inset-0 dot-grid-white opacity-10" />
+      <section className="section-padding pt-32 relative z-10">
         <div className="mx-auto max-w-4xl">
-          <div className="mb-12 rounded-3xl bg-gradient-to-br from-primary to-secondary p-10 text-white shadow-xl">
-            <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-white/80">
-              <span className="rounded-full bg-white/10 px-3 py-1 font-semibold">
+          <div className="mb-12 rounded-3xl bg-gradient-to-br from-primary to-secondary p-10 text-white shadow-xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
+            <div className="relative z-10 mb-4 flex flex-wrap items-center gap-3 text-sm text-white/80">
+              <span className="rounded-full bg-white/10 px-3 py-1 font-semibold border border-white/20">
                 {article.category}
               </span>
-              <span>{article.readTime}</span>
-              <span>
+              <span className="flex items-center gap-1.5">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {article.readTime}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
                 {new Date(article.date).toLocaleDateString('en-US', {
                   month: 'long',
                   day: 'numeric',
@@ -3292,25 +3302,27 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
                 })}
               </span>
             </div>
-            <h1 className="mb-4 text-4xl font-display font-bold md:text-6xl">{article.title}</h1>
-            <p className="max-w-3xl text-lg text-white/85">{article.excerpt}</p>
+            <h1 className="mb-4 text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">{article.title}</h1>
+            <p className="max-w-3xl text-lg md:text-xl text-white/90 leading-relaxed">{article.excerpt}</p>
           </div>
 
-          <figure className="mb-12">
-            <div className="relative overflow-hidden rounded-3xl">
+          <figure className="mb-12 relative">
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-primary/10">
               <Image
                 src={articleHeroImages[article.slug]?.src || ''}
                 alt={articleHeroImages[article.slug]?.alt || article.title}
                 width={1200}
                 height={675}
-                className="w-full h-auto"
+                className="w-full h-auto transition-transform duration-700 hover:scale-[1.02]"
                 unoptimized
                 priority
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-charcoal/40 via-transparent to-transparent" />
             </div>
           </figure>
 
-          <article className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12 backdrop-blur">
+          <article className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12 backdrop-blur-sm relative">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent" />
             {article.slug === 'launching-prospera-havens-ai-powered-real-estate' ? (
               <ProsperaHavensArticle />
             ) : article.slug === 'ultimate-guide-agentic-ai-automated-coding' ? (
@@ -3339,28 +3351,37 @@ export default function StoryArticle({ params }: { params: { slug: string } }) {
             )}
           </article>
 
-          <div className="mt-12 border-t border-neutral-white/10 pt-8">
+          <div className="mt-12 pt-8 border-t border-white/10">
             <Link
               href="/stories"
-              className="text-accent hover:text-accent/80 transition-colors font-semibold"
+              className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-semibold group"
             >
-              ← Back to Notes
+              <svg className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              <span>Back to Notes</span>
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-to-r from-primary to-accent/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to apply this to your own team?
-          </h2>
-          <p className="text-lg text-neutral-white/90 mb-8">
-            Bring the workflow or product question and we will help shape the next credible step.
-          </p>
-          <Link href="/#contact" className="btn-primary inline-block">
-            Start a Conversation
-          </Link>
+      <section className="section-padding bg-gradient-to-r from-primary to-accent/20 relative overflow-hidden">
+        <div className="absolute inset-0 dot-grid-white opacity-20" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 mb-6">
+              <span className="text-xs font-bold uppercase tracking-[0.24em] text-white/70">Ready to apply this?</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to apply this to your own team?
+            </h2>
+            <p className="text-lg text-neutral-white/90 mb-8">
+              Bring the workflow or product question and we will help shape the next credible step.
+            </p>
+            <Link href="/#contact" className="btn-primary inline-block">
+              Start a Conversation
+            </Link>
+          </div>
         </div>
       </section>
       <Footer />
