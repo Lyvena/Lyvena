@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'eleven-public-cdn.elevenlabs.io',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.marblism.com',
+      },
     ],
   },
 }
