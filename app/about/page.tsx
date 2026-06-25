@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Footer from '@/components/Footer'
-import { FaLinkedin, FaCalendarAlt, FaRobot, FaChartLine, FaPaintBrush, FaHeadset, FaSearch, FaPenFancy } from 'react-icons/fa'
+import { FaLinkedin, FaCalendarAlt } from 'react-icons/fa'
 
 const team = [
   {
@@ -17,57 +17,6 @@ const team = [
     role: 'Chief Designer & COO',
     linkedin: 'https://www.linkedin.com/in/unicornixa/',
     description: 'Shapes design quality, product clarity, and the operating discipline behind every delivery.',
-  },
-]
-
-const aiTeam = [
-  {
-    name: 'Penny',
-    role: 'AI Product Manager',
-    description: 'Scopes requirements, prioritizes features, and keeps delivery on track.',
-    icon: FaChartLine,
-    gradient: 'from-violet-500 to-purple-600',
-    link: 'https://www.marblism.com/ai-employees/penny?via=1178f3',
-  },
-  {
-    name: 'Eva',
-    role: 'AI Engineer',
-    description: 'Writes production code, builds APIs, and architects scalable systems.',
-    icon: FaRobot,
-    gradient: 'from-cyan-500 to-blue-600',
-    link: 'https://www.marblism.com/ai-employees/eva?via=1178f3',
-  },
-  {
-    name: 'Sonny',
-    role: 'AI Designer',
-    description: 'Creates interfaces, design systems, and user experiences that feel intuitive.',
-    icon: FaPaintBrush,
-    gradient: 'from-orange-500 to-amber-600',
-    link: 'https://www.marblism.com/ai-employees/sonny?via=1178f3',
-  },
-  {
-    name: 'Stan',
-    role: 'AI QA & Support',
-    description: 'Tests systems, catches edge cases, and ensures quality before launch.',
-    icon: FaHeadset,
-    gradient: 'from-green-500 to-emerald-600',
-    link: 'https://www.marblism.com/ai-employees/stan?via=1178f3',
-  },
-  {
-    name: 'Rachel',
-    role: 'AI Researcher',
-    description: 'Analyzes markets, evaluates tools, and finds the fastest path to results.',
-    icon: FaSearch,
-    gradient: 'from-pink-500 to-rose-600',
-    link: 'https://www.marblism.com/ai-employees/rachel?via=1178f3',
-  },
-  {
-    name: 'Linda',
-    role: 'AI Content Strategist',
-    description: 'Writes copy, structures messaging, and builds content that converts.',
-    icon: FaPenFancy,
-    gradient: 'from-indigo-500 to-violet-600',
-    link: 'https://www.marblism.com/ai-employees/linda?via=1178f3',
   },
 ]
 
@@ -205,56 +154,6 @@ export default function About() {
                   </a>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* AI Team */}
-      <section className="section-padding bg-gradient-to-br from-neutral-charcoal via-neutral-charcoal to-primary-dark relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 -left-32 w-[400px] h-[400px] bg-violet-500/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-1/4 -right-32 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[120px]" />
-        </div>
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent/80">AI-Powered</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              Meet Our AI Team
-            </h2>
-            <p className="text-xl text-neutral-white/70 max-w-2xl mx-auto">
-              We use AI specialists across research, engineering, design, and operations — each with a clear role, clear review step, and human oversight.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {aiTeam.map((member, index) => (
-              <motion.a
-                key={member.name}
-                href={member.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group block"
-              >
-                <div className="bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50 border border-white/10 rounded-2xl p-6 hover:border-accent/30 transition-all duration-300">
-                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${member.gradient} mb-4 group-hover:scale-110 transition-transform`}>
-                    <member.icon className="text-2xl text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-1 group-hover:text-accent transition-colors">
-                    {member.name}
-                  </h3>
-                  <p className={`text-sm font-semibold bg-gradient-to-r ${member.gradient} bg-clip-text text-transparent mb-3`}>
-                    {member.role}
-                  </p>
-                  <p className="text-neutral-white/70 text-sm leading-relaxed">
-                    {member.description}
-                  </p>
-                </div>
-              </motion.a>
             ))}
           </div>
         </div>
