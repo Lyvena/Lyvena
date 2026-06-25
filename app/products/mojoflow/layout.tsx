@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Mojoflow - AI-Powered Workflow Automation',
-  description: 'Create intelligent automation flows that adapt and optimize themselves. Visual drag-and-drop builder with AI decision nodes, smart triggers, and universal connectors.',
+  title: 'Mojoflow - AI-Native Full-Stack Framework for Mojo',
+  description: 'A production-grade, modular full-stack framework for the Mojo programming language. Built-in LLM client, agent execution, task orchestration, async HTTP server, and declarative UI DSL.',
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
