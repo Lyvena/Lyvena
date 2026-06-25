@@ -97,8 +97,8 @@ export default function Hero() {
       <div className="absolute -bottom-32 -right-32 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[100px] animate-float-slow" style={{ animationDelay: '4s' }} />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 pt-28 pb-10 md:px-12 lg:px-24 lg:pt-36">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center min-h-[70vh]">
-          <div className="lg:col-span-3">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[70vh]">
+          <div className="lg:col-span-7">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
               className="flex items-center gap-2.5 mb-7">
               <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-accent/30 bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest">
@@ -163,7 +163,7 @@ export default function Hero() {
 
           <motion.div initial={{ opacity: 0, x: 50, scale: 0.95 }} animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="hidden lg:flex lg:col-span-2 items-center justify-center">
+            className="hidden lg:flex lg:col-span-5 items-center justify-center">
             <div className="relative w-full max-w-md">
               <div className="absolute -inset-6 bg-gradient-to-br from-primary/20 via-transparent to-accent/15 rounded-3xl blur-2xl animate-breathe" />
               <div className="relative rounded-3xl border border-white/10 glass overflow-hidden" style={{ aspectRatio: '4/3' }}>
