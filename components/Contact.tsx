@@ -31,36 +31,24 @@ export default function Contact() {
     setShowEmailFallback(false)
 
     try {
-      const hubspotData = {
-        fields: [
-          { name: 'firstname', value: formData.name },
-          { name: 'email', value: formData.email },
-          { name: 'company', value: formData.organization },
-          {
-            name: 'message',
-            value: `Budget: ${formData.budget || 'Not specified'}\nTimeline: ${formData.timeline || 'Not specified'}\n\n${formData.message}`,
-          },
-        ],
-        context: {
-          pageUri: typeof window !== 'undefined' ? window.location.href : 'https://lyvena.xyz',
-          pageName: 'Contact Form',
-        },
-      }
+      const data = new FormData()
+      data.append('name', formData.name)
+      data.append('email', formData.email)
+      data.append('organization', formData.organization)
+      data.append('budget', formData.budget || 'Not specified')
+      data.append('timeline', formData.timeline || 'Not specified')
+      data.append('message', formData.message)
+      data.append('_subject', `New inquiry from ${formData.name}`)
+      data.append('_captcha', 'true')
+      data.append('_template', 'table')
 
-      const response = await fetch(
-        'https://api.hsforms.com/submissions/v3/integration/submit/244179468/your-form-guid',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(hubspotData),
-        }
-      )
+      const response = await fetch('https://formsubmit.co/ajax/info@lyvena.xyz', {
+        method: 'POST',
+        body: data,
+      })
 
       if (!response.ok) {
-        setIsSubmitting(false)
-        setError('We could not submit your request right now. Please try again or use email below.')
-        setShowEmailFallback(true)
-        return
+        throw new Error('Form submission failed')
       }
 
       setIsSubmitting(false)
