@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
     <main className="min-h-screen bg-neutral-cream">
       {/* Hero Section */}
       <section className="section-padding pt-32 pb-16 bg-gradient-to-br from-primary via-primary-dark to-primary-light relative overflow-hidden">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
 
       {/* Content Section */}
       <section className="section-padding">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

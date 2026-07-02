@@ -91,7 +91,7 @@ export default function MojoflowPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-amber-400/8 rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-medium mb-8">
               <FaCube className="text-xs" />
@@ -128,7 +128,7 @@ export default function MojoflowPage() {
 
       {/* Architecture layers */}
       <section className="py-12 px-6 border-y border-white/10 bg-white/[0.02]">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-5 gap-3">
             {layers.map((layer, idx) => (
               <motion.div
@@ -156,7 +156,7 @@ export default function MojoflowPage() {
 
       {/* Interactive Terminal / Code Mockup */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -340,7 +340,7 @@ export default function MojoflowPage() {
 
       {/* Features */}
       <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Built for the AI Era</h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">Each layer is independently composable and designed for AI-native development from the ground up.</p>
@@ -369,7 +369,7 @@ export default function MojoflowPage() {
 
       {/* Architecture detail */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Modular Architecture</h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">Each layer depends only on the layers below it. The Core layer has zero external dependencies.</p>
@@ -406,7 +406,7 @@ export default function MojoflowPage() {
 
       {/* CLI Demo */}
       <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Developer Experience</h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">From project creation to production — clean syntax, helpful errors, fast iteration.</p>
@@ -436,7 +436,7 @@ export default function MojoflowPage() {
 
       {/* CTA */}
       <section className="section-padding bg-gradient-to-r from-orange-900/30 via-amber-900/30 to-yellow-900/30">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Build the Future with Mojo

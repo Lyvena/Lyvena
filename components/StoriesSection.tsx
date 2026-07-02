@@ -15,7 +15,7 @@ export default function StoriesSection() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/6 rounded-full blur-[100px]" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/6 rounded-full blur-[100px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="flex items-center gap-3 mb-5">
             <div className="h-px w-8 bg-primary" />

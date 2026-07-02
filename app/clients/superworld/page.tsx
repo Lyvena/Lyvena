@@ -57,7 +57,7 @@ export default function SuperWorldPage() {
           <div className="absolute bottom-0 right-1/4 w-[380px] h-[380px] bg-cyan-500/10 rounded-full blur-[110px]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500/20 border border-sky-500/30 text-sky-300 text-sm font-medium mb-8">
               <FaStar className="text-xs" />
@@ -88,7 +88,7 @@ export default function SuperWorldPage() {
 
       {/* Globe Mockup */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -177,7 +177,7 @@ export default function SuperWorldPage() {
 
       {/* Features */}
       <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Platform Features</h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">A comprehensive ecosystem for virtual real estate, NFTs, and augmented reality.</p>
@@ -206,7 +206,7 @@ export default function SuperWorldPage() {
 
       {/* Highlights */}
       <section className="section-padding">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Ecosystem Highlights</h2>
           </motion.div>
@@ -233,7 +233,7 @@ export default function SuperWorldPage() {
 
       {/* CTA */}
       <section className="section-padding bg-gradient-to-r from-sky-900/30 via-cyan-900/30 to-blue-900/30">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Explore the Virtual World

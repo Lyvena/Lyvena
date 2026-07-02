@@ -48,7 +48,7 @@ export default function About() {
           <div className="absolute top-20 left-10 w-96 h-96 bg-accent rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary rounded-full blur-3xl" />
         </div>
-        <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export default function About() {
 
       {/* Mission */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
@@ -115,7 +115,7 @@ export default function About() {
 
       {/* Leadership */}
       <section className="section-padding bg-gradient-to-br from-neutral-charcoal/50 to-primary-dark/50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent/80">Our Team</p>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
@@ -161,7 +161,7 @@ export default function About() {
 
       {/* How We Use AI */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent/80">Our Approach</p>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
@@ -198,7 +198,7 @@ export default function About() {
 
       {/* CTA */}
       <section className="section-padding bg-gradient-to-r from-primary to-accent/20">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-charcoal mb-4">
             Ready to turn AI ambition into a real product?
           </h2>

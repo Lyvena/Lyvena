@@ -63,7 +63,7 @@ export default function ProsperaHavensPage() {
           <div className="absolute top-1/3 right-1/3 w-[300px] h-[300px] bg-teal-400/8 rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-8">
               <FaHome className="text-xs" />
@@ -99,7 +99,7 @@ export default function ProsperaHavensPage() {
 
       {/* Stats */}
       <section className="py-12 px-6 border-y border-white/10 bg-white/[0.02]">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
               <motion.div
@@ -122,7 +122,7 @@ export default function ProsperaHavensPage() {
 
       {/* Interactive Property Mockup */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -196,7 +196,7 @@ export default function ProsperaHavensPage() {
 
       {/* Features */}
       <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Why Prospera Havens</h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">The smartest way to invest in Caribbean real estate, powered by AI and blockchain.</p>
@@ -225,7 +225,7 @@ export default function ProsperaHavensPage() {
 
       {/* Intelligence Services */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Premium Intelligence</h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">AI-powered services to make smarter real estate decisions.</p>
@@ -252,7 +252,7 @@ export default function ProsperaHavensPage() {
 
       {/* CTA */}
       <section className="section-padding bg-gradient-to-r from-cyan-900/30 via-teal-900/30 to-blue-900/30">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Your Caribbean Investment Awaits

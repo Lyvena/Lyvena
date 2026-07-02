@@ -68,7 +68,7 @@ export default function SeeristPage() {
           <div className="absolute top-1/3 right-1/3 w-[300px] h-[300px] bg-indigo-400/8 rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-8">
               <FaBriefcase className="text-xs" />
@@ -104,7 +104,7 @@ export default function SeeristPage() {
 
       {/* Stats */}
       <section className="py-12 px-6 border-y border-white/10 bg-white/[0.02]">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
               <motion.div
@@ -127,7 +127,7 @@ export default function SeeristPage() {
 
       {/* Interactive Dashboard Mockup */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -220,7 +220,7 @@ export default function SeeristPage() {
 
       {/* Workflow */}
       <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Capture. Shape. Ship.</h2>
             <p className="text-lg text-white/80">A systematic approach to revenue generation.</p>
@@ -249,7 +249,7 @@ export default function SeeristPage() {
 
       {/* Features */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Complete Revenue Toolkit</h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">Everything you need to systematize opportunity capture and conversion.</p>
@@ -278,7 +278,7 @@ export default function SeeristPage() {
 
       {/* Modes */}
       <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Three Modes, One Platform</h2>
             <p className="text-lg text-white/80">Whether you&apos;re a solo consultant, agency, or SaaS company.</p>
@@ -304,7 +304,7 @@ export default function SeeristPage() {
 
       {/* CTA */}
       <section className="section-padding bg-gradient-to-r from-blue-900/30 via-cyan-900/30 to-indigo-900/30">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Systematize Your Revenue

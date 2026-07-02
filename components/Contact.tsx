@@ -108,7 +108,7 @@ export default function Contact() {
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-accent/8 rounded-full blur-[120px]" />
       <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px]" />
 
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
           className="mb-16"

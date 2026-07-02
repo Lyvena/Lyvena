@@ -145,7 +145,7 @@ export default function IntelektPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-purple-400/10 rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-medium mb-8">
               <FaRocket className="text-xs" />
@@ -181,7 +181,7 @@ export default function IntelektPage() {
 
       {/* Stats Bar */}
       <section className="py-12 px-6 border-y border-white/10 bg-white/[0.02]">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { value: '10K+', label: 'Apps Generated' },
@@ -209,7 +209,7 @@ export default function IntelektPage() {
 
       {/* Interactive IDE Mockup */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -493,7 +493,7 @@ export default function IntelektPage() {
 
       {/* Features */}
       <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -527,7 +527,7 @@ export default function IntelektPage() {
 
       {/* Pipeline / How It Works */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -566,7 +566,7 @@ export default function IntelektPage() {
 
       {/* Agent Collaboration Preview */}
       <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -607,7 +607,7 @@ export default function IntelektPage() {
 
       {/* Self-Improving System */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -646,7 +646,7 @@ export default function IntelektPage() {
 
       {/* CTA */}
       <section className="section-padding bg-gradient-to-r from-violet-900/30 via-purple-900/30 to-indigo-900/30">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

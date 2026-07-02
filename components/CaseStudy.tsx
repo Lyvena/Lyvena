@@ -14,8 +14,8 @@ const results = [
 
 export default function CaseStudy() {
   return (
-    <section className="min-h-screen bg-neutral-charcoal py-20 px-6 text-white">
-      <div className="mx-auto max-w-5xl">
+    <section className="min-h-screen bg-neutral-charcoal py-20 text-white">
+      <div className="mx-auto max-w-5xl px-6">
         <div className="mb-12 rounded-3xl bg-gradient-to-br from-primary to-secondary p-10 shadow-xl">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-white/75">
             Case Study

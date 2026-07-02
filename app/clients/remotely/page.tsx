@@ -64,7 +64,7 @@ export default function RemotelyPage() {
           <div className="absolute top-1/3 left-1/2 w-[300px] h-[300px] bg-violet-400/8 rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8">
               <FaStar className="text-xs" />
@@ -95,7 +95,7 @@ export default function RemotelyPage() {
 
       {/* Stats */}
       <section className="py-12 px-6 border-y border-white/10 bg-white/[0.02]">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
               <motion.div
@@ -118,7 +118,7 @@ export default function RemotelyPage() {
 
       {/* Platform Mockup */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -210,7 +210,7 @@ export default function RemotelyPage() {
 
       {/* Process */}
       <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">How It Works</h2>
             <p className="text-lg text-white/80">From discovery to long-term career success in five steps.</p>
@@ -237,7 +237,7 @@ export default function RemotelyPage() {
 
       {/* Features */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Developer-First Platform</h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">Built to put developers first with transparent compensation and comprehensive support.</p>
@@ -266,7 +266,7 @@ export default function RemotelyPage() {
 
       {/* CTA */}
       <section className="section-padding bg-gradient-to-r from-purple-900/30 via-pink-900/30 to-orange-900/30">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
               Connecting Talent with Opportunity

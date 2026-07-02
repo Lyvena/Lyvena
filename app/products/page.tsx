@@ -111,7 +111,7 @@ export default function ProductsPage() {
           <div className="absolute bottom-0 right-1/4 w-[520px] h-[520px] bg-amber-500/8 rounded-full blur-[120px]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ export default function ProductsPage() {
 
       {/* Products Grid */}
       <section className="section-padding pt-0">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {products.map((product, index) => (
               <motion.div
@@ -201,7 +201,7 @@ export default function ProductsPage() {
 
       {/* Client Projects */}
       <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -270,7 +270,7 @@ export default function ProductsPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

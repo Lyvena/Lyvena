@@ -54,7 +54,7 @@ export default function Products() {
       <div className="absolute top-1/4 -left-40 w-[600px] h-[600px] bg-violet-500/8 rounded-full blur-[120px]" />
       <div className="absolute bottom-1/4 -right-40 w-[600px] h-[600px] bg-amber-500/8 rounded-full blur-[120px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="flex items-center justify-center gap-3 mb-5">
             <div className="h-px w-8 bg-accent/50" />

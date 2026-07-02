@@ -24,7 +24,7 @@ export default function About() {
       <div className="absolute top-10 right-10 w-80 h-80 bg-accent/8 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-10 left-10 w-80 h-80 bg-primary/8 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div className="mb-20" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="flex items-center gap-3 mb-5">
             <div className="h-px w-8 bg-primary" />

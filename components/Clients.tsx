@@ -11,10 +11,10 @@ const clients = [
 
 export default function Clients() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-neutral-charcoal to-[#0d0f12] py-20 px-6 md:px-12">
+    <section className="relative overflow-hidden bg-gradient-to-b from-neutral-charcoal to-[#0d0f12] py-20">
       <div className="absolute inset-0 dot-grid-white opacity-20" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="flex items-center justify-center gap-3 mb-3">
             <div className="h-px w-8 bg-accent/40" />
