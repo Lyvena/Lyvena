@@ -96,7 +96,7 @@ export default function Hero() {
       <div className="absolute -top-32 -left-32 w-[700px] h-[700px] bg-primary/20 rounded-full blur-[120px] animate-float-slow" />
       <div className="absolute -bottom-32 -right-32 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[100px] animate-float-slow" style={{ animationDelay: '4s' }} />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-28 pb-10 md:px-12 lg:px-24 lg:pt-36">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-28 pb-10 lg:pt-36">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[70vh]">
           <div className="lg:col-span-7">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
@@ -192,7 +192,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-20 md:px-12 lg:px-24">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {metrics.map((metric, i) => (
             <motion.div key={metric.label}
